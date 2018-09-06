@@ -15,4 +15,4 @@ weight = 25
 
 +++
 
-Que vous souhaitiez aborder ou voir abordée une thématique lors d'une prochaine session d'infomath, nous vous invitons à remplir ce fichier. Nous reviendrons au plus vite vers les personnes désirant présenter un exposé pour convenir avec elles d'une date et d'un horaire.
+Que vous souhaitiez aborder ou voir abordée une thématique lors d'une prochaine session d'infomath, nous vous invitons à nous contacter. Nous reviendrons au plus vite vers les personnes désirant présenter un exposé pour convenir avec elles d'une date et d'un horaire.
