@@ -1,16 +1,16 @@
 +++
-title = "PSTricks : une courte introduction au dessin sous LaTeX"
-date = 2018-03-15T16:00:00+02:00  # Schedule page publish date.
+title = "Une brève introduction à Matplotlib et Seaborn"
+date = 2018-05-24T16:00:00+02:00  # Schedule page publish date.
 draft = false
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-time_start = 2018-03-15T16:00:00+02:00
+time_start = 2018-05-24T16:00:00+02:00
 #time_end = 2018-09-05T17:38:30+02:00
 
 #authors (can be left blank)
-author = "Jean-François Abadie"
-author_url = "https://www.ljll.math.upmc.fr/abadiej"
+author = "James Nichols"
+author_url = "https://www.ceremade.dauphine.fr/~chupin/"
 author_affiliation = "LJLL"
 
 # Abstract and optional shortened version.
@@ -36,13 +36,13 @@ projects = []
 
 # Tags (optional).
 #   Set `tags = []` for no tags, or use the form `tags = ["A Tag", "Another Tag"]` for one or more tags.
-tags = ["latex", "draw"]
+tags = ["git", "source control systems"]
 
 # Links (optional).
-url_pdf = "https://www.ljll.math.upmc.fr/abadiej/infomath/documents/IntroPSTricks.pdf"
-url_slides = ""
+url_pdf = ""
+url_slides = "http://nbviewer.jupyter.org/github/james-nichols/matplotlib_LJLL_presentation/blob/master/matplotlib_LJLL_presentation.ipynb"
 url_video = ""
-url_code = ""
+url_code = "https://github.com/james-nichols/matplotlib_LJLL_presentation/"
 
 # Does the content use math formatting?
 math = false
