@@ -5,7 +5,7 @@ draft = false
 
 # Tags and categories
 # For example, use `tags = []` for no tags, or the form `tags = ["A Tag", "Another Tag"]` for one or more tags.
-tags = ["Git", "Gestionnaire de version"]
+tags = ["Git", "source control systems"]
 
 # Project summary to display on homepage.
 summary = "Gérer les différentes versions de votre code ou de votre rapport LaTeX"
