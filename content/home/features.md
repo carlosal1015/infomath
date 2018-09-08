@@ -9,19 +9,19 @@ weight = 20
 [[feature]]
   icon = "question"
   icon_pack = "fa"
-  name = "Pour qui ?"
-  description = "Pour tout le monde ! Les novices, les curieuses et curieux, les geeks et geekettes."
+  name = "For whom?"
+  description = "Everybody! Newbies, curious and geeks!"
 
 [[feature]]
   icon = "pencil-alt"
   icon_pack = "fa"
-  name = "Rédaction"
-  description = "Améliorer vos compétences en LaTeX en appliquant les bonnes pratiques (et non pas celles datant de 20 ans)."
+  name = "Writing"
+  description = "Enhanced your LaTeX skills by applying the right practices (and not outdated practices...)."
 
 [[feature]]
   icon = "toolbox"
   icon_pack = "fa"
-  name = "Autres outils recommandés"
-  description = "Parce qu'il n'y a pas que LaTeX en recherche, d'autres outils vont vous simplifier la vie : Gestion automatique de vos documents, création d'un site web professionnel propre, ... "    
+  name = "Recommanded tools"
+  description = "LaTeX is not the only tool for researchers! You will find here a list of recommanded tools that will help you and simplify your work: source control systems, website builder, ... "    
 
 +++

@@ -16,8 +16,8 @@ abstract = ""
 abstract_short = ""
 
 # Name of event and optional event URL.
-event = "Infomath seminar"
-event_url = "https://infomath.netlify.com"
+event = ""
+event_url = ""
 
 # Location of event.
 location = ""

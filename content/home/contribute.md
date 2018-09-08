@@ -7,7 +7,7 @@ active = true
 date = 2016-04-20T00:00:00
 
 # Note: a full width section format can be enabled by commenting out the `title` and `subtitle` with a `#`.
-title = "Contribuez !"
+title = "Contribute!"
 subtitle = ""
 
 # Order that this section will appear in.
@@ -15,4 +15,4 @@ weight = 25
 
 +++
 
-Que vous souhaitiez aborder ou voir abordée une thématique lors d'une prochaine session d'infomath, nous vous invitons à nous contacter. Nous reviendrons au plus vite vers les personnes désirant présenter un exposé pour convenir avec elles d'une date et d'un horaire.
+Fell free to contact us if you want to *present* a tool or if you *want* a tool to be presented and/or displayed in the recommanded tools section!
