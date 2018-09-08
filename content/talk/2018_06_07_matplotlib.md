@@ -9,7 +9,7 @@ time_start = 2018-05-24T16:00:00+02:00
 #time_end = 2018-09-05T17:38:30+02:00
 
 #authors (can be left blank)
-authors = ["[James Nichols (LJLL)](https://www.ceremade.dauphine.fr/~chupin/)]
+authors = ["[James Nichols (LJLL)](https://www.ceremade.dauphine.fr/~chupin/)"]
 
 # Abstract and optional shortened version.
 abstract = ""
