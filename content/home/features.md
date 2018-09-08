@@ -21,7 +21,7 @@ weight = 20
 [[feature]]
   icon = "toolbox"
   icon_pack = "fa"
-  name = "Boîte à outils"
+  name = "Autres outils recommandés"
   description = "Parce qu'il n'y a pas que LaTeX en recherche, d'autres outils vont vous simplifier la vie : Gestion automatique de vos documents, création d'un site web professionnel propre, ... "    
 
 +++
