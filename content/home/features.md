@@ -21,7 +21,7 @@ weight = 20
 [[feature]]
   icon = "toolbox"
   icon_pack = "fa"
-  name = "Recommanded tools"
-  description = "LaTeX is not the only tool for researchers! You will find here a list of recommanded tools that will help you and simplify your work: source control systems, website builder, ... "    
+  name = "Recommended tools"
+  description = "LaTeX is not the only tool for researchers! You will find here a list of recommended tools that will help you and simplify your work: source control systems, website builder, ... "    
 
 +++
