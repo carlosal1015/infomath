@@ -48,4 +48,8 @@ filter_default = 0
  [[filter]]
    name = "Scientific Computing"
    tag = "scientific computing"
+
+ [[filter]]
+   name = "Text editor"
+   tag = "text editor"
 +++
