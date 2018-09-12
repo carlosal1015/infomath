@@ -15,6 +15,7 @@ image_preview = "tools/gitlab.png"
 
 # Optional external URL for project (replaces project detail page).
 external_link = "https://gitlab.lpma.upmc.fr"
+official_website = "https://gitlab.lpma.upmc.fr"
 
 selected=true
 

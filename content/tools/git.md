@@ -15,6 +15,8 @@ image_preview = "tools/git.png"
 
 # Optional external URL for project (replaces project detail page).
 external_link = "https://git-scm.com"
+official_website = "https://git-scm.com"
+
 
 selected=true
 

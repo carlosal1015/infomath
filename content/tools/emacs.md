@@ -15,6 +15,7 @@ image_preview = "tools/emacs.png"
 
 # Optional external URL for project (replaces project detail page).
 external_link = "https://www.gnu.org/software/emacs/"
+official_website = "https://www.gnu.org/software/emacs/"
 
 selected=true
 

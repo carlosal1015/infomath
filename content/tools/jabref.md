@@ -15,6 +15,7 @@ image_preview = "tools/jabref.png"
 
 # Optional external URL for project (replaces project detail page).
 external_link = "https://www.jabref.org"
+official_website = "https://www.jabref.org"
 
 selected=true
 

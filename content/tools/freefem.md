@@ -15,6 +15,7 @@ image_preview = "tools/freefem.jpg"
 
 # Optional external URL for project (replaces project detail page).
 external_link = "http://www.freefem.org/"
+official_website = "http://www.freefem.org/"
 
 selected=true
 

@@ -15,6 +15,7 @@ image_preview = "tools/github.png"
 
 # Optional external URL for project (replaces project detail page).
 external_link = "https://github.com"
+official_website = "https://github.com"
 
 selected=true
 

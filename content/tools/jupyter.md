@@ -15,6 +15,7 @@ image_preview = "tools/jupyter.jpg"
 
 # Optional external URL for project (replaces project detail page).
 external_link = "https://jupyter.org"
+official_website = "https://jupyter.org"
 
 selected=true
 

@@ -15,6 +15,7 @@ image_preview = "tools/overleaf.png"
 
 # Optional external URL for project (replaces project detail page).
 external_link = "https://www.overleaf.com/"
+official_website = "https://www.overleaf.com/"
 
 selected=true
 

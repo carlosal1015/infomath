@@ -15,6 +15,7 @@ image_preview = "tools/gmsh.png"
 
 # Optional external URL for project (replaces project detail page).
 external_link = "https://www.gmsh.info"
+official_website = "https://www.gmsh.info"
 
 selected=true
 

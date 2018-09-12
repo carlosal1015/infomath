@@ -15,6 +15,7 @@ image_preview = "tools/getdp.jpg"
 
 # Optional external URL for project (replaces project detail page).
 external_link = "http://getdp.info/"
+official_website = "http://getdp.info/"
 
 selected=true
 

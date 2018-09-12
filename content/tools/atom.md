@@ -15,6 +15,7 @@ image_preview = "tools/atom.png"
 
 # Optional external URL for project (replaces project detail page).
 external_link = "https://atom.io/"
+official_website = "https://atom.io/"
 
 selected=true
 
