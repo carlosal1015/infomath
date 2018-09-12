@@ -35,6 +35,7 @@ caption = ""
 +++
 
 Tutorials and interesting links:
+
 - [Git for lazy mathematicians](http://www.mseri.me/git-workflow-for-lazy-mathematicians/)
 - [Git Immersion: interactive tutorials](http://gitimmersion.com/)
 - [Git tutorials](https://git-scm.com/docs/gittutorial)
