@@ -32,3 +32,6 @@ highlight = true
 image = ""
 caption = ""
 +++
+
+Links:
+- [Tutorial (in french)](https://bthierry.netlify.com/course/gmsh/)

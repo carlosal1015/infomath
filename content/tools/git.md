@@ -14,7 +14,7 @@ summary = "Gérer les différentes versions de votre code ou de votre rapport La
 image_preview = "tools/git.png"
 
 # Optional external URL for project (replaces project detail page).
-external_link = "https://git-scm.com"
+external_link = ""
 official_website = "https://git-scm.com"
 
 
