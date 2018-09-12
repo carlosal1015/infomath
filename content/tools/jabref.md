@@ -14,7 +14,7 @@ summary = "Cross-platform Reference Management Software"
 image_preview = "tools/jabref.png"
 
 # Optional external URL for project (replaces project detail page).
-external_link = "www.jabref.org"
+external_link = "https://www.jabref.org"
 
 selected=true
 
