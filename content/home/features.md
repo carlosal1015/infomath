@@ -9,7 +9,7 @@ weight = 20
 [[feature]]
   icon = "question"
   icon_pack = "fa"
-  name = "For whom?"
+  name = "Whom is it for?"
   description = "Everybody! Newbies, curious and geeks!"
 
 [[feature]]
