@@ -26,5 +26,5 @@ weight = 3
 
 Le séminaire des outils informatiques à l'usage des mathématiciennes et mathématiciens  :mortar_board:
 <br>
-<small><a id="academic-release" href="https://unsplash.com/photos/xrVDYZRGdw4">Crédit photo : Émile Peron</a></small>
+<small><i class="fas fa-camera"></i> <a id="academic-release" href="https://unsplash.com/photos/xrVDYZRGdw4"> Émile Peron</a></small>
 <br><br>

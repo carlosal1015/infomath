@@ -22,6 +22,9 @@ event_url = ""
 # Location of event.
 location = ""
 
+# Featured image thumbnail (optional)
+image_preview = "talks/matplotlib.png"
+
 # Is this a selected talk? (true/false)
 selected = true
 
