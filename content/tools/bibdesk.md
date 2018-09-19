@@ -1,21 +1,21 @@
 +++
-title = "Jupyter"
+title = "BibDesk"
 date = 2018-09-05T17:45:05+02:00
 draft = false
 
 # Tags and categories
 # For example, use `tags = []` for no tags, or the form `tags = ["A Tag", "Another Tag"]` for one or more tags.
-tags = ["python", "jupyter", "notebook", "R", "julia", "scientific computing", "collaborative", "online app", "desktop app"]
+tags = ["bibtex", "reference management software", "latex", "mac", "desktop app"]
 
 # Project summary to display on homepage.
-summary = "Open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text."
+summary = "Cross-platform Reference Management Software"
 
 # Optional image to display on homepage.
-image_preview = "tools/jupyter.jpg"
+image_preview = "tools/bibdesk.png"
 
 # Optional external URL for project (replaces project detail page).
-external_link = "https://jupyter.org"
-official_website = "https://jupyter.org"
+external_link = "https://bibdesk.sourceforge.io/"
+official_website = "https://bibdesk.sourceforge.io/"
 
 selected=true
 
