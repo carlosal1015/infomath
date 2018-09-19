@@ -14,8 +14,8 @@ summary = "Stocker vos dépôts Git sur le serveur du labo"
 image_preview = "tools/gitlab.png"
 
 # Optional external URL for project (replaces project detail page).
-external_link = "https://gitlab.lpma.upmc.fr"
-official_website = "https://gitlab.lpma.upmc.fr"
+external_link = ""
+official_website = ""
 
 selected=true
 
@@ -32,3 +32,10 @@ highlight = true
 image = ""
 caption = ""
 +++
+
+GitLab désigne à la fois l'entreprise et le logiciel open-source associé. Plusieurs instances sont déployées et accessibles, notamment :
+
+- [Gitlab.com](https://gitlab.com) : tout public. Pratique notamment pour la partie Continuous Integration - Continuous Deployment (CI-CD)
+- [Gitlab du LJLL](https://gitlab.lpma.math.upmc.fr/) : pour les membres du LJLL
+- [Gitlab de l'INRIA](https://gitlab.inria.fr/) : pour les agents INRIA
+- [FramaGit](https://framagit.org/) : tout public, proposé par [l'association Framasoft](https://framasoft.org)
