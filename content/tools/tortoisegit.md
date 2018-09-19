@@ -1,23 +1,23 @@
 +++
-title = "Overleaf"
+title = "Tortoise Git"
 date = 2018-09-05T17:45:05+02:00
 draft = false
 
 # Tags and categories
 # For example, use `tags = []` for no tags, or the form `tags = ["A Tag", "Another Tag"]` for one or more tags.
-tags = ["latex", "collaborative", "source control systems", "online app"]
+tags = ["git", "source control systems", "collaborative", "windows", "desktop app"]
 
 # Project summary to display on homepage.
-summary = "Online LaTeX editor and collaborative writing and publishing"
+summary = "Stocker vos dépôts Git en ligne"
 
 # Optional image to display on homepage.
-image_preview = "tools/overleaf.png"
+image_preview = "tools/tortoisegit.png"
 
 # Optional external URL for project (replaces project detail page).
-external_link = "https://www.overleaf.com/"
-official_website = "https://www.overleaf.com/"
+external_link = "https://tortoisegit.org/"
+official_website = "https://tortoisegit.org/"
 
-selected=true
+selected=false
 
 # Does the project detail page use math formatting?
 math = false

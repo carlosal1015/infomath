@@ -5,7 +5,7 @@ draft = false
 
 # Tags and categories
 # For example, use `tags = []` for no tags, or the form `tags = ["A Tag", "Another Tag"]` for one or more tags.
-tags = ["python", "jupyter", "notebook", "R", "julia", "scientific computing", "collaborative"]
+tags = ["python", "jupyter", "notebook", "R", "julia", "scientific computing", "collaborative", "online app", desktop app"]
 
 # Project summary to display on homepage.
 summary = "Open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text."

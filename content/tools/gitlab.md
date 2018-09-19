@@ -5,7 +5,7 @@ draft = false
 
 # Tags and categories
 # For example, use `tags = []` for no tags, or the form `tags = ["A Tag", "Another Tag"]` for one or more tags.
-tags = ["git", "source control systems", "collaborative"]
+tags = ["git", "source control systems", "collaborative", "online app"]
 
 # Project summary to display on homepage.
 summary = "Stocker vos dépôts Git sur le serveur du labo"

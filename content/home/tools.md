@@ -52,4 +52,5 @@ filter_default = 0
  [[filter]]
    name = "Text editor"
    tag = "text editor"
+
 +++
