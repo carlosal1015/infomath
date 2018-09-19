@@ -35,7 +35,7 @@ caption = ""
 
 GitLab désigne à la fois l'entreprise et le logiciel open-source associé. Plusieurs instances sont déployées et accessibles, notamment :
 
-- [Gitlab.com](https://gitlab.com) : tout public. Pratique notamment pour la partie Continuous Integration - Continuous Deployment (CI-CD)
+- [Gitlab.com](https://gitlab.com) : tout public. Pratique notamment pour la partie Continuous Integration - Continuous Delivery (CI-CD)
 - [Gitlab du LJLL](https://gitlab.lpma.math.upmc.fr/) : pour les membres du LJLL
 - [Gitlab de l'INRIA](https://gitlab.inria.fr/) : pour les agents INRIA
 - [FramaGit](https://framagit.org/) : tout public, proposé par [l'association Framasoft](https://framasoft.org)
