@@ -42,4 +42,4 @@ Les étudiant.e.s en thèse (ou pas) et les chercheur.e.s et MCF[^1] peuvent (et
 
 [Lien pour postuler]http://education.github.com/)
 
-[^1]: Sous le bouton "Yes, I'm a student", et il faut cliquer juste en dessous "No, I'm not a student but I want a discount" et suivre les instructions. Il faut réitérer la procédure tous les deux ans.
+[^1]: Sous le bouton "Yes, I'm a student", et il faut cliquer juste en dessous "No, I'm not a student but I want a discount" et suivre les instructions. Il faut réitérer la procédure tous les deux ans. En revanche, cela ne donne accès qu'aux dépôts privés de GitHub.
