@@ -11,10 +11,10 @@ tags = ["git", "source control systems", "collaborative", "mac", "windows", "lin
 OS = ["windows", "apple", "linux"]
 
 # Project summary to display on homepage.
-summary = "Stocker vos dépôts Git en ligne"
+summary = "Git graphical interface"
 
 # Optional image to display on homepage.
-image_preview = "tools/gitkraken.svg"
+image_preview = "tools/gitkraken.png"
 
 # Optional external URL for project (replaces project detail page).
 official_website = "https://www.gitkraken.com/"

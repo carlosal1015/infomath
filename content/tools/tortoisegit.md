@@ -11,7 +11,7 @@ tags = ["git", "source control systems", "collaborative", "windows", "desktop ap
 OS = ["windows"]
 
 # Project summary to display on homepage.
-summary = "Stocker vos dépôts Git en ligne"
+summary = "Git graphical interface"
 
 # Optional image to display on homepage.
 image_preview = "tools/tortoisegit.png"

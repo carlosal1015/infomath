@@ -1,5 +1,5 @@
 +++
-title = "Atom"
+title = "Visual Studio Code"
 date = 2018-09-05T17:45:05+02:00
 draft = false
 
@@ -13,10 +13,10 @@ OS = ["apple", "windows", "linux"]
 summary = "Open-source hackable text editor, easy to use"
 
 # Optional image to display on homepage.
-image_preview = "tools/atom.png"
+image_preview = "tools/vscode.png"
 
 # Optional external URL for project (replaces project detail page).
-official_website = "https://atom.io/"
+official_website = "https://code.visualstudio.com/"
 
 selected=true
 
@@ -34,9 +34,5 @@ image = ""
 caption = ""
 +++
 
-Open-source hackable text editor developped by the [GitHub team](https://github.com)[^1]. Numerous packages are available, we recommand *at least* the following:
+Open-source hackable text editor developped by Microsoft (yes we know, Microsoft is evil). Numerous packages are available for free.
 
-- Project
-- [...]
-
-[^1]: Note that GitHub has been bought by Microsoft which is developping the competiting software [Visual Studio Code](tools/vscode.md).
