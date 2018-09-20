@@ -15,4 +15,4 @@ weight = 25
 
 +++
 
-Fell free to contact us if you want to *present* a tool or if you *want* a tool to be presented and/or displayed in the recommanded tools section!
+Fell free to [contact us](#organizers) if you want to *present* a tool or if you *want* a tool to be presented and/or displayed in the recommanded tools section!
