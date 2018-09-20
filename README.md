@@ -1,3 +1,3 @@
-# Infomath seminar of the LJLL
+# Infomath
 
 Seminar dedicated to softwares and tools useful for mathematicians.
