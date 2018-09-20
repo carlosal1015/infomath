@@ -1,8 +1,14 @@
-Appart from the folder themes/academics and some files detailed in LICENSE_GCushen.md, the codes and content are under the following MIT License:
+The following files are under the MIT License :
+- Folder themes/academics
+- .gitignore
+- .gitmodules
+- update_academics.sh
+- netlify.tom
+- .editorconfig
 
 MIT License
 
-Copyright (c) 2018-present Jean-François Abadi, Pierre Marchand, Bertrand Thierry
+Copyright (c) 2016-present George Cushen
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
