@@ -347,3 +347,5 @@ enableGitInfo = false
 #    name = "Wo"
 #    url = "#about"
 #    weight = 1
+
+custom_css = ["tools.css"]

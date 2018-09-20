@@ -7,6 +7,8 @@ draft = false
 # For example, use `tags = []` for no tags, or the form `tags = ["A Tag", "Another Tag"]` for one or more tags.
 tags = ["text editor", "latex", "mac", "windows", "linux", "desktop app"]
 
+OS = [ "apple", "windows", "linux"]
+
 # Project summary to display on homepage.
 summary = "Hackable text editor: hard learning curve"
 
@@ -14,7 +16,6 @@ summary = "Hackable text editor: hard learning curve"
 image_preview = "tools/emacs.png"
 
 # Optional external URL for project (replaces project detail page).
-external_link = "https://www.gnu.org/software/emacs/"
 official_website = "https://www.gnu.org/software/emacs/"
 
 selected=true

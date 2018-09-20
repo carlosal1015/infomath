@@ -7,6 +7,9 @@ draft = false
 # For example, use `tags = []` for no tags, or the form `tags = ["A Tag", "Another Tag"]` for one or more tags.
 tags = ["git", "source control systems", "collaborative", "online app"]
 
+#OS
+OS = ["webapp"]
+
 # Project summary to display on homepage.
 summary = "Stocker vos dépôts Git sur le serveur du labo"
 
@@ -14,8 +17,7 @@ summary = "Stocker vos dépôts Git sur le serveur du labo"
 image_preview = "tools/gitlab.png"
 
 # Optional external URL for project (replaces project detail page).
-external_link = ""
-official_website = ""
+official_website = "https://gitlab.com"
 
 selected=true
 

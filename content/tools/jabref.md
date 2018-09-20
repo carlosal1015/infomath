@@ -7,6 +7,9 @@ draft = false
 # For example, use `tags = []` for no tags, or the form `tags = ["A Tag", "Another Tag"]` for one or more tags.
 tags = ["bibtex", "reference management software", "latex", "mac", "windows", "linux", "desktop app"]
 
+#OS
+OS = ["windows", "apple", "linux"]
+
 # Project summary to display on homepage.
 summary = "Cross-platform Reference Management Software"
 
@@ -14,7 +17,6 @@ summary = "Cross-platform Reference Management Software"
 image_preview = "tools/jabref.png"
 
 # Optional external URL for project (replaces project detail page).
-external_link = "https://www.jabref.org"
 official_website = "https://www.jabref.org"
 
 selected=true

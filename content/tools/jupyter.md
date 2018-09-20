@@ -7,6 +7,9 @@ draft = false
 # For example, use `tags = []` for no tags, or the form `tags = ["A Tag", "Another Tag"]` for one or more tags.
 tags = ["python", "jupyter", "notebook", "R", "julia", "scientific computing", "collaborative", "online app", "desktop app"]
 
+#OS
+OS = ["windows", "apple", "linux", "webapp"]
+
 # Project summary to display on homepage.
 summary = "Open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text."
 
@@ -14,7 +17,6 @@ summary = "Open-source web application that allows you to create and share docum
 image_preview = "tools/jupyter.jpg"
 
 # Optional external URL for project (replaces project detail page).
-external_link = "https://jupyter.org"
 official_website = "https://jupyter.org"
 
 selected=true

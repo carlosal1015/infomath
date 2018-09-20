@@ -10,11 +10,13 @@ tags = ["latex", "collaborative", "source control systems", "online app"]
 # Project summary to display on homepage.
 summary = "Online LaTeX editor and collaborative writing and publishing"
 
+#OS
+OS = ["webapp"]
+
 # Optional image to display on homepage.
 image_preview = "tools/overleaf.png"
 
 # Optional external URL for project (replaces project detail page).
-external_link = "https://www.overleaf.com/"
 official_website = "https://www.overleaf.com/"
 
 selected=true

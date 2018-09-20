@@ -7,6 +7,9 @@ draft = false
 # For example, use `tags = []` for no tags, or the form `tags = ["A Tag", "Another Tag"]` for one or more tags.
 tags = ["git", "source control systems", "collaborative", "mac", "windows", "linux", "desktop app"]
 
+#OS
+OS = ["windows", "apple", "linux"]
+
 # Project summary to display on homepage.
 summary = "Gérer les différentes versions de votre code ou de votre rapport LaTeX"
 
@@ -14,7 +17,6 @@ summary = "Gérer les différentes versions de votre code ou de votre rapport La
 image_preview = "tools/git.png"
 
 # Optional external URL for project (replaces project detail page).
-external_link = ""
 official_website = "https://git-scm.com"
 
 

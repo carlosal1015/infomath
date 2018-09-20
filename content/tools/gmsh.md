@@ -7,6 +7,9 @@ draft = false
 # For example, use `tags = []` for no tags, or the form `tags = ["A Tag", "Another Tag"]` for one or more tags.
 tags = ["gmsh", "mesh generation", "finite element method", "scientific computing", "mac", "windows", "linux", "desktop app"]
 
+#OS
+OS = ["windows", "apple", "linux"]
+
 # Project summary to display on homepage.
 summary = "Mesh generation and post-processing"
 
@@ -14,7 +17,6 @@ summary = "Mesh generation and post-processing"
 image_preview = "tools/gmsh.png"
 
 # Optional external URL for project (replaces project detail page).
-external_link = "https://www.gmsh.info"
 official_website = "https://www.gmsh.info"
 
 selected=true

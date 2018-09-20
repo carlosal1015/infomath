@@ -5,7 +5,9 @@ draft = false
 
 # Tags and categories
 # For example, use `tags = []` for no tags, or the form `tags = ["A Tag", "Another Tag"]` for one or more tags.
-tags = ["text editor", "latex", "mac", "windows", "linux", "desktop app"]
+tags = ["text editor", "latex", "desktop app"]
+
+OS = ["apple", "windows", "linux"]
 
 # Project summary to display on homepage.
 summary = "Hackable text editor, easy to use"
@@ -14,7 +16,6 @@ summary = "Hackable text editor, easy to use"
 image_preview = "tools/atom.png"
 
 # Optional external URL for project (replaces project detail page).
-external_link = "https://atom.io/"
 official_website = "https://atom.io/"
 
 selected=true

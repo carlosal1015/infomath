@@ -7,6 +7,9 @@ draft = false
 # For example, use `tags = []` for no tags, or the form `tags = ["A Tag", "Another Tag"]` for one or more tags.
 tags = ["git", "source control systems", "collaborative", "windows", "desktop app"]
 
+#OS
+OS = ["windows"]
+
 # Project summary to display on homepage.
 summary = "Stocker vos dépôts Git en ligne"
 
@@ -14,7 +17,6 @@ summary = "Stocker vos dépôts Git en ligne"
 image_preview = "tools/tortoisegit.png"
 
 # Optional external URL for project (replaces project detail page).
-external_link = "https://tortoisegit.org/"
 official_website = "https://tortoisegit.org/"
 
 selected=false

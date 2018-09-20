@@ -7,6 +7,9 @@ draft = false
 # For example, use `tags = []` for no tags, or the form `tags = ["A Tag", "Another Tag"]` for one or more tags.
 tags = ["git", "source control systems", "collaborative", "mac", "windows", "linux", "desktop app"]
 
+#OS
+OS = ["windows", "apple", "linux"]
+
 # Project summary to display on homepage.
 summary = "Stocker vos dépôts Git en ligne"
 
@@ -14,10 +17,9 @@ summary = "Stocker vos dépôts Git en ligne"
 image_preview = "tools/gitkraken.svg"
 
 # Optional external URL for project (replaces project detail page).
-external_link = "https://www.gitkraken.com"
 official_website = "https://www.gitkraken.com/"
 
-selected=true
+selected=false
 
 # Does the project detail page use math formatting?
 math = false

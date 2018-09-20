@@ -5,7 +5,7 @@
 
   {{ partial "header_image.html" . }}
 
-  <div class="article-container">
+  <div class="article-container pub">
 
     <div class="pub-title">
       <h1 itemprop="name">{{ .Title }}</h1>
@@ -14,10 +14,35 @@
         {{ partial "share.html" . }}
       </span>
     </div>
+    <div class="d-md-none space-below"></div>
 
     {{ with .Params.official_website }}
     <a class="btn btn-outline-primary my-1" href="{{ . }}" target="_blank" rel="noopener">Go to the official website</a>
     {{ end }}
+
+
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">System</div>
+          <div class="col-12 col-md-9">
+            <ul class="tool-icon os-icon" aria-hidden="true">
+              {{ range sort $.Params.OS }}
+              <li>
+                {{ if eq . "webapp"}}
+                  <i data-toggle="tooltip" title="Web App" class="fas fa-globe big-icon"></i>
+                {{ else }}
+                  <i data-toggle="tooltip" title="{{ humanize . }}" class="fab fa-{{ . }} big-icon"></i>
+                {{ end }}
+              </li>
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-md-none space-below"></div>
 
     <div class="article-style" itemprop="articleBody">
       {{ .Content }}

@@ -7,6 +7,8 @@ draft = false
 # For example, use `tags = []` for no tags, or the form `tags = ["A Tag", "Another Tag"]` for one or more tags.
 tags = ["finite element method", "scientific computing", "mac", "windows", "linux", "desktop app"]
 
+OS = [ "apple", "windows", "linux"]
+
 # Project summary to display on homepage.
 summary = "Finite element solver"
 
@@ -14,7 +16,6 @@ summary = "Finite element solver"
 image_preview = "tools/freefem.jpg"
 
 # Optional external URL for project (replaces project detail page).
-external_link = "http://www.freefem.org/"
 official_website = "http://www.freefem.org/"
 
 selected=true

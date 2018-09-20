@@ -1,0 +1,30 @@
+ul.tool-icon {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin-top: 0px;
+  color: #0095eb;
+}
+
+ul.tool-icon li {
+  margin-right: 10px;
+}
+
+ul.tool-icon li:last-of-type {
+  margin-right: 0;
+}
+
+.tool-icon li:hover {
+  transform: scale(1.2)
+}
+
+ul.tool-icon li i:hover{
+  cursor:pointer;
+}
+
+.black{
+  color:black!important;
+}
