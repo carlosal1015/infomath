@@ -8,7 +8,7 @@ draft = false
 tags = ["website"]
 
 # Availability (windows, apple, linux, webapp) could be also (android, iphone)
-OS = []
+OS = ["apple", "windows", "linux", "webapp"]
 
 # Tool summary to display on homepage.
 summary = "A professional webpage in 10 minuts!"

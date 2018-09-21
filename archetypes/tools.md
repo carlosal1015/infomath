@@ -7,8 +7,8 @@ draft = false
 # Example: `tags = ["machine-learning", "deep-learning"]`
 tags = []
 
-# Availability (windows, apple, linux, webapp) could be also (android, iphone)
-OS = [ ""]
+# Availability ("windows", "apple", "linux", "webapp") could be also (android, iphone)
+OS = []
 
 # Tool summary to display on homepage.
 summary = ""
