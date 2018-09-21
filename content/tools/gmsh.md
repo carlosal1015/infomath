@@ -13,8 +13,8 @@ OS = ["windows", "apple", "linux"]
 # Project summary to display on homepage.
 summary = "Mesh generation and post-processing"
 
-# Optional image to display on homepage.
-image_preview = "tools/gmsh.png"
+# Logo (or image preview) to be displayed on homepage.
+logo = "tools/gmsh.png"
 
 # Optional external URL for project (replaces project detail page).
 official_website = "https://www.gmsh.info"

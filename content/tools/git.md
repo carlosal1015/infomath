@@ -13,8 +13,8 @@ OS = ["windows", "apple", "linux"]
 # Project summary to display on homepage.
 summary = "Gérer les différentes versions de votre code ou de votre rapport LaTeX"
 
-# Optional image to display on homepage.
-image_preview = "tools/git.png"
+# Logo (or image preview) to be displayed on homepage.
+logo = "tools/git.png"
 
 # Optional external URL for project (replaces project detail page).
 official_website = "https://git-scm.com"

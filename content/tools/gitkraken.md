@@ -13,8 +13,8 @@ OS = ["windows", "apple", "linux"]
 # Project summary to display on homepage.
 summary = "Git graphical interface"
 
-# Optional image to display on homepage.
-image_preview = "tools/gitkraken.png"
+# Logo (or image preview) to be displayed on homepage.
+logo = "tools/gitkraken.png"
 
 # Optional external URL for project (replaces project detail page).
 official_website = "https://www.gitkraken.com/"

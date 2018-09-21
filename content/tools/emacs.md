@@ -12,8 +12,8 @@ OS = [ "apple", "windows", "linux"]
 # Project summary to display on homepage.
 summary = "Hackable text editor: hard learning curve"
 
-# Optional image to display on homepage.
-image_preview = "tools/emacs.png"
+# Logo (or image preview) to be displayed on homepage.
+logo = "tools/emacs.png"
 
 # Optional external URL for project (replaces project detail page).
 official_website = "https://www.gnu.org/software/emacs/"

@@ -13,8 +13,8 @@ OS = ["windows", "apple", "linux", "webapp"]
 # Project summary to display on homepage.
 summary = "Open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text."
 
-# Optional image to display on homepage.
-image_preview = "tools/jupyter.jpg"
+# Logo (or image preview) to be displayed on homepage.
+logo = "tools/jupyter.jpg"
 
 # Optional external URL for project (replaces project detail page).
 official_website = "https://jupyter.org"

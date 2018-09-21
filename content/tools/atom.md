@@ -12,8 +12,8 @@ OS = ["apple", "windows", "linux"]
 # Project summary to display on homepage.
 summary = "Open-source hackable text editor, easy to use"
 
-# Optional image to display on homepage.
-image_preview = "tools/atom.png"
+# Logo (or image preview) to be displayed on homepage.
+logo = "tools/atom.png"
 
 # Optional external URL for project (replaces project detail page).
 official_website = "https://atom.io/"

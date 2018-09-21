@@ -13,8 +13,8 @@ OS = ["windows", "apple", "linux"]
 # Project summary to display on homepage.
 summary = "Cross-platform Reference Management Software"
 
-# Optional image to display on homepage.
-image_preview = "tools/jabref.png"
+# Logo (or image preview) to be displayed on homepage.
+logo = "tools/jabref.png"
 
 # Optional external URL for project (replaces project detail page).
 official_website = "https://www.jabref.org"

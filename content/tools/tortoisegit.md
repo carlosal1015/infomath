@@ -13,8 +13,8 @@ OS = ["windows"]
 # Project summary to display on homepage.
 summary = "Git graphical interface"
 
-# Optional image to display on homepage.
-image_preview = "tools/tortoisegit.png"
+# Logo (or image preview) to be displayed on homepage.
+logo = "tools/tortoisegit.png"
 
 # Optional external URL for project (replaces project detail page).
 official_website = "https://tortoisegit.org/"

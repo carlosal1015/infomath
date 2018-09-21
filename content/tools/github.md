@@ -13,8 +13,8 @@ OS = [ "webapp"]
 # Project summary to display on homepage.
 summary = "Stocker vos dépôts Git en ligne"
 
-# Optional image to display on homepage.
-image_preview = "tools/github.png"
+# Logo (or image preview) to be displayed on homepage.
+logo = "tools/github.png"
 
 # Official website
 official_website = "https://github.com"

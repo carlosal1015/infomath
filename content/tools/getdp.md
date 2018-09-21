@@ -12,8 +12,8 @@ OS = [ "apple", "windows", "linux"]
 # Project summary to display on homepage.
 summary = "Finite element solver"
 
-# Optional image to display on homepage.
-image_preview = "tools/getdp.jpg"
+# Logo (or image preview) to be displayed on homepage.
+logo = "tools/getdp.jpg"
 
 # Optional external URL for project (replaces project detail page).
 official_website = "http://getdp.info/"

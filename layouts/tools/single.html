@@ -5,10 +5,14 @@
 
   {{ partial "header_image.html" . }}
 
+  
+
   <div class="article-container pub">
 
-    <div class="pub-title">
-      <h1 itemprop="name">{{ .Title }}</h1>
+    <div class="pub-title">        
+      <h1 itemprop="name">
+          <img src="/img/{{ .Params.logo }} " itemprop="image" alt="logo" style="display:inline-block;height:1.5em; margin-right:10px;">
+          {{ .Title }}</h1>
       <span class="pub-authors" itemprop="author">&nbsp;</span>
       <span class="float-right">
         {{ partial "share.html" . }}

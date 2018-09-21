@@ -13,8 +13,8 @@ summary = "Online LaTeX editor and collaborative writing and publishing"
 #OS
 OS = ["webapp"]
 
-# Optional image to display on homepage.
-image_preview = "tools/overleaf.png"
+# Logo (or image preview) to be displayed on homepage.
+logo = "tools/overleaf.png"
 
 # Optional external URL for project (replaces project detail page).
 official_website = "https://www.overleaf.com/"

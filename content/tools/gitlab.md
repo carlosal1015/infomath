@@ -13,8 +13,8 @@ OS = ["webapp"]
 # Project summary to display on homepage.
 summary = "Stocker vos dépôts Git sur le serveur du labo"
 
-# Optional image to display on homepage.
-image_preview = "tools/gitlab.png"
+# Logo (or image preview) to be displayed on homepage.
+logo = "tools/gitlab.png"
 
 # Optional external URL for project (replaces project detail page).
 official_website = "https://gitlab.com"

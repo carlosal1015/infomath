@@ -79,7 +79,7 @@
       {{ end }}
       <div class="col-12 col-md-6 col-lg-4 col-xl-6 project-item isotope-item {{ delimit (apply .Params.tags "urlize" ".") " " }}">
         <div class="card">
-          {{ with $project.Params.image_preview }}
+          {{ with $project.Params.logo }}
           <a href="{{ $.Scratch.Get "project_url" }}" title="" class="card-image hover-overlay"
              {{ $.Scratch.Get "target" | safeHTMLAttr }}>
             <img src="{{ "/img/" | relURL }}{{ . }}" alt="" class="img-responsive">

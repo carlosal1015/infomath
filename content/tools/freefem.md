@@ -12,8 +12,8 @@ OS = [ "apple", "windows", "linux"]
 # Project summary to display on homepage.
 summary = "Finite element solver"
 
-# Optional image to display on homepage.
-image_preview = "tools/freefem.jpg"
+# Logo (or image preview) to be displayed on homepage.
+logo = "tools/freefem.jpg"
 
 # Optional external URL for project (replaces project detail page).
 official_website = "http://www.freefem.org/"
