@@ -18,7 +18,7 @@ image_preview = "tools/atom.png"
 # Optional external URL for project (replaces project detail page).
 official_website = "https://atom.io/"
 
-selected=true
+selected=false
 
 # Does the project detail page use math formatting?
 math = false
@@ -34,9 +34,13 @@ image = ""
 caption = ""
 +++
 
-Open-source hackable text editor developped by the [GitHub team](https://github.com)[^1]. Numerous packages are available, we recommand *at least* the following:
+{{% alert warning %}}
+As [VSCode]({{< ref "tools/vscode.md">}}) is also open-source but seems to be much robust than Atom (and less CPU-demanding), we now recommend to use [VSCode]({{< ref "tools/vscode.md">}})  instead of Atom
+{{% /alert %}}
+
+Open-source hackable text editor developped by the [GitHub team](https://github.com)[^1]. Numerous packages are available, we recommend *at least* the following:
 
 - Project
 - [...]
 
-[^1]: Note that GitHub has been bought by Microsoft which is developping the competiting software [Visual Studio Code](tools/vscode.md).
+[^1]: Note that GitHub has been [bought by Microsoft](https://blogs.microsoft.com/blog/2018/06/04/microsoft-github-empowering-developers/) which is developping the text editor [VSCode]({{< ref "tools/vscode.md">}}) .
