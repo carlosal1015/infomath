@@ -4,8 +4,8 @@ widget = "tools"
 active = true
 date = 2016-04-20T00:00:00
 
-title = "Useful tools"
-subtitle = ""
+title = "Softwares and Web App"
+subtitle = "Tested and approved!"
 
 # Order that this section will appear in.
 weight = 50

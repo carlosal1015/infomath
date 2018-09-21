@@ -15,4 +15,10 @@ weight = 25
 
 +++
 
-Fell free to [contact us](#organizers) if you want to *present* a tool or if you *want* a tool to be presented and/or displayed in the recommanded tools section!
+## You want to present one at the seminar?
+
+Fell free to [contact us](#organizers) either by email or around a coffee.
+
+## A tool/software is missing in the list? Found a mistake or want to improve the website? 
+
+Navigate to our [GitHub repository](https://www.github.com/Bertbk/infomath) and launch an issue or even a Pull Request!

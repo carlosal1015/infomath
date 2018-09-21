@@ -19,12 +19,12 @@ weight = 3
 # Call to action button (optional).
 #   Activate the button by specifying a URL and button label below.
 #   Deactivate by commenting out parameters, prefixing lines with `#`.
-#[cta]
-#  url = "./post/getting-started/"
-#  label = '<i class="fas fa-download"></i> Install Now'
+[cta]
+  url = "https://www.github.com/Bertbk/infomath"
+  label = '<i class="fab fa-github"></i> Follow us on GitHub!'
 +++
 
-Le séminaire des outils informatiques à l'usage des mathématiciennes et mathématiciens  :mortar_board:
+Softwares and geekiness stuffs for mathematicians :mortar_board:
 <br>
-<small><a id="academic-release" href="https://unsplash.com/photos/xrVDYZRGdw4">Crédit photo : Émile Peron</a></small>
+<small><a id="academic-release" href="https://unsplash.com/photos/xrVDYZRGdw4">Photo credit : Émile Peron</a></small>
 <br><br>
