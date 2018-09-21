@@ -89,6 +89,7 @@
             <h4><a href="{{ $.Scratch.Get "project_url" }}" {{ $.Scratch.Get "target" | safeHTMLAttr }}>{{ .Title }}</a></h4>
             <div class="card-desription">
               {{ with $project.Params.summary }}<p>{{ . | markdownify }}</p>{{ end }}
+              {{ if not (eq (len $project.Params.os) 0) }}
               <ul class="tool-icon os-icon black" aria-hidden="true">
                   {{ range sort $project.Params.os }}
                   <li>
@@ -100,6 +101,7 @@
                   </li>
                   {{ end }}
               </ul>
+              {{ end }}
             </div>
           </div>          
         </div>
