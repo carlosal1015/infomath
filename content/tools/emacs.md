@@ -5,7 +5,7 @@ draft = false
 
 # Tags and categories
 # For example, use `tags = []` for no tags, or the form `tags = ["A Tag", "Another Tag"]` for one or more tags.
-tags = ["text editor", "latex", "mac", "windows", "linux", "desktop app"]
+tags = ["text editor", "mac", "windows", "linux", "desktop app"]
 
 OS = [ "apple", "windows", "linux"]
 
