@@ -18,7 +18,7 @@ logo = "tools/bibdesk.png"
 # Optional external URL for project (replaces project detail page).
 official_website = "https://bibdesk.sourceforge.io/"
 
-selected=true
+selected=false
 
 # Does the project detail page use math formatting?
 math = false

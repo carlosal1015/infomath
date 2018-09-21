@@ -19,7 +19,7 @@ logo = "tools/tortoisegit.png"
 # Optional external URL for project (replaces project detail page).
 official_website = "https://tortoisegit.org/"
 
-selected=false
+selected=true
 
 # Does the project detail page use math formatting?
 math = false

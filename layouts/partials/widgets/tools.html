@@ -86,7 +86,7 @@
           </a>
           {{ end }}
           <div class="card-text">
-            <h4><a href="{{ $.Scratch.Get "project_url" }}" {{ $.Scratch.Get "target" | safeHTMLAttr }}>{{ .Title }}</a></h4>
+            <h4>{{ if $project.Params.selected }}<i data-toggle="tooltip" title="Selected" class="fas fa-star"></i>{{ end }} <a href="{{ $.Scratch.Get "project_url" }}" {{ $.Scratch.Get "target" | safeHTMLAttr }}>{{ .Title }}</a></h4>
             <div class="card-desription">
               {{ with $project.Params.summary }}<p>{{ . | markdownify }}</p>{{ end }}
               {{ if not (eq (len $project.Params.os) 0) }}
