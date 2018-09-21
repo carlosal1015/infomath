@@ -53,4 +53,7 @@ filter_default = 0
    name = "Text editor"
    tag = "text editor"
 
+ [[filter]]
+   name = "Website"
+   tag = "website"
 +++
