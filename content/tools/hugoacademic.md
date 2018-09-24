@@ -35,3 +35,9 @@ image = ""
 caption = ""
 
 +++
+
+
+- [Academic Kickstart repo](https://github.com/sourcethemes/academic-kickstart)
+- [(Extensive) Documentation](https://sourcethemes.com/academic/docs/)
+
+
