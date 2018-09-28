@@ -38,7 +38,7 @@ caption = ""
 ## Read the Documentation
 
 
-[The Documentation](https://code.visualstudio.com/Docs) is exhaustive and detailed: **read the doc!** This is even more true before installing a (random) package: the functionnality you are looking for is probably in the core of vscode! At least, read the [Basic Editing](https://code.visualstudio.com/docs/editor/codebasics). For every languages or functionnality ([intellisence](https://code.visualstudio.com/docs/editor/intellisense), [debugging](https://code.visualstudio.com/docs/editor/debugging),...), the documentation also provides a list of **useful and recommended associated packages**. 
+[The Documentation](https://code.visualstudio.com/Docs) is exhaustive and detailed: **read the doc!** This is even more true before installing a (random) package: the functionnality you are looking for is probably in the core of vscode! At least, read the [Basic Editing](https://code.visualstudio.com/docs/editor/codebasics). For every languages or functionnality ([intellisense](https://code.visualstudio.com/docs/editor/intellisense), [debugging](https://code.visualstudio.com/docs/editor/debugging),...), the documentation also provides a list of **useful and recommended associated packages**. 
 
 
 ## Useful shortcuts
