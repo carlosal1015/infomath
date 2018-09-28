@@ -34,5 +34,38 @@ image = ""
 caption = ""
 +++
 
-Open-source hackable text editor developped by Microsoft (yes we know, Microsoft is evil). Numerous packages are available for free.
+Open-source hackable text editor developped by Microsoft (yes we know, Microsoft is evil). 
+
+## Read the Documentation
+
+
+[The Documentation](https://code.visualstudio.com/Docs) is exhaustive and detailed: **read the doc!** before installing a (random) package: the functionnality you are looking for is probably in the core of vscode! At least, read the [Basic Editing](https://code.visualstudio.com/docs/editor/codebasics). For every languages or functionnality ([intellisence](https://code.visualstudio.com/docs/editor/intellisense), [debugging](https://code.visualstudio.com/docs/editor/debugging),...), the documentation provides :
+
+- Obviously: shortcuts, functionnalities, ...
+- A list of useful associated packages 
+
+
+## Useful shortcuts
+
+- `ctrl` + `p` : command prompt to select file (add a `>` to use extension)
+- `ctrl` + `shift` + `p` : command prompt (for extension)
+
+
+## Packages: everything you need!
+
+We recommend the user to install only packages that have **many users** and to give priority to **recommended** packages. Here is a list of some packages that we tested (and approved!). Obviously keep the number of packages as small as possible: if you don't do C/C++, do not install the C/C++ package.
+
+### Improved Graphical User Interface (GUI)
+
+- [Project Manager](https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager)
+- [vscode-icons](https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-icons)
+- [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) : save your settings on your github account
+
+### Languages
+
+- [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
+- [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+- [C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
+- [Markdown](https://code.visualstudio.com/Docs/languages/markdown) : [Markdown Lint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint), [Markdown Preview Github Styling](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-preview-github-styles), [Markdown+Math](https://marketplace.visualstudio.com/items?itemName=goessner.mdmath)
+
 
