@@ -43,9 +43,17 @@ caption = ""
 
 ## Useful shortcuts
 
+The full list can be accessed by doing : `ctrl` + `k` then `ctrl` + `r`. It might differs from the OS you are using :
+
 - `ctrl` + `p` : command prompt to select file (add a `>` to use extension)
 - `ctrl` + `shift` + `p` : command prompt (for extension)
-
+- `ctrl` + `x`: cut entire line (if nothing selected)
+- `ctrl` + `c`: copy entire line (if nothing selected)
+- `ctrl` + `k` then `ctrl` + `c` : comment line
+- `ctrl` + `k` then `ctrl` + `u` : uncomment line
+- `alt` + `click` : insert new cursor
+- `shift` + `alt` + `↑/↓` : insert cursor above/below
+- `ctrl` + `f` : format line or multi-lines (= auto indent)
 
 ## Packages: everything you need!
 
@@ -56,6 +64,9 @@ We recommend the user to install only packages that have **many users** and to g
 - [Project Manager](https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager)
 - [vscode-icons](https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-icons)
 - [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) : save your settings on your github account
+- [Todo+](https://marketplace.visualstudio.com/items?itemName=fabiospampinato.vscode-todo-plus) : manage a TODO list
+- [TODO Highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight) : highlight `TODO` and `FIXME` in a source code
+
 
 ### Languages
 
