@@ -34,7 +34,6 @@ image = ""
 caption = ""
 +++
 
-Open-source hackable text editor developped by Microsoft (yes we know, Microsoft is evil). 
 
 ## Read the Documentation
 
