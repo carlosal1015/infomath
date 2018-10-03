@@ -66,7 +66,7 @@ enableGitInfo = false
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
   avatar = "portrait.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
-  email = ""
+  email = "infomath@ljll.math.upmc.fr"
 #  telegram = "thierry@ljll.math.upmc.fr"
   address = "Laboratoire Jacques Louis Lions\nUniversité Pierre et Marie Curie\n4 place Jussieu\n 75252 Paris cedex 05\n France"
   office_hours = ""
@@ -281,7 +281,7 @@ enableGitInfo = false
 
 [[menu.main]]
   name = "Talks"
-  url = "#talks"
+  url = "#talks_upcoming"
   weight = 5
 
   [[menu.main]]
@@ -300,8 +300,8 @@ enableGitInfo = false
   weight = 15
 
 [[menu.main]]
-  name = "Location"
-  url = "#location"
+  name = "Contact"
+  url = "#contact"
   weight = 20
 
 # Link to a PDF of your resume/CV from the menu.

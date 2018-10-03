@@ -1,0 +1,104 @@
+{{ $ := .root }}
+{{ $page := .page }}
+{{/* Get Talks */}}
+{{ $.Scratch.Set "talks" (where $.Site.RegularPages "Type" "talk") }}
+{{/* Exclude talks shown in Selected Talks widget? */}}
+{{ if $page.Params.exclude_selected }}
+{{ $.Scratch.Set "talks" (where ($.Scratch.Get "talks") ".Params.selected" "!=" true) }}
+{{ end }}
+{{/* Exclude Upcoming Talks ? */}}
+{{ if $page.Params.exclude_upcoming }}
+{{ $.Scratch.Set "talks" (where ($.Scratch.Get "talks") ".Params.time_start" "lt" now) }}
+{{ end }}
+{{/* Exclude Past Talks ? */}}
+{{ if $page.Params.exclude_past }}
+{{ $.Scratch.Set "talks" (where ($.Scratch.Get "talks") ".Params.time_start" "gt" now) }}
+{{ end }}
+
+{{/* Number of talks  */}}
+{{ $talks_len := len "talks"}}
+
+{{/* Order of appeareance  */}}
+{{ $order := "dec" }}
+{{ with $page.Params.order }}
+{{ $order = . }}
+{{ end }}
+
+{{/* Force 1st talk to be detailed  */}}
+{{ $force_first_detailed  := false }}
+{{ with $page.Params.force_first_detailed  }}
+{{ $force_first_detailed  = true }}
+{{ end }}
+
+<!-- Talks widget (copy/paste) -->
+<div class="row">
+  <div class="col-12 col-lg-4 section-heading">
+    <h1>{{ with $page.Title }}{{ . | markdownify }}{{ end }}</h1>
+    {{ with $page.Params.subtitle }}<p>{{ . | markdownify }}</p>{{ end }}
+    {{ if gt $talks_len $page.Params.count }}
+    <p class="view-all">
+      <a href="{{ ($.Site.GetPage "section" "talk").RelPermalink }}">
+        {{ i18n "more_talks" | markdownify }}
+        <i class="fas fa-angle-double-right"></i>
+      </a>
+    </p>
+    {{ end }}
+  </div>
+  <div class="col-12 col-lg-8">
+    {{ with $page.Content }}<p>{{ . | markdownify }}</p>{{ end }}
+    {{ range first $page.Params.count (sort ($.Scratch.Get "talks") ".Params.time_start" $order) }}
+      {{ if $force_first_detailed }}
+        {{ partial "talk_li_detailed" . }}
+        {{ $force_first_detailed  = false }}
+      {{ else }}
+        {{ if eq $page.Params.list_format 1 }}
+          {{ partial "talk_li_detailed" . }}
+        {{ else }}
+          {{ partial "talk_li_simple" . }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+{{ $ := .root }}
+{{ $page := .page }}
+-->
+<!-- Selected Talks widget -->
+<!--<div class="row">
+  <div class="col-12 col-lg-4 section-heading">
+    <h1>{{ with $page.Title }}{{ . | markdownify }}{{ end }}</h1>
+    {{ with $page.Params.subtitle }}<p>{{ . | markdownify }}</p>{{ end }}
+  </div>
+  <div class="col-12 col-lg-8">
+    {{ with $page.Content }}<p>{{ . | markdownify }}</p>{{ end }}
+
+    {{ range (sort ((where (where $.Site.RegularPages "Type" "talk") ".Params.time_start" "gt" now)) ".Params.time_start" "asc") }}
+      {{ if eq $page.Params.list_format 1 }}
+        {{ partial "talk_li_detailed" . }}
+      {{ else }}
+        {{ partial "talk_li_simple" . }}
+      {{ end }}
+    {{ end }}
+  </div>
+</div>
+-->
