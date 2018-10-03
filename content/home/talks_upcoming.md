@@ -18,9 +18,6 @@ count = 2
 #   1 = Detailed
 list_format = 1
 
-# Force 1st to be detailed
-force_first_detailed = true
-
 # Exclude talks that are shown in the Selected Talks widget?
 exclude_selected = false
 
