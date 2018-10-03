@@ -285,8 +285,8 @@ enableGitInfo = false
   weight = 5
 
   [[menu.main]]
-  name = "Posts"
-  url = "#posts"
+  name = "Tuto & links"
+  url = "#tuto_links"
   weight = 6
 
 [[menu.main]]
