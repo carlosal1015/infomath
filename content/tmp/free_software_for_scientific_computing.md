@@ -11,7 +11,7 @@ math = false
 # Does the project detail page use source code highlighting?
 highlight = true
 
-[menu.temporaire]
+[menu.tmp]
   name = "Software for scientific computing"
   weight = 1
 
