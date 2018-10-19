@@ -17,4 +17,4 @@ weight = 25
 
 We try to regroup links, tutorials or documentations of interest for either programming language, softwares, ...
 
-[Go to the page]({{< ref "/tuto_links.md" >}})
+[Go to the page]({{< ref "/docus/tuto_links.md" >}})
