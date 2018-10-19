@@ -45,6 +45,7 @@ highlight = true
 This page is maintained by [Antoine Le Hyaric](https://www.ljll.math.upmc.fr/lehyaric/) who nicely proposed to migrate his huge work to infomath website.
 {{% /alert %}}
 
+{{% toc %}}
 
 ## Categories
 
