@@ -2,7 +2,7 @@
 title = "Tutos & Links"
 date = 2018-09-05T17:45:05+02:00
 draft = false
-layout = "docs"
+type = "docs"
 toc = true
 
 # Tags and categories
