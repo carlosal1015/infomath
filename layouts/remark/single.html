@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en-us" }}">
+  <head>
+    {{ $css := .Site.Data.assets.css }}
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="Source Themes Academic {{ .Site.Data.academic.version }}">
+  
+    <link rel="manifest" href="{{ "site.webmanifest" | relURL }}">
+    <link rel="icon" type="image/png" href="{{ "/img/icon.png" | relURL }}">
+    <link rel="apple-touch-icon" type="image/png" href="{{ "/img/icon-192.png" | relURL }}">
+  
+    <link rel="canonical" href="{{ .Permalink }}">
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" type="text/css" href="/css/middlebury.css">
+    <link rel="stylesheet" type="text/css" href="/css/middlebury-fonts.css">
+
+  </head>
+  <body>
+    <textarea id="source">
+{{ .RawContent }}
+      </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
+
+
+
+
