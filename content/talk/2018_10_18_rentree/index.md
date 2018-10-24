@@ -22,9 +22,6 @@ event_url = ""
 # Location of event.
 location = ""
 
-# Featured image thumbnail (optional)
-image_preview = "headers/rich-tervet-662093-unsplash.jpg"
-
 # Is this a selected talk? (true/false)
 selected = false
 

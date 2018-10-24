@@ -6,7 +6,7 @@
 
 # The URL of your website.
 # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
-baseurl = "https://infomath.netlify.com/"
+baseurl = "https://infomath.gitlab.io/"
 
 # Title of your site
 title = "Séminaire Infomath"
@@ -163,7 +163,7 @@ enableGitInfo = false
 
   # Link custom CSS and JS assets
   #   (relative to /static/css and /static/js respectively)
-  custom_css = []
+  custom_css = ["tools.css"]
   custom_js  = []
 
   # Publication types.
@@ -353,4 +353,3 @@ enableGitInfo = false
 #    url = "#about"
 #    weight = 1
 
-custom_css = ["tools.css"]
