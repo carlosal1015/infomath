@@ -41,7 +41,7 @@ tags = ["webpage"]
 
 # Links (optional).
 url_pdf = ""
-url_slides = "/slides/2018_10_25_website"
+url_slides = "slides/2018_10_25_website"
 url_video = ""
 url_code = ""
 
@@ -50,12 +50,6 @@ math = false
 
 # Does the content use source code highlighting?
 highlight = true
-
-# Featured image
-# Place your image in the `static/img/` folder and reference its filename below, e.g. `image = "example.jpg"`.
-[header]
-image = ""
-caption = ""
 
 +++
 

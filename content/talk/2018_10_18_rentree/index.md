@@ -41,7 +41,7 @@ tags = ["teaching"]
 
 # Links (optional).
 url_pdf = ""
-url_slides = "/slides/2018_10_18_rentree"
+url_slides = "slides/2018_10_18_rentree"
 url_video = ""
 url_code = ""
 
@@ -53,9 +53,13 @@ highlight = true
 
 # Featured image
 # Place your image in the `static/img/` folder and reference its filename below, e.g. `image = "example.jpg"`.
-[header]
-image = "headers/rich-tervet-662093-unsplash.jpg"
-caption = "[Crédit : Rich Tervet](https://unsplash.com/photos/q2GNdFmhxx4)"
+[image]
+  # Caption (optional)
+  caption = "[Crédit : Rich Tervet](https://unsplash.com/photos/q2GNdFmhxx4)"
+
+  # Focal point (optional)
+  # Options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
+  focal_point = "Center"
 
 +++
 
