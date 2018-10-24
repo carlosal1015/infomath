@@ -41,7 +41,7 @@ tags = ["webpage"]
 
 # Links (optional).
 url_pdf = ""
-url_slides = "slides/2018_10_25_website"
+url_slides = "https://infomath.gitlab.io/slides/2018_10_25_website"
 url_video = ""
 url_code = ""
 

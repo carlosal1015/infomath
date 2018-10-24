@@ -22,6 +22,7 @@ event_url = ""
 # Location of event.
 location = ""
 
+
 # Is this a selected talk? (true/false)
 selected = false
 
@@ -38,7 +39,7 @@ tags = ["teaching"]
 
 # Links (optional).
 url_pdf = ""
-url_slides = "slides/2018_10_18_rentree"
+url_slides = "https://infomath.gitlab.io/slides/2018_10_18_rentree"
 url_video = ""
 url_code = ""
 
