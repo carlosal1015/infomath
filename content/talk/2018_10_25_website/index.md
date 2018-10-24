@@ -41,7 +41,7 @@ tags = ["webpage"]
 
 # Links (optional).
 url_pdf = ""
-url_slides = ""
+url_slides = "/slides/2018_10_25_website"
 url_video = ""
 url_code = ""
 
@@ -71,10 +71,7 @@ Using the static web generator [Hugo](https://gohugo.io) and the wonderful theme
 
 1. [Optional but highly recommended] Git and a [Github]({{<ref "tools/github.md">}}) or [Gitlab(.com)]({{<ref "tools/gitlab.md">}}) (but not the local Gitlab!) account
 2. A good text editor: we recommend [VSCode]({{<ref "tools/vscode.md" >}})
-3. [Optionnal: to work locally] Hugo (v. 0.48 compiled with 1.11), see [documentation for installation](https://gohugo.io/getting-started/installing/):
-  1. Mac users: install hugo via [Brew](https://brew.sh/)
-  2. Linux users: Sadly, compile Go and Hugo yourself (package are currently outdated)
-  3. Windows users: well I don't know
+3. [Optionnal: to work locally] [Hugo](https://gohugo.io/getting-started/installing/)
 
 ## Let's do it!
 
@@ -83,10 +80,9 @@ Using the static web generator [Hugo](https://gohugo.io) and the wonderful theme
 All the stages are detailed on the [exhaustive documentation of Hugo Academic](https://sourcethemes.com/academic/docs/) but we do remind some of them here. We assume you have a Github account but it is the same if you own a Gitlab(.com) one:
 
 1. Have Github/Gitlab.com account
-2. Go to [Netlify](https://netlify.com)
-3. Provide the following link: https://github.com/sourcethemes/academic-kickstart
-4. Allow Netlify to modify your github/gitlab account
-5. Choose a repo name (*e.g* "webpage")
+2. Go to [Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/sourcethemes/academic-kickstart)
+3. Allow Netlify to modify your github/gitlab account
+4. Choose a repo name (*e.g* "webpage")
 
 At this stage, you already have a basic but working  website. The URL is however UGLY:
 
