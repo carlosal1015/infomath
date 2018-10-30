@@ -39,7 +39,7 @@ tags = ["teaching"]
 
 # Links (optional).
 url_pdf = ""
-url_slides = "../../slides/2018_10_18_rentree"
+url_slides = "../../slides/2018_rentree"
 url_video = ""
 url_code = ""
 
