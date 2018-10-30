@@ -369,7 +369,8 @@ Remarque : le "html" des Widgets est dans `/themes/academic/layouts/partials/wid
 ### Widgets usuels
 
 - Majoritairement à **contenu "vide"** mais remplis de **méta-données**
-- CHoisi dans les méta-données
+- Choisi dans les méta-données
+- Le widget `custom` permet d'afficher simplement ce que vous voulez
 
 ```toml
 +++
@@ -382,10 +383,9 @@ date = 2016-04-20T00:00:00 #<- Ne sera pas publié si date dans futur
 ```
 
 
-### Des widgets "masqués" 
+### Widget page
 
-- `custom` : Affiche simplement ce que vous voulez
-- `page` : Listing simple de données "à vous"
+- Créer une page avec [ses propres "widgets"](https://sourcethemes.com/academic/docs/managing-content/#create-a-widget-page) (comme la homepage) est possible
 
 ---
 
