@@ -12,8 +12,8 @@ time_start = 2018-11-22T16:00:00+02:00
 authors = ["Simon TOURNIER (IR - Hôpital St. Louis)"]
 
 # Abstract and optional shortened version.
-abstract = ""
-abstract_short = ""
+abstract = "Aujourd'hui, la plus grande partie du travail sur ordinateur consiste à lire du texte pour produire un nouveau texte. Par conséquent, il apparait essentiel de maitriser un outil d'édition de texte ; pour l'efficacité et son confort.<br>Je vous propose de parler de mon expérience avec Emacs.<br>Emacs ? ce vieux truc de geek dont on ne comprend rien ?<br>Oui oui, cet éditeur de texte. Je dirais même : ce couteau-suisse.<br>Je vous présenterai la \"philosophie\" d'Emacs à travers mon *flot de travail*. En prenant comme exemples l'édition de documents LaTeX et le développement de scripts Python. J'expliquerai aussi comment Emacs+Org-mode m'aide pour organiser mes tâches et autres ligne-mortes.<br>Puis je discuterai pourquoi un éditeur est plus efficace qu'un autre en parlant de l'extensibilité. Comment adapter son outil à ses besoins ? En somme, je parlerai d'extensions empaquetées et d'Emacs Lisp.<br>En résumé, le but de la présentation sera d'expliquer pourquoi Emacs c'est génial."
+abstract_short = "Emacs ? ce vieux truc de geek dont on ne comprend rien ? Oui oui, cet éditeur de texte. Je dirais même : ce couteau-suisse."
 
 # Name of event and optional event URL.
 event = ""
