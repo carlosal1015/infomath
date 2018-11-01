@@ -1,6 +1,6 @@
 +++
 title = "Logiciels gratuits pour le calcul scientifique"
-date = "2018-11-01T08:47:59+01:00"
+date = "2018-11-01T22:15:27+01:00"
 draft = false
 layout = "docs"
 
@@ -30,15 +30,16 @@ highlight = true
    -              [[LaTeX]] [[Libtool]] [[METIS]] [[MUMPS]] [[Matlab]] [[Maxima]] [[MayaVi]] [[Mercurial]] [[Meshing]] [[Méfisto]] [[Mélina]]
    -              [[NAPACK]] [[NCO]] [[NSC2KE]] [[Netgen]] [[OFELI]] [[OFF]] [[OOFEM]] [[Octave]] [[OpenMP]] [[OpenSees]] [[PARI/GP]]
    -              [[PBLAS]] [[PETSc]] [[PLAPACK]] [[POOMA]] [[PRIMME]] [[PRISM]] [[ParaView]] [[Perl]] [[Plotmtv]] [[Povray]] [[Python]]
-   -              [[Questions/Réponses]] [[Radia]] [[Rheolef]] [[SLEPc]] [[SLFCFD]] [[SLFFEA]] [[SPARSE]] [[SPOOLES]] [[STEP]] [[Sage]]
-   -              [[Salomé]] [[ScaLAPACK]] [[Scilab]] [[SparseLib++]] [[SuperLU]] [[TYPHON]] [[TetGen]] [[Triangle]] [[UMFPACK]] [[VRML]]
-   -              [[VTK]] [[VisIt]] [[Visualisation]] [[XEmacs]] [[Y12M]] [[Yorick]] [[Z88]] [[autres_informations_utiles]] [[bamg]]
-   -              [[bidirectional_reflectance_codes]] [[bilum]] [[blacs]] [[brl-cad]] [[bsp]] [[c]] [[cadna]] [[calcul]] [[calculix]]
-   -              [[cast3m]] [[channelflow]] [[deal.II]] [[dolfyn]] [[featflow]] [[gotm]] [[history]] [[industrialisation]] [[jCAE]]
-   -              [[libMesh]] [[liens]] [[modeles_physiques]] [[mpi]] [[ngsolve]] [[nohup]] [[opendx]] [[openfem]] [[openfoam]] [[pARMS]]
-   -              [[pthreads]] [[questions_reponses_langages_compiles]] [[questions_reponses_sur_freefem]] [[reutilisation]] [[rlabplus]]
-   -              [[screen]] [[trilinos]] [[uBLAS]] [[xd3d]]
-   - _TODO_ [[file:::3447]] [[file:::3990]]
+   -              [[Radia]] [[Rheolef]] [[SLEPc]] [[SLFCFD]] [[SLFFEA]] [[SPARSE]] [[SPOOLES]] [[STEP]] [[Sage]] [[Salomé]] [[ScaLAPACK]]
+   -              [[Scilab]] [[SparseLib++]] [[SuperLU]] [[TYPHON]] [[TetGen]] [[Triangle]] [[UMFPACK]] [[VRML]] [[VTK]] [[VisIt]]
+   -              [[Visualisation]] [[Y12M]] [[Yorick]] [[Z88]] [[autres_informations_utiles]] [[bamg]] [[bidirectional_reflectance_codes]]
+   -              [[bilum]] [[blacs]] [[brl-cad]] [[bsp]] [[c]] [[cadna]] [[calcul]] [[calculix]] [[cast3m]] [[channelflow]] [[deal.II]]
+   -              [[dolfyn]] [[featflow]] [[gotm]] [[history]] [[industrialisation]] [[jCAE]] [[libMesh]] [[liens]] [[modeles_physiques]]
+   -              [[mpi]] [[ngsolve]] [[nohup]] [[opendx]] [[openfem]] [[openfoam]] [[pARMS]] [[pthreads]]
+   -              [[questions_reponses_langages_compiles]] [[questions_reponses_sur_freefem]] [[reutilisation]] [[rlabplus]] [[screen]]
+   -              [[trilinos]] [[uBLAS]] [[xd3d]]
+   - _HERE_ [[file:::4243]]
+   - _TODO_ [[file:::2152]] [[file:::3671]] [[file:::4235]]
    - 
    - [[elisp:(alh-set-keywords)]] [[file:~/.emacs::alh-set-keywords]] [[file:~/alh/bin/headeralh]]
    - emacs-keywords brief="Free software for scientific computing" markdown nofaces start=19/10/18 top=\n written
@@ -48,6 +49,7 @@ highlight = true
     template       [[https://raw.githubusercontent.com/Bertbk/infomath/master/content/tools/vscode.md]]
     syntax         [[https://sourcethemes.com/academic/docs/writing-markdown-latex/]]
                    [[https://daringfireball.net/projects/markdown/syntax]]
+                   [[https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#code]]
                    [[info:m4]]
     compile
     - dev          [[elisp:(compile "make freesoft.htm")]]
@@ -59,6 +61,10 @@ highlight = true
                    [[file:~/infomath/content/tmp/free_software_for_scientific_computing.md]]
     Nombre de ##   [[shell:grep '^## ' freesoft.md|wc -l]]
 -->
+
+
+
+
 
 
 
@@ -99,7 +105,8 @@ si vous notez une imprécision.
 ## <a name="Meshing"></a> Mesh generation
 
 *  Construire un maillage 2D : [Bamg](#bamg), [GRUMMP](#grummp), [Triangle](#triangle)
-*  Construire un maillage 3D (surfaces &amp; volumes) : [Gmsh](#gmsh), [GNU Triangulated Surface Library](#gnu_triangulated_surface_library), [GRUMMP](#grummp), [jCAE](#jcae), [Méfisto](#maofisto), [Netgen](#netgen), [Salomé](#salome), [TetGen](#tetgen)
+*  Construire un maillage 3D (surfaces & volumes) : [Gmsh](#gmsh), [GNU Triangulated Surface Library](#gnu_triangulated_surface_library),
+   [GRUMMP](#grummp), [jCAE](#jcae), [Méfisto](#maofisto), [Netgen](#netgen), [Salomé](#salome), [TetGen](#tetgen)
 *  [Trouver un maillage gratuit](#free_meshes)
 *  Réparation de maillage : [ADMesh](#admesh)
 *  Partitionnement de maillage : [METIS](#metis)
@@ -109,10 +116,14 @@ si vous notez une imprécision.
 <!-- <<<modeles_physiques>>> -->
 ## <a name="modeles_physiques"></a> Modélisation de Phénomènes Physiques
 
-*  Multi-physiques : [Elmer](#elmer), [FElt](#felt), [Méfisto](#maofisto), [NGSolve](#ngsolve), [OOFEM](#oofem), [OpenFOAM](#openfoam), [TYPHON](#typhon)
-*  Dynamique des fluides : [Channelflow](#channelflow), [Code_Saturne](#code_saturne), [dolfyn](#dolfyn), [FEATFLOW](#featflow), [Gerris Flow Solver](#gerris_flow_solver), [ISAAC](#isaac), [NSC2KE](#nsc2ke), [SLFCFD](#slfcfd)
-*  Electromagnétisme : [Bidirectional Reflectance Codes](#bidirectional_reflectance_codes), [EMAP](#emap), [FEMM](#femm), [GetDP](#getdp), [Radia](#radia)
-*  Mécanique des structures : [CalculiX](#calculix), [Cast3M](#cast3m), [Code_Aster](#code_aster), [FEniCS](#fenics), [Impact](#impact), [SLFFEA](#slffea), [Z88](#z88)
+*  Multi-physiques : [Elmer](#elmer), [FElt](#felt), [Méfisto](#maofisto), [NGSolve](#ngsolve), [OOFEM](#oofem), [OpenFOAM](#openfoam),
+   [TYPHON](#typhon)
+*  Dynamique des fluides : [Channelflow](#channelflow), [Code_Saturne](#code_saturne), [dolfyn](#dolfyn), [FEATFLOW](#featflow), [Gerris
+   Flow Solver](#gerris_flow_solver), [ISAAC](#isaac), [NSC2KE](#nsc2ke), [SLFCFD](#slfcfd)
+*  Electromagnétisme : [Bidirectional Reflectance Codes](#bidirectional_reflectance_codes), [EMAP](#emap), [FEMM](#femm), [GetDP](#getdp),
+   [Radia](#radia)
+*  Mécanique des structures : [CalculiX](#calculix), [Cast3M](#cast3m), [Code_Aster](#code_aster), [FEniCS](#fenics), [Impact](#impact),
+   [SLFFEA](#slffea), [Z88](#z88)
 *  Dynamique des solides rigides : [Open Dynamics Engine](#open_dynamics_engine)
 *  Géophysique : [GETM](#getm), [GOTM](#gotm), [OpenSees](#opensees)
 
@@ -121,10 +132,11 @@ si vous notez une imprécision.
 <!-- <<<calcul>>> -->
 ## <a name="calcul"></a> Logiciels et Bibliothèques de Calcul Numérique
 
-*  Méthode des éléments finis : [deal.II](#deal_ii), [Feel++](#feel), [FEniCS](#fenics), [FreeFEM++](#freefem), [FreeFEM++-cs](#freefem_cs),
+*  Méthode des éléments finis : [deal.II](#deal.ii), [Feel++](#feel), [FEniCS](#fenics), [FreeFEM++](#freefem), [FreeFEM++-cs](#freefem_cs),
    [Getfem++](#getfem), [libMesh](#libmesh), [Mélina](#maolina), [OFELI](#ofeli), [OpenFEM](#openfem), [Rheolef](#rheolef)
 *  Eléments finis discontinus : [FreeFEM++](#freefem), [Sledge++](#sledge)
-*  Langages mathématiques : [Maxima](#maxima), [Octave](#octave), [PARI/GP](#pari_gp), [rlabplus](#rlabplus), [Sage](#sage), [Scilab](#scilab), [Yorick](#yorick)
+*  Langages mathématiques : [Maxima](#maxima), [Octave](#octave), [PARI/GP](#pari_gp), [rlabplus](#rlabplus), [Sage](#sage),
+   [Scilab](#scilab), [Yorick](#yorick)
 *  Bibliothèques scientifiques tous usages : [Boost](#boost), [GNU Scientific Library](#gnu_scientific_library),
    [NumPy](https://www.projet-plume.org/fiche/numpy), [POOMA](#pooma), [SciPy](http://www.scipy.org), [Trilinos](#trilinos)
 *  Solveurs linéaires : [BILUM](#bilum), [Hypre](#hypre), [IML++](#iml), [ITPACK](#itpack), [LAPACK](#lapack), [MUMPS](#mumps),
@@ -134,7 +146,7 @@ si vous notez une imprécision.
 *  Algèbre linéaire : [Atlas](#atlas), [BLAS](#blas), [Blitz++](#blitz), [FLAME](#flame), [NIST Sparse BLAS](#nist_sparse_blas),
    [OpenBLAS](http://xianyi.github.io/OpenBLAS), [PBLAS](#pblas), [SparseLib++](#sparselib), [uBLAS](#ublas)
 *  Transformées de Fourier : [FFTW](#fftw)
-*  Problèmes d&#039;arrondi arithmétique : [CADNA](#cadna), [GNU Multiple Precision Arithmetic Library](http://gmplib.org/)
+*  Problèmes d'arrondi arithmétique : [CADNA](#cadna), [GNU Multiple Precision Arithmetic Library](http://gmplib.org/)
 *  Modèles de programmation parallèle : [BLACS](#blacs), [BSP](#bsp), [Cilk](#cilk), [MPI](#mpi), [OpenMP](#openmp), [Pthreads](#pthreads)
 
 <p>&nbsp;</p>
@@ -146,7 +158,18 @@ si vous notez une imprécision.
 * Configuration : [Automake](#automake), [GNU Make](#gnu_make), [Libtool](#libtool)
 * Documentation : [Doxygen](#doxygen), HTML, [LaTeX](#latex) 
 * [Licences pour logiciels libres](#licences_pour_logiciels_libres)
-* De l'importance de la robustesse d'un code : [Working with the Chaos Monkey](http://www.codinghorror.com/blog/2011/04/working-with-the-chaos-#monkeyl)
+* De l'importance de la robustesse d'un code : [Working with the Chaos
+  Monkey](http://www.codinghorror.com/blog/2011/04/working-with-the-chaos-#monkeyl)
+
+<p>&nbsp;</p>
+
+<!-- <<<reutilisation>>> -->
+## <a name="reutilisation"></a> Formats Standard Réutilisables et Conversions entre Formats
+
+* Formats standard : [3D-Studio](#3d_studio), [AutoCAD DXF](#autocad_dxf), [HDF](#hdf), [I-DEAS file format](#i_deas_file_format),
+  [IGES](#iges), [Matlab MAT-Files](#matlab_mat_files), [Matrix Market Exchange Formats](#matrix_market_exchange_formats), [OFF](#off),
+  [Povray](#povray), [Salomé MED](#salome), [STEP](#step), [STL file format](#stl_file_format), [VRML](#vrml)
+* Conversion entre formats de données : [medit2dx](#medit2dx), [NCO](#nco)
 
 <p>&nbsp;</p>
 
@@ -163,11 +186,14 @@ si vous notez une imprécision.
 ## <a name="liens"></a> Liens vers d'autres listes de logiciels
 
 * [Finite element analysis - Wikipedia, the free encyclopedia](http://en.wikipedia.org/wiki/Finite_element_analysis)
-* [Matrix Market : A visual repository of test data for use in comparative studies of algorithms for numerical linear algebra, featuring nearly 500 sparse matrices from a variety of applications, as well as matrix generation tools and services](http://math.nist.gov/MatrixMarket/)
+* [Matrix Market : A visual repository of test data for use in comparative studies of algorithms for numerical linear algebra, featuring
+  nearly 500 sparse matrices from a variety of applications, as well as matrix generation tools and
+  services](http://math.nist.gov/MatrixMarket/)
 * [Free Mechanical Engineering Software](http://www.freebyte.com/cad/)
 * [Netlib Repository](http://www.netlib.org/)
 * [Jack Dongarra's survey : Freely available software for linear algebra on the web](http://www.netlib.org/utk/people/JackDongarra/la-#swl)
-* [polymorphe.org: Ce site regroupe de nombreuses archives portant sur divers domaines de l'informatique, les cours que vous pourrez trouver ici sont sous divers formats : doc, html, pdf, ps mais d'autres sont egalement compresses au format rar](http://www.polymorphe.org/)
+* [polymorphe.org: Ce site regroupe de nombreuses archives portant sur divers domaines de l'informatique, les cours que vous pourrez trouver
+  ici sont sous divers formats : doc, html, pdf, ps mais d'autres sont egalement compresses au format rar](http://www.polymorphe.org/)
 * [Convert: Bridging the Scientific Data Format Chasm](http://www.adass.org/adass/proceedings/adass94/#jenningsdl) (1995)
 * [website dedicated to numerical analysis by Jean-Pierre Moreau](http://perso.wanadoo.fr/jean-pierre.moreau)
 * [Overview of Iterative Linear System Solver Packages, Victor Eijkhout, 15 August, 1997](http://www.netlib.org/utk/papers/iterative-survey/)
@@ -235,7 +261,7 @@ si vous notez une imprécision.
 <p>&nbsp;</p>
 
 <!-- <<<ARPACK>>> -->
-## <A NAME="ARPACK"></A> ARPACK
+## <a name="ARPACK"></a> ARPACK
 
 > "*ARPACK++ is an object-oriented version of the ARPACK package. ARPACK is a well known collection of [Fortran](#fortran) subroutines
 > designed to compute a few eigenvalues and eigenvectors of large scale sparse matrices and pencils. It implements a variant of the Arnoldi
@@ -289,7 +315,7 @@ si vous notez une imprécision.
 <!-- <<<AutoCAD DXF>>> -->
 ## <a name="AutoCAD DXF"></a> AutoCAD DXF
 
-(il ne s&#039;agit pas ici du logiciel commercial AutoCAD mais du format de ses fichiers car ils sont compris par beaucoup d&#039;autres
+(il ne s'agit pas ici du logiciel commercial AutoCAD mais du format de ses fichiers car ils sont compris par beaucoup d'autres
 logiciels)
 
 "*Drawing Interchange Format (DXF) files enable the interchange of drawings between AutoCAD and other programs. DXF files can be either
@@ -299,7 +325,7 @@ logiciels)
 
 [http://www.autodesk.com/techpubs/autocad/acad2000/dxf/#index](http://www.autodesk.com/techpubs/autocad/acad2000/dxf/#index)
 
-### Logiciels capables d&#039;écrire dans ce format
+### Logiciels capables d'écrire dans ce format
 
 [ADMesh](#admesh)
 
@@ -308,7 +334,7 @@ logiciels)
 <!-- <<<Automake>>> -->
 ## <a name="Automake"></a> Automake
 
-"* Automake is a tool for automatically generating &#039;Makefile.in&#039; files compliant with the GNU Coding Standards. Automake requires
+"* Automake is a tool for automatically generating 'Makefile.in' files compliant with the GNU Coding Standards. Automake requires
 the use of GNU Autoconf.*"
 
 ### Web
@@ -335,7 +361,8 @@ keep this project alive. If you use Ayam, please submit your pictures, bug repor
 *   RIB (RenderMan Interface Bytestream) export and import.
 *   Support for NURBS curves and (trimmed) NURBS surfaces, Boxes, Quadrics (Sphere, Disk, Cylinder, Cone, Hyperboloid, Paraboloid, and
     Torus), CSG, MetaBalls, Patch Meshes, Polygonal Meshes, and Subdivision Surfaces.
-*   NURBS modelling includes normal and interpolating curves as well as extrude, revolve, sweep, birail, skin and gordon objects with caps, holes, and bevels.
+*   NURBS modelling includes normal and interpolating curves as well as extrude, revolve, sweep, birail, skin and gordon objects with caps,
+    holes, and bevels.
 *   Custom objects that may freely implement their representations (using OpenGL and RIB) and even small GUIs to edit their type specific
     parameters may be written by the user and dynamically loaded at runtime.
 *   Scripting interface: Tcl.
@@ -353,10 +380,10 @@ keep this project alive. If you use Ayam, please submit your pictures, bug repor
 ## <a name="bamg"></a> Bamg
 	  
 "*Bamg est un générateur de maillages bidimensionnels isotropes ou anisotopes. Ce générateur permet, soit de construire un maillage à partir
-d&#039;une géométrie, soit de construire un maillage adapté à partir d&#039;un maillage précédent et d&#039;une solution ou d&#039;une
-métrique. Il permet aussi d&#039;interpoler sur le maillage créé des solutions P1 définies sur le maillage précédent.*
+d'une géométrie, soit de construire un maillage adapté à partir d'un maillage précédent et d'une solution ou d'une
+métrique. Il permet aussi d'interpoler sur le maillage créé des solutions P1 définies sur le maillage précédent.*
 
-*Une géométrie est définie par un maillage de contours : liste de sommets, liste d&#039;arêtes, plus des informations de continuité
+*Une géométrie est définie par un maillage de contours : liste de sommets, liste d'arêtes, plus des informations de continuité
 G1. Cette géométrie peut être construite avec EMC2 et en traduisant le fichiers de maillage avec le petit utilitaire cvmsh2 qui est
 inclus.*"
 
@@ -380,7 +407,7 @@ different refractive indices (e.g., a rough ocean surface).*"
 <p>&nbsp;</p>
 
 <!-- <<<bilum>>> -->
-## <A NAME="bilum"></A> BILUM
+## <a name="bilum"></a> BILUM
 
 "*BILUM is a set of programs designed for solving general sparse linear systems by using Krylov subspace methods preconditioned by some
 multi-level block ILU (BILUM) preconditioning techniques. BILUM combines the benefits of generality and robustness of ILU preconditioning
@@ -413,7 +440,7 @@ Written in [Fortran](#fortran).
 <p>&nbsp;</p>
 
 <!-- <<<blacs>>> -->
-## <A NAME="blacs"></A> BLACS
+## <a name="blacs"></a> BLACS
 
 "*The BLACS (Basic Linear Algebra Communication Subprograms) project is an ongoing investigation whose purpose is to create a linear algebra
 oriented message passing interface that may be implemented efficiently and uniformly across a large range of distributed memory platforms.*
@@ -437,11 +464,11 @@ reason that the BLACS are used as the communication layer of [ScaLAPACK](#scalap
 <p>&nbsp;</p>
 
 <!-- <<<BLAS>>> -->
-## <A NAME="BLAS"></A> BLAS
+## <a name="BLAS"></a> BLAS
 
 "*The BLAS (Basic Linear Algebra Subprograms) are high quality “building block” routines for performing basic vector and matrix
 operations. Level 1 BLAS do vector-vector operations, Level 2 BLAS do matrix-vector operations, and Level 3 BLAS do matrix-matrix
-operations. Because the BLAS are efficient, portable, and widely available, they&#039;re commonly used in the development of high quality
+operations. Because the BLAS are efficient, portable, and widely available, they're commonly used in the development of high quality
 linear algebra software, LINPACK and [LAPACK](#lapack) for example.*"
 
 [Fiche PLUME](http://www.projet-plume.org/fiche/blas-basic-linear-algebra-subprograms)
@@ -452,7 +479,8 @@ linear algebra software, LINPACK and [LAPACK](#lapack) for example.*"
 
 ### Autres indications
 
-The BLAS have to be optimized for each particular hardware architecture. If you do not know where to find such an optimized version the BLAS, see [Atlas](#atlas) or the [GNU Scientific Library](#gnu_scientific_library).
+The BLAS have to be optimized for each particular hardware architecture. If you do not know where to find such an optimized version the
+BLAS, see [Atlas](#atlas) or the [GNU Scientific Library](#gnu_scientific_library).
 
 <p>&nbsp;</p>
 
@@ -495,12 +523,12 @@ vectors and matrices. Blitz++ is distributed freely under an open source license
 broad spectrum of applications. The Boost license encourages both commercial and non-commercial use.*
 
 *We aim to establish “existing practice” and provide reference implementations so that Boost libraries are suitable for eventual
-standardization. Ten Boost libraries are already included in the C++ Standards Committee&#039;s Library Technical Report (TR1) as a step
+standardization. Ten Boost libraries are already included in the C++ Standards Committee's Library Technical Report (TR1) as a step
 toward becoming part of a future C++ Standard. More Boost libraries are proposed for the upcoming TR2.*
 
 *Getting started: Boost works on almost any modern operating system, including UNIX and Windows variants. Follow the Getting Started Guide
 to download and install Boost. Popular Linux and Unix distributions such as Fedora, Debian, and NetBSD include pre-built Boost
-packages. Boost may also already be available on your organization&#039;s internal web server.*"
+packages. Boost may also already be available on your organization's internal web server.*"
 
 ### Web
 
@@ -523,7 +551,7 @@ packages. Boost may also already be available on your organization&#039;s intern
 <p>&nbsp;</p>
 
 <!-- <<<brl-cad>>> -->
-## <A NAME="brl-cad"></A> BRL-CAD
+## <a name="brl-cad"></a> BRL-CAD
 
 "*The BRL-CAD package is a powerful Constructive Solid Geometry (CSG) solid modeling system with over 20 years development and production
 use by the U.S. military. BRL-CAD includes an interactive geometry editor, parallel ray-tracing support for rendering and geometric
@@ -549,7 +577,7 @@ tools.*"
 <p>&nbsp;</p>
 
 <!-- <<<bsp>>> -->
-## <A NAME="bsp"></A> BSP
+## <a name="bsp"></a> BSP
 
 "*Parallel programmers looking for a simple but efficient approach to developing scalable applications software may be interested in the
 BSPlib programming library. BSPlib is an alternative to [MPI](#mpi) and PVM, and is based on the BSP model of parallel computation. It is
@@ -573,7 +601,7 @@ See also [MPI](#mpi).
 <p>&nbsp;</p>
 
 <!-- <<<cadna>>> -->
-## <A NAME="cadna"></A> CADNA
+## <a name="cadna"></a> CADNA
 
 "*… the CADNA library … allows to estimate the round-off error propagation on every scientific code written in FORTRAN language.*"
 
@@ -666,7 +694,13 @@ Référence : [Anglais](http://www.acm.uiuc.edu/webmonkeys/book/c_guide/)
 <!-- <<<Cilk>>> -->
 ## <a name="Cilk"></a> Cilk
 
-"*Cilk is a language for multithreaded parallel programming based on [ANSI C](#c). Cilk is designed for general-purpose parallel programming, but it is especially effective for exploiting dynamic, highly asynchronous parallelism, which can be difficult to write in data-parallel or message-passing style. Using Cilk, our group has developed three world-class chess programs, StarTech, *Socrates, and Cilkchess. Cilk provides an effective platform for programming dense and sparse numerical algorithms, such as matrix factorization and N-body simulations, and we are working on other types of applications. Unlike many other multithreaded programming systems, Cilk is algorithmic, in that the runtime system employs a scheduler that allows the performance of programs to be estimated accurately based on abstract complexity measures.*"
+"*Cilk is a language for multithreaded parallel programming based on [ANSI C](#c). Cilk is designed for general-purpose parallel
+programming, but it is especially effective for exploiting dynamic, highly asynchronous parallelism, which can be difficult to write in
+data-parallel or message-passing style. Using Cilk, our group has developed three world-class chess programs, StarTech, *Socrates, and
+Cilkchess. Cilk provides an effective platform for programming dense and sparse numerical algorithms, such as matrix factorization and
+N-body simulations, and we are working on other types of applications. Unlike many other multithreaded programming systems, Cilk is
+algorithmic, in that the runtime system employs a scheduler that allows the performance of programs to be estimated accurately based on
+abstract complexity measures.*"
 
 ### Web
 
@@ -677,7 +711,11 @@ Référence : [Anglais](http://www.acm.uiuc.edu/webmonkeys/book/c_guide/)
 <!-- <<<Code_Aster>>> -->
 ## <a name="Code_Aster"></a> Code_Aster
 
-"*Code_Aster propose, bien au delà des fonctionnalités standard d'un code de calcul thermo-mécanique, toute une panoplie de méthodes d'analyse et de modélisations multiphysiques : de l'analyse sismique aux milieux poreux en passant par l'acoustique, la fatigue, la dynamique stochastique… Ses modélisations, ses algorithmes et ses solveurs ont gagné en robustesse et en complétude (1000000 lignes de codes, 200 opérateurs). Résolument ouvert, il est chaîné, couplé et encapsulé de mille façons. Bref, l'utilisateur n'a que l'embarras du choix !*"
+"*Code_Aster propose, bien au delà des fonctionnalités standard d'un code de calcul thermo-mécanique, toute une panoplie de méthodes
+d'analyse et de modélisations multiphysiques : de l'analyse sismique aux milieux poreux en passant par l'acoustique, la fatigue, la
+dynamique stochastique… Ses modélisations, ses algorithmes et ses solveurs ont gagné en robustesse et en complétude (1000000 lignes de
+codes, 200 opérateurs). Résolument ouvert, il est chaîné, couplé et encapsulé de mille façons. Bref, l'utilisateur n'a que l'embarras du
+choix !*"
 
 [http://www.code-aster.org](http://www.code-aster.org)
 
@@ -686,25 +724,35 @@ Référence : [Anglais](http://www.acm.uiuc.edu/webmonkeys/book/c_guide/)
 <!-- <<<Code_Saturne>>> -->
 ## <a name="Code_Saturne"></a> Code_Saturne
 
-"*Code_Saturne® is EDF's general purpose computational fluid dynamics software. Developed since 1997 at EDF R&amp;D, it is based on a co-located Finite Volume approach that accepts meshes with any type of cell (tetrahedral, hexahedral, prismatic, pyramidal, polyhedral…) and any type of grid structure (unstructured, block structured, hybrid, conforming or with hanging nodes…).
+"*Code_Saturne® is EDF's general purpose computational fluid dynamics software. Developed since 1997 at EDF R&D, it is based on a
+co-located Finite Volume approach that accepts meshes with any type of cell (tetrahedral, hexahedral, prismatic, pyramidal, polyhedral…) and
+any type of grid structure (unstructured, block structured, hybrid, conforming or with hanging nodes…).*
 
-Its basic capabilities enable the handling of either incompressible or expandable flows with or without heat transfer and turbulence (mixing length, 2-equation models, v2f, Reynolds stress models, Large Eddy Simulations…).
+*Its basic capabilities enable the handling of either incompressible or expandable flows with or without heat transfer and turbulence
+(mixing length, 2-equation models, v2f, Reynolds stress models, Large Eddy Simulations…).*
 
-Dedicated modules are available for specific physics such as radiative heat transfer, combustion (gas, coal…), magneto-hydro dynamics, compressible flows, two-phase flows (Euler-Lagrange approach with two-way coupling), extensions to specific applications (e.g.  for atmospheric environment: code Mercure_Saturne).
+*Dedicated modules are available for specific physics such as radiative heat transfer, combustion (gas, coal…), magneto-hydro dynamics,
+compressible flows, two-phase flows (Euler-Lagrange approach with two-way coupling), extensions to specific applications (e.g.  for
+atmospheric environment: code Mercure_Saturne).*
 
- Code_Saturne can be coupled to EDF's thermal software Syrthes.  It can also be used jointly with EDF's structural analysis software [Code_Aster](#code_aster), in particular in the [Salomé](#salome) platform.
+*Code_Saturne can be coupled to EDF's thermal software Syrthes.  It can also be used jointly with EDF's structural analysis software
+[Code_Aster](#code_aster), in particular in the [Salomé](#salome) platform.*
 
-Parallel code coupling capabilities are provided by the FVM library (EDF's “Finite Volume Mesh” library, under [LGPL](#licences_pour_logiciels_libres) licence).*"
+*Parallel code coupling capabilities are provided by the FVM library (EDF's “Finite Volume Mesh” library, under
+[LGPL](#licences_pour_logiciels_libres) licence).*"
 
 [Fiche PLUME](http://www.projet-plume.org/fiche/codesaturne)
 
 ### Format de données standard lus
 
-"*De nombreux mailleurs sont compatibles avec Code_Saturne, entre autres [I-DEAS®](#i_deas_file_format), [GMSH](#gmsh), Gambit®, Simail®, [Salomé](#salome), Harpoon®, ICEM®, …*"
+"*De nombreux mailleurs sont compatibles avec Code_Saturne, entre autres [I-DEAS®](#i_deas_file_format), [GMSH](#gmsh), Gambit®, Simail®,
+[Salomé](#salome), Harpoon®, ICEM®, …*"
 
 ### Format de données standard écrits
 
-"*Les sorties de posttraitement sont disponibles aux formats EnSight®, CGNS et [MED_fichier](#salome), avec des fonctionnalités avancées offertes par la librairie FVM (librairie « Finite Volume Mesh » développée par EDF sous licence [LGPL](#licences_pour_logiciels_libres)).  La librairie FVM offre aussi des possibilités de couplage de codes en parallèle.*"
+"*Les sorties de posttraitement sont disponibles aux formats EnSight®, CGNS et [MED_fichier](#salome), avec des fonctionnalités avancées
+offertes par la librairie FVM (librairie « Finite Volume Mesh » développée par EDF sous licence [LGPL](#licences_pour_logiciels_libres)).
+La librairie FVM offre aussi des possibilités de couplage de codes en parallèle.*"
 
 <p>&nbsp;</p>
 
@@ -713,40 +761,32 @@ Parallel code coupling capabilities are provided by the FVM library (EDF's “Fi
 
 Les systèmes Linux, Windows et MacOS ne traitent pas les fichiers textes de la même façon :
 
-<ul>
-<li > sur Linux, chaque ligne se termine par le caractère <strong>0x0d</strong>
-</li>
-<li > sur Windows : <strong>0x0d 0x0a</strong>
-</li>
-<li > sur MacOS (et anciennement SunOS) : <strong>0x0a</strong>
-</li>
-</ul>
+* sur Linux, chaque ligne se termine par le caractère **0x0d**
+* sur Windows : **0x0d 0x0a**
+* sur MacOS (et anciennement SunOS) : **0x0a**
 
 ### sed
 
 Plusieurs éditeurs (par exemple [Emacs](#emacs)) sont capables de traduire les lignes d'un système à l'autre. Mais on peut aussi utiliser
 les commandes suivantes sous Linux ou MacOS :
 
-<ul>
 *  De Windows vers Linux :
 
-</ul>
-<pre >sed 's/\x0d\x0a/\x0d/g' windows.txt &gt; linux.txt</pre>
-<ul>
+`sed 's/\x0d\x0a/\x0d/g' windows.txt > linux.txt`
+
 *  De MacOS vers Linux :
 
-</ul>
-<pre >sed 's/\x0a/\x0d/g' macos.txt &gt; linux.txt</pre>
+`sed 's/\x0a/\x0d/g' macos.txt > linux.txt`
 
 ### Emacs
-<pre >M-x set-buffer-file-coding-system RET undecided-unix RET C-x C-s</pre>
+`M-x set-buffer-file-coding-system RET undecided-unix RET C-x C-s`
 
 <p>&nbsp;</p>
 
 <!-- <<<CUDA>>> -->
-## <A NAME="CUDA"></A> CUDA
+## <a name="CUDA"></a> CUDA
 
-Au laboratoire, CUDA est disponible sur <strong>gpu1</strong>, <strong>gpu2</strong> et <strong>tesla</strong>. CUDA est une technologie
+Au laboratoire, CUDA est disponible sur **gpu1**, **gpu2** et **tesla**. CUDA est une technologie
 propriétaire développée par la société [NVidia](http://www.nvidia.fr). La technologie alternative
 [OpenCL](http://fr.wikipedia.org/wiki/OpenCL) est moins dépendante d'une société mais aussi moins mature actuellement.
 
@@ -761,37 +801,41 @@ propriétaire développée par la société [NVidia](http://www.nvidia.fr). La t
 
 C++ est un langage de programmation généraliste issu d'une évolution du langage [C](#c).
 
-<ul>
-*  Introduction : [Cours de C/C++](http://casteyde.christian.free.fr/cpp/cours/#indexl) (Français), [The cplusplus.com tutorial](http://www.cplusplus.com/doc/tutorial) (English)
-
+*  Introduction : [Cours de C/C++](http://casteyde.christian.free.fr/cpp/cours/#indexl) (Français), [The cplusplus.com
+   tutorial](http://www.cplusplus.com/doc/tutorial) (English)
 *  Réference : [http://www.cplusplus.com/ref](http://www.cplusplus.com/ref), [http://www.cppreference.com](http://www.cppreference.com)
-
-*  Standard Template Library (STL) : [Tutorial](http://www.cs.brown.edu/people/jak/proglang/cpp/stltut/#tutl), [Reference](http://www.sgi.com/tech/stl), [Concepts de la programmation générique](http://www.boost.org/more/#generic_programmingl)
-
-</ul>
+*  Standard Template Library (STL) : [Tutorial](http://www.cs.brown.edu/people/jak/proglang/cpp/stltut/#tutl),
+   [Reference](http://www.sgi.com/tech/stl), [Concepts de la programmation générique](http://www.boost.org/more/#generic_programmingl)
 
 [Questions/Réponses de programmation](#questions_reponses_langages_compiles)
 
 <p>&nbsp;</p>
 
 <!-- <<<DDD>>> -->
-## <A NAME="DDD"></A> DDD
+## <a name="DDD"></a> DDD
 
-"*GNU DDD is a graphical front-end for command-line debuggers such as [GDB](#gdb), DBX, WDB, Ladebug, JDB, XDB, the Perl debugger, the bash debugger, or the Python debugger. Besides “usual” front-end features such as viewing source texts, DDD has become famous through its interactive graphical data display, where data structures are displayed as graphs.*"
+"*GNU DDD is a graphical front-end for command-line debuggers such as [GDB](#gdb), DBX, WDB, Ladebug, JDB, XDB, the Perl debugger, the bash
+debugger, or the Python debugger. Besides “usual” front-end features such as viewing source texts, DDD has become famous through its
+interactive graphical data display, where data structures are displayed as graphs.*"
 
-<ul>
 *  Web: [http://www.gnu.org/software/ddd/](http://www.gnu.org/software/ddd/)
 
-</ul>
 
 <p>&nbsp;</p>
 
 <!-- <<<deal.II>>> -->
-## <a name="deal.II"></a> deal.II
+## <a name="deal.ii"></a> deal.II
 
-"* deal.II is a [C++](#c) program library targeted at adaptive finite elements and error estimation. It uses state-of-the-art programming techniques of the C++ programming language to offer you a modern interface to the complex data structures and algorithms required for adaptivity and enables you to use a variety of finite elements in one, two, and three space dimensions, as well as time-dependent problems.
+"*deal.II is a [C++](#c) program library targeted at adaptive finite elements and error estimation. It uses state-of-the-art programming
+techniques of the C++ programming language to offer you a modern interface to the complex data structures and algorithms required for
+adaptivity and enables you to use a variety of finite elements in one, two, and three space dimensions, as well as time-dependent problems.*
 
-The main aim of deal.II is to enable development of modern finite element algorithms, using among other aspects sophisticated error estimators and adaptive meshes. Writing such programs is a non-trivial task, and successful programs tend to become very large and complex. We therefore believe that this is best done using a program library that frees the application programmer from aspects like grid handling and refinement, handling of degrees of freedom, input of meshes and output of results in graphics formats, and the like. Also, support for several space dimensions at once is included in a way such that programs can be written independent of the space dimension without unreasonable penalties on run-time and memory consumption.*"
+*The main aim of deal.II is to enable development of modern finite element algorithms, using among other aspects sophisticated error
+estimators and adaptive meshes. Writing such programs is a non-trivial task, and successful programs tend to become very large and
+complex. We therefore believe that this is best done using a program library that frees the application programmer from aspects like grid
+handling and refinement, handling of degrees of freedom, input of meshes and output of results in graphics formats, and the like. Also,
+support for several space dimensions at once is included in a way such that programs can be written independent of the space dimension
+without unreasonable penalties on run-time and memory consumption.*"
 
 ### Web
 
@@ -812,7 +856,10 @@ The main aim of deal.II is to enable development of modern finite element algori
 <!-- <<<dolfyn>>> -->
 ## <a name="dolfyn"></a> dolfyn
 
-"*The Open Source CFD code dolfyn is an initiative in Noord-Brabant, a Dutch province in the south of the Netherlands, particularly in the region around Eindhoven. The Eindhoven Region presents itself as Leading in technology and ranks in the top three most technological districts in Europe. The goal of dolfyn is to promote, introduce and teach the use of modern numerical simulation techniques in general and the use of Computational Fluid Dynamics (CFD) in particular.*"
+"*The Open Source CFD code dolfyn is an initiative in Noord-Brabant, a Dutch province in the south of the Netherlands, particularly in the
+region around Eindhoven. The Eindhoven Region presents itself as Leading in technology and ranks in the top three most technological
+districts in Europe. The goal of dolfyn is to promote, introduce and teach the use of modern numerical simulation techniques in general and
+the use of Computational Fluid Dynamics (CFD) in particular.*"
 
 ### Web
 
@@ -843,7 +890,8 @@ Part of the documentation is in dutch. There is also a graphical user interface 
 <!-- <<<Doxygen>>> -->
 ## <a name="Doxygen"></a> Doxygen
 
-"*Doxygen is a documentation system for [C++](#cxx), [C](#c), Java, IDL (Corba and Microsoft flavors) and to some extent Objective-C, PHP, C# and D.*
+"*Doxygen is a documentation system for [C++](#cxx), [C](#c), Java, IDL (Corba and Microsoft flavors) and to some extent Objective-C, PHP,
+C# and D.*
 
 *It can help you in three ways:*
 
@@ -873,7 +921,11 @@ well. Furthermore, executables for Windows 9x/NT and Mac **OS** X are available.
 
 ### Licence
 
-"*Permission to use, copy, modify, and distribute this software and its documentation under the terms of the [GNU General Public License](#licences_pour_logiciels_libres) is hereby granted. No representations are made about the suitability of this software for any purpose. It is provided “as is” without express or implied warranty. See the [GNU General Public License](#licences_pour_logiciels_libres) for more details. Documents produced by doxygen are derivative works derived from the input used in their production; they are not affected by this license.*"
+"*Permission to use, copy, modify, and distribute this software and its documentation under the terms of the [GNU General Public
+License](#licences_pour_logiciels_libres) is hereby granted. No representations are made about the suitability of this software for any
+purpose. It is provided “as is” without express or implied warranty. See the [GNU General Public License](#licences_pour_logiciels_libres)
+for more details. Documents produced by doxygen are derivative works derived from the input used in their production; they are not affected
+by this license.*"
 
 <p>&nbsp;</p>
 
@@ -920,9 +972,11 @@ Emacs include:*
 
 ### Documentation
 
-Initiation : [Emacs Beginner's HOWTO](http://jeremy.zawodny.com/emacs/#emacsl), [Tutorial pour Emacs, pour le programmeur](http://www.linux-france.org/article/appli/emacs/tut/)
+Initiation : [Emacs Beginner's HOWTO](http://jeremy.zawodny.com/emacs/#emacsl), [Tutorial pour Emacs, pour le
+programmeur](http://www.linux-france.org/article/appli/emacs/tut/)
 
-**FAQ** : [générale](http://www.gnu.org/software/emacs/emacs-faq.text), [Microsoft Windows](http://www.gnu.org/software/emacs/windows/#ntemacsl)
+**FAQ** : [générale](http://www.gnu.org/software/emacs/emacs-faq.text), [Microsoft
+Windows](http://www.gnu.org/software/emacs/windows/#ntemacsl)
 
 Manuel : [http://www.gnu.org/software/emacs/manual](http://www.gnu.org/software/emacs/manual)
 
@@ -931,7 +985,7 @@ GNU Emacs Lisp Reference Manual : [http://www.gnu.org/software/emacs/manual/#eli
 <p>&nbsp;</p>
 
 <!-- <<<EMAP>>> -->
-## <A NAME="EMAP"></A> EMAP
+## <a name="EMAP"></a> EMAP
 
 "*EMAP (ElectroMagnetic Analysis Program) is a family of three-dimensional finite element modeling codes that can be used to analyze simple
 3-dimensional geometries. The EMAP codes are relatively easy to learn to use and are distributed in source code form.*
@@ -963,7 +1017,8 @@ incompressible Navier-Stokes equations in two and three space dimensions. It is 
 <!-- <<<Feel++ : Finite Element Embedded Library in C++>>> -->
 ## <a name="Feel++ : Finite Element Embedded Library in C++"></a> Feel++ : Finite Element Embedded Library in C++
 
-"*FEEL++ est une bibliothèque C++ pour la résolution des EDP par des méthodes de Galerkin généralisées telles que les méthodes des éléments finis simples et étendues (FEM et hp-FEM) et les méthodes spectrales.*"
+"*FEEL++ est une bibliothèque C++ pour la résolution des EDP par des méthodes de Galerkin généralisées telles que les méthodes des éléments
+finis simples et étendues (FEM et hp-FEM) et les méthodes spectrales.*"
 
 [Fiche PLUME](http://www.projet-plume.org/relier/feel)
 
@@ -1003,7 +1058,7 @@ it quite easy to specify a wide range of functions.*"
 <p>&nbsp;</p>
 
 <!-- <<<FEMM>>> -->
-## <A NAME="FEMM"></A> FEMM
+## <a name="FEMM"></a> FEMM
 
 "*A Windows finite element solver for 2D and axisymmetric magnetic and electrostatic problems with graphical pre- and post-processors.*"
 
@@ -1032,7 +1087,7 @@ the goals of generality, efficiency, and simplicity, concerning mathematical met
 <p>&nbsp;</p>
 
 <!-- <<<FFTW>>> -->
-## <A NAME="FFTW"></A> FFTW
+## <a name="FFTW"></a> FFTW
 
 "*FFTW is a C subroutine library for computing the discrete Fourier transform (DFT) in one or more dimensions, of arbitrary input size, and
 of both real and complex data (as well as of even/odd data, i.e. the discrete cosine/sine transforms or DCT/DST). We believe that FFTW,
@@ -1048,7 +1103,7 @@ somewhat whimsical title of “Fastest Fourier Transform in the West.”*"
 <p>&nbsp;</p>
 
 <!-- <<<FLAME>>> -->
-## <A NAME="FLAME"></A> FLAME
+## <a name="FLAME"></a> FLAME
 
 Quote from [http://www.cs.utexas.edu/users/flame/overview/#node1l](http://www.cs.utexas.edu/users/flame/overview/#node1l) : "*When
 considering the unmanageable complexity of computer systems, Dijkstra recently made the following observations 3:*
@@ -1126,26 +1181,34 @@ Documentation:
 
 Depuis un terminal Linux :
 
-<pre >gfortran programme.f -o programme
-./programme</pre>
+```bash
+gfortran programme.f -o programme
+./programme
+```
 
 #### Legacy Fortran programs
 
-Fortran 77 programs may not run as expected with recent fortran compilers, because variables are not initialized to zero by default anymore. In the case of [gfortran](http://gcc.gnu.org/wiki/GFortran), the old behaviour is obtained by adding  <strong>-finit-local-zero</strong> to the compiling command.
+Fortran 77 programs may not run as expected with recent fortran compilers, because variables are not initialized to zero by default
+anymore. In the case of [gfortran](http://gcc.gnu.org/wiki/GFortran), the old behaviour is obtained by adding
+**-finit-local-zero** to the compiling command.
 
-#### Tektronix terminals
+#### Tektronix-type terminals
 
-Graphical programs that rely on [Textronix terminal](http://en.wikipedia.org/wiki/Tektronix_4010)-type commands to draw pictures can use <strong>xterm -t</strong> to run under Linux.
+Graphical programs that rely on [Textronix terminal](http://en.wikipedia.org/wiki/Tektronix_4010)-type commands to draw pictures can use
+**xterm -t** to run under Linux.
 
 #### Quel environnement de programmation intégré pour Fortran 95 sous Linux?
 
-[Eclipse](http://www.eclipse.org) et [Photran](http://www.eclipse.org/photran) ont été testés avec succès sous Linux. <em >Attention:* l'installation de Photran nécessite une configuration manuelle des téléchargements d'extensions pour eclipse.
+[Eclipse](http://www.eclipse.org) et [Photran](http://www.eclipse.org/photran) ont été testés avec succès sous Linux. *Attention:*
+l'installation de Photran nécessite une configuration manuelle des téléchargements d'extensions pour eclipse.
 
-#### Quelle est la correspondance entre la directive Fortran &quot;selected_real_kind&quot; les types C++ float et double?
+#### Quelle est la correspondance entre la directive Fortran "selected_real_kind" les types C++ float et double?
 
-La définition de cette directive est ici: [http://gcc.gnu.org/onlinedocs/gcc-4.7.1/gfortran/SELECTED_005fREAL_005fKIND.html](http://gcc.gnu.org/onlinedocs/gcc-4.7.1/gfortran/SELECTED_005fREAL_005fKIND.html)
+La définition de cette directive est ici:
+[http://gcc.gnu.org/onlinedocs/gcc-4.7.1/gfortran/SELECTED_005fREAL_005fKIND.html](http://gcc.gnu.org/onlinedocs/gcc-4.7.1/gfortran/SELECTED_005fREAL_005fKIND.html)
 
-La relation avec les autres langages: [http://stackoverflow.com/questions/838310/fortran-90-kind-parameter](http://stackoverflow.com/questions/838310/fortran-90-kind-parameter)
+La relation avec les autres langages:
+[http://stackoverflow.com/questions/838310/fortran-90-kind-parameter](http://stackoverflow.com/questions/838310/fortran-90-kind-parameter)
 
 <p>&nbsp;</p>
 
@@ -1178,7 +1241,8 @@ automatiquement dans FreeFem++-cs tout script EDP qui est glissé/déposé sur c
 
 #### Si FreeFem++-cs ne fonctionne plus après un changement de version d'Ubuntu
 
-Il faut télécharger la version de FreeFem++-cs qui correspond à chaque nouvelle version d'Ubuntu à [http://www.ljll.math.upmc.fr/lehyaric/ffcs/#install](http://www.ljll.math.upmc.fr/lehyaric/ffcs/#install).
+Il faut télécharger la version de FreeFem++-cs qui correspond à chaque nouvelle version d'Ubuntu à
+[http://www.ljll.math.upmc.fr/lehyaric/ffcs/#install](http://www.ljll.math.upmc.fr/lehyaric/ffcs/#install).
 
 <p>&nbsp;</p>
 
@@ -1202,13 +1266,14 @@ interactions require interpolations of data on several meshes and their manipula
 
 Free pre-built meshes available from the web.
 
-* [http://www-static.cc.gatech.edu/projects/large_models/](http://www-static.cc.gatech.edu/projects/large_models/) Large Geometric Models Archive at Georgia Tech
+* [http://www-static.cc.gatech.edu/projects/large_models/](http://www-static.cc.gatech.edu/projects/large_models/) Large Geometric Models
+  Archive at Georgia Tech
 * [http://www.ocnus.com/models/](http://www.ocnus.com/models/) VRML Models from ORC Incorporated
 
 <p>&nbsp;</p>
 
 <!-- <<<GDB>>> -->
-## <A NAME="GDB"></A> GDB
+## <a name="GDB"></a> GDB
 
 "*GDB, the GNU Project debugger, allows you to see what is going on 'inside' another program while it executes – or what another program was
 doing at the moment it crashed.*
@@ -1220,7 +1285,8 @@ doing at the moment it crashed.*
 * *Examine what has happened, when your program has stopped.*
 * *Change things in your program, so you can experiment with correcting the effects of one bug and go on to learn about another.*
 
-*The program being debugged can be written in C, C++, Pascal, Objective-C (and many other languages). Those programs might be executing on the same machine as GDB (native) or on another machine (remote). GDB can run on most popular UNIX and Microsoft Windows variants.*"
+*The program being debugged can be written in C, C++, Pascal, Objective-C (and many other languages). Those programs might be executing on
+the same machine as GDB (native) or on another machine (remote). GDB can run on most popular UNIX and Microsoft Windows variants.*"
 
 * Web: [http://www.gnu.org/software/gdb/#gdbl](http://www.gnu.org/software/gdb/#gdbl)
 
@@ -1266,7 +1332,8 @@ OOGL, [OFF](#off)
 "*Gerris is an Open Source Free Software library for the solution of the partial differential equations describing fluid flow. The source
 code is available free of charge under the [Free Software GPL license](#licences_pour_logiciels_libres).*
 
-*Gerris is supported by NIWA (National Institute of Water and Atmospheric research) and by the Marsden Fund of the Royal Society of New Zealand.*
+*Gerris is supported by NIWA (National Institute of Water and Atmospheric research) and by the Marsden Fund of the Royal Society of New
+Zealand.*
 
 *The code is written entirely in [C](#c) and uses both the GLib Library and the [GTS Library](#gnu_triangulated_surface_library) for
 geometrical functions and object-oriented programming.*
@@ -1369,7 +1436,7 @@ different meshes. This is usefull for some mixed finite element methods and for 
 <p>&nbsp;</p>
 
 <!-- <<<GETM>>> -->
-## <A NAME="GETM"></A> GETM
+## <a name="GETM"></a> GETM
 
 "*GETM is a 3D numerical model simulating the most important hydrodynamic and thermodynamic processes in natural waters. The model is
 general in the sense that it can be applied to various systems, scales and specifications. The model includes for example flooding and
@@ -1423,7 +1490,7 @@ install the program.*"
 
 If MACRO is used inside a makefile, one can give it a value from the command line with
 
-<pre >make MACRO=value</pre>
+`make MACRO=value`
 
 <p>&nbsp;</p>
 
@@ -1438,13 +1505,13 @@ representation. gnuplot is copyrighted, but freely distributable; you don't have
 * Tutorial : [http://www.duke.edu/~hpgavin/#gnuplotl](http://www.duke.edu/~hpgavin/#gnuplotl)
 * Manual : [http://theochem.ki.ku.dk/on_line_docs/gnuplot/#gnuplot_tocl](http://theochem.ki.ku.dk/on_line_docs/gnuplot/#gnuplot_tocl)
 * **FAQ** : [http://www.gnuplot.info/faq/](http://www.gnuplot.info/faq/)
-</li>
-</ul>
 
 ### Questions/Réponses
 
 #### Comment dessiner une courbe avec comme X et Y les deux colonnes d'un fichier
-<pre >&gt; gnuplot
+
+```
+> gnuplot
 
 	G N U P L O T
 	Version 4.4 patchlevel 0
@@ -1455,16 +1522,19 @@ representation. gnuplot is copyrighted, but freely distributable; you don't have
 	Thomas Williams, Colin Kelley and many others
 
 	gnuplot home:     http://www.gnuplot.info
-	faq, bugs, etc:   type &quot;help seeking-assistance&quot;
-	immediate help:   type &quot;help&quot;
+	faq, bugs, etc:   type "help seeking-assistance"
+	immediate help:   type "help"
 	plot window:      hit 'h'
 
 Terminal type set to 'wxt'
-gnuplot&gt; plot 'resultats.dat' using 1:2 title 'Résultats' with lines
-gnuplot&gt; quit</pre>
+gnuplot> plot 'resultats.dat' using 1:2 title 'Résultats' with lines
+gnuplot> quit
+```
 
 #### Comment dessiner deux courbes sur le même graphe, la première avec les colonnes 1 et 2 du fichier, la deuxième avec les colonnes 1 et 3?
-<pre >&gt; gnuplot
+
+```
+> gnuplot
 
 	G N U P L O T
 	Version 4.4 patchlevel 0
@@ -1475,33 +1545,40 @@ gnuplot&gt; quit</pre>
 	Thomas Williams, Colin Kelley and many others
 
 	gnuplot home:     http://www.gnuplot.info
-	faq, bugs, etc:   type &quot;help seeking-assistance&quot;
-	immediate help:   type &quot;help&quot;
+	faq, bugs, etc:   type "help seeking-assistance"
+	immediate help:   type "help"
 	plot window:      hit 'h'
 
 Terminal type set to 'wxt'
-gnuplot&gt; plot 'resultats.dat' using 1:2 title 'Courbe 1' with lines,'resultats.dat' using 1:3 title 'Courbe 2' with lines
-gnuplot&gt; quit</pre>
+gnuplot> plot 'resultats.dat' using 1:2 title 'Courbe 1' with lines,'resultats.dat' using 1:3 title 'Courbe 2' with lines
+gnuplot> quit
+```
 
 #### Comment tracer une droite passant par des points expérimentaux?
-<pre >f1(x)=a*x+b
+
+```gnuplot
+f1(x)=a*x+b
 a=10;b=10;
 fit f1(x) 'data.dat' using 1:2 via a,b
 
-plot &quot;data.dat&quot; using 1:2,a*x+b title 'fit'
+plot "data.dat" using 1:2,a*x+b title 'fit'
 
-pause -1</pre>
+pause -1
+```
 
 <p>&nbsp;</p>
 
 <!-- <<<GNU Scientific Library>>> -->
 ## <a name="GNU Scientific Library"></a> GNU Scientific Library
 
-"*The GNU Scientific Library (GSL) is a numerical library for [C](#c) and [C++](#cxx) programmers. It is free software under the [GNU General Public License](#licences_pour_logiciels_libres).*
+"*The GNU Scientific Library (GSL) is a numerical library for [C](#c) and [C++](#cxx) programmers. It is free software under the [GNU
+General Public License](#licences_pour_logiciels_libres).*
 
-*The library provides a wide range of mathematical routines such as random number generators, special functions and least-squares fitting. There are over 1000 functions in total.*
+*The library provides a wide range of mathematical routines such as random number generators, special functions and least-squares
+fitting. There are over 1000 functions in total.*
 
-*Unlike the licenses of proprietary numerical libraries the license of GSL does not restrict scientific cooperation. It allows you to share your programs freely with others.*"
+*Unlike the licenses of proprietary numerical libraries the license of GSL does not restrict scientific cooperation. It allows you to share
+your programs freely with others.*"
 
 ### Web
 
@@ -1522,36 +1599,28 @@ The GNU Scientific Library implements [BLAS](#blas) support as described in
 <!-- <<<GNU Triangulated Surface Library>>> -->
 ## <a name="GNU Triangulated Surface Library"></a> GNU Triangulated Surface Library
 
-"*GTS stands for the GNU Triangulated Surface Library. It is an Open Source Free Software Library intended to provide a set of useful functions to deal with 3D surfaces meshed with interconnected triangles. The source code is available free of charge under the Free Software [LGPL](#licences_pour_logiciels_libres) license.*
+"*GTS stands for the GNU Triangulated Surface Library. It is an Open Source Free Software Library intended to provide a set of useful
+functions to deal with 3D surfaces meshed with interconnected triangles. The source code is available free of charge under the Free Software
+[LGPL](#licences_pour_logiciels_libres) license.*
 
-*The code is written entirely in [C](#c) with an object-oriented approach based mostly on the design of GTK+. Careful attention is paid to performance related issues as the initial goal of GTS is to provide a simple and efficient library to scientists dealing with 3D computational surface meshes.*
+*The code is written entirely in [C](#c) with an object-oriented approach based mostly on the design of GTK+. Careful attention is paid to
+performance related issues as the initial goal of GTS is to provide a simple and efficient library to scientists dealing with 3D
+computational surface meshes.*
 
 *A brief summary of its main features:*
 
-<ul>
-*  *Simple object-oriented structure giving easy access to topological properties.*
-
-*  *2D dynamic Delaunay and constrained Delaunay triangulations.*
-
-*  *Robust geometric predicates (orientation, in circle) using fast adaptive floating point arithmetic (adapted from the fine work of Jonathan R. Shewchuk).*
-
-*  *Robust set operations on surfaces (union, intersection, difference).*
-
-*  *Surface refinement and coarsening (multiresolution models).*
-
-*  *Dynamic view-independent continuous level-of-detail.*
-
-*  *Preliminary support for view-dependent level-of-detail.*
-
-*  *Bounding-boxes trees and Kd-trees for efficient point location and collision/intersection detection.*
-
-*  *Graph operations: traversal, graph partitioning.*
-
-*  *Metric operations (area, volume, curvature …).*
-
-*  *Triangle strips generation for fast rendering.*"
-
-</ul>
+* *Simple object-oriented structure giving easy access to topological properties.*
+* *2D dynamic Delaunay and constrained Delaunay triangulations.*
+* *Robust geometric predicates (orientation, in circle) using fast adaptive floating point arithmetic (adapted from the fine work of
+  Jonathan R. Shewchuk).*
+* *Robust set operations on surfaces (union, intersection, difference).*
+* *Surface refinement and coarsening (multiresolution models).*
+* *Dynamic view-independent continuous level-of-detail.*
+* *Preliminary support for view-dependent level-of-detail.*
+* *Bounding-boxes trees and Kd-trees for efficient point location and collision/intersection detection.*
+* *Graph operations: traversal, graph partitioning.*
+* *Metric operations (area, volume, curvature …).*
+* *Triangle strips generation for fast rendering.*"
 
 ### Web
 
@@ -1593,19 +1662,32 @@ empirical models, energy models, two-equation models, Explicit Algebraic Stress 
 <p>&nbsp;</p>
 
 <!-- <<<GRUMMP>>> -->
-## <A NAME="GRUMMP"></A> GRUMMP
+## <a name="GRUMMP"></a> GRUMMP
 
 "*GRUMMP — Generation and Refinement of Unstructured, Mixed-Element Meshes in Parallel*
 
 *Goals of the GRUMMP Project*
 
-*The goal of the GRUMMP project is to develop automatic mesh generation software for unstructured meshes with mixed element types. The software should produce high-quality meshes that meet user-defined mesh density requirements, using elements appropriate for the geometry and physics of a particular problem.*
+*The goal of the GRUMMP project is to develop automatic mesh generation software for unstructured meshes with mixed element types. The
+software should produce high-quality meshes that meet user-defined mesh density requirements, using elements appropriate for the geometry
+and physics of a particular problem.*
 
-*Automatic mesh generation for complex two and three dimensional domains is a topic of intensive research. It is imperative that automatic mesh generation tools be capable of generating quality finite element and finite volume meshes. There must be a balance between resolution of the boundary and surface features and complexity of the problem. In addition, for problems with isotropic physics, element aspect ratio must be small to minimize linear system condition number and interpolation error. On the other hand, problems with anisotropic physics (for example, a shear layer in viscous fluid flow) require highly anisotropic elements for efficient solution. A further level of complication is that for some physical problems and applications, quadrilateral (2D) or hexahedral (3D) elements are preferred, even though filling space with high quality elements is easier using triangular (2D) or tetrahedral (3D) elements.*
+*Automatic mesh generation for complex two and three dimensional domains is a topic of intensive research. It is imperative that automatic
+mesh generation tools be capable of generating quality finite element and finite volume meshes. There must be a balance between resolution
+of the boundary and surface features and complexity of the problem. In addition, for problems with isotropic physics, element aspect ratio
+must be small to minimize linear system condition number and interpolation error. On the other hand, problems with anisotropic physics (for
+example, a shear layer in viscous fluid flow) require highly anisotropic elements for efficient solution. A further level of complication is
+that for some physical problems and applications, quadrilateral (2D) or hexahedral (3D) elements are preferred, even though filling space
+with high quality elements is easier using triangular (2D) or tetrahedral (3D) elements.*
 
-*A general-purpose automatic mesh generator should address all of these issues without excessive user intervention. We envision a system in which common types of physical problems have predefined mesh sizing and element aspect ratio functions, allowing easy generation of meshes for these applications areas. For flexibility and generality, the user will also be able to prescribe these functions (for totally different applications) or modify the predefined behaviors (to provide a quality mesh in the wake of an airplane wing, for example).*
+*A general-purpose automatic mesh generator should address all of these issues without excessive user intervention. We envision a system in
+which common types of physical problems have predefined mesh sizing and element aspect ratio functions, allowing easy generation of meshes
+for these applications areas. For flexibility and generality, the user will also be able to prescribe these functions (for totally different
+applications) or modify the predefined behaviors (to provide a quality mesh in the wake of an airplane wing, for example).*
 
-*GRUMMP addresses these issues by implementing mesh manipulation primitives to generate or modify existing meshes so that criteria for element size and quality are met. In addition, automatic computation of local length scale is performed to provide a default in cases where solution-based adaptive length scales are not available.*"
+*GRUMMP addresses these issues by implementing mesh manipulation primitives to generate or modify existing meshes so that criteria for
+element size and quality are met. In addition, automatic computation of local length scale is performed to provide a default in cases where
+solution-based adaptive length scales are not available.*"
 
 ### Web
 
@@ -1626,17 +1708,17 @@ empirical models, energy models, two-equation models, Explicit Algebraic Stress 
 <p>&nbsp;</p>
 
 <!-- <<<HDF>>> -->
-## <A NAME="HDF"></A> HDF
+## <a name="HDF"></a> HDF
 
-"*WELCOME to the Hierarchical Data Format (HDF) home page at the National Center for Supercomputing Applications.
+"*WELCOME to the Hierarchical Data Format (HDF) home page at the National Center for Supercomputing Applications.*
 
-The HDF project involves the development and support of software and file formats for scientific data management. The HDF software includes
+*The HDF project involves the development and support of software and file formats for scientific data management. The HDF software includes
 I/O libraries and tools for analyzing, visualizing, and converting scientific data. There are two HDF formats, HDF (4.x and previous
-releases) and HDF5. These formats are completely different and NOT compatible. ( NOTE: There are no plans to drop support for HDF 4.x )
+releases) and HDF5. These formats are completely different and NOT compatible. ( NOTE: There are no plans to drop support for HDF 4.x )*
 
-The HDF software is developed and supported by NCSA and is freely available. It is used world-wide in many fields, including Environmental
-Science, Neutron Scattering, Non-Destructive Testing, and Aerospace, to name a few. Scientific projects that use HDF include NASA's
-HDF-EOS project, and the DOE's Advanced Simulation and Computing Program. *"
+*The HDF software is developed and supported by NCSA and is freely available. It is used world-wide in many fields, including Environmental
+Science, Neutron Scattering, Non-Destructive Testing, and Aerospace, to name a few. Scientific projects that use HDF include NASA's HDF-EOS
+project, and the DOE's Advanced Simulation and Computing Program.*"
 
 ### Documentation
 
@@ -1647,7 +1729,10 @@ HDF-EOS project, and the DOE's Advanced Simulation and Computing Program. *"
 <!-- <<<Hypre>>> -->
 ## <a name="Hypre"></a> Hypre
 
-"*The goal of the Scalable Linear Solvers project is to develop scalable algorithms and software for solving large, sparse linear systems of equations on parallel computers. The primary software product is hypre, a library of high performance preconditioners that features parallel multigrid methods for both structured and unstructured grid problems. The problems of interest arise in the simulation codes being developed at LLNL and elsewhere to study physical phenomena in the defense, environmental, energy, and biological sciences.*"
+"*The goal of the Scalable Linear Solvers project is to develop scalable algorithms and software for solving large, sparse linear systems of
+equations on parallel computers. The primary software product is hypre, a library of high performance preconditioners that features parallel
+multigrid methods for both structured and unstructured grid problems. The problems of interest arise in the simulation codes being developed
+at LLNL and elsewhere to study physical phenomena in the defense, environmental, energy, and biological sciences.*"
 
 ### Web
 
@@ -1668,15 +1753,20 @@ HDF-EOS project, and the DOE's Advanced Simulation and Computing Program. *"
 <!-- <<<I-DEAS file format>>> -->
 ## <a name="I-DEAS file format"></a> I-DEAS file format
 
-File format of the [I-DEAS computer-aided design software package](http://en.wikipedia.org/wiki/I-DEAS). It can be used in [Matlab](#matlab) : [http://www.mathworks.com/matlabcentral/fileexchange/loadFile.do?objectId=6395&amp;objectType=file](http://www.mathworks.com/matlabcentral/fileexchange/loadFile.do?objectId=6395&amp;objectType=file)
+File format of the [I-DEAS computer-aided design software package](http://en.wikipedia.org/wiki/I-DEAS). It can be used in
+[Matlab](#matlab) :
+[http://www.mathworks.com/matlabcentral/fileexchange/loadFile.do?objectId=6395&objectType=file](http://www.mathworks.com/matlabcentral/fileexchange/loadFile.do?objectId=6395&objectType=file)
 and [libMesh](#libmesh).
 
 <p>&nbsp;</p>
 
 <!-- <<<IGES>>> -->
-## <A NAME="IGES"></A> IGES
+## <a name="IGES"></a> IGES
 
-"*Products may be designed as either a two-dimensional, three-view drawing layout, or as a full three-dimensional model with associated drawing views and dimensions using a Computer Aided Design (CAD) system. The IGES format serves as a neutral data format to transfer the design to a dissimilar system. Translators, developed to the IGES Standard, are used to export a design into an IGES file for exchange and for importing the IGES file into the destination system.*"
+"*Products may be designed as either a two-dimensional, three-view drawing layout, or as a full three-dimensional model with associated
+drawing views and dimensions using a Computer Aided Design (CAD) system. The IGES format serves as a neutral data format to transfer the
+design to a dissimilar system. Translators, developed to the IGES Standard, are used to export a design into an IGES file for exchange and
+for importing the IGES file into the destination system.*"
 
 ### Web
 
@@ -1693,28 +1783,20 @@ and [libMesh](#libmesh).
 <p>&nbsp;</p>
 
 <!-- <<<IML++>>> -->
-## <A NAME="IML++"></A> IML++
+## <a name="IML++"></a> IML++
 
-"*IML++ is a [C++](#cxx) templated library of modern iterative methods for solving both symmetric and nonsymmetric linear systems of equations. The algorithms are fully templated in that the same source code works for dense, sparse, and distributed matrices. Some of the numerical methods are presented in the book, Templates: Building Blocks for the Solution of Iterative Systems and include*
+"*IML++ is a [C++](#cxx) templated library of modern iterative methods for solving both symmetric and nonsymmetric linear systems of
+equations. The algorithms are fully templated in that the same source code works for dense, sparse, and distributed matrices. Some of the
+numerical methods are presented in the book, Templates: Building Blocks for the Solution of Iterative Systems and include*
 
-<ul>
-*  *Richardson Iteration*
-
-*  *Chebyshev Iteration*
-
-*  *Conjugate Gradient (CG)*
-
-*  *Conjugate Gradient Squared (CGS)*
-
-*  *BiConjugate Gradient (BiCG)*
-
-*  *BiConjugate Gradient Stabilized (BiCGSTAB)*
-
-*  *Generalized Minimum Residual (GMRES)*
-
-*  *Quasi-Minimal Residual Without Lookahead (QMR)*
-
-</ul>
+* *Richardson Iteration*
+* *Chebyshev Iteration*
+* *Conjugate Gradient (CG)*
+* *Conjugate Gradient Squared (CGS)*
+* *BiConjugate Gradient (BiCG)*
+* *BiConjugate Gradient Stabilized (BiCGSTAB)*
+* *Generalized Minimum Residual (GMRES)*
+* *Quasi-Minimal Residual Without Lookahead (QMR)*
 
 *The IML++ software also contains an optional test suite for sparse matrix computations, using [SparseLib++](#sparselib).*"
 
@@ -1727,15 +1809,20 @@ and [libMesh](#libmesh).
 <!-- <<<Impact>>> -->
 ## <a name="Impact"></a> Impact
 
-"*Impact is an open source finite element program suite which can be used to predict most dynamic events such as car crashes or metal sheet punch operations. They usually involve large deformations and high velocities.*
+"*Impact is an open source finite element program suite which can be used to predict most dynamic events such as car crashes or metal sheet
+punch operations. They usually involve large deformations and high velocities.*
 
-*Simulations are made on a virtual three dimensional model which can be created with a pre-processor or with the built-in Fembic language. Results are viewed in a post-processor.*
+*Simulations are made on a virtual three dimensional model which can be created with a pre-processor or with the built-in Fembic
+language. Results are viewed in a post-processor.*
 
-*Impact is designed to interface with the included pre- and postprocessor by default, but there are also interfaces available for more advanced pre-and postprocessors such as GiD or Gmsh. Impact also has rudamentary support for Nastran file format.*
+*Impact is designed to interface with the included pre- and postprocessor by default, but there are also interfaces available for more
+advanced pre-and postprocessors such as GiD or Gmsh. Impact also has rudamentary support for Nastran file format.*
 
-*Development is made by a team of volunteers from all over the world with the aim of creating a clean and compact program which is simple to understand and use.*
+*Development is made by a team of volunteers from all over the world with the aim of creating a clean and compact program which is simple to
+understand and use.*
 
-*Impact is licensed under the [Gnu Public License](#licences_pour_logiciels_libres) which makes it free to use and modify as long as you release and publish your improvements under the same license.*
+*Impact is licensed under the [Gnu Public License](#licences_pour_logiciels_libres) which makes it free to use and modify as long as you
+release and publish your improvements under the same license.*
 
 *Impact is written in Java which means it can be run on most hardware and operating systems.*"
 
@@ -1746,11 +1833,15 @@ and [libMesh](#libmesh).
 <p>&nbsp;</p>
 
 <!-- <<<ISAAC>>> -->
-## <A NAME="ISAAC"></A> ISAAC
+## <a name="ISAAC"></a> ISAAC
 
-"*ISAAC (Integrated Solution Algorithm for Arbitrary Configurations) is a compressible Euler/Navier-Stokes computational fluid dynamics code. ISAAC includes the capability of calculating the Euler equations for inviscid flow or the Navier-Stokes equations for viscous flows. ISAAC uses a domain decomposition structure to accomodate complex physical configurations. ISAAC can calculate either steady-state or time dependent flow.*
+"*ISAAC (Integrated Solution Algorithm for Arbitrary Configurations) is a compressible Euler/Navier-Stokes computational fluid dynamics
+code. ISAAC includes the capability of calculating the Euler equations for inviscid flow or the Navier-Stokes equations for viscous
+flows. ISAAC uses a domain decomposition structure to accomodate complex physical configurations. ISAAC can calculate either steady-state or
+time dependent flow.*
 
-*ISAAC was designed to test turbulence models. Various two equation turbulence models, explicit algebraic Reynolds stress models, and full differential Reynolds stress models are implemented in ISAAC. Several test cases are documented in the User's Guide.  *"
+*ISAAC was designed to test turbulence models. Various two equation turbulence models, explicit algebraic Reynolds stress models, and full
+differential Reynolds stress models are implemented in ISAAC. Several test cases are documented in the User's Guide.  *"
 
 ### Web
 
@@ -1771,9 +1862,14 @@ and [libMesh](#libmesh).
 <p>&nbsp;</p>
 
 <!-- <<<ITPACK>>> -->
-## <A NAME="ITPACK"></A> ITPACK
+## <a name="ITPACK"></a> ITPACK
 
-"*There are four packages in the ITPACK directory for solving large sparse linear systems by iterative methods: ITPACK 2C (single precision), ITPACK 2C (double precision), ITPACKV 2D (a vectorized version of ITPACK 2C for the Cray Y-MP and similar vector computers), and NSPCG.  ITPACK 2C and ITPACKV 2D are intended for symmetric and positive-definite matrix problems.  NSPCG has preconditioners and polynomial accelerators for nonsymmetric matrix problems as well.  Only single precision versions are available for ITPACKV 2D and NSPCG.  Machine-dependent constants and the timing function may need to be modified by the user when installing the packages for a particular computer.  They are located in routines DFAULT and TIMER in all four packages.*"
+"*There are four packages in the ITPACK directory for solving large sparse linear systems by iterative methods: ITPACK 2C (single
+precision), ITPACK 2C (double precision), ITPACKV 2D (a vectorized version of ITPACK 2C for the Cray Y-MP and similar vector computers), and
+NSPCG.  ITPACK 2C and ITPACKV 2D are intended for symmetric and positive-definite matrix problems.  NSPCG has preconditioners and polynomial
+accelerators for nonsymmetric matrix problems as well.  Only single precision versions are available for ITPACKV 2D and NSPCG.
+Machine-dependent constants and the timing function may need to be modified by the user when installing the packages for a particular
+computer.  They are located in routines DFAULT and TIMER in all four packages.*"
 
 ### Web
 
@@ -1786,7 +1882,6 @@ and [libMesh](#libmesh).
 
 "*Features*
 
-<ul>
 *  *simple volumes modeler*
 
 *  *finit elements mesher*
@@ -1794,8 +1889,6 @@ and [libMesh](#libmesh).
 *  *portable on platforms which support Java and Opencascade*
 
 *  *inherit module architecture of Netbeans*"
-
-</ul>
 
 ### Web
 
@@ -1808,9 +1901,13 @@ and [libMesh](#libmesh).
 <p>&nbsp;</p>
 
 <!-- <<<LAPACK>>> -->
-## <A NAME="LAPACK"></A> LAPACK
+## <a name="LAPACK"></a> LAPACK
 
-"*LAPACK is written in [Fortran](#fortran) 77 and provides routines for solving systems of simultaneous linear equations, least-squares solutions of linear systems of equations, eigenvalue problems, and singular value problems. The associated matrix factorizations (LU, Cholesky, QR, SVD, Schur, generalized Schur) are also provided, as are related computations such as reordering of the Schur factorizations and estimating condition numbers. Dense and banded matrices are handled, but not general sparse matrices. In all areas, similar functionality is provided for real and complex matrices, in both single and double precision.*"
+"*LAPACK is written in [Fortran](#fortran) 77 and provides routines for solving systems of simultaneous linear equations, least-squares
+solutions of linear systems of equations, eigenvalue problems, and singular value problems. The associated matrix factorizations (LU,
+Cholesky, QR, SVD, Schur, generalized Schur) are also provided, as are related computations such as reordering of the Schur factorizations
+and estimating condition numbers. Dense and banded matrices are handled, but not general sparse matrices. In all areas, similar
+functionality is provided for real and complex matrices, in both single and double precision.*"
 
 [Fiche PLUME](http://www.projet-plume.org/fiche/lapack)
 
@@ -1829,34 +1926,28 @@ LAPACK should be used together with an optimized version of the [BLAS](#blas). F
 <!-- <<<LaTeX>>> -->
 ## <a name="LaTeX"></a> LaTeX
 
-"*LaTeX is a high-quality typesetting system, with features designed for the production of technical and scientific documentation. LaTeX is the de facto standard for the communication and publication of scientific documents.*"
+"*LaTeX is a high-quality typesetting system, with features designed for the production of technical and scientific documentation. LaTeX is
+the de facto standard for the communication and publication of scientific documents.*"
 
 [Fiche PLUME](http://www.projet-plume.org/fiche/latex)
 
-<ul>
-*  Initiation : [FAQ](http://www.grappa.univ-lille3.fr/FAQ-LaTeX/) (Français), [http://www.maths.tcd.ie/~dwilkins/LaTeXPrimer](http://www.maths.tcd.ie/~dwilkins/LaTeXPrimer) (English)
-
-*  Référence : [http://en.wikibooks.org/wiki/LaTeX](http://en.wikibooks.org/wiki/LaTeX)
-
-*  Retrouver le nom d'un symbole LaTeX en le dessinant : [http://detexify.kirelabs.org/#classifyl](http://detexify.kirelabs.org/#classifyl)
-
-</ul>
+* Initiation : [FAQ](http://www.grappa.univ-lille3.fr/FAQ-LaTeX/) (Français),
+  [http://www.maths.tcd.ie/~dwilkins/LaTeXPrimer](http://www.maths.tcd.ie/~dwilkins/LaTeXPrimer) (English)
+* Référence : [http://en.wikibooks.org/wiki/LaTeX](http://en.wikibooks.org/wiki/LaTeX)
+* Retrouver le nom d'un symbole LaTeX en le dessinant : [http://detexify.kirelabs.org/#classifyl](http://detexify.kirelabs.org/#classifyl)
 
 ### Questions/Réponses
 
 #### Transparents
-<ul>
-*  Beamer
 
-*  Prosper : [styles disponibles](http://prosper.sourceforge.net/#viewerl)
-
-*  Seminar : [seminar user's guide](http://tex.loria.fr/classes/sem-user.pdf)
-
-</ul>
+* Beamer
+* Prosper : [styles disponibles](http://prosper.sourceforge.net/#viewerl)
+* Seminar : [seminar user's guide](http://tex.loria.fr/classes/sem-user.pdf)
 
 #### Graphiques avec TikZ
 
-"*PGF is a TeX macro package for generating graphics. It is platform- and format-independent and works together with the most important TeX backend drivers, including pdftex and dvips. It comes with a user-friedly syntax layer called TikZ.*"
+"*PGF is a TeX macro package for generating graphics. It is platform- and format-independent and works together with the most important TeX
+backend drivers, including pdftex and dvips. It comes with a user-friedly syntax layer called TikZ.*"
 
 [https://sourceforge.net/projects/pgf/](https://sourceforge.net/projects/pgf/)
 
@@ -1870,8 +1961,14 @@ Avec [kile](http://kile.sourceforge.net)
 
 #### Comment changer la numérotation des équations
 
-citation de [http://www.math.uiuc.edu/~hildebr/tex/#displaysl](http://www.math.uiuc.edu/~hildebr/tex/#displaysl): *By default, LaTeX will number equations consecutively, as (1), (2), etc., assuming you use the automatic equation numbering mechanism. If the paper is very short, or if there are only a few numbered equations, this is fine, but once the numbers get into the twenties and higher, a scheme that numbers equations by section, as in (1.1), (1.2), …, (2.1), etc., is preferable. In fact, for the vast majority of journal articles, the latter is probably the best numbering scheme. To get equations numbered by section, just put the following into the preamble: “
-\numberwithin{equation}{section} ”. For books, theses, or very long papers, an equation numbering scheme that is three levels deep (with numbers like (4.1.1), etc.) may be appropriate. To get this, just replace “section” above by “subsection”, or the corresponding innermost level. The same mechanism works for other counters, e.g., theorem counters, instead of “equation”.*
+citation de [http://www.math.uiuc.edu/~hildebr/tex/#displaysl](http://www.math.uiuc.edu/~hildebr/tex/#displaysl): *By default, LaTeX will
+number equations consecutively, as (1), (2), etc., assuming you use the automatic equation numbering mechanism. If the paper is very short,
+or if there are only a few numbered equations, this is fine, but once the numbers get into the twenties and higher, a scheme that numbers
+equations by section, as in (1.1), (1.2), …, (2.1), etc., is preferable. In fact, for the vast majority of journal articles, the latter is
+probably the best numbering scheme. To get equations numbered by section, just put the following into the preamble: “
+\numberwithin{equation}{section} ”. For books, theses, or very long papers, an equation numbering scheme that is three levels deep (with
+numbers like (4.1.1), etc.) may be appropriate. To get this, just replace “section” above by “subsection”, or the corresponding innermost
+level. The same mechanism works for other counters, e.g., theorem counters, instead of “equation”.*
 
 #### Imprimer un grand poster sur plusieurs feuilles A4 sous Linux
 
@@ -1881,10 +1978,12 @@ Utiliser [PosteRazor](http://posterazor.sourceforge.net).
 
 Avec ghostscript:
 
-<pre >gs -q -dNOPAUSE -dBATCH -dSAFER -sDEVICE=pdfwrite -dCompatibilityLevel=1.3 -dPDFSETTINGS=/screen \
+```bash
+gs -q -dNOPAUSE -dBATCH -dSAFER -sDEVICE=pdfwrite -dCompatibilityLevel=1.3 -dPDFSETTINGS=/screen \
 -dEmbedAllFonts=true -dSubsetFonts=true -dColorImageDownsampleType=/Bicubic -dColorImageResolution=72 \
 -dGrayImageDownsampleType=/Bicubic -dGrayImageResolution=72 -dMonoImageDownsampleType=/Bicubic \
--dMonoImageResolution=72 -dNumRenderingThreads=4 -sOutputFile=smalldoc.pdf bigdoc.pdf</pre>
+-dMonoImageResolution=72 -dNumRenderingThreads=4 -sOutputFile=smalldoc.pdf bigdoc.pdf
+```
 
 #### Graphics with inkscape
 
@@ -1894,31 +1993,40 @@ inkscape is able to draw vector-based graphics and output them as pdf or postscr
 
 It is as simple as including:
 
-<pre >\usepackage{epstopdf}</pre>
+`\usepackage{epstopdf}`
 
 On machines where the epstopdf external command is not available to LaTeX, one can also convert eps figures to pdf with:
 
-<pre >convert figure.eps figure.pdf</pre>
+`convert figure.eps figure.pdf`
 
 <p>&nbsp;</p>
 
 <!-- <<<libMesh>>> -->
 ## <a name="libMesh"></a> libMesh
 
-"*The libMesh library is a [C++](#cxx) framework for the numerical simulation of partial differential equations on serial and parallel platforms. Development began in March 2002 with the intent of providing a friendly interface to a number of high-quality software packages that are currently available. Currently the library supports 2D and 3D steady and transient finite element simulations. [PETSc](#petsc) is currently used for the solution of linear systems on both serial and parallel platforms, and LASPack is included with the library to provide linear solver support on serial machines.*
+"*The libMesh library is a [C++](#cxx) framework for the numerical simulation of partial differential equations on serial and parallel
+platforms. Development began in March 2002 with the intent of providing a friendly interface to a number of high-quality software packages
+that are currently available. Currently the library supports 2D and 3D steady and transient finite element simulations. [PETSc](#petsc) is
+currently used for the solution of linear systems on both serial and parallel platforms, and LASPack is included with the library to provide
+linear solver support on serial machines.*
 
-*The libMesh library is actively developed at The University of Texas at Austin in the CFDLab and at Technische Universität Hamburg-Harburg, Modelling and Computation in Germany. Many thanks to SourceForge for hosting the project. You can find out what is currently happening in the development branch by checking out the CVS Logs online.*
+*The libMesh library is actively developed at The University of Texas at Austin in the CFDLab and at Technische Universität Hamburg-Harburg,
+Modelling and Computation in Germany. Many thanks to SourceForge for hosting the project. You can find out what is currently happening in
+the development branch by checking out the CVS Logs online.*
 
-*A major goal of the library is to provide support for adaptive mesh refinement (AMR) computations in parallel while allowing a research scientist to focus on the physics they are modeling.*"
+*A major goal of the library is to provide support for adaptive mesh refinement (AMR) computations in parallel while allowing a research
+scientist to focus on the physics they are modeling.*"
 
 <p>&nbsp;</p>
 
 <!-- <<<Libtool>>> -->
 ## <a name="Libtool"></a> Libtool
 
-"*GNU libtool is a generic library support script. Libtool hides the complexity of using shared libraries behind a consistent, portable interface.*
+"*GNU libtool is a generic library support script. Libtool hides the complexity of using shared libraries behind a consistent, portable
+interface.*
 
-*To use libtool, add the new generic library building commands to your Makefile, Makefile.in, or Makefile.am. See the documentation for details.*"
+*To use libtool, add the new generic library building commands to your Makefile, Makefile.in, or Makefile.am. See the documentation for
+details.*"
 
 ### Web
 
@@ -1930,7 +2038,8 @@ On machines where the epstopdf external command is not available to LaTeX, one c
 
 ### Licence
 
-"*GNU Libtool is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.*"
+"*GNU Libtool is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or (at your option) any later version.*"
 
 <p>&nbsp;</p>
 
@@ -1939,23 +2048,16 @@ On machines where the epstopdf external command is not available to LaTeX, one c
 
 Pour les développeurs de logiciels dans les laboratoires de recherche (CNRS, universités, INRA…) :
 
-<ul>
-*  [Projet Plume FAQ : licence &amp; copyright pour les développements de logiciels libres de laboratoires de recherche](http://www.projet-plume.org/fr/ressource/faq-licence-copyright)
+*  [Projet Plume FAQ : licence & copyright pour les développements de logiciels libres de laboratoires de
+   recherche](http://www.projet-plume.org/fr/ressource/faq-licence-copyright)
 
-</ul>
 
 Voici aussi une liste de licences gratuites, parmi les plus répandues :
 
-<ul>
 *  [BSD License](http://www.opensource.org/licenses/bsd-license.php)
-
 *  [GNU General Public License (GPL)](http://www.gnu.org/copyleft/#gpll)
-
 *  [GNU Lesser General Public License (LGPL)](http://www.fsf.org/licensing/licenses/#lgpll)
-
 *  [Licence française de logiciel libre CeCILL](http://www.cecill.info)
-
-</ul>
 
 Et une autre liste en anglais : [List of Free Licenses from the Open Source Initiative](http://www.opensource.org/licenses/category)
 
@@ -1966,26 +2068,18 @@ Et une autre liste en anglais : [List of Free Licenses from the Open Source Init
 
 "*Ce logiciel gratuit comprend les modules exécutables à télécharger :*
 
-<ul>
-*  *Un initialisateur de fichiers numériques nécessaires pour les     modules suivants: Méfisto-INITIER;*
+* *Un initialisateur de fichiers numériques nécessaires pour les     modules suivants: Méfisto-INITIER;*
+* *Un générateur de maillages 2D ou 3D, structurés et/ou     non-structurés: Méfisto-MAILLER;*
+* *Un solveur du problème stationnaire ou instationnaire de     l'Élasticité linéaire: Méfisto-ELASTICER;*
+* *Un solveur du calcul des modes propres d'un objet 2d ou 3d:     Méfisto-ELASTICER;*
+* *Un solveur du problème thermique stationnaire ou     instationnaire linéaire ou non linéaire: Méfisto-THERMICER.*
+* *Un solveur du problème de l'équation des ondes planes:     Méfisto-THERMICER.*
+* *Un solveur du calcul des plus petites valeurs propres de     l'opérateur -div A grad: Méfisto-THERMICER.*
+* *Un solveur du problème de Stokes en 2d avec éléments finis de     Taylor-Hood ou Brezzi-Fortin: Méfisto-FLUIDER.*
 
-*  *Un générateur de maillages 2D ou 3D, structurés et/ou     non-structurés: Méfisto-MAILLER;*
+*L'utilisation de ces modules est rendue conviviale par l'emploi systèmatique de menus, le recours à la souris, et une représentation
+graphique des résultats sur l'écran et éventuellement, dans un fichier d'instructions PostScript.*"
 
-*  *Un solveur du problème stationnaire ou instationnaire de     l'Élasticité linéaire: Méfisto-ELASTICER;*
-
-*  *Un solveur du calcul des modes propres d'un objet 2d ou 3d:     Méfisto-ELASTICER;*
-
-*  *Un solveur du problème thermique stationnaire ou     instationnaire linéaire ou non linéaire: Méfisto-THERMICER.*
-
-*  *Un solveur du problème de l'équation des ondes planes:     Méfisto-THERMICER.*
-
-*  *Un solveur du calcul des plus petites valeurs propres de     l'opérateur -div A grad: Méfisto-THERMICER.*
-
-*  *Un solveur du problème de Stokes en 2d avec éléments finis de     Taylor-Hood ou Brezzi-Fortin: Méfisto-FLUIDER.
-
-L'utilisation de ces modules est rendue conviviale par l'emploi systèmatique de menus, le recours à la souris, et une représentation graphique des résultats sur l'écran et éventuellement, dans un fichier d'instructions PostScript.*"
-
-</ul>
 
 ### Auteur(s)
 
@@ -2000,7 +2094,11 @@ Alain Perronnet ([http://www.ljll.math.upmc.fr/perronnet](http://www.ljll.math.u
 <!-- <<<Mélina>>> -->
 ## <a name="Mélina"></a> Mélina
 
-"*Le code MÉLINA est une bibliothèque de procédures pour la résolution de problèmes aux limites gouvernés par des équations aux dérivées partielles par la méthode des éléments finis en dimension 2 ou 3. Il a été développé par D.Martin (Université de RENNES 1) et O.deBayser (SMP, E.N.S.T.A. jusqu'en 1995) dans le cadre des problèmes étudiés au sein du groupe simulation et modélisation des phénomènes de propagation (S.M.P.). Ce code est essentiellement un code de recherche et fournit un ensemble d'outils aisément manipulables pour écrire rapidement des applications pour le traitement numérique de problèmes nouveaux ou/et la mise au point de nouveaux algorithmes.*"
+"*Le code MÉLINA est une bibliothèque de procédures pour la résolution de problèmes aux limites gouvernés par des équations aux dérivées
+partielles par la méthode des éléments finis en dimension 2 ou 3. Il a été développé par D.Martin (Université de RENNES 1) et O.deBayser
+(SMP, E.N.S.T.A. jusqu'en 1995) dans le cadre des problèmes étudiés au sein du groupe simulation et modélisation des phénomènes de
+propagation (S.M.P.). Ce code est essentiellement un code de recherche et fournit un ensemble d'outils aisément manipulables pour écrire
+rapidement des applications pour le traitement numérique de problèmes nouveaux ou/et la mise au point de nouveaux algorithmes.*"
 
 [Fiche PLUME](http://www.projet-plume.org/fiche/melina)
 
@@ -2008,33 +2106,33 @@ Alain Perronnet ([http://www.ljll.math.upmc.fr/perronnet](http://www.ljll.math.u
 
 <!-- <<<Matlab>>> -->
 ## <a name="Matlab"></a> Matlab
-<ul>
+
 *  [Historique](http://fr.wikipedia.org/wiki/MATLAB)
-
 *  [Introduction au logiciel Matlab](http://www.ljll.math.upmc.fr/~postel/matlab)
-
 *  Alternatives gratuites : [Octave](#octave), [Sage](#sage), [Scilab](#scilab)
 
-</ul>
 
 ### Questions/Réponses
 
 #### ssh sur Linux: Attention à TMOUT
 
-Matlab est souvent lancé sur un serveur distant grâce à ssh suivi de la commande “matlab&amp;”. Il est conseillé d'ajouter la commande <strong>export TMOUT=0</strong> (TMOUT signifie time-out et représente le temps en secondes après lequel la session est déconnectée) après “ssh” avant “matlab” afin d'éviter toute déconnection automatique avant que le programme matlab soit terminé.
+Matlab est souvent lancé sur un serveur distant grâce à ssh suivi de la commande “matlab&”. Il est conseillé d'ajouter la commande
+**export TMOUT=0** (TMOUT signifie time-out et représente le temps en secondes après lequel la session est déconnectée) après
+“ssh” avant “matlab” afin d'éviter toute déconnection automatique avant que le programme matlab soit terminé.
 
 #### Limiter le nombre de coeurs de calcul utilisés par Matlab
 
-Matlab utilise par défaut tous les coeurs disponibles. Pour éviter cela (par exemple quand il y a d'autres utilisateurs sur le même serveur de calcul), il faut utiliser l'option <strong>-singleCompThread</strong>
+Matlab utilise par défaut tous les coeurs disponibles. Pour éviter cela (par exemple quand il y a d'autres utilisateurs sur le même serveur
+de calcul), il faut utiliser l'option **-singleCompThread**
 
-<pre >matlab -singleCompThread</pre>
+`matlab -singleCompThread`
 
 (cf [http://www.mathworks.fr/help/techdoc/ref/#maxnumcompthreadsl](http://www.mathworks.fr/help/techdoc/ref/#maxnumcompthreadsl))
 
 Les utilisateurs de MatlabMPI ont eux-aussi besoin de cette option car [MPI](#mpi)
-  gère lui-même le parallélisme. Il faut donc ajouter <strong>-singleCompThread</strong> dans le fichier
+  gère lui-même le parallélisme. Il faut donc ajouter **-singleCompThread** dans le fichier
 
-<pre >MatlabMPI/src/MatMPI_Comm_settings.m</pre>
+`MatlabMPI/src/MatMPI_Comm_settings.m`
 
 et sur la ligne de commande de tous les scripts MatlabMPI.
 
@@ -2042,46 +2140,53 @@ et sur la ligne de commande de tous les scripts MatlabMPI.
 
 Matlab est capable d'utiliser la carte [CUDA](#cuda) de la machine. Par exemple:
 
-<pre ><span >%  feature('numCores')</span>
+<!-- ALHTODO 01/11/18 09:07:27 convert all span fields as source code with highlighting -->
+
+```matlab
+%  feature('numCores')
 n = gpuDeviceCount;
-<span >for</span> ii = <span >1</span>:n
-    gpuDevice<span >&#40;</span>ii<span >&#41;</span>
-<span >end</span>
-&nbsp;
-<span >%Transfer a 10-by-10 matrix of random single-precision values to the GPU, then use the GPU to square each element.</span>
-&nbsp;
-X = [<span >rand</span>](http://www.mathworks.com/access/helpdesk/help/techdoc/ref/#randl)<span >&#40;</span><span >10</span>, <span >'single'</span><span >&#41;</span>;
-G = gpuArray<span >&#40;</span>X<span >&#41;</span>;
-isequal<span >&#40;</span>gather<span >&#40;</span>G<span >&#41;</span>, X<span >&#41;</span>  <span >% Returns true</span>
-classUnderlying<span >&#40;</span>G<span >&#41;</span>     <span >% Returns 'single'</span>
-G2 = G .* G            <span >% Uses times method defined for </span>
-                       <span >% GPUArray objects</span>
-&nbsp;
-<span >for</span> ii = <span >1</span>:gpuDeviceCount
-    g = gpuDevice<span >&#40;</span>ii<span >&#41;</span>;
-    [<span >fprintf</span>](http://www.mathworks.com/access/helpdesk/help/techdoc/ref/#fprintfl)<span >&#40;</span><span >1</span>, <span >'Device %i has ComputeCapability %s \n'</span>, <span >...</span>
-            <span >g</span>.<span >Index</span>, g.<span >ComputeCapability</span><span >&#41;</span>
-<span >end</span></pre>
+for ii = 1:n
+    gpuDevice(ii)
+end
+ 
+%Transfer a 10-by-10 matrix of random single-precision values to the GPU, then use the GPU to square each element.
+ 
+X = [rand](http://www.mathworks.com/access/helpdesk/help/techdoc/ref/#randl)(10, 'single');
+G = gpuArray(X);
+isequal(gather(G), X)  % Returns true
+classUnderlying(G)     % Returns 'single'
+G2 = G .* G            % Uses times method defined for 
+                       % GPUArray objects
+ 
+for ii = 1:gpuDeviceCount
+    g = gpuDevice(ii);
+    [fprintf](http://www.mathworks.com/access/helpdesk/help/techdoc/ref/#fprintfl)(1, 'Device %i has ComputeCapability %s \n', ...
+            g.Index, g.ComputeCapability)
+end
+```
 
 #### Comment lancer une commande Matlab sans fenêtre graphique?
-<pre >matlab -nodisplay -r commande</pre>
+`matlab -nodisplay -r commande`
 
 Ceci est très utile en conjonction avec [nohup](#nohup) ou [screen](#screen). Voici aussi un exemple de script [qsub](#qsub) :
 
-<dl >
-<dt>matlab.qsub</dt>
-<dd><pre ><span >#!/bin/bash</span>
-<span >#PBS -q seq</span>
-<span >#PBS -N matlab</span>
-<span >#PBS -j oe</span>
-. <span >/</span>usr<span >/</span>share<span >/</span>modules<span >/</span>init<span >/</span><span >sh</span>
+* matlab.qsub
+
+```bash
+#!/bin/bash
+#PBS -q seq
+#PBS -N matlab
+#PBS -j oe
+. /usr/share/modules/init/sh
 module load Matlab
-<span >cd</span> <span >$PBS_O_WORKDIR</span>
-matlab <span >-nodisplay</span> <span >-r</span> <span >&#91;</span>commande<span >&#93;</span></pre>
-</dd></dl>
+cd $PBS_O_WORKDIR
+matlab -nodisplay -r [commande]
+```
 
 #### Les principales options de la commande Matlab
-<pre >&gt; matlab -h
+
+```
+> matlab -h
 
     Usage:  matlab [-h|-help] | [-n | -e]
                    [-arch | v=variant | v=arch/variant]
@@ -2135,74 +2240,78 @@ matlab <span >-nodisplay</span> <span >-r</span> <span >&#91;</span>commande<spa
     -r MATLAB_command    - Start MATLAB and execute the MATLAB_command.
     -logfile log         - Make a copy of any output to the command window
                            in file log. This includes all crash reports.
-    -Ddebugger [options] - Start debugger to debug MATLAB.</pre>
+    -Ddebugger [options] - Start debugger to debug MATLAB.
+```
 
 #### Quel équivalent pour la commande Matlab ksdensity()?
 
-avec [Octave](#octave) : [http://octave.sourceforge.net/econometrics/function/#kernel_densityl](http://octave.sourceforge.net/econometrics/function/#kernel_densityl)
+avec [Octave](#octave) :
+[http://octave.sourceforge.net/econometrics/function/#kernel_densityl](http://octave.sourceforge.net/econometrics/function/#kernel_densityl)
 
 #### Comment inverser une matrice?
 
 Pour trouver l'inverse d'une matrice A, il y a plusieurs possibilités en fonction de l'utilisation prévue pour l'inverse:
 
-<ul>
-<li > simple mais très long à calculer: <strong>Inv(A)</strong>
-</li>
-<li > beaucoup plus rapide si on veut uniquement calculer le produit A^-1*B où B est un vecteur: <strong>A\\B</strong> (utilise la méthode de résolution matricielle par défaut).
-</li>
-<li > pour choisir une méthode de résolution matricielle particulière: appeler la fonction correspondante. Par exemple <strong>conjgrad(A,B,1e-8)</strong> pour le gradient conjugué.
-</li>
-</ul>
+* simple mais très long à calculer: **Inv(A)**
+* beaucoup plus rapide si on veut uniquement calculer le produit A^-1*B où B est un vecteur: **A\\B** (utilise la méthode de
+  résolution matricielle par défaut).
+* pour choisir une méthode de résolution matricielle particulière: appeler la fonction correspondante. Par exemple
+  **conjgrad(A,B,1e-8)** pour le gradient conjugué.
 
-Quelques exemples avec les temps de calcul associés: [http://scicomp.stackexchange.com/questions/1001/how-does-the-matlab-backslash-operator-solve-ax-b-for-square-matrices](http://scicomp.stackexchange.com/questions/1001/how-does-the-matlab-backslash-operator-solve-ax-b-for-square-matrices)
+Quelques exemples avec les temps de calcul associés:
+[http://scicomp.stackexchange.com/questions/1001/how-does-the-matlab-backslash-operator-solve-ax-b-for-square-matrices](http://scicomp.stackexchange.com/questions/1001/how-does-the-matlab-backslash-operator-solve-ax-b-for-square-matrices)
 
 #### Comment calculer les zéros des polynômes de Legendre?
 
-Si on définit la fonction suivante dans le fichier <strong>leg.m</strong> (pour polynômes de Legendre associés à 2 indices n et m):
+Si on définit la fonction suivante dans le fichier **leg.m** (pour polynômes de Legendre associés à 2 indices n et m):
 
-<dl >
-<dt>leg.m</dt>
-<dd><pre ><span >function</span> leg = leg<span >&#40;</span>n,m,x<span >&#41;</span>
-y=[<span >legendre</span>](http://www.mathworks.com/access/helpdesk/help/techdoc/ref/#legendrel)<span >&#40;</span>n,x<span >&#41;</span>;
-leg=y<span >&#40;</span>m,:<span >&#41;</span>;</pre>
-</dd></dl>
+* leg.m
 
-Alors par exemple un zéro de <strong>P^1_3</strong> dans l'intervalle <strong>[0.1,0.9]</strong> se calcule de la façon suivante:
+```matlab
+function leg = leg(n,m,x)
+y=[legendre](http://www.mathworks.com/access/helpdesk/help/techdoc/ref/#legendrel)(n,x);
+leg=y(m,:);
+```
 
-<pre >&gt;&gt; n=<span >3</span>;m=<span >1</span>;[<span >fzero</span>](http://www.mathworks.com/access/helpdesk/help/techdoc/ref/#fzerol)<span >&#40;</span>@<span >&#40;</span>x<span >&#41;</span> leg<span >&#40;</span>n,m,x<span >&#41;</span>,<span >&#91;</span><span >0.1</span> <span >0.9</span><span >&#93;</span><span >&#41;</span>
-&nbsp;
-[<span >ans</span>](http://www.mathworks.com/access/helpdesk/help/techdoc/ref/#ansl) =
-&nbsp;
-    <span >0.7746</span></pre>
+Alors par exemple un zéro de **P^1_3** dans l'intervalle **[0.1,0.9]** se calcule de la façon suivante:
+
+```
+> n=3;m=1;[fzero](http://www.mathworks.com/access/helpdesk/help/techdoc/ref/#fzerol)(@(x) leg(n,m,x),[0.1 0.9])
+ 
+ans =
+ 
+    0.7746
+```
 
 #### Emplacement du compilateur mex
 
 Si l'exécutable matlab est dans le chemin suivant :
 
-<pre >/usr/local/MATLAB/R2012b/bin/matlab</pre>
+`/usr/local/MATLAB/R2012b/bin/matlab`
 
 Il peut être nécessaire de préciser le chemin complet pour mex. Il est dans le même répertoire :
 
-<pre >/usr/local/MATLAB/R2012b/bin/mex</pre>
+`/usr/local/MATLAB/R2012b/bin/mex`
 
 #### Tester le multithreading
 
 Ce petit programme peut utiliser 20 threads simultanées (visibles avec la commande “top”) si Matlab est correctement configuré:
 
-<dl >
-<dt>threading.m</dt>
-<dd><pre ><span >% Benchmarking Ax = b algebraic system of equations with multithreading</span>
-&nbsp;
-n = <span >8000</span>;         <span >% set matrix size</span>
-M = [<span >rand</span>](http://www.mathworks.com/access/helpdesk/help/techdoc/ref/#randl)<span >&#40;</span>n<span >&#41;</span>;      <span >% create random matrix</span>
-A = M + M';       <span >% create A as a symmetric real matrix</span>
-x = [<span >ones</span>](http://www.mathworks.com/access/helpdesk/help/techdoc/ref/#onesl)<span >&#40;</span>n,<span >1</span><span >&#41;</span>;    <span >% define solution x as unity vector</span>
-b = A * x;        <span >% compute RHS b from A and x</span>
-&nbsp;
-display &quot;start&quot;
-&nbsp;
-y = A\b;                <span >% solves Ay = b; y should equal x</span></pre>
-</dd></dl>
+* threading.m
+
+```matlab
+% Benchmarking Ax = b algebraic system of equations with multithreading
+ 
+n = 8000;         % set matrix size
+M = [rand](http://www.mathworks.com/access/helpdesk/help/techdoc/ref/#randl)(n);      % create random matrix
+A = M + M';       % create A as a symmetric real matrix
+x = [ones](http://www.mathworks.com/access/helpdesk/help/techdoc/ref/#onesl)(n,1);    % define solution x as unity vector
+b = A * x;        % compute RHS b from A and x
+ 
+display "start"
+ 
+y = A\b;                % solves Ay = b; y should equal x
+```
 
 <p>&nbsp;</p>
 
@@ -2211,39 +2320,43 @@ y = A\b;                <span >% solves Ay = b; y should equal x</span></pre>
 
 (I do not describe the commercial Matlab software here but its file formats, because these are understood by many other programs)
 
-"*MAT-files are double-precision, binary, [MATLAB](#matlab) format files. They can be created on one machine and later read by MATLAB on another machine with a different floating-point format, retaining as much accuracy and range as the different formats allow. They can also be manipulated by other programs external to MATLAB.*"
+"*MAT-files are double-precision, binary, [MATLAB](#matlab) format files. They can be created on one machine and later read by MATLAB on
+another machine with a different floating-point format, retaining as much accuracy and range as the different formats allow. They can also
+be manipulated by other programs external to MATLAB.*"
 
-<ul>
-*  Documentation: [http://www.mathworks.com/access/helpdesk/help/pdf_doc/matlab/matfile_format.pdf](http://www.mathworks.com/access/helpdesk/help/pdf_doc/matlab/matfile_format.pdf)
-
-*  Logiciels capables de lire ce format: [Rheolef](#rheolef)
-
-*  Logiciels capables d'écrire dans ce format: [Rheolef](#rheolef)
-
-</ul>
+* Documentation: [http://www.mathworks.com/access/helpdesk/help/pdf_doc/matlab/matfile_format.pdf](http://www.mathworks.com/access/helpdesk/help/pdf_doc/matlab/matfile_format.pdf)
+* Logiciels capables de lire ce format: [Rheolef](#rheolef)
+* Logiciels capables d'écrire dans ce format: [Rheolef](#rheolef)
 
 <p>&nbsp;</p>
 
 <!-- <<<Matrix Market Exchange Formats>>> -->
 ## <a name="Matrix Market Exchange Formats"></a> Matrix Market Exchange Formats
 
-"*The Matrix Market (MM) exchange formats provide a simple mechanism to facilitate the exchange of matrix data. In particular, the objective has been to define a minimal base **ASCII** file format which can be very easily explained and parsed, but can easily adapted to applications with a more rigid structure, or extended to related data objects. The MM exchange format for matrices is really a collection of affiliated formats which share design elements. In our initial specification, two matrix formats are defined.*"
+"*The Matrix Market (MM) exchange formats provide a simple mechanism to facilitate the exchange of matrix data. In particular, the objective
+has been to define a minimal base **ASCII** file format which can be very easily explained and parsed, but can easily adapted to
+applications with a more rigid structure, or extended to related data objects. The MM exchange format for matrices is really a collection of
+affiliated formats which share design elements. In our initial specification, two matrix formats are defined.*"
 
-<ul>
 *  Web: [http://math.nist.gov/MatrixMarket/#formatsl](http://math.nist.gov/MatrixMarket/#formatsl)
 
-</ul>
 
 <p>&nbsp;</p>
 
 <!-- <<<Maxima>>> -->
 ## <a name="Maxima"></a> Maxima
 
-"*Maxima is a system for the manipulation of symbolic and numerical expressions, including differentiation, integration, Taylor series, Laplace transforms, ordinary differential equations, systems of linear equations, and vectors, matrices, and tensors. Maxima produces high precision results by using exact fractions and arbitrarily long floating point representations, and can plot functions and data in two and three dimensions.
+"*Maxima is a system for the manipulation of symbolic and numerical expressions, including differentiation, integration, Taylor series,
+Laplace transforms, ordinary differential equations, systems of linear equations, and vectors, matrices, and tensors. Maxima produces high
+precision results by using exact fractions and arbitrarily long floating point representations, and can plot functions and data in two and
+three dimensions.*
 
-The Maxima source code can be compiled on many systems, including Windows, Linux, and MacOS X. The source code for all systems and precompiled binaries for Windows and Linux are available at the SourceForge file manager.
+*The Maxima source code can be compiled on many systems, including Windows, Linux, and MacOS X. The source code for all systems and
+precompiled binaries for Windows and Linux are available at the SourceForge file manager.*
 
-Maxima is a descendant of Macsyma, the legendary computer algebra system developed in the late 1960s at the Massachusetts Institute of Technology. It is the only system based on that effort still publicly available and with an active user community, thanks to its open source nature. Macsyma was revolutionary in its day, and many later systems, such as Maple and Mathematica, were inspired by it.*"
+*Maxima is a descendant of Macsyma, the legendary computer algebra system developed in the late 1960s at the Massachusetts Institute of
+Technology. It is the only system based on that effort still publicly available and with an active user community, thanks to its open source
+nature. Macsyma was revolutionary in its day, and many later systems, such as Maple and Mathematica, were inspired by it.*"
 
 ### Documentation
 
@@ -2254,7 +2367,10 @@ Maxima is a descendant of Macsyma, the legendary computer algebra system develop
 <!-- <<<MayaVi>>> -->
 ## <a name="MayaVi"></a> MayaVi
 
-"*MayaVi is a free, easy to use scientific data visualizer. It is written in [Python](#python) and uses the amazing Visualization Toolkit ([VTK](#vtk)) for the graphics. It provides a **GUI** written using Tkinter. MayaVi is free and distributed under the conditions of the BSD license. It is also cross platform and should run on any platform where both [Python](#python) and [VTK](#vtk) are available (which is almost any *nix, Mac OSX or Windows).*"
+"*MayaVi is a free, easy to use scientific data visualizer. It is written in [Python](#python) and uses the amazing Visualization Toolkit
+([VTK](#vtk)) for the graphics. It provides a **GUI** written using Tkinter. MayaVi is free and distributed under the conditions of the BSD
+license. It is also cross platform and should run on any platform where both [Python](#python) and [VTK](#vtk) are available (which is
+almost any *nix, Mac OSX or Windows).*"
 
 ### Web
 
@@ -2282,46 +2398,51 @@ Maxima is a descendant of Macsyma, the legendary computer algebra system develop
 ## <a name="Mercurial"></a> Mercurial
 
 #<!-- <<<FAQ>>> -->
-## <A NAME="FAQ"></A> FAQ
+## <a name="FAQ"></a> FAQ
 
 #### Which diff3 software to use for merging?
-<ul>
-*  [kdiff3](http://kdiff3.sourceforge.net/) is available for Linux, Windows and MacOS (through [Macports](http://www.macports.org) or as a standalone binary).
 
+*  [kdiff3](http://kdiff3.sourceforge.net/) is available for Linux, Windows and MacOS (through [Macports](http://www.macports.org) or as a
+   standalone binary).
 *  Specific for MacOS: FileMerge [Using FileMerge as a diff command for Subversion (and Mercurial)](http://www.defraine.net/~brunod/fmdiff)
 
-</ul>
 
 #### Merging development heads
 
 To see the different heads:
 
-<pre >hg heads</pre>
+`hg heads`
 
 To merge two heads:
 
-<pre >hg merge
-hg commit -m &quot;commit message&quot;</pre>
+```
+hg merge
+hg commit -m "commit message"
+```
 
-<em >note*: hg merge may ask to specify a version reference for each head (with *-r version_number*) if there is an ambiguity.
+*note*: hg merge may ask to specify a version reference for each head (with *-r version_number*) if there is an ambiguity.
 
 ### How to view all changes as a graphical tree?
 
 To view the tree in a text terminal:
 
-<pre >hg glog</pre>
+`hg glog`
 
 This requires the following lines to be added to the Mercurial configuration file:
 
-<pre >[extensions]
-graphlog = </pre>
+```
+[extensions]
+graphlog =
+```
 
 <p>&nbsp;</p>
 
 <!-- <<<METIS>>> -->
-## <A NAME="METIS"></A> METIS
+## <a name="METIS"></a> METIS
 
-"*METIS is a family of programs for partitioning unstructured graphs and hypergraphs and computing fill-reducing orderings of sparse matrices. The underlying algorithms used by METIS are based on the state-of-the-art multilevel paradigm that has been shown to produce high quality results and scale to very large problems.*"
+"*METIS is a family of programs for partitioning unstructured graphs and hypergraphs and computing fill-reducing orderings of sparse
+matrices. The underlying algorithms used by METIS are based on the state-of-the-art multilevel paradigm that has been shown to produce high
+quality results and scale to very large problems.*"
 
 ### Web
 
@@ -2332,7 +2453,8 @@ graphlog = </pre>
 <!-- <<<mpi>>> -->
 ## <a name="mpi"></a> MPI
     
-"*MPI is a library specification for message-passing, proposed as a standard by a broadly based committee of vendors, implementors, and users.*"
+"*MPI is a library specification for message-passing, proposed as a standard by a broadly based committee of vendors, implementors, and
+users.*"
 
 *Reference:* [http://www.mcs.anl.gov/mpi/www](http://www.mcs.anl.gov/mpi/www)
 *Voir aussi:* [BSP](#bsp).
@@ -2340,7 +2462,7 @@ graphlog = </pre>
 <p>&nbsp;</p>
 
 <!-- <<<MUMPS>>> -->
-## <A NAME="MUMPS"></A> MUMPS
+## <a name="MUMPS"></a> MUMPS
 
 "*MUMPS: a MUltifrontal Massively Parallel sparse direct Solver*"
 
@@ -2349,9 +2471,13 @@ graphlog = </pre>
 <p>&nbsp;</p>
 
 <!-- <<<NAPACK>>> -->
-## <A NAME="NAPACK"></A> NAPACK
+## <a name="NAPACK"></a> NAPACK
 
-"*NAPACK is a collection of [Fortran](#fortran) subroutines for doing numerical linear algebra and optimization. It may be used to solve linear systems, to estimate the condition number or the norm of a matrix, to compute determinants, to multiply a matrix by a vector, to invert a matrix, to solve least squares problems, to perform unconstrained minimization, to compute eigenvalues, eigenvectors, the singular value decomposition, or the QR decomposition. The package has special routines for general, band, symmetric, indefinite, tridiagonal, upper Hessenberg, and circulant matrices.*"
+"*NAPACK is a collection of [Fortran](#fortran) subroutines for doing numerical linear algebra and optimization. It may be used to solve
+linear systems, to estimate the condition number or the norm of a matrix, to compute determinants, to multiply a matrix by a vector, to
+invert a matrix, to solve least squares problems, to perform unconstrained minimization, to compute eigenvalues, eigenvectors, the singular
+value decomposition, or the QR decomposition. The package has special routines for general, band, symmetric, indefinite, tridiagonal, upper
+Hessenberg, and circulant matrices.*"
 
 ### Web
 
@@ -2360,11 +2486,21 @@ graphlog = </pre>
 <p>&nbsp;</p>
 
 <!-- <<<NCO>>> -->
-## <A NAME="NCO"></A> NCO
+## <a name="NCO"></a> NCO
 
-"*The NetCDF Operators, or NCO, are a suite of programs known as operators. Each operator is a standalone, command line program which is executed at the UNIX (or NT) shell-level like, e.g., ls or mkdir. The operators take NetCDF or [HDF](#hdf)4 files as input, then perform a set of operations (e.g., deriving new data, averaging, hyperslabbing, or metadata manipulation) and produce a NetCDF file as output. The operators are primarily designed to aid manipulation and analysis of gridded scientific data. The single command style of NCO allows users to manipulate and analyze files interactively and with simple scripts, avoiding the overhead (and some of the power) of a higher level programming environment. The NCO User's Guide illustrates their use with examples from the field of climate modeling and analysis.*
+"*The NetCDF Operators, or NCO, are a suite of programs known as operators. Each operator is a standalone, command line program which is
+executed at the UNIX (or NT) shell-level like, e.g., ls or mkdir. The operators take NetCDF or [HDF](#hdf)4 files as input, then perform a
+set of operations (e.g., deriving new data, averaging, hyperslabbing, or metadata manipulation) and produce a NetCDF file as output. The
+operators are primarily designed to aid manipulation and analysis of gridded scientific data. The single command style of NCO allows users
+to manipulate and analyze files interactively and with simple scripts, avoiding the overhead (and some of the power) of a higher level
+programming environment. The NCO User's Guide illustrates their use with examples from the field of climate modeling and analysis.*
 
-*The operators are as general as NetCDF itself: there are no restrictions on the contents of the NetCDF or [HDF](#hdf)4 file(s) used as input. The internal routines of NCO are completely dynamic which means that NCO imposes no limit on the number of dimensions, sizes of variables, files etc. NCO is designed to be used both interactively and with large batch jobs. There are plenty of command line (i.e., runtime) options, but the defaults settings are often sufficient for everyday needs. NCO works on AIX, IRIX, Linux, SunOS, Solaris, tru64, UNICOS, and Windows NT. The following operators are thoroughly described in the NCO User's Guide. Note that the “averagers” are misnamed because they can perform many non-linear operations as well, e.g., total, minimum, maximum, RMS.*"
+*The operators are as general as NetCDF itself: there are no restrictions on the contents of the NetCDF or [HDF](#hdf)4 file(s) used as
+input. The internal routines of NCO are completely dynamic which means that NCO imposes no limit on the number of dimensions, sizes of
+variables, files etc. NCO is designed to be used both interactively and with large batch jobs. There are plenty of command line (i.e.,
+runtime) options, but the defaults settings are often sufficient for everyday needs. NCO works on AIX, IRIX, Linux, SunOS, Solaris, tru64,
+UNICOS, and Windows NT. The following operators are thoroughly described in the NCO User's Guide. Note that the “averagers” are misnamed
+because they can perform many non-linear operations as well, e.g., total, minimum, maximum, RMS.*"
 
 ### Web
 
@@ -2375,7 +2511,10 @@ graphlog = </pre>
 <!-- <<<Netgen>>> -->
 ## <a name="Netgen"></a> Netgen
 
-"*NETGEN is an automatic 3d tetrahedral mesh generator. It accepts input from constructive solid geometry (CSG) or boundary representation (BRep) from [STL file format](#stl_file_format).  The connection to a geometry kernel allows the handling of [IGES](#iges) and [STEP](#step) files. NETGEN contains modules for mesh optimization and hierarchical mesh refinement. Netgen is open source based on the [LGPL license](#licences_pour_logiciels_libres). It is available for Unix/Linux and Windows.*"
+"*NETGEN is an automatic 3d tetrahedral mesh generator. It accepts input from constructive solid geometry (CSG) or boundary representation
+(BRep) from [STL file format](#stl_file_format).  The connection to a geometry kernel allows the handling of [IGES](#iges) and [STEP](#step)
+files. NETGEN contains modules for mesh optimization and hierarchical mesh refinement. Netgen is open source based on the [LGPL
+license](#licences_pour_logiciels_libres). It is available for Unix/Linux and Windows.*"
 
 [Fiche PLUME](http://www.projet-plume.org/fiche/netgen)
 
@@ -2397,7 +2536,10 @@ adaptive mesh refinement, the matrix equations are solved by optimal order multi
 <!-- <<<NIST Sparse BLAS>>> -->
 ## <a name="NIST Sparse BLAS"></a> NIST Sparse BLAS
 
-"*This page contains software for various libaries developed at NIST for the Sparse Basic Linear Algebra Subprograms ([BLAS](#blas)), which describes kernels operations for sparse vectors and matrices. The current distribution adheres to the ANSI [C](#c) interface of the [BLAS](#blas) Technical Forum Standard. Older libraries corresponding to previous designs are also included for archival and historical purposes.*"
+"*This page contains software for various libaries developed at NIST for the Sparse Basic Linear Algebra Subprograms ([BLAS](#blas)), which
+describes kernels operations for sparse vectors and matrices. The current distribution adheres to the ANSI [C](#c) interface of the
+[BLAS](#blas) Technical Forum Standard. Older libraries corresponding to previous designs are also included for archival and historical
+purposes.*"
 
 ### Web
 
@@ -2412,48 +2554,49 @@ adaptive mesh refinement, the matrix equations are solved by optimal order multi
 <!-- <<<nohup>>> -->
 ## <a name="nohup"></a> nohup
 
-exécute une commande en la rendant insensible aux déconnexions et stocke les résultats dans le fichier <strong>nohup.out</strong> :
+exécute une commande en la rendant insensible aux déconnexions et stocke les résultats dans le fichier **nohup.out** :
 
-<pre >nohup &lt;programme&gt; &amp;</pre>
-<ul>
+`nohup <programme> &`
+
 *  [FreeFem++](#freefem) :
 
-</ul>
-<pre >nohup FreeFem++-nw &lt;programme&gt;.edp &amp;</pre>
-<ul>
+`nohup FreeFem++-nw <programme>.edp &`
+
 *  [Matlab](#matlab) :
 
-</ul>
-<pre >nohup matlab -nodisplay -r commande &amp;</pre>
-<ul>
+`nohup matlab -nodisplay -r commande &`
+
 *  [Scilab](#scilab) :
 
-</ul>
-<pre >nohup scilab -nw -f &lt;programme&gt;.sce &amp;</pre>
+`nohup scilab -nw -f <programme>.sce &`
 
-#<!-- <<<Interrompre un calcul lancé avec nohup>>> -->
-## <a name="Interrompre un calcul lancé avec nohup"></a> Interrompre un calcul lancé avec nohup
+### Interrompre un calcul lancé avec nohup
 
-Les calculs lancés en tâche de fond ne peuvent pas être stoppés avec Control-C. Il faut utiliser les commandes <strong>kill</strong> ou <strong>killall</strong>. Exemple : stopper les calculs [Matlab](#matlab) en cours sur gpu1:
+Les calculs lancés en tâche de fond ne peuvent pas être stoppés avec Control-C. Il faut utiliser les commandes **kill** ou
+**killall**. Exemple : stopper les calculs [Matlab](#matlab) en cours sur gpu1:
 
-<pre >killall MATLAB</pre>
+`killall MATLAB`
 
-(<em >NB:* ceci n'a *<em >aucun effet** sur les calculs Matlab lancés par les autres utilisateurs de la machine)
+(*NB:* ceci n'a **aucun effet** sur les calculs Matlab lancés par les autres utilisateurs de la machine)
 
 Pour interrompre un calcul précis, il faut connaître son identifiant (numéro compris entre 1 et 65536), avec la commande :
 
-<pre >top</pre>
+`top`
 
 (L'identifiant se trouve dans la colonne de droite). Pour stopper un calcul :
 
-<pre >kill &lt;identifiant&gt;</pre>
+`kill <identifiant>`
 
 <p>&nbsp;</p>
 
 <!-- <<<NSC2KE>>> -->
-## <A NAME="NSC2KE"></A> NSC2KE
+## <a name="NSC2KE"></a> NSC2KE
 
-"*NSC2KE est un solveur Volumes-Finis-Galerkin pour le calcul d'écoulements 2D et axisymetriques utilisant des maillages non-structurés. Pour résoudre la partie Euler des equations, le flux de Roe, de Osher et un flux cinetique sont disponibles. Pour le calcul d'écoulements turbulents un modéle k-epsilon est disponible. La modélisation à bas nombre de Reynolds s'effectue soit par une technique bi-couche, soit à travers des lois de paroi. L'utilisation d'un shéma Runge-Kutta à 4 pas permet aussi la résolution de problèmes instationnaires.*"
+"*NSC2KE est un solveur Volumes-Finis-Galerkin pour le calcul d'écoulements 2D et axisymetriques utilisant des maillages
+non-structurés. Pour résoudre la partie Euler des equations, le flux de Roe, de Osher et un flux cinetique sont disponibles. Pour le calcul
+d'écoulements turbulents un modéle k-epsilon est disponible. La modélisation à bas nombre de Reynolds s'effectue soit par une technique
+bi-couche, soit à travers des lois de paroi. L'utilisation d'un shéma Runge-Kutta à 4 pas permet aussi la résolution de problèmes
+instationnaires.*"
 
 [http://www.abbesazzi.com/nsc2ke-2](http://www.abbesazzi.com/nsc2ke-2) contient une présentation du logiciel et le code source.
 
@@ -2464,9 +2607,14 @@ NSC2KE utilise les maillages générés par [Bamg](#bamg) ou EMC2.
 <!-- <<<Octave>>> -->
 ## <a name="Octave"></a> Octave
 
-"*GNU Octave is a high-level language, primarily intended for numerical computations. It provides a convenient command line interface for solving linear and nonlinear problems numerically, and for performing other numerical experiments using a language that is mostly compatible with [Matlab](#matlab). It may also be used as a batch-oriented language.
+"*GNU Octave is a high-level language, primarily intended for numerical computations. It provides a convenient command line interface for
+solving linear and nonlinear problems numerically, and for performing other numerical experiments using a language that is mostly compatible
+with [Matlab](#matlab). It may also be used as a batch-oriented language.*
 
-Octave has extensive tools for solving common numerical linear algebra problems, finding the roots of nonlinear equations, integrating ordinary functions, manipulating polynomials, and integrating ordinary differential and differential-algebraic equations. It is easily extensible and customizable via user-defined functions written in Octave's own language, or using dynamically loaded modules written in [C++](#cxx), [C](#c), [Fortran](#fortran), or other languages.*"
+*Octave has extensive tools for solving common numerical linear algebra problems, finding the roots of nonlinear equations, integrating
+ordinary functions, manipulating polynomials, and integrating ordinary differential and differential-algebraic equations. It is easily
+extensible and customizable via user-defined functions written in Octave's own language, or using dynamically loaded modules written in
+[C++](#cxx), [C](#c), [Fortran](#fortran), or other languages.*"
 
 [Fiche PLUME](http://www.projet-plume.org/fiche/octave)
 
@@ -2481,9 +2629,10 @@ Octave has extensive tools for solving common numerical linear algebra problems,
 <p>&nbsp;</p>
 
 <!-- <<<OFELI>>> -->
-## <A NAME="OFELI"></A> OFELI
+## <a name="OFELI"></a> OFELI
 
-"*OFELI (Object Finite Element LIbrary) is an object oriented library of [C++](#cxx) classes for development of finite element codes. Its main features are :*
+"*OFELI (Object Finite Element LIbrary) is an object oriented library of [C++](#cxx) classes for development of finite element codes. Its
+main features are :*
 
 * *Various storage schemes of matrices (dense, sparse, skyline, tridiagonal).*
 * *Direct methods and preconditioned iterative strategies for the solution of linear systems of equations.*
@@ -2508,9 +2657,10 @@ Octave has extensive tools for solving common numerical linear algebra problems,
 <p>&nbsp;</p>
 
 <!-- <<<OFF>>> -->
-## <A NAME="OFF"></A> OFF
+## <a name="OFF"></a> OFF
 
-"*This format, called OFF (for Object File Format), is general, flexible, and extensible. It supports **ASCII** text versions of objects for the purpose of interchange, and binary versions for efficiency of reading and writing.*"
+"*This format, called OFF (for Object File Format), is general, flexible, and extensible. It supports **ASCII** text versions of objects for
+the purpose of interchange, and binary versions for efficiency of reading and writing.*"
 
 ### Documentation
 
@@ -2525,11 +2675,13 @@ Octave has extensive tools for solving common numerical linear algebra problems,
 <p>&nbsp;</p>
 
 <!-- <<<OOFEM>>> -->
-## <A NAME="OOFEM"></A> OOFEM
+## <a name="OOFEM"></a> OOFEM
 
-"*OOFEM is free finite element code with object oriented architecture for solving mechanical, transport and fluid mechanics problems that operates on various platforms.*
+"*OOFEM is free finite element code with object oriented architecture for solving mechanical, transport and fluid mechanics problems that
+operates on various platforms.*
 
-*The aim of this project is to develop efficient and robust tool for FEM computations as well as to provide modular and extensible environment for future development.*"
+*The aim of this project is to develop efficient and robust tool for FEM computations as well as to provide modular and extensible
+environment for future development.*"
 
 ### Web
 
@@ -2577,7 +2729,10 @@ the science of visualization come together. It's the place where they're combine
 <!-- <<<Open Dynamics Engine>>> -->
 ## <a name="Open Dynamics Engine"></a> Open Dynamics Engine
 
-"*ODE is an open source, high performance library for simulating rigid body dynamics. It is fully featured, stable, mature and platform independent with an easy to use [C](#c)/[C++](#cxx) **API**. It has advanced joint types and integrated collision detection with friction. ODE is useful for simulating vehicles, objects in virtual reality environments and virtual creatures. It is currently used in many computer games, 3D authoring tools and simulation tools.*"
+"*ODE is an open source, high performance library for simulating rigid body dynamics. It is fully featured, stable, mature and platform
+independent with an easy to use [C](#c)/[C++](#cxx) **API**. It has advanced joint types and integrated collision detection with
+friction. ODE is useful for simulating vehicles, objects in virtual reality environments and virtual creatures. It is currently used in many
+computer games, 3D authoring tools and simulation tools.*"
 
 ### Web
 
@@ -2634,21 +2789,22 @@ integrated at a low level so that solvers can generally be developed without the
 <!-- <<<OpenMP>>> -->
 ## <a name="OpenMP"></a> OpenMP
 
-"*OpenMP is a specification for a set of compiler directives, library routines, and environment variables that can be used to specify shared memory parallelism in [Fortran](#fortran) and [C](#c)/[C++](#cxx) programs.*"
+"*OpenMP is a specification for a set of compiler directives, library routines, and environment variables that can be used to specify shared
+memory parallelism in [Fortran](#fortran) and [C](#c)/[C++](#cxx) programs.*"
 
-<ul>
 *  Web: [http://www.openmp.org/](http://www.openmp.org/)
 
-</ul>
 
 <p>&nbsp;</p>
 
 <!-- <<<OpenSees>>> -->
 ## <a name="OpenSees"></a> OpenSees
 
-"*[…] OpenSees, a software framework for developing applications to simulate the performance of structural and geotechnical systems subjected to earthquakes.*
+"*[…] OpenSees, a software framework for developing applications to simulate the performance of structural and geotechnical systems
+subjected to earthquakes.*
 
-*The goal of the OpenSees development is to improve the modeling and computational simulation in earthquake engineering through open-souce development. *"
+*The goal of the OpenSees development is to improve the modeling and computational simulation in earthquake engineering through open-souce
+development. *"
 
 ### Web
 
@@ -2665,9 +2821,9 @@ integrated at a low level so that solvers can generally be developed without the
 <!-- <<<ParaView>>> -->
 ## <a name="ParaView"></a> ParaView
 
-"*Welcome to ParaView, an application designed with the need to visualize large data sets in mind. The goals of the ParaView project include the following:*
+"*Welcome to ParaView, an application designed with the need to visualize large data sets in mind. The goals of the ParaView project include
+the following:*
 
-<ul>
 *  *Develop an open-source, multi-platform visualization application.*
 
 *  *Support distributed computation models to process large data sets.*
@@ -2676,9 +2832,10 @@ integrated at a low level so that solvers can generally be developed without the
 
 *  *Develop an extensible architecture based on open standards.*
 
-</ul>
 
-*ParaView runs on distributed and shared memory parallel as well as single processor systems and has been succesfully tested on Windows, Linux and various Unix workstations and clusters. Under the hood, ParaView uses the [Visualization Toolkit](#vtk) as the data processing and rendering engine and has a user interface written using a unique blend of Tcl/Tk and [C++](#cxx).*"
+*ParaView runs on distributed and shared memory parallel as well as single processor systems and has been succesfully tested on Windows,
+Linux and various Unix workstations and clusters. Under the hood, ParaView uses the [Visualization Toolkit](#vtk) as the data processing and
+rendering engine and has a user interface written using a unique blend of Tcl/Tk and [C++](#cxx).*"
 
 [Fiche PLUME](http://www.projet-plume.org/fiche/paraview)
 
@@ -2686,7 +2843,8 @@ integrated at a low level so that solvers can generally be developed without the
 
 #### Comment relire un fichier de données VTK en dehors de Paraview?
 
-Avec l'interface Python/VTK dont de nombreux exemples sont à [http://www.vtk.org/Wiki/VTK/Examples/Python](http://www.vtk.org/Wiki/VTK/Examples/Python)
+Avec l'interface Python/VTK dont de nombreux exemples sont à
+[http://www.vtk.org/Wiki/VTK/Examples/Python](http://www.vtk.org/Wiki/VTK/Examples/Python)
 
 #### Comment sauvegarder une image?
 
@@ -2705,9 +2863,12 @@ Menu “Edit/Settings…/Colors”
 <p>&nbsp;</p>
 
 <!-- <<<PARI/GP>>> -->
-## <A NAME="PARI/GP"></A> PARI/GP
+## <a name="PARI/GP"></a> PARI/GP
 
-"* PARI/GP is a widely used computer algebra system designed for fast computations in number theory (factorizations, algebraic number theory, elliptic curves…), but also contains a large number of other useful functions to compute with mathematical entities such as matrices, polynomials, power series, algebraic numbers etc., and a lot of transcendental functions. PARI is also available as a [C](#c) library to allow for faster computations.*"
+"* PARI/GP is a widely used computer algebra system designed for fast computations in number theory (factorizations, algebraic number
+theory, elliptic curves…), but also contains a large number of other useful functions to compute with mathematical entities such as
+matrices, polynomials, power series, algebraic numbers etc., and a lot of transcendental functions. PARI is also available as a [C](#c)
+library to allow for faster computations.*"
 
 [Fiche PLUME](http://www.projet-plume.org/fiche/pari-gp)
 
@@ -2722,7 +2883,11 @@ Menu “Edit/Settings…/Colors”
 
 "*pARMS: parallel Algebraic Recursive Multilevel Solvers*
 
-*pARMS is a library of parallel solvers for distributed sparse linear systems of equations. It is based on a preconditioned Krylov subspace approach, using a domain decomposition viewpoint. It offers a large selection of preconditioners for distributed sparse linear systems and a few of the best known accelerators. The basic methodology used relies on a Recursive Multi-level ILU factorization wich allows to develop many of the standard domain-decomposition type iterative solvers in a single framework. For example, the standard Schwarz procedures are included as are a number of Schur complement techniques.*"
+*pARMS is a library of parallel solvers for distributed sparse linear systems of equations. It is based on a preconditioned Krylov subspace
+approach, using a domain decomposition viewpoint. It offers a large selection of preconditioners for distributed sparse linear systems and a
+few of the best known accelerators. The basic methodology used relies on a Recursive Multi-level ILU factorization wich allows to develop
+many of the standard domain-decomposition type iterative solvers in a single framework. For example, the standard Schwarz procedures are
+included as are a number of Schur complement techniques.*"
 
 ### Web
 
@@ -2731,7 +2896,7 @@ Menu “Edit/Settings…/Colors”
 <p>&nbsp;</p>
 
 <!-- <<<PBLAS>>> -->
-## <A NAME="PBLAS"></A> PBLAS
+## <a name="PBLAS"></a> PBLAS
 
 "*Parallel Basic Linear Algebra Subprograms (PBLAS)*"
 
@@ -2744,7 +2909,8 @@ Menu “Edit/Settings…/Colors”
 <!-- <<<Perl>>> -->
 ## <a name="Perl"></a> Perl
 
-Perl is a general-purpose scripting language, like Tcl/Tk and [Python](#python). Il existe une [version pour Windows.](http://www.activestate.com/Products/ActivePerl)
+Perl is a general-purpose scripting language, like Tcl/Tk and [Python](#python). Il existe une [version pour
+Windows.](http://www.activestate.com/Products/ActivePerl)
 
 ### Documentation
 
@@ -2761,31 +2927,46 @@ Opérateurs de test sur les fichiers : [http://www.cs.cf.ac.uk/Dave/PERL/#node69
 Voici par exemple un fichier dont le nom contient une valeur de vitesse. L'emplacement des parenthèses dans l'expression régulière permet
 d'isoler l'information importante :
 
-<pre >&gt; echo resultats_v=2.txt|perl -e 'while(&lt;&gt;){/resultats_v=(.*)\.txt/;print &quot;$1\n&quot;;}'
-2</pre>
+```bash
+> echo resultats_v=2.txt|perl -e 'while(<>){/resultats_v=(.*)\.txt/;print "$1\n";}'
+2
+```
 
 Un autre exemple avec plusieurs informations à extraire :
 
-<pre >&gt; echo resultats_v=2_c=3.txt|perl -e 'while(&lt;&gt;){/resultats_v=(.*)_c=(.*)\.txt/;print &quot;v=$1 c=$2\n&quot;;}'
-v=2 c=3</pre>
+```
+> echo resultats_v=2_c=3.txt|perl -e 'while(<>){/resultats_v=(.*)_c=(.*)\.txt/;print "v=$1 c=$2\n";}'
+v=2 c=3
+```
 
 <p>&nbsp;</p>
 
 <!-- <<<PETSc>>> -->
 ## <a name="PETSc"></a> PETSc
 
-"*PETSc, the Portable, Extensible Toolkit for Scientific computation, provides sets of tools for the parallel (as well as serial), numerical solution of PDEs that require solving large-scale, sparse nonlinear systems of equations. PETSc includes nonlinear and linear equation solvers that employ a variety of Newton techniques and Krylov subspace methods. PETSc provides several parallel sparse matrix formats, including compressed row, block compressed row, and block diagonal storage.
+"*PETSc, the Portable, Extensible Toolkit for Scientific computation, provides sets of tools for the parallel (as well as serial), numerical
+solution of PDEs that require solving large-scale, sparse nonlinear systems of equations. PETSc includes nonlinear and linear equation
+solvers that employ a variety of Newton techniques and Krylov subspace methods. PETSc provides several parallel sparse matrix formats,
+including compressed row, block compressed row, and block diagonal storage.
 
-PETSc is fully usable from [Fortran](#fortran), [C](#c) and [C++](#cxx), and is portable, running on most UNIX systems. PETSc uses [MPI](#mpi) for all parallel communication.*"
+PETSc is fully usable from [Fortran](#fortran), [C](#c) and [C++](#cxx), and is portable, running on most UNIX systems. PETSc uses
+[MPI](#mpi) for all parallel communication.*"
 
 [Fiche PLUME](http://www.projet-plume.org/fiche/petsc)
 
 <p>&nbsp;</p>
 
 <!-- <<<PLAPACK>>> -->
-## <A NAME="PLAPACK"></A> PLAPACK
+## <a name="PLAPACK"></a> PLAPACK
 
-"*Coding parallel algorithms is generally regarded as a formidable task. To make this task manageable in the arena of linear algebra algorithms, we have developed the Parallel Linear Algebra Package (PLAPACK), an infrastructure for coding such algorithms at a high level of abstraction. It is often believed that by raising the level of abstraction in this fashion, performance is sacrificed. Throughout, we have maintained that indeed there is a performance penalty, but that by coding at a higher level of abstraction, more sophisticated algorithms can be implemented, which allows high levels of performance to be regained. In this paper, we show this to indeed be the case for the parallel solver package implemented using PLAPACK, which includes Cholesky, LU, and QR factorization based solvers for symmetric positive definite, general, and overdetermined systems of equations, respectively. Performance comparison with [ScaLAPACK](#scalapack) shows better performance is attained by our solvers.*"
+"*Coding parallel algorithms is generally regarded as a formidable task. To make this task manageable in the arena of linear algebra
+algorithms, we have developed the Parallel Linear Algebra Package (PLAPACK), an infrastructure for coding such algorithms at a high level of
+abstraction. It is often believed that by raising the level of abstraction in this fashion, performance is sacrificed. Throughout, we have
+maintained that indeed there is a performance penalty, but that by coding at a higher level of abstraction, more sophisticated algorithms
+can be implemented, which allows high levels of performance to be regained. In this paper, we show this to indeed be the case for the
+parallel solver package implemented using PLAPACK, which includes Cholesky, LU, and QR factorization based solvers for symmetric positive
+definite, general, and overdetermined systems of equations, respectively. Performance comparison with [ScaLAPACK](#scalapack) shows better
+performance is attained by our solvers.*"
 
 ### Web
 
@@ -2806,7 +2987,9 @@ PETSc is fully usable from [Fortran](#fortran), [C](#c) and [C++](#cxx), and is 
 <!-- <<<Plotmtv>>> -->
 ## <a name="Plotmtv"></a> Plotmtv
 
-"*The application plotmtv is a fast multi-purpose plotting program for visualization of scientific data in an X11-window environment. Each plot comes with a simple but functional Graphical User Interface which allows users to zoom in or pan to areas of interest on the plot or to toggle between 2D and 3D plots.*"
+"*The application plotmtv is a fast multi-purpose plotting program for visualization of scientific data in an X11-window environment. Each
+plot comes with a simple but functional Graphical User Interface which allows users to zoom in or pan to areas of interest on the plot or to
+toggle between 2D and 3D plots.*"
 
 ### Documentation
 
@@ -2815,9 +2998,11 @@ PETSc is fully usable from [Fortran](#fortran), [C](#c) and [C++](#cxx), and is 
 <p>&nbsp;</p>
 
 <!-- <<<POOMA>>> -->
-## <A NAME="POOMA"></A> POOMA
+## <a name="POOMA"></a> POOMA
 
-"*POOMA is a high-performance [C++](#cxx) toolkit for parallel scientific computation. POOMA's object-oriented design facilitates rapid application development. POOMA has been optimized to take full advantage of massively parallel machines. POOMA is available free of charge in order to facilitate its use in both industrial and research environments.*"
+"*POOMA is a high-performance [C++](#cxx) toolkit for parallel scientific computation. POOMA's object-oriented design facilitates rapid
+application development. POOMA has been optimized to take full advantage of massively parallel machines. POOMA is available free of charge
+in order to facilitate its use in both industrial and research environments.*"
 
 ### Web
 
@@ -2833,43 +3018,38 @@ PETSc is fully usable from [Fortran](#fortran), [C](#c) and [C++](#cxx), and is 
 
 ### Licence
 
-"*FreePOOMA is free software; you can redistribute it and/or modify it under the terms of the Expat license. See LICENSE, LICENSE.pooma and LICENSE.pete for more information.  *"
+"*FreePOOMA is free software; you can redistribute it and/or modify it under the terms of the Expat license. See LICENSE, LICENSE.pooma and
+LICENSE.pete for more information.  *"
 
 <p>&nbsp;</p>
 
 <!-- <<<Povray>>> -->
 ## <a name="Povray"></a> Povray
 
-"*The Persistence of Vision Raytracer is a high-quality, totally free tool for creating stunning three-dimensional graphics. It is available in official versions for Windows, Mac **OS**/Mac **OS** X and i86 Linux. The source code is available for those wanting to do their own ports.*"
+"*The Persistence of Vision Raytracer is a high-quality, totally free tool for creating stunning three-dimensional graphics. It is available
+in official versions for Windows, Mac **OS**/Mac **OS** X and i86 Linux. The source code is available for those wanting to do their own
+ports.*"
 
-<ul>
 *  Web: [http://www.povray.org/](http://www.povray.org/)
 
 *  Documentation: [http://www.povray.org/documentation/](http://www.povray.org/documentation/)
 
 *  Licence: [http://www.povray.org/#povlegall](http://www.povray.org/#povlegall)
 
-</ul>
 
 <p>&nbsp;</p>
 
 <!-- <<<PRIMME>>> -->
-## <A NAME="PRIMME"></A> PRIMME
+## <a name="PRIMME"></a> PRIMME
 
 "*PRIMME (PReconditioned Iterative MultiMethod Eigensolver)*
 
-<ul>
-*  *PRIMME is a [C](#c) library to find a number of eigenvalues and their corresponding eigenvectors of a Real Symmetric, or Complex Hermitian matrix A.*
-
-</ul>
-<ul>
-*  *Preconditioning and finding largest, smallest or interior eigenvalues is supported.*
-
-</ul>
-<ul>
-*  *PRIMME is a multimethod eigensolver. Based on Davidson/Jacobi-Davidson main iteration, it can transform to most known preconditioned eigensolvers, by the appropriate choice of parameters. Two of the choices, GD+1 and JDQMR, have proved nearly optimal eigensolvers (see 1,2). For user friendliness it provides the following predefined choices of methods.*
-
-</ul>
+* *PRIMME is a [C](#c) library to find a number of eigenvalues and their corresponding eigenvectors of a Real Symmetric, or Complex
+  Hermitian matrix A.*
+* *Preconditioning and finding largest, smallest or interior eigenvalues is supported.*
+* *PRIMME is a multimethod eigensolver. Based on Davidson/Jacobi-Davidson main iteration, it can transform to most known preconditioned
+  eigensolvers, by the appropriate choice of parameters. Two of the choices, GD+1 and JDQMR, have proved nearly optimal eigensolvers (see
+  1,2). For user friendliness it provides the following predefined choices of methods.*
 
 ### Web
 
@@ -2882,9 +3062,11 @@ PETSc is fully usable from [Fortran](#fortran), [C](#c) and [C++](#cxx), and is 
 <p>&nbsp;</p>
 
 <!-- <<<PRISM>>> -->
-## <A NAME="PRISM"></A> PRISM
+## <a name="PRISM"></a> PRISM
 
-"*The goal of the PRISM (Parallel Research on Invariant Subspace Methods) project is to develop infrastructure and algorithms for the parallel solution of eigenvalue problems. We are currently investigating a complete eigensolver based on the Invariant Subspace Decomposition Algorithm for dense symmetric matrices (SYISDA).*"
+"*The goal of the PRISM (Parallel Research on Invariant Subspace Methods) project is to develop infrastructure and algorithms for the
+parallel solution of eigenvalue problems. We are currently investigating a complete eigensolver based on the Invariant Subspace
+Decomposition Algorithm for dense symmetric matrices (SYISDA).*"
 
 ### Web
 
@@ -2923,44 +3105,41 @@ there are differences between drafts that can cause problems.*"
 
 Python is a general-purpose scripting language, like Tcl/Tk and [Perl](#perl).
 
-<ul>
-<li > [Fiche PLUME](http://www.projet-plume.org/fiche/python)
-</li>
-<li > Documentation: [The Python Tutorial](http://docs.python.org/tutorial), [http://www.python.org/doc](http://www.python.org/doc)
-</li>
-<li > NumPy: "*NumPy is the fundamental package for scientific computing with Python.*" [http://www.numpy.org](http://www.numpy.org)
-</li>
-</ul>
+* [Fiche PLUME](http://www.projet-plume.org/fiche/python)
+* Documentation: [The Python Tutorial](http://docs.python.org/tutorial), [http://www.python.org/doc](http://www.python.org/doc)
+* NumPy: "*NumPy is the fundamental package for scientific computing with Python.*" [http://www.numpy.org](http://www.numpy.org)
 
 ### Questions/Réponses
 
 #### Multithreading
 
-Le multithreading est activé par “import threading”. Voir aussi [http://docs.python.org/library/#threadingl#module-threading](http://docs.python.org/library/#threadingl#module-threading) pour la liste des commandes et objets disponibles.
+Le multithreading est activé par “import threading”. Voir aussi
+[http://docs.python.org/library/#threadingl#module-threading](http://docs.python.org/library/#threadingl#module-threading) pour la liste des
+commandes et objets disponibles.
 
 <p>&nbsp;</p>
 
-<!-- <<<Commande de soumission de travaux &quot;qsub&quot;>>> -->
-## <a name="Commande de soumission de travaux &quot;qsub&quot;"></a> Commande de soumission de travaux &quot;qsub&quot;
+<!-- <<<Commande de soumission de travaux "qsub">>> -->
+## <a name="qsub"></a> Commande de soumission de travaux "qsub"
 
-#<!-- <<<Questions/Réponses>>> -->
-## <a name="Questions/Réponses"></a> Questions/Réponses
+### Questions/Réponses
 
 #### Comment assurer qu'un script soumis à qsub va être exécuté dans le répertoire où il a été soumis?
 
-Par défault, un script est exécuté dans un répertoire temporaire différent du répertoire où il a été soumis. Pour changer ce comportement, ajouter au début du script:
+Par défault, un script est exécuté dans un répertoire temporaire différent du répertoire où il a été soumis. Pour changer ce comportement,
+ajouter au début du script:
 
-<pre >cd $PBS_O_WORKDIR</pre>
+`cd $PBS_O_WORKDIR`
 
 #### Comment spécifier le nombre de processeurs à un seul endroit dans un script qsub?
 
 Le nombre de processeurs demandés doit être écrit explicitement au moins une fois:
 
-<pre >#PBS -l ncpus=18</pre>
+`#PBS -l ncpus=18`
 
-Mais dans les lignes suivantes, ce nombre de processeurs peut être remplacé par <strong>$NCPUS</strong>. Par exemple:
+Mais dans les lignes suivantes, ce nombre de processeurs peut être remplacé par **$NCPUS**. Par exemple:
 
-<pre >mpirun -np $NCPUS ...</pre>
+`mpirun -np $NCPUS ...`
 
 <p>&nbsp;</p>
 
@@ -2969,9 +3148,13 @@ Mais dans les lignes suivantes, ce nombre de processeurs peut être remplacé pa
 
 ### Comment observer une fuite de mémoire?
 
-Les fuites de mémoires arrivent le plus souvent quand tous les <strong>malloc()</strong> ne sont pas suivis par un <strong>free()</strong>. On observe, soit dans le Gestionnaire des tâches Windows ou MacOS, soit avec l'utilitaire Unix “top”, que le programme demande de plus en plus de RAM. S'il en demande trop, l'ordinateur peut bloquer. Dans l'exemple ci-dessous avec top, c'est la colonne “VIRT” (comme mémoire virtuelle) qui augmente avec le temps:
+Les fuites de mémoires arrivent le plus souvent quand tous les **malloc()** ne sont pas suivis par un
+**free()**. On observe, soit dans le Gestionnaire des tâches Windows ou MacOS, soit avec l'utilitaire Unix “top”, que le
+programme demande de plus en plus de RAM. S'il en demande trop, l'ordinateur peut bloquer. Dans l'exemple ci-dessous avec top, c'est la
+colonne “VIRT” (comme mémoire virtuelle) qui augmente avec le temps:
 
-<pre >top - 10:25:38 up 5 days, 13 min, 10 users,  load average: 0,64, 0,51, 0,59
+```
+top - 10:25:38 up 5 days, 13 min, 10 users,  load average: 0,64, 0,51, 0,59
 Tasks: 224 total,   1 running, 223 sleeping,   0 stopped,   0 zombie
 %Cpu(s):  4,0 us,  2,8 sy,  0,0 ni, 92,7 id,  0,4 wa,  0,0 hi,  0,0 si,  0,0 st
 KiB Mem:   8195840 total,  7593824 used,   602016 free,   758696 buffers
@@ -2996,24 +3179,29 @@ KiB Swap: 16777212 total,      284 used, 16776928 free,  2089788 cached
    21 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 cpuset                      
    22 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 khelper                     
    23 root      20   0     0    0    0 S   0,0  0,0   0:00.00 kdevtmpfs                   
-   24 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 netns                       </pre>
+   24 root       0 -20     0    0    0 S   0,0  0,0   0:00.00 netns                       
+```
 
 ### Comment écrire des lignes différentes pour Windows, MacOS et Linux dans le même programme C?
-<pre >#ifdef __linux__
+
+```C
+#ifdef __linux__
    ...lignes valables uniquement sous linux...
-#endif</pre>
-<pre >#ifdef WIN32
+#endif
+#ifdef WIN32
    ...lignes valables uniquement sous Windows...
-#endif</pre>
-<pre >#ifdef __APPLE__
+#endif
+#ifdef __APPLE__
    ...lignes valables uniquement sous MacOS...
-#endif</pre>
+#endif
+```
 
 ### How to check what symbols a compiled object contains?
 
-On linux-type systems, use nm. <strong>T</strong> shows defined symbols, <strong>U</strong> shows undefined ones. eg:
+On linux-type systems, use nm. **T** shows defined symbols, **U** shows undefined ones. eg:
 
-<pre >&gt; nm prettyedp-env.o 
+```
+> nm prettyedp-env.o 
                  U _Unwind_Resume
 0000000000000000 T _Z12getoneenvvarSs
 00000000000003dc T _Z12readabledatev
@@ -3041,16 +3229,21 @@ On linux-type systems, use nm. <strong>T</strong> shows defined symbols, <strong
                  w pthread_cancel
                  U setenv
                  U strftime
-                 U time</pre>
+                 U time
+```
 
 <!-- <<<history>>> [[file:history.php]] -->
 <script src="//www.ljll.math.upmc.fr/lehyaric/history.php?page=freesoft-infomath" type="text/javascript"></script>
 
-### How to deal with a &quot;segmentation fault&quot; in a compiled program?
+### How to deal with a "segmentation fault" in a compiled program?
 
-The source for the program is needed. First try to locate where this error appears. This is done by adding <strong>-g</strong> when compiling and running the code through [gdb](#gdb). If there is no programming error at the location where the error occurs, it can be the consequence of an earlier error (memory errors may not be detected immediately). If this is the case then [valgrind](http://valgrind.org) may be able to detect where the first error occurred:
+The source for the program is needed. First try to locate where this error appears. This is done by adding **-g** when compiling and running
+the code through [gdb](#gdb). If there is no programming error at the location where the error occurs, it can be the consequence of an
+earlier error (memory errors may not be detected immediately). If this is the case then [valgrind](http://valgrind.org) may be able to
+detect where the first error occurred:
 
-<pre >&gt; valgrind ./prettyedp
+```
+> valgrind ./prettyedp
 ==7341== Memcheck, a memory error detector
 ==7341== Copyright (C) 2002-2011, and GNU GPL'd, by Julian Seward et al.
 ==7341== Using Valgrind-3.7.0 and LibVEX; rerun with -h for copyright info
@@ -3071,7 +3264,8 @@ The source for the program is needed. First try to locate where this error appea
 ==7341== Rerun with --leak-check=full to see details of leaked memory
 ==7341== 
 ==7341== For counts of detected and suppressed errors, rerun with: -v
-==7341== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 4 from 4)</pre>
+==7341== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 4 from 4)
+```
 
 <p>&nbsp;</p>
 
@@ -3094,48 +3288,48 @@ solveur plus lent mais peu gourmand en mémoire (CG ou GMRES si la matrice le pe
 ### Fichiers de données en format binaire
 
 Le format binaire peut diminuer la taille des fichiers de données numériques produits par FreeFem++ par un facteur 2 environ. Ce n'est pas
-forcément mieux que la compression avec un utilitaire comme <strong>zip</strong>. Actuellement le plus simple pour produire un fichier
+forcément mieux que la compression avec un utilitaire comme **zip**. Actuellement le plus simple pour produire un fichier
 binaire est d'utiliser le [C++](#cxx). Voici un exemple où le fichier à traduire contient un vecteur : la première ligne contient la taille
 du vecteur, les lignes suivantes ses coordonnées.
 
-<pre >
-#include &lt;stdio.h&gt;
-#include &lt;iostream&gt;
-#include &lt;fstream&gt;
+```C++
+#include <stdio.h>
+#include <iostream>
+#include <fstream>
 using namespace std;
 
 int main(int argc,char *argv[]){
 
   // Paramètres de la ligne de commande
   if(argc!=3){
-    cout&lt;&lt;&quot;./asc2bin in out&quot;&lt;&lt;endl;
+    cout<<"./asc2bin in out"<<endl;
     return 1;
   }
 
   ifstream i(argv[1],ifstream::in);
   if(!i){
-    cout&lt;&lt;&quot;problème avec le fichier d'entrée&quot;&lt;&lt;endl;
+    cout<<"problème avec le fichier d'entrée"<<endl;
     return 1;
   }
 
-  FILE *o=fopen(argv[2],&quot;w&quot;);
+  FILE *o=fopen(argv[2],"w");
   if(!o){
-    cout&lt;&lt;&quot;problème avec le fichier de sortie&quot;&lt;&lt;endl;
+    cout<<"problème avec le fichier de sortie"<<endl;
     return 1;
   }
 
   // lit et réécrit le nombre d'éléments du vecteur
   int n;
-  i&gt;&gt;n;
-  cout&lt;&lt;n&lt;&lt;&quot; elements&quot;&lt;&lt;endl;
+  i>>n;
+  cout<<n<<" elements"<<endl;
 
-  fwrite(&amp;n,sizeof(int),1,o);
+  fwrite(&n,sizeof(int),1,o);
 
   // lit et réécrit les composantes du vecteur
-  for(int j=0;j&lt;n;j++){
+  for(int j=0;j<n;j++){
     double d;
-    i&gt;&gt;d;
-    fwrite(&amp;d,sizeof(double),1,o);
+    i>>d;
+    fwrite(&d,sizeof(double),1,o);
   }
 
   // ferme tous les fichiers
@@ -3144,121 +3338,131 @@ int main(int argc,char *argv[]){
 
   return 0;
 }
-</pre>
+```
 
 ### Différences entre vecteurs et tableaux FreeFem++
 
 Si les vecteurs uh et vh sont définis par
 
-<pre >fespace Vh(Th,P13d);
-Vh uh,vh;</pre>
+```C++
+fespace Vh(Th,P13d);
+Vh uh,vh;
+```
 
 alors
 
-<pre >uh = randreal1();
-vh = randreal1();</pre>
+```C++
+uh = randreal1();
+vh = randreal1();
+```
 
-interpole la valeur donnée par la fonction randreal1() sur le maillage. La fonction est appelée autant de fois qu'il y a de points d'intégration.
+interpole la valeur donnée par la fonction randreal1() sur le maillage. La fonction est appelée autant de fois qu'il y a de points
+d'intégration.
 
 Tandis que
 
-<pre >vh[] = randreal1();
-uh[] = randreal1();</pre>
+```C++
+vh[] = randreal1();
+uh[] = randreal1();
+```
 
 initialise les tableaux avec une valeur constante donnée par un appel unique à randreal1().
 
 ### Validation d'un problème 2D avec des résultats numériques 1D déjà connus
 
-Il peut être utile dans certains cas que la description 2D contenue dans un script FreeFem++ donne les mêmes résultats numériques qu'un cas-test 1D déjà validé. Pour cela il suffit de configurer le domaine 2D comme une bande rectangulaire dont les côtés obéissent à une condition aux limites périodique. For more information on how to specify a periodic boundary condition, see the <strong>fespace</strong> keyword.
+Il peut être utile dans certains cas que la description 2D contenue dans un script FreeFem++ donne les mêmes résultats numériques qu'un
+cas-test 1D déjà validé. Pour cela il suffit de configurer le domaine 2D comme une bande rectangulaire dont les côtés obéissent à une
+condition aux limites périodique. For more information on how to specify a periodic boundary condition, see the **fespace** keyword.
 
-### A quel moment FreeFem++ effectue-t-il les calculs correspondant à &quot;matrix A=f(...,solver=...)&quot; et &quot;x=A^-1*b&quot;?
-<ul>
-<li > cas de <strong>CG</strong> et <strong>GMRES</strong> : la résolution itérative a lieu au moment du calcul de x.
-</li>
-<li > cas de <strong>UMFPACK</strong> : c'est une méthode de résolution directe. La décomposition LU a lieu lors de la définition de A (par un appel à umfpack_di_numeric() dans le fichier C++ ff/src/fflib/UMFPack_Solver.cpp). Le calcul de <strong>x</strong> exploite les matrices triangulaires L et U calculées auparavant.
-</li>
-<li > autres solveurs : il faut rechercher l'implémentation correspondante de la classe abstraite MatriceMorse&lt;R&gt;::VirtualSolver dans le répertoire src/solver du source C++ de FreeFem++.
-</li>
-</ul>
+### A quel moment FreeFem++ effectue-t-il les calculs correspondant à "matrix A=f(...,solver=...)" et "x=A^-1*b"?
+
+* cas de **CG** et **GMRES** : la résolution itérative a lieu au moment du calcul de x.
+* cas de **UMFPACK** : c'est une méthode de résolution directe. La décomposition LU a lieu lors de la définition de A (par un appel à
+  umfpack_di_numeric() dans le fichier C++ ff/src/fflib/UMFPack_Solver.cpp). Le calcul de **x** exploite les matrices triangulaires L et U
+  calculées auparavant.
+* autres solveurs : il faut rechercher l'implémentation correspondante de la classe abstraite MatriceMorse<R>::VirtualSolver dans le
+répertoire src/solver du source C++ de FreeFem++.
 
 ### Comment fixer une échelle constante sur plusieurs images successives? (par exemple pour créer un film)
 
-Utiliser <strong>plot(nbiso=…,viso=…)</strong>. Par exemple :
+Utiliser **plot(nbiso=…,viso=…)**. Par exemple :
 
-<dl >
-<dt>echelle.edp</dt>
-<dd><pre ><span >// maillage simple pour l'exemple</span>
-mesh M<span >=</span>square<span >&#40;</span><span >10</span>,<span >10</span><span >&#41;</span><span >;</span>
-fespace Vh<span >&#40;</span>M,P1<span >&#41;</span><span >;</span>
-Vh xh<span >=</span>x<span >;</span>
-&nbsp;
-<span >// liste d'isovaleurs constantes d'une image à l'autre</span>
-<span >int</span> ni<span >=</span><span >4</span><span >;</span>
-real<span >&#91;</span><span >int</span><span >&#93;</span> vi<span >&#40;</span><span >4</span><span >&#41;</span><span >;</span>
-vi<span >&#91;</span><span >0</span><span >&#93;</span><span >=</span><span >0</span><span >;</span>
-vi<span >&#91;</span><span >1</span><span >&#93;</span><span >=</span><span >1</span><span >;</span>
-vi<span >&#91;</span><span >2</span><span >&#93;</span><span >=</span><span >2</span><span >;</span>
-vi<span >&#91;</span><span >3</span><span >&#93;</span><span >=</span><span >3</span><span >;</span>
-&nbsp;
-<span >// première image</span>
-plot<span >&#40;</span>xh,value<span >=</span><span >1</span>,nbiso<span >=</span>ni,viso<span >=</span>vi<span >&#41;</span><span >;</span>
-&nbsp;
-<span >// deuxième image avec des valeurs deux fois plus grandes mais la même échelle</span>
-xh<span >=</span><span >2</span><span >*</span>x<span >;</span>
-plot<span >&#40;</span>xh,value<span >=</span><span >1</span>,nbiso<span >=</span>ni,viso<span >=</span>vi<span >&#41;</span><span >;</span></pre>
-</dd></dl>
+<!-- [[https://highlightjs.org/static/demo/]] -->
+
+```C++
+// maillage simple pour l'exemple
+mesh M=square(10,10);
+fespace Vh(M,P1);
+Vh xh=x;
+ 
+// liste d'isovaleurs constantes d'une image à l'autre
+int ni=4;
+real[int] vi(4);
+vi[0]=0;
+vi[1]=1;
+vi[2]=2;
+vi[3]=3;
+
+// première image
+plot(xh,value=1,nbiso=ni,viso=vi);
+
+// deuxième image avec des valeurs deux fois plus grandes mais la même échelle
+xh=2*x;
+plot(xh,value=1,nbiso=ni,viso=vi);
+```
 
 ### Comment changer les couleurs d'un graphique?
 
-utiliser <strong>plot(…,hsv=[…],…)</strong>, comme dans l'exemple suivant (examples++-tutorial/plot.edp):
+utiliser **plot(…,hsv=[…],…)**, comme dans l'exemple suivant (examples++-tutorial/plot.edp):
 
-<dl >
-<dt>couleurs.edp</dt>
-<dd><pre ><span >int</span> n<span >=</span><span >20</span>,nn<span >=</span>n<span >+</span><span >10</span><span >;</span>
-real<span >&#91;</span><span >int</span><span >&#93;</span> xx<span >&#40;</span>nn<span >&#41;</span>,yy<span >&#40;</span>nn<span >&#41;</span><span >;</span>
-<span >//  \url{from:   http://en.wikipedia.org/wiki/HSV_color_space} </span>
-<span >//The HSV (Hue, Saturation, Value) model, </span>
-<span >//   defines a color space in terms of three constituent components:</span>
-<span >//</span>
-<span >//HSV color space as a color wheel</span>
-<span >//Hue, the color type (such as red, blue, or yellow):</span>
-<span >//   Ranges from 0-360 (but normalized to 0-100% h ere)</span>
-<span >// Saturation, the &quot;vibrancy&quot; of the color: Ranges     from 0-100%</span>
-<span >//    The lower the saturation of a color, the more &quot;grayness&quot; is present </span>
-<span >//    and the more faded the color will appear.</span>
-<span >// Value, the brightness of the color:</span>
-<span >//   Ranges from 0-100%</span>
-<span >// </span>
-real<span >&#91;</span><span >int</span><span >&#93;</span> colorhsv<span >=</span><span >&#91;</span>  <span >// color hsv model</span>
-  <span >4</span>.<span >/</span><span >6</span>., <span >1</span> , <span >0.5</span>, <span >// dark blue</span>
-  <span >4</span>.<span >/</span><span >6</span>., <span >1</span> , <span >1</span>, <span >//  blue</span>
-  <span >5</span>.<span >/</span><span >6</span>., <span >1</span> , <span >1</span>, <span >//  magenta</span>
-  <span >1</span>, <span >1</span>. , <span >1</span>, <span >//  red</span>
-  <span >1</span>, <span >0.5</span> , <span >1</span> <span >// light red </span>
-   <span >&#93;</span><span >;</span>
-mesh Th<span >=</span>square<span >&#40;</span><span >5</span>,<span >5</span><span >&#41;</span><span >;</span>
-fespace Vh<span >&#40;</span>Th,P2<span >&#41;</span><span >;</span>
-Vh uh<span >=</span>x<span >*</span>x<span >+</span>y<span >*</span>y,vh<span >=</span><span >-</span>y<span >^</span><span >2</span><span >+</span>x<span >^</span><span >2</span><span >;</span>
-<span >assert</span><span >&#40;</span>n<span >+</span><span >1</span> <span >&lt;</span> nn<span >&#41;</span><span >;</span>
-<span >//  compute a cut </span>
-<span >for</span> <span >&#40;</span><span >int</span> i<span >=</span><span >0</span><span >;</span>i<span >&lt;=</span>n<span >;</span>i<span >++</span><span >&#41;</span>
- <span >&#123;</span>
-   xx<span >&#91;</span>i<span >&#93;</span><span >=</span>i<span >;</span>
-   yy<span >&#91;</span>i<span >&#93;</span><span >=</span>uh<span >&#40;</span>real<span >&#40;</span>i<span >&#41;</span><span >/</span>n,real<span >&#40;</span>i<span >&#41;</span><span >/</span>n<span >&#41;</span><span >;</span> <span >// value of uh at point (i/10. , i/10.) </span>
- <span >&#125;</span>
-&nbsp;
- plot<span >&#40;</span>Th,uh,<span >&#91;</span>uh,vh<span >&#93;</span>,value<span >=</span><span >true</span>,ps<span >=</span><span >&quot;three.eps&quot;</span>,wait<span >=</span><span >true</span><span >&#41;</span><span >;</span> <span >// plot mesh, isovalue, and vector</span>
- <span >//  zoom on box defined by the two corner points [0.1,0.2] and [0.5,0.6]</span>
- plot<span >&#40;</span>uh,<span >&#91;</span>uh,vh<span >&#93;</span>,bb<span >=</span><span >&#91;</span><span >&#91;</span><span >0.1</span>,<span >0.2</span><span >&#93;</span>,<span >&#91;</span><span >0.5</span>,<span >0.6</span><span >&#93;</span><span >&#93;</span>,wait<span >=</span><span >true</span>,grey<span >=</span><span >1</span>,fill<span >=</span><span >1</span>,value<span >=</span><span >1</span>,ps<span >=</span><span >&quot;threeg.eps&quot;</span><span >&#41;</span><span >;</span>  <span >// in grey with filling</span>
- plot<span >&#40;</span><span >&#91;</span>xx<span >&#40;</span><span >0</span><span >:</span>n<span >&#41;</span>,yy<span >&#40;</span><span >0</span><span >:</span>n<span >&#41;</span><span >&#93;</span>,<span >&#91;</span>xx<span >&#40;</span><span >0</span><span >:</span>n<span >:</span><span >5</span><span >&#41;</span>,yy<span >&#40;</span><span >0</span><span >:</span>n<span >:</span><span >5</span><span >&#41;</span><span >&#93;</span>,ps<span >=</span><span >&quot;likegnu.eps&quot;</span>,wait<span >=</span><span >true</span><span >&#41;</span><span >;</span> <span >//  like gnuplot plot a cut of uh</span>
-&nbsp;
- real<span >&#91;</span><span >int</span><span >&#93;</span> viso<span >&#40;</span><span >31</span><span >&#41;</span><span >;</span>
-&nbsp;
- <span >for</span> <span >&#40;</span><span >int</span> i<span >=</span><span >0</span><span >;</span>i<span >&lt;</span>viso.<span >n</span><span >;</span>i<span >++</span><span >&#41;</span>
-   viso<span >&#91;</span>i<span >&#93;</span><span >=</span>i<span >*</span><span >0.1</span><span >;</span>
-&nbsp;
- plot<span >&#40;</span>uh,viso<span >=</span>viso<span >&#40;</span><span >0</span><span >:</span>viso.<span >n</span><span >-</span><span >1</span><span >&#41;</span>,value<span >=</span><span >1</span>,fill<span >=</span><span >1</span>,wait<span >=</span><span >1</span>,hsv<span >=</span>colorhsv,ps<span >=</span><span >&quot;threehsv.eps&quot;</span><span >&#41;</span><span >;</span></pre>
-</dd></dl>
+* couleurs.edp
+
+```C++
+int n=20,nn=n+10;
+real[int] xx(nn),yy(nn);
+//  \url{from:   http://en.wikipedia.org/wiki/HSV_color_space} 
+//The HSV (Hue, Saturation, Value) model, 
+//   defines a color space in terms of three constituent components:
+//
+//HSV color space as a color wheel
+//Hue, the color type (such as red, blue, or yellow):
+//   Ranges from 0-360 (but normalized to 0-100% h ere)
+// Saturation, the "vibrancy" of the color: Ranges     from 0-100%
+//    The lower the saturation of a color, the more "grayness" is present 
+//    and the more faded the color will appear.
+// Value, the brightness of the color:
+//   Ranges from 0-100%
+// 
+real[int] colorhsv=[  // color hsv model
+  4./6., 1 , 0.5, // dark blue
+  4./6., 1 , 1, //  blue
+  5./6., 1 , 1, //  magenta
+  1, 1. , 1, //  red
+  1, 0.5 , 1 // light red 
+   ];
+mesh Th=square(5,5);
+fespace Vh(Th,P2);
+Vh uh=x*x+y*y,vh=-y^2+x^2;
+assert(n+1 < nn);
+//  compute a cut 
+for (int i=0;i<=n;i++)
+ {
+   xx[i]=i;
+   yy[i]=uh(real(i)/n,real(i)/n); // value of uh at point (i/10. , i/10.) 
+ }
+ 
+ plot(Th,uh,[uh,vh],value=true,ps="three.eps",wait=true); // plot mesh, isovalue, and vector
+ //  zoom on box defined by the two corner points [0.1,0.2] and [0.5,0.6]
+ plot(uh,[uh,vh],bb=[[0.1,0.2],[0.5,0.6]],wait=true,grey=1,fill=1,value=1,ps="threeg.eps");  // in grey with filling
+ plot([xx(0:n),yy(0:n)],[xx(0:n:5),yy(0:n:5)],ps="likegnu.eps",wait=true); //  like gnuplot plot a cut of uh
+ 
+ real[int] viso(31);
+ 
+ for (int i=0;i<viso.n;i++)
+   viso[i]=i*0.1;
+ 
+ plot(uh,viso=viso(0:viso.n-1),value=1,fill=1,wait=1,hsv=colorhsv,ps="threehsv.eps");
+```
 
 ### Comment sauvegarder les graphiques 3D sous forme de fichiers images PNG ou JPEG?
 
@@ -3268,153 +3472,155 @@ Utiliser [FreeFem++-cs](#freefem_cs).
 
 Grâce à l'interpolation entre les deux maillages:
 
-<dl >
-<dt>renumerotation.edp</dt>
-<dd><pre ><span >// petit maillage m sous-ensemble du grand maillage M</span>
-mesh M<span >=</span>square<span >&#40;</span><span >10</span>,<span >10</span><span >&#41;</span><span >;</span>
-<span >cout</span><span >&lt;&lt;</span><span >&quot;nombre de points dans M=&quot;</span><span >&lt;&lt;</span>M.<span >nv</span><span >&lt;&lt;</span>endl<span >;</span>
-mesh m<span >=</span>trunc<span >&#40;</span>M,x<span >&lt;</span><span >.5</span><span >&#41;</span><span >;</span>
-<span >cout</span><span >&lt;&lt;</span><span >&quot;nombre de points dans m=&quot;</span><span >&lt;&lt;</span>m.<span >nv</span><span >&lt;&lt;</span>endl<span >;</span>
-&nbsp;
-<span >// matrices d'interpolation entre maillages</span>
-fespace EM<span >&#40;</span>M,P1<span >&#41;</span><span >;</span>
-fespace Em<span >&#40;</span>m,P1<span >&#41;</span><span >;</span>
-matrix m2M<span >=</span>interpolate<span >&#40;</span>EM,Em<span >&#41;</span><span >;</span>
-matrix M2m<span >=</span>interpolate<span >&#40;</span>Em,EM<span >&#41;</span><span >;</span>
-&nbsp;
-<span >// vecteur representant les numeros des points dans le petit maillage</span>
-&nbsp;
-real<span >&#91;</span><span >int</span><span >&#93;</span> nm<span >&#40;</span>m.<span >nv</span><span >&#41;</span><span >;</span>
-nm<span >=</span><span >0</span><span >:</span><span >&#40;</span>m.<span >nv</span><span >-</span><span >1</span><span >&#41;</span><span >;</span>
-&nbsp;
-<span >// vecteur du grand maillage contenant les numeros des memes points</span>
-<span >// dans le petit maillage</span>
-&nbsp;
-real<span >&#91;</span><span >int</span><span >&#93;</span> nM<span >&#40;</span>M.<span >nv</span><span >&#41;</span><span >;</span>
-nM<span >=</span>m2M<span >*</span>nm<span >;</span>
-&nbsp;
-<span >// verification</span>
-<span >// ------------</span>
-&nbsp;
-<span >// choisit un point dans le grand maillage</span>
-<span >int</span> n<span >=</span><span >35</span><span >;</span>
-<span >cout</span><span >&lt;&lt;</span><span >&quot;numero dans le grand maillage=&quot;</span><span >&lt;&lt;</span>n<span >&lt;&lt;</span>endl<span >;</span>
-EM F<span >=</span><span >0</span><span >;</span>
-F<span >&#91;</span><span >&#93;</span><span >&#91;</span>n<span >&#93;</span><span >=</span><span >1</span><span >;</span>
-plot<span >&#40;</span>F,cmm<span >=</span><span >&quot;F&quot;</span><span >&#41;</span><span >;</span>
-&nbsp;
-<span >// affiche le meme point dans le petit maillage par interpolation</span>
-Em f<span >=</span><span >0</span><span >;</span>
-f<span >&#91;</span><span >&#93;</span><span >=</span>M2m<span >*</span>F<span >&#91;</span><span >&#93;</span><span >;</span>
-plot<span >&#40;</span>f,cmm<span >=</span><span >&quot;interpolate&quot;</span><span >&#41;</span><span >;</span>
-&nbsp;
-<span >// affiche le meme point dans le petit maillage par renumerotation</span>
-f<span >=</span><span >0</span><span >;</span>
-<span >cout</span><span >&lt;&lt;</span><span >&quot;numero dans le petit maillage=&quot;</span><span >&lt;&lt;</span>nM<span >&#40;</span>n<span >&#41;</span><span >&lt;&lt;</span>endl<span >;</span>
-f<span >&#91;</span><span >&#93;</span><span >&#91;</span>nM<span >&#40;</span>n<span >&#41;</span><span >&#93;</span><span >=</span><span >1</span><span >;</span>
-plot<span >&#40;</span>f,cmm<span >=</span><span >&quot;renumerotation&quot;</span><span >&#41;</span><span >;</span></pre>
-</dd></dl>
+* renumerotation.edp
+
+```C++
+// petit maillage m sous-ensemble du grand maillage M
+mesh M=square(10,10);
+cout<<"nombre de points dans M="<<M.nv<<endl;
+mesh m=trunc(M,x<.5);
+cout<<"nombre de points dans m="<<m.nv<<endl;
+ 
+// matrices d'interpolation entre maillages
+fespace EM(M,P1);
+fespace Em(m,P1);
+matrix m2M=interpolate(EM,Em);
+matrix M2m=interpolate(Em,EM);
+ 
+// vecteur representant les numeros des points dans le petit maillage
+ 
+real[int] nm(m.nv);
+nm=0:(m.nv-1);
+ 
+// vecteur du grand maillage contenant les numeros des memes points
+// dans le petit maillage
+ 
+real[int] nM(M.nv);
+nM=m2M*nm;
+ 
+// verification
+// ------------
+ 
+// choisit un point dans le grand maillage
+int n=35;
+cout<<"numero dans le grand maillage="<<n<<endl;
+EM F=0;
+F[][n]=1;
+plot(F,cmm="F");
+ 
+// affiche le meme point dans le petit maillage par interpolation
+Em f=0;
+f[]=M2m*F[];
+plot(f,cmm="interpolate");
+ 
+// affiche le meme point dans le petit maillage par renumerotation
+f=0;
+cout<<"numero dans le petit maillage="<<nM(n)<<endl;
+f[][nM(n)]=1;
+plot(f,cmm="renumerotation");
+```
 
 ### Comment trouver la matrice élémentaire sur un élément d'un maillage?
 
 Voici une méthode impliquant un maillage “élémentaire” contenant un seul élément:
 
-<dl >
-<dt>element.edp</dt>
-<dd><pre ><span >// petit maillage m sous-ensemble du grand maillage M</span>
-<span >// m = maillage avec un seul élément (numéro 55 choisi au hasard)</span>
-mesh M<span >=</span>square<span >&#40;</span><span >10</span>,<span >10</span><span >&#41;</span><span >;</span>
-mesh m<span >=</span>trunc<span >&#40;</span>M,M<span >&#40;</span>x,y<span >&#41;</span>.<span >nuTriangle</span><span >==</span><span >55</span><span >&#41;</span><span >;</span>
-&nbsp;
-<span >cout</span><span >&lt;&lt;</span><span >&quot;nombre de points dans M=&quot;</span><span >&lt;&lt;</span>M.<span >nv</span><span >&lt;&lt;</span>endl<span >;</span>
-<span >cout</span><span >&lt;&lt;</span><span >&quot;nombre de points dans m=&quot;</span><span >&lt;&lt;</span>m.<span >nv</span><span >&lt;&lt;</span>endl<span >;</span>
-&nbsp;
-<span >// matrices d'interpolation entre maillages</span>
-fespace EM<span >&#40;</span>M,P1<span >&#41;</span><span >;</span>
-fespace Em<span >&#40;</span>m,P1<span >&#41;</span><span >;</span>
-matrix m2M<span >=</span>interpolate<span >&#40;</span>EM,Em<span >&#41;</span><span >;</span>
-matrix M2m<span >=</span>interpolate<span >&#40;</span>Em,EM<span >&#41;</span><span >;</span>
-&nbsp;
-<span >// vecteur representant les numeros des points dans le grand maillage</span>
-real<span >&#91;</span><span >int</span><span >&#93;</span> nM<span >&#40;</span>M.<span >nv</span><span >&#41;</span><span >;</span>
-nM<span >=</span><span >0</span><span >:</span><span >&#40;</span>M.<span >nv</span><span >-</span><span >1</span><span >&#41;</span><span >;</span>
-&nbsp;
-<span >// vecteur du petit maillage contenant les numeros des memes points</span>
-<span >// dans le grand maillage</span>
-&nbsp;
-real<span >&#91;</span><span >int</span><span >&#93;</span> nm<span >&#40;</span>m.<span >nv</span><span >&#41;</span><span >;</span>
-nm<span >=</span>M2m<span >*</span>nM<span >;</span>
-&nbsp;
-<span >// Affiche les numéros des points du petit maillage dans le grand maillage</span>
-<span >cout</span><span >&lt;&lt;</span><span >&quot;numeros des points = &quot;</span><span >;</span>
-<span >int</span> p<span >;</span>
-<span >for</span><span >&#40;</span>p<span >=</span><span >0</span><span >;</span>p<span >&lt;</span>m.<span >nv</span><span >;</span>p<span >++</span><span >&#41;</span><span >cout</span><span >&lt;&lt;</span>nm<span >&#40;</span>p<span >&#41;</span><span >&lt;&lt;</span><span >&quot; &quot;</span><span >;</span>
-<span >cout</span><span >&lt;&lt;</span>endl<span >;</span>
-&nbsp;
-<span >// affiche les points du petit maillage dans le grand maillage pour vérifier</span>
-<span >// qu'ils constituent bien un triangle</span>
-EM F<span >;</span>
-<span >for</span><span >&#40;</span>p<span >=</span><span >0</span><span >;</span>p<span >&lt;</span>m.<span >nv</span><span >;</span>p<span >++</span><span >&#41;</span><span >&#123;</span>F<span >&#91;</span><span >&#93;</span><span >&#91;</span>nm<span >&#40;</span>p<span >&#41;</span><span >&#93;</span><span >=</span><span >1</span><span >;</span><span >&#125;</span>
-plot<span >&#40;</span>F,cmm<span >=</span><span >&quot;verification&quot;</span><span >&#41;</span><span >;</span></pre>
-</dd></dl>
+* element.edp
+
+```C++
+// petit maillage m sous-ensemble du grand maillage M
+// m = maillage avec un seul élément (numéro 55 choisi au hasard)
+mesh M=square(10,10);
+mesh m=trunc(M,M(x,y).nuTriangle==55);
+ 
+cout<<"nombre de points dans M="<<M.nv<<endl;
+cout<<"nombre de points dans m="<<m.nv<<endl;
+ 
+// matrices d'interpolation entre maillages
+fespace EM(M,P1);
+fespace Em(m,P1);
+matrix m2M=interpolate(EM,Em);
+matrix M2m=interpolate(Em,EM);
+ 
+// vecteur representant les numeros des points dans le grand maillage
+real[int] nM(M.nv);
+nM=0:(M.nv-1);
+ 
+// vecteur du petit maillage contenant les numeros des memes points
+// dans le grand maillage
+ 
+real[int] nm(m.nv);
+nm=M2m*nM;
+ 
+// Affiche les numéros des points du petit maillage dans le grand maillage
+cout<<"numeros des points = ";
+int p;
+for(p=0;p<m.nv;p++)cout<<nm(p)<<" ";
+cout<<endl;
+ 
+// affiche les points du petit maillage dans le grand maillage pour vérifier
+// qu'ils constituent bien un triangle
+EM F;
+for(p=0;p<m.nv;p++){F[][nm(p)]=1;}
+plot(F,cmm="verification");
+```
 
 La matrice élémentaire peut ensuite être obtenue en appliquant le problème global au petit maillage.
 
 ### Comment créer une échelle de couleurs monochrome rouge ou verte?
 
-Voici l'exemple examples++-tutorial/plot.edp avec une échelle monochrome rouge. Pour une échelle verte, remplacer la première coordonnée de chaque couleur (hue) par 0.33.
+Voici l'exemple examples++-tutorial/plot.edp avec une échelle monochrome rouge. Pour une échelle verte, remplacer la première coordonnée de
+chaque couleur (hue) par 0.33.
 
-<dl >
-<dt>plot.edp</dt>
-<dd><pre ><span >int</span> n<span >=</span><span >20</span>,nn<span >=</span>n<span >+</span><span >10</span><span >;</span>
-real<span >&#91;</span><span >int</span><span >&#93;</span> xx<span >&#40;</span>nn<span >&#41;</span>,yy<span >&#40;</span>nn<span >&#41;</span><span >;</span>
-<span >//  \url{from:   http://en.wikipedia.org/wiki/HSV_color_space} </span>
-<span >//The HSV (Hue, Saturation, Value) model, </span>
-<span >//   defines a color space in terms of three constituent components:</span>
-<span >//</span>
-<span >//HSV color space as a color wheel</span>
-<span >//Hue, the color type (such as red, blue, or yellow):</span>
-<span >//   Ranges from 0-360 (but normalized to 0-100% h ere)</span>
-<span >// Saturation, the &quot;vibrancy&quot; of the color: Ranges     from 0-100%</span>
-<span >//    The lower the saturation of a color, the more &quot;grayness&quot; is present </span>
-<span >//    and the more faded the color will appear.</span>
-<span >// Value, the brightness of the color:</span>
-<span >//   Ranges from 0-100%</span>
-<span >// </span>
-real<span >&#91;</span><span >int</span><span >&#93;</span> colorhsv<span >=</span><span >&#91;</span>  <span >// color hsv model</span>
-  <span >1</span>, <span >1</span>, <span >0</span>,
-  <span >1</span>, <span >1</span>, <span >0.25</span>,
-  <span >1</span>, <span >1</span>, <span >0.5</span>,
-  <span >1</span>, <span >1</span>, <span >0.75</span>,
-  <span >1</span>, <span >1</span>, <span >1</span>
-   <span >&#93;</span><span >;</span>
-mesh Th<span >=</span>square<span >&#40;</span><span >5</span>,<span >5</span><span >&#41;</span><span >;</span>
-fespace Vh<span >&#40;</span>Th,P2<span >&#41;</span><span >;</span>
-Vh uh<span >=</span>x<span >*</span>x<span >+</span>y<span >*</span>y,vh<span >=</span><span >-</span>y<span >^</span><span >2</span><span >+</span>x<span >^</span><span >2</span><span >;</span>
-<span >assert</span><span >&#40;</span>n<span >+</span><span >1</span> <span >&lt;</span> nn<span >&#41;</span><span >;</span>
-<span >//  compute a cut </span>
-<span >for</span> <span >&#40;</span><span >int</span> i<span >=</span><span >0</span><span >;</span>i<span >&lt;=</span>n<span >;</span>i<span >++</span><span >&#41;</span>
- <span >&#123;</span>
-   xx<span >&#91;</span>i<span >&#93;</span><span >=</span>i<span >;</span>
-   yy<span >&#91;</span>i<span >&#93;</span><span >=</span>uh<span >&#40;</span>real<span >&#40;</span>i<span >&#41;</span><span >/</span>n,real<span >&#40;</span>i<span >&#41;</span><span >/</span>n<span >&#41;</span><span >;</span> <span >// value of uh at point (i/10. , i/10.) </span>
- <span >&#125;</span>
-&nbsp;
- plot<span >&#40;</span>Th,uh,<span >&#91;</span>uh,vh<span >&#93;</span>,value<span >=</span><span >true</span>,ps<span >=</span><span >&quot;three.eps&quot;</span>,wait<span >=</span><span >true</span><span >&#41;</span><span >;</span> <span >// plot mesh, isovalue, and vector</span>
- <span >//  zoom on box defined by the two corner points [0.1,0.2] and [0.5,0.6]</span>
- plot<span >&#40;</span>uh,<span >&#91;</span>uh,vh<span >&#93;</span>,bb<span >=</span><span >&#91;</span><span >&#91;</span><span >0.1</span>,<span >0.2</span><span >&#93;</span>,<span >&#91;</span><span >0.5</span>,<span >0.6</span><span >&#93;</span><span >&#93;</span>,wait<span >=</span><span >true</span>,grey<span >=</span><span >1</span>,fill<span >=</span><span >1</span>,value<span >=</span><span >1</span>,ps<span >=</span><span >&quot;threeg.eps&quot;</span><span >&#41;</span><span >;</span>  <span >// in grey with filling</span>
- plot<span >&#40;</span><span >&#91;</span>xx<span >&#40;</span><span >0</span><span >:</span>n<span >&#41;</span>,yy<span >&#40;</span><span >0</span><span >:</span>n<span >&#41;</span><span >&#93;</span>,<span >&#91;</span>xx<span >&#40;</span><span >0</span><span >:</span>n<span >:</span><span >5</span><span >&#41;</span>,yy<span >&#40;</span><span >0</span><span >:</span>n<span >:</span><span >5</span><span >&#41;</span><span >&#93;</span>,ps<span >=</span><span >&quot;likegnu.eps&quot;</span>,wait<span >=</span><span >true</span><span >&#41;</span><span >;</span> <span >//  like gnuplot plot a cut of uh</span>
-&nbsp;
- real<span >&#91;</span><span >int</span><span >&#93;</span> viso<span >&#40;</span><span >31</span><span >&#41;</span><span >;</span>
-&nbsp;
- <span >for</span> <span >&#40;</span><span >int</span> i<span >=</span><span >0</span><span >;</span>i<span >&lt;</span>viso.<span >n</span><span >;</span>i<span >++</span><span >&#41;</span>
-   viso<span >&#91;</span>i<span >&#93;</span><span >=</span>i<span >*</span><span >0.1</span><span >;</span>
-&nbsp;
- plot<span >&#40;</span>uh,viso<span >=</span>viso<span >&#40;</span><span >0</span><span >:</span>viso.<span >n</span><span >-</span><span >1</span><span >&#41;</span>,value<span >=</span><span >1</span>,fill<span >=</span><span >1</span>,wait<span >=</span><span >1</span>,hsv<span >=</span>colorhsv,ps<span >=</span><span >&quot;threehsv.eps&quot;</span><span >&#41;</span><span >;</span>
-&nbsp;
-&nbsp;</pre>
-</dd></dl>
+* plot.edp
 
-### Quelle est la signification du paramètre &quot;tgv&quot; pour la définition matricielle d'un problème?
+```C++
+int n=20,nn=n+10;
+real[int] xx(nn),yy(nn);
+//  \url{from:   http://en.wikipedia.org/wiki/HSV_color_space} 
+//The HSV (Hue, Saturation, Value) model, 
+//   defines a color space in terms of three constituent components:
+//
+//HSV color space as a color wheel
+//Hue, the color type (such as red, blue, or yellow):
+//   Ranges from 0-360 (but normalized to 0-100% h ere)
+// Saturation, the "vibrancy" of the color: Ranges     from 0-100%
+//    The lower the saturation of a color, the more "grayness" is present 
+//    and the more faded the color will appear.
+// Value, the brightness of the color:
+//   Ranges from 0-100%
+// 
+real[int] colorhsv=[  // color hsv model
+  1, 1, 0,
+  1, 1, 0.25,
+  1, 1, 0.5,
+  1, 1, 0.75,
+  1, 1, 1
+   ];
+mesh Th=square(5,5);
+fespace Vh(Th,P2);
+Vh uh=x*x+y*y,vh=-y^2+x^2;
+assert(n+1 < nn);
+//  compute a cut 
+for (int i=0;i<=n;i++)
+ {
+   xx[i]=i;
+   yy[i]=uh(real(i)/n,real(i)/n); // value of uh at point (i/10. , i/10.) 
+ }
+ 
+ plot(Th,uh,[uh,vh],value=true,ps="three.eps",wait=true); // plot mesh, isovalue, and vector
+ //  zoom on box defined by the two corner points [0.1,0.2] and [0.5,0.6]
+ plot(uh,[uh,vh],bb=[[0.1,0.2],[0.5,0.6]],wait=true,grey=1,fill=1,value=1,ps="threeg.eps");  // in grey with filling
+ plot([xx(0:n),yy(0:n)],[xx(0:n:5),yy(0:n:5)],ps="likegnu.eps",wait=true); //  like gnuplot plot a cut of uh
+ 
+ real[int] viso(31);
+ 
+ for (int i=0;i<viso.n;i++)
+   viso[i]=i*0.1;
+ 
+ plot(uh,viso=viso(0:viso.n-1),value=1,fill=1,wait=1,hsv=colorhsv,ps="threehsv.eps");
+```
+
+### Quelle est la signification du paramètre "tgv" pour la définition matricielle d'un problème?
 
 *tgv* est la méthode utilisée par défaut par FreeFem++ pour implémenter les conditions de Dirichlet. *tgv* signifie “très grande valeur”
 (10^30 par défaut). Elle est imposée sur le terme diagonal de la matrice (ce qui rend les autres termes de la même ligne négligeables) et au
@@ -3425,30 +3631,32 @@ En cas de difficulté, une valeur négative pour le paramètre *tgv* force FreeF
 annuler tous les autres termes de la ligne de la matrice.
 
 ### Comment créer rapidement un maillage 3D en forme de sphère?
-<dl >
-<dt>sphere.edp</dt>
-<dd><pre >load <span >&quot;msh3&quot;</span>
-&nbsp;
-border cc<span >&#40;</span>t<span >=</span><span >0</span>,<span >2</span><span >*</span>pi<span >&#41;</span><span >&#123;</span>x<span >=</span><span >cos</span><span >&#40;</span>t<span >&#41;</span><span >;</span>y<span >=</span><span >sin</span><span >&#40;</span>t<span >&#41;</span><span >;</span>label<span >=</span><span >1</span><span >;</span><span >&#125;</span>
-mesh Th2<span >=</span> buildmesh<span >&#40;</span>cc<span >&#40;</span><span >500</span><span >&#41;</span><span >&#41;</span><span >;</span>
-&nbsp;
-<span >// eps is there to avoid square roots of negative values</span>
-<span >// and thin triangles close to the equator</span>
-real eps<span >=</span><span >1e-2</span><span >;</span>
-&nbsp;
-func zmin<span >=</span><span >-</span><span >sqrt</span><span >&#40;</span><span >1</span><span >+</span>eps<span >-</span>x<span >*</span>x<span >-</span>y<span >*</span>y<span >&#41;</span><span >;</span>
-func zmax<span >=</span><span >sqrt</span><span >&#40;</span><span >1</span><span >+</span>eps<span >-</span>x<span >*</span>x<span >-</span>y<span >*</span>y<span >&#41;</span><span >;</span>
-&nbsp;
-<span >int</span><span >&#91;</span><span >int</span><span >&#93;</span> rup<span >=</span><span >&#91;</span><span >0</span>,<span >2</span><span >&#93;</span>,rdown<span >=</span><span >&#91;</span><span >0</span>,<span >1</span><span >&#93;</span>,rmid<span >=</span><span >&#91;</span><span >1</span>,<span >3</span>,<span >2</span>,<span >3</span>,<span >3</span>,<span >3</span>,<span >4</span>,<span >3</span><span >&#93;</span><span >;</span>
-&nbsp;
-mesh3 Th<span >=</span>buildlayers<span >&#40;</span>Th2,<span >20</span>,
-  zbound<span >=</span><span >&#91;</span>zmin,zmax<span >&#93;</span>,
-  labelmid<span >=</span>rmid, 
-  reffaceup <span >=</span> rup,
-  reffacelow <span >=</span> rdown<span >&#41;</span><span >;</span>
-&nbsp;
-plot<span >&#40;</span>Th<span >&#41;</span><span >;</span></pre>
-</dd></dl>
+
+* sphere.edp
+
+```C++
+load "msh3"
+ 
+border cc(t=0,2*pi){x=cos(t);y=sin(t);label=1;}
+mesh Th2= buildmesh(cc(500));
+ 
+// eps is there to avoid square roots of negative values
+// and thin triangles close to the equator
+real eps=1e-2;
+ 
+func zmin=-sqrt(1+eps-x*x-y*y);
+func zmax=sqrt(1+eps-x*x-y*y);
+ 
+int[int] rup=[0,2],rdown=[0,1],rmid=[1,3,2,3,3,3,4,3];
+ 
+mesh3 Th=buildlayers(Th2,20,
+  zbound=[zmin,zmax],
+  labelmid=rmid, 
+  reffaceup = rup,
+  reffacelow = rdown);
+ 
+plot(Th);
+```
 
 ce qui donne :
 
@@ -3458,540 +3666,529 @@ ffquasisphere.png <!-- ALHTODO find in dokuwiki backups -->
 
 Voici un script [perl](#perl) qui sait traduire les SVG qui contiennent des courbes de Bézier cubiques et des lignes droites :
 
-<dl >
-<dt>svg2edp</dt>
-<dd><pre ><span >#!/usr/bin/perl</span>
-<span ># ======================================================================</span>
-<span ># Written by Antoine Le Hyaric</span>
-<span ># http://www.ljll.math.upmc.fr/lehyaric</span>
-<span ># ======================================================================</span>
-<span ># headeralh mine perl start=20/02/2012</span>
-&nbsp;
-<span ># Converts a 2D SVG picture (eg obtained with inkscape &quot;Path/Trace Bitmap...&quot;) into a list of FreeFem++ borders and</span>
-<span ># meshes. Examples use: &quot;svg2edp &lt; file.svg  &gt; file.edp 2&gt; file.gnuplot&quot;</span>
-&nbsp;
-<span >use</span> strict<span >;</span>
-&nbsp;
-<span ># final list of all borders</span>
-<span >my</span> <span >@borders</span><span >;</span>
-&nbsp;
-<span ># numbering borders</span>
-<span >my</span> <span >$numb</span><span >=</span><span >0</span><span >;</span>
-&nbsp;
-<span >sub</span> straightborder<span >&#123;</span>
-  <span >my</span><span >&#40;</span><span >$x0</span><span >,</span><span >$y0</span><span >,</span><span >$x1</span><span >,</span><span >$y1</span><span >&#41;</span><span >=</span><span >@_</span><span >;</span>
-&nbsp;
-  [<span >die</span>](http://perldoc.perl.org/functions/#diel) <span >if</span> <span >&#40;</span>[<span >abs</span>](http://perldoc.perl.org/functions/#absl)<span >&#40;</span><span >$x1</span><span >-</span><span >$x0</span><span >&#41;</span><span >+</span>[<span >abs</span>](http://perldoc.perl.org/functions/#absl)<span >&#40;</span><span >$y1</span><span >-</span><span >$y0</span><span >&#41;</span><span >&#41;</span><span >&lt;</span>1e<span >-</span>6<span >;</span>
-&nbsp;
-  [<span >print</span>](http://perldoc.perl.org/functions/#printl) <span >&quot;border b$numb(t=0,1){<span >\n</span>&quot;</span><span >;</span>
-  [<span >print</span>](http://perldoc.perl.org/functions/#printl) <span >&quot;<span >\t</span>x=$x0*t+$x1*(1-t);<span >\n</span>&quot;</span><span >;</span>
-  [<span >print</span>](http://perldoc.perl.org/functions/#printl) <span >&quot;<span >\t</span>y=$y0*t+$y1*(1-t);<span >\n</span>&quot;</span><span >;</span>
-  [<span >print</span>](http://perldoc.perl.org/functions/#printl) <span >&quot;}<span >\n</span>&quot;</span><span >;</span>
-  [<span >push</span>](http://perldoc.perl.org/functions/#pushl) <span >@borders</span><span >,</span><span >&quot;b$numb(-2)&quot;</span><span >;</span>
-  <span >$numb</span><span >++;</span>
-&nbsp;
-  <span ># stderr contains the same data for debugging via gnuplot</span>
-  [<span >print</span>](http://perldoc.perl.org/functions/#printl) <span >STDERR</span> <span >&quot;$x0 $y0<span >\n</span>&quot;</span><span >;</span>
-  [<span >print</span>](http://perldoc.perl.org/functions/#printl) <span >STDERR</span> <span >&quot;$x1 $y1<span >\n</span>&quot;</span><span >;</span>
-<span >&#125;</span>
-&nbsp;
-<span >sub</span> bezierinterp<span >&#123;</span>
-  <span >my</span><span >&#40;</span><span >$p0</span><span >,</span><span >$q0</span><span >,</span><span >$q1</span><span >,</span><span >$p1</span><span >,</span><span >$t</span><span >&#41;</span><span >=</span><span >@_</span><span >;</span>
-  [<span >return</span>](http://perldoc.perl.org/functions/#returnl) <span >$p0</span><span >*</span><span >&#40;</span><span >1</span><span >-</span><span >$t</span><span >&#41;</span><span >**</span><span >3</span><span >+</span><span >$q0</span><span >*</span><span >3</span><span >*</span><span >&#40;</span><span >1</span><span >-</span><span >$t</span><span >&#41;</span><span >**</span><span >2</span><span >*$t</span><span >+</span><span >$q1</span><span >*</span><span >3</span><span >*</span><span >&#40;</span><span >1</span><span >-</span><span >$t</span><span >&#41;</span><span >*$t</span><span >**</span><span >2</span><span >+</span><span >$p1</span><span >*$t</span><span >**</span><span >3</span><span >;</span>
-<span >&#125;</span>
-&nbsp;
-<span >sub</span> bezierborder<span >&#123;</span>
-  <span >my</span><span >&#40;</span><span >$p1x</span><span >,</span><span >$p1y</span><span >,</span><span >$q1x</span><span >,</span><span >$q1y</span><span >,</span><span >$q2x</span><span >,</span><span >$q2y</span><span >,</span><span >$p2x</span><span >,</span><span >$p2y</span><span >&#41;</span><span >=</span><span >@_</span><span >;</span>
-  <span >my</span> <span >$xprev</span><span >=</span><span >$p1x</span><span >;</span>
-  <span >my</span> <span >$yprev</span><span >=</span><span >$p1y</span><span >;</span>
-&nbsp;
-  <span >for</span><span >&#40;</span><span >my</span> <span >$t</span><span >=</span><span >0.1</span><span >;</span><span >$t</span><span >&lt;=</span><span >1</span><span >;</span><span >$t</span><span >+=</span><span >0.1</span><span >&#41;</span><span >&#123;</span>
-    <span >my</span> <span >$xnext</span><span >=</span>bezierinterp<span >&#40;</span><span >$p1x</span><span >,</span><span >$q1x</span><span >,</span><span >$q2x</span><span >,</span><span >$p2x</span><span >,</span><span >$t</span><span >&#41;</span><span >;</span>
-    <span >my</span> <span >$ynext</span><span >=</span>bezierinterp<span >&#40;</span><span >$p1y</span><span >,</span><span >$q1y</span><span >,</span><span >$q2y</span><span >,</span><span >$p2y</span><span >,</span><span >$t</span><span >&#41;</span><span >;</span>
-&nbsp;
-    [<span >print</span>](http://perldoc.perl.org/functions/#printl) <span >&quot;border b$numb(t=0,1){<span >\n</span>&quot;</span><span >;</span>
-    [<span >print</span>](http://perldoc.perl.org/functions/#printl) <span >&quot;<span >\t</span>x=$xprev*t+$xnext*(1-t);<span >\n</span>&quot;</span><span >;</span>
-    [<span >print</span>](http://perldoc.perl.org/functions/#printl) <span >&quot;<span >\t</span>y=$yprev*t+$ynext*(1-t);<span >\n</span>&quot;</span><span >;</span>
-    [<span >print</span>](http://perldoc.perl.org/functions/#printl) <span >&quot;<span >\t</span>label=1;<span >\n</span>&quot;</span><span >;</span>
-    [<span >print</span>](http://perldoc.perl.org/functions/#printl) <span >&quot;}<span >\n</span>&quot;</span><span >;</span>
-    [<span >push</span>](http://perldoc.perl.org/functions/#pushl) <span >@borders</span><span >,</span><span >&quot;b$numb(-2)&quot;</span><span >;</span>
-    <span >$numb</span><span >++;</span>
-&nbsp;
-    <span ># stderr contains the same data for debugging via gnuplot</span>
-    [<span >print</span>](http://perldoc.perl.org/functions/#printl) <span >STDERR</span> <span >&quot;$xprev $yprev<span >\n</span>&quot;</span><span >;</span>
-    [<span >print</span>](http://perldoc.perl.org/functions/#printl) <span >STDERR</span> <span >&quot;$xnext $ynext<span >\n</span>&quot;</span><span >;</span>
-&nbsp;
-    <span >$xprev</span><span >=</span><span >$xnext</span><span >;</span>
-    <span >$yprev</span><span >=</span><span >$ynext</span><span >;</span>
-  <span >&#125;</span>
-<span >&#125;</span>
-&nbsp;
-<span ># numbering meshes</span>
-<span >my</span> <span >$numm</span><span >=</span><span >0</span><span >;</span>
-&nbsp;
-<span ># read input file</span>
-<span >while</span><span >&#40;</span><span >&lt;STDIN&gt;</span><span >&#41;</span><span >&#123;</span>
-  <span >next</span> <span >unless</span> <span >/ d=&quot;(.*)&quot;/</span><span >;</span>
-  <span >my</span> <span >$path</span><span >=</span><span >$1</span><span >;</span>
-&nbsp;
-  <span ># scan path</span>
-  <span >my</span> <span >$num</span><span >=</span><span >'([-.0-9]+)'</span><span >;</span>
-&nbsp;
-  <span ># current point in absolute coordinates</span>
-  <span >my</span> <span >$curx</span><span >=</span><span >0</span><span >;</span>
-  <span >my</span> <span >$cury</span><span >=</span><span >0</span><span >;</span>
-&nbsp;
-  <span ># first point (to close a curve) in absolute coordinates</span>
-  <span >my</span> <span >$firstx</span><span >;</span>
-  <span >my</span> <span >$firsty</span><span >;</span>
-  <span >my</span> <span >$firstok</span><span >=</span><span >0</span><span >;</span>
-&nbsp;
-  <span ># list of all SVG commands [[http://www.w3.org/TR/SVG11/#pathsl#PathDataMovetoCommands]]</span>
-  <span >my</span> <span >$state</span><span >=</span><span >''</span><span >;</span>
-  <span >my</span> <span >$abs</span><span >=</span><span >0</span><span >;</span>
-  <span >my</span> <span >@args</span><span >;</span>
-  <span >while</span><span >&#40;</span><span >$path</span><span >=~</span>[<span >m</span>](http://perldoc.perl.org/functions/#ml)<span >/</span> <span >*</span><span >&#40;</span>[<span >m</span>](http://perldoc.perl.org/functions/#ml)<span >|</span>c<span >|</span>l<span >|</span>z<span >|</span><span >$num</span><span >,</span><span >$num</span><span >&#41;</span><span >/</span>gi<span >&#41;</span><span >&#123;</span>
-    <span >my</span> <span >$Command</span><span >=</span><span >$1</span><span >;</span>
-    <span >my</span> <span >$command</span><span >=</span>[<span >lc</span>](http://perldoc.perl.org/functions/#lcl)<span >&#40;</span><span >$Command</span><span >&#41;</span><span >;</span>
-    <span >my</span> <span >$x</span><span >=</span><span >$2</span><span >;</span>
-    <span >my</span> <span >$y</span><span >=</span><span >$3</span><span >;</span>
-    <span >if</span><span >&#40;</span><span >$command</span> <span >eq</span> <span >'m'</span> <span >||</span> <span >$command</span> <span >eq</span> <span >'c'</span> <span >||</span> <span >$command</span> <span >eq</span> <span >'l'</span><span >&#41;</span><span >&#123;</span>
-      <span >$state</span><span >=</span>[<span >lc</span>](http://perldoc.perl.org/functions/#lcl)<span >&#40;</span><span >$command</span><span >&#41;</span><span >;</span>
-&nbsp;
-      <span ># capital letters represent absolute coordinates</span>
-      <span >$abs</span><span >=</span><span >0</span><span >;</span>
-      <span >$abs</span><span >=</span><span >1</span> <span >if</span> [<span >ord</span>](http://perldoc.perl.org/functions/#ordl)<span >&#40;</span><span >$Command</span><span >&#41;</span><span >&lt;</span><span >97</span><span >;</span>
-&nbsp;
-      <span >@args</span><span >=</span><span >&#40;</span><span >&#41;</span><span >;</span>
-    <span >&#125;</span>
-&nbsp;
-    <span ># SVG command for closing the curve</span>
-    <span >elsif</span><span >&#40;</span><span >$command</span> <span >eq</span> <span >'z'</span><span >&#41;</span><span >&#123;</span>
-      [<span >print</span>](http://perldoc.perl.org/functions/#printl) <span >&quot;// closing the curve<span >\n</span>&quot;</span><span >;</span>
-      <span >###straightborder($curx,$cury,$firstx,$firsty);</span>
-      <span >$curx</span><span >=</span><span >$firstx</span><span >;</span>
-      <span >$cury</span><span >=</span><span >$firsty</span><span >;</span>
-    <span >&#125;</span>
-&nbsp;
-    <span ># SVG commands followed by coordinates</span>
-    <span >else</span><span >&#123;</span>
-&nbsp;
-      <span ># initial point</span>
-      <span >if</span><span >&#40;</span><span >$state</span> <span >eq</span> <span >'m'</span><span >&#41;</span><span >&#123;</span>
-	<span >$curx</span><span >=</span>abscoord<span >&#40;</span><span >$curx</span><span >,</span><span >$x</span><span >,</span><span >$abs</span><span >&#41;</span><span >;</span>
-	<span >$cury</span><span >=</span>abscoord<span >&#40;</span><span >$cury</span><span >,</span><span >$y</span><span >,</span><span >$abs</span><span >&#41;</span><span >;</span>
-	[<span >print</span>](http://perldoc.perl.org/functions/#printl) <span >&quot;// moving to [$curx,$cury]<span >\n</span>&quot;</span><span >;</span>
-	<span >if</span><span >&#40;</span><span >!</span><span >$firstok</span><span >&#41;</span><span >&#123;</span>
-	  <span >$firstx</span><span >=</span><span >$curx</span><span >;</span>
-	  <span >$firsty</span><span >=</span><span >$cury</span><span >;</span>
-	  <span >$firstok</span><span >=</span><span >1</span><span >;</span>
-	<span >&#125;</span>
-      <span >&#125;</span>
-&nbsp;
-      <span ># line</span>
-      <span >elsif</span><span >&#40;</span><span >$state</span> <span >eq</span> <span >'l'</span><span >&#41;</span><span >&#123;</span>
-	[<span >print</span>](http://perldoc.perl.org/functions/#printl) <span >&quot;// line<span >\n</span>&quot;</span><span >;</span>
-	<span >my</span> <span >$tox</span><span >=</span>abscoord<span >&#40;</span><span >$curx</span><span >,</span><span >$x</span><span >,</span><span >$abs</span><span >&#41;</span><span >;</span>
-	<span >my</span> <span >$toy</span><span >=</span>abscoord<span >&#40;</span><span >$cury</span><span >,</span><span >$y</span><span >,</span><span >$abs</span><span >&#41;</span><span >;</span>
-	straightborder<span >&#40;</span><span >$curx</span><span >,</span><span >$cury</span><span >,</span><span >$tox</span><span >,</span><span >$toy</span><span >&#41;</span><span >;</span>
-	<span >$curx</span><span >=</span><span >$tox</span><span >;</span>
-	<span >$cury</span><span >=</span><span >$toy</span><span >;</span>
-      <span >&#125;</span>
-&nbsp;
-      <span ># bezier curve</span>
-      <span >elsif</span><span >&#40;</span><span >$state</span> <span >eq</span> <span >'c'</span><span >&#41;</span><span >&#123;</span>
-&nbsp;
-	[<span >push</span>](http://perldoc.perl.org/functions/#pushl) <span >@args</span><span >,</span>abscoord<span >&#40;</span><span >$curx</span><span >,</span><span >$x</span><span >,</span><span >$abs</span><span >&#41;</span><span >,</span>abscoord<span >&#40;</span><span >$cury</span><span >,</span><span >$y</span><span >,</span><span >$abs</span><span >&#41;</span><span >;</span>
-&nbsp;
-	<span ># draw one bezier segment when is fully defined (ie with 2 points + 2 control points)</span>
-	<span >if</span><span >&#40;</span><span >$#args</span><span >==</span><span >5</span><span >&#41;</span><span >&#123;</span>
-	  [<span >print</span>](http://perldoc.perl.org/functions/#printl) <span >&quot;// bezier curve<span >\n</span>&quot;</span><span >;</span>
-&nbsp;
-	  <span >my</span> <span >$tox</span><span >=</span><span >$args</span><span >&#91;</span><span >4</span><span >&#93;</span><span >;</span>
-	  <span >my</span> <span >$toy</span><span >=</span><span >$args</span><span >&#91;</span><span >5</span><span >&#93;</span><span >;</span>
-	  bezierborder<span >&#40;</span><span >$curx</span><span >,</span><span >$cury</span><span >,</span><span >$args</span><span >&#91;</span><span >0</span><span >&#93;</span><span >,</span><span >$args</span><span >&#91;</span><span >1</span><span >&#93;</span><span >,</span><span >$args</span><span >&#91;</span><span >2</span><span >&#93;</span><span >,</span><span >$args</span><span >&#91;</span><span >3</span><span >&#93;</span><span >,</span><span >$tox</span><span >,</span><span >$toy</span><span >&#41;</span><span >;</span>
-&nbsp;
-	  <span ># the next bezier point may come without an explicit 'c'</span>
-	  <span >@args</span><span >=</span><span >&#40;</span><span >&#41;</span><span >;</span>
-	  <span >$curx</span><span >=</span><span >$tox</span><span >;</span>
-	  <span >$cury</span><span >=</span><span >$toy</span><span >;</span>
-	<span >&#125;</span>
-      <span >&#125;</span>
-    <span >&#125;</span>
-  <span >&#125;</span>
-&nbsp;
-  <span ># create corresponding mesh</span>
-  <span >if</span><span >&#40;</span><span >$#borders</span><span >&gt;=</span><span >0</span><span >&#41;</span><span >&#123;</span>
-    [<span >print</span>](http://perldoc.perl.org/functions/#printl) <span >&quot;mesh Th$numm=buildmesh(&quot;</span><span >.</span>[<span >join</span>](http://perldoc.perl.org/functions/#joinl)<span >&#40;</span><span >&quot;+&quot;</span><span >,</span><span >@borders</span><span >&#41;</span><span >.</span><span >&quot;);<span >\n</span>&quot;</span><span >;</span>
-    <span >$numm</span><span >++;</span>
-  <span >&#125;</span>
-<span >&#125;</span>
-&nbsp;
-<span ># choose between relative and absolute coordinates</span>
-<span >sub</span> abscoord<span >&#123;</span>
-  <span >my</span><span >&#40;</span><span >$x0</span><span >,</span><span >$x</span><span >,</span><span >$abs</span><span >&#41;</span><span >=</span><span >@_</span><span >;</span>
-  [<span >return</span>](http://perldoc.perl.org/functions/#returnl) <span >$x</span> <span >if</span> <span >$abs</span><span >;</span>
-  [<span >return</span>](http://perldoc.perl.org/functions/#returnl) <span >$x</span><span >+</span><span >$x0</span><span >;</span>
-<span >&#125;</span>
-&nbsp;
-<span ># Local Variables:</span>
-<span ># mode:cperl</span>
-<span ># ispell-local-dictionary:&quot;british&quot;</span>
-<span ># coding:utf-8</span>
-<span ># End:</span></pre>
-</dd></dl>
+* svg2edp
+
+```perl
+#!/usr/bin/perl
+# ======================================================================
+# Written by Antoine Le Hyaric
+# http://www.ljll.math.upmc.fr/lehyaric
+# ======================================================================
+# headeralh mine perl start=20/02/2012
+ 
+# Converts a 2D SVG picture (eg obtained with inkscape "Path/Trace Bitmap...") into a list of FreeFem++ borders and
+# meshes. Examples use: "svg2edp < file.svg  > file.edp 2> file.gnuplot"
+ 
+use strict;
+ 
+# final list of all borders
+my @borders;
+ 
+# numbering borders
+my $numb=0;
+ 
+sub straightborder{
+  my($x0,$y0,$x1,$y1)=@_;
+ 
+  die if (abs($x1-$x0)+abs($y1-$y0))<1e-6;
+ 
+  print "border b$numb(t=0,1){\n";
+  print "\tx=$x0*t+$x1*(1-t);\n";
+  print "\ty=$y0*t+$y1*(1-t);\n";
+  print "}\n";
+  push @borders,"b$numb(-2)";
+  $numb++;
+ 
+  # stderr contains the same data for debugging via gnuplot
+  print STDERR "$x0 $y0\n";
+  print STDERR "$x1 $y1\n";
+}
+ 
+sub bezierinterp{
+  my($p0,$q0,$q1,$p1,$t)=@_;
+  return $p0*(1-$t)**3+$q0*3*(1-$t)**2*$t+$q1*3*(1-$t)*$t**2+$p1*$t**3;
+}
+ 
+sub bezierborder{
+  my($p1x,$p1y,$q1x,$q1y,$q2x,$q2y,$p2x,$p2y)=@_;
+  my $xprev=$p1x;
+  my $yprev=$p1y;
+ 
+  for(my $t=0.1;$t<=1;$t+=0.1){
+    my $xnext=bezierinterp($p1x,$q1x,$q2x,$p2x,$t);
+    my $ynext=bezierinterp($p1y,$q1y,$q2y,$p2y,$t);
+ 
+    print "border b$numb(t=0,1){\n";
+    print "\tx=$xprev*t+$xnext*(1-t);\n";
+    print "\ty=$yprev*t+$ynext*(1-t);\n";
+    print "\tlabel=1;\n";
+    print "}\n";
+    push @borders,"b$numb(-2)";
+    $numb++;
+ 
+    # stderr contains the same data for debugging via gnuplot
+    print STDERR "$xprev $yprev\n";
+    print STDERR "$xnext $ynext\n";
+ 
+    $xprev=$xnext;
+    $yprev=$ynext;
+  }
+}
+
+# numbering meshes
+my $numm=0;
+ 
+# read input file
+while(<STDIN>){
+  next unless / d="(.*)"/;
+  my $path=$1;
+ 
+  # scan path
+  my $num='([-.0-9]+)';
+ 
+  # current point in absolute coordinates
+  my $curx=0;
+  my $cury=0;
+ 
+  # first point (to close a curve) in absolute coordinates
+  my $firstx;
+  my $firsty;
+  my $firstok=0;
+ 
+  # list of all SVG commands [[http://www.w3.org/TR/SVG11/#pathsl#PathDataMovetoCommands]]
+  my $state='';
+  my $abs=0;
+  my @args;
+  while($path=~m/ *(m|c|l|z|$num,$num)/gi){
+    my $Command=$1;
+    my $command=lc($Command);
+    my $x=$2;
+    my $y=$3;
+    if($command eq 'm' || $command eq 'c' || $command eq 'l'){
+      $state=lc($command);
+ 
+      # capital letters represent absolute coordinates
+      $abs=0;
+      $abs=1 if ord($Command)<97;
+ 
+      @args=();
+    }
+ 
+    # SVG command for closing the curve
+    elsif($command eq 'z'){
+      print "// closing the curve\n";
+      ###straightborder($curx,$cury,$firstx,$firsty);
+      $curx=$firstx;
+      $cury=$firsty;
+    }
+ 
+    # SVG commands followed by coordinates
+    else{
+ 
+      # initial point
+      if($state eq 'm'){
+	$curx=abscoord($curx,$x,$abs);
+	$cury=abscoord($cury,$y,$abs);
+	print "// moving to [$curx,$cury]\n";
+	if(!$firstok){
+	  $firstx=$curx;
+	  $firsty=$cury;
+	  $firstok=1;
+	}
+      }
+ 
+      # line
+      elsif($state eq 'l'){
+	print "// line\n";
+	my $tox=abscoord($curx,$x,$abs);
+	my $toy=abscoord($cury,$y,$abs);
+	straightborder($curx,$cury,$tox,$toy);
+	$curx=$tox;
+	$cury=$toy;
+      }
+ 
+      # bezier curve
+      elsif($state eq 'c'){
+ 
+	push @args,abscoord($curx,$x,$abs),abscoord($cury,$y,$abs);
+ 
+	# draw one bezier segment when is fully defined (ie with 2 points + 2 control points)
+	if($#args==5){
+	  print "// bezier curve\n";
+ 
+	  my $tox=$args[4];
+	  my $toy=$args[5];
+	  bezierborder($curx,$cury,$args[0],$args[1],$args[2],$args[3],$tox,$toy);
+ 
+	  # the next bezier point may come without an explicit 'c'
+	  @args=();
+	  $curx=$tox;
+	  $cury=$toy;
+	}
+      }
+    }
+  }
+ 
+  # create corresponding mesh
+  if(\$#borders>=0){
+    print "mesh Th$numm=buildmesh(".[join](http://perldoc.perl.org/functions/#joinl)("+",@borders).");\n";
+    $numm++;
+  }
+}
+
+# choose between relative and absolute coordinates
+sub abscoord{
+  my($x0,$x,$abs)=@_;
+  [return](http://perldoc.perl.org/functions/#returnl) $x if $abs;
+  [return](http://perldoc.perl.org/functions/#returnl) $x+$x0;
+}
+```
 
 ### Comment passer du 2D au 3D dans FreeFem++?
 
 Les points importants pour convertir un script .edp du 2D au 3D:
 
-<ul>
-<li > ajouter <strong>load “msh3”</strong> (et <strong>load “tetgen”</strong> si nécessaire) au début du script
-</li>
-<li > utiliser le mot-clé <strong>mesh3</strong> au lieu de <strong>mesh</strong> pour définir les maillages 3D
-</li>
-<li > créer un maillage 3D grâce à (au choix):
-<ul>
-<li > <strong>buildlayers()</strong>
-</li>
-<li > <strong>tetg()</strong>
-</li>
-<li > en incluant les géométries définies dans MeshSurface.idp (sphère et boite carrée)
-</li>
-<li > en chargeant un maillage externe au format .mesh construit avec [Gmsh](#gmsh) par exemple
-</li>
-</ul>
-</li>
-<li > si nécessaire, changer la méthode de résolution par défaut de FreeFem++ ([Umfpack](#umfpack)) pour limiter la consommation de mémoire vive (essayer par exemple <strong>CG</strong> ou <strong>GMRES</strong>).
-</li>
-</ul>
+* ajouter **load “msh3”** (et **load “tetgen”** si nécessaire) au début du script
+* utiliser le mot-clé **mesh3** au lieu de **mesh** pour définir les maillages 3D
+* créer un maillage 3D grâce à (au choix): **buildlayers()**, **tetg()**, en incluant les géométries définies dans MeshSurface.idp (sphère
+  et boite carrée), en chargeant un maillage externe au format .mesh construit avec [Gmsh](#gmsh) par exemple.
+* si nécessaire, changer la méthode de résolution par défaut de FreeFem++ ([Umfpack](#umfpack)) pour limiter la consommation de mémoire vive
+  (essayer par exemple **CG** ou **GMRES**).
 
 ### Comment extraire les matrices contruites par FreeFem++?
 
-Le mot-clé <strong>problem</strong> ne permet pas de manipuler les matrices. Il faut utiliser le mot-clé <strong>varf</strong> avec les précautions suivantes:
+Le mot-clé **problem** ne permet pas de manipuler les matrices. Il faut utiliser le mot-clé **varf** avec les précautions suivantes:
 
-<ul>
-<li > un “problem” doit être traduit en deux matrices: une matrice carrée A et un second membre B qui donnent l'équation Ax=B
-</li>
-<li > le second membre B calculé par varf est <em >du signe opposé* à celui calculé par problem. Ce changement de signe est contenu <em >implicitement* dans l'écriture des conditions de Dirichlet “on(…)” mais pas dans les termes intégraux dépendant de l'edp traitée.
-</li>
-</ul>
+* un “problem” doit être traduit en deux matrices: une matrice carrée A et un second membre B qui donnent l'équation Ax=B
+* le second membre B calculé par varf est *du signe opposé* à celui calculé par problem. Ce changement de signe est contenu *implicitement*
+  dans l'écriture des conditions de Dirichlet “on(…)” mais pas dans les termes intégraux dépendant de l'edp traitée.
 
 Voici un exemple:
 
-<dl >
-<dt>problem2varf.edp</dt>
-<dd><pre >mesh Th<span >=</span>square<span >&#40;</span><span >10</span>,<span >10</span><span >&#41;</span><span >;</span>
-fespace Vh<span >&#40;</span>Th,P1<span >&#41;</span><span >;</span>
-Vh uh,vh<span >;</span>
-func f<span >=</span><span >1</span><span >;</span>
-func g<span >=</span><span >1</span><span >;</span>
-&nbsp;
-<span >// Résolution d'une EDP avec le mot-clé problem</span>
-problem laplace<span >&#40;</span>uh,vh<span >&#41;</span><span >=</span>int2d<span >&#40;</span>Th<span >&#41;</span><span >&#40;</span>dx<span >&#40;</span>uh<span >&#41;</span><span >*</span>dx<span >&#40;</span>vh<span >&#41;</span><span >+</span>dy<span >&#40;</span>uh<span >&#41;</span><span >*</span>dy<span >&#40;</span>vh<span >&#41;</span><span >&#41;</span><span >-</span>int2d<span >&#40;</span>Th<span >&#41;</span><span >&#40;</span>f<span >*</span>vh<span >&#41;</span><span >+</span>on<span >&#40;</span><span >1</span>,<span >2</span>,<span >3</span>,<span >4</span>,uh<span >=</span>g<span >&#41;</span><span >;</span>
-laplace<span >;</span>
-plot<span >&#40;</span>uh<span >&#41;</span><span >;</span>
-&nbsp;
-<span >// Résolution de la même EDP sous forme matricielle</span>
-varf laplaceA<span >&#40;</span>uh,vh<span >&#41;</span><span >=</span>int2d<span >&#40;</span>Th<span >&#41;</span><span >&#40;</span>dx<span >&#40;</span>uh<span >&#41;</span><span >*</span>dx<span >&#40;</span>vh<span >&#41;</span><span >+</span>dy<span >&#40;</span>uh<span >&#41;</span><span >*</span>dy<span >&#40;</span>vh<span >&#41;</span><span >&#41;</span><span >;</span>
-matrix A<span >=</span>laplaceA<span >&#40;</span>Vh,Vh<span >&#41;</span><span >;</span>
-&nbsp;
-varf laplaceB<span >=</span>int2d<span >&#40;</span>Th<span >&#41;</span><span >&#40;</span>f<span >*</span>vh<span >&#41;</span><span >+</span>on<span >&#40;</span><span >1</span>,<span >2</span>,<span >3</span>,<span >4</span>,uh<span >=</span>g<span >&#41;</span><span >;</span>
-real<span >&#91;</span><span >int</span><span >&#93;</span> B<span >=</span>laplaceB<span >&#40;</span><span >0</span>,Vh<span >&#41;</span><span >;</span>
-&nbsp;
-uh<span >&#91;</span><span >&#93;</span><span >=</span>A<span >^</span><span >-</span><span >1</span><span >*</span>B<span >;</span>
-plot<span >&#40;</span>uh<span >&#41;</span><span >;</span></pre>
-</dd></dl>
+* problem2varf.edp
+
+```C++
+mesh Th=square(10,10);
+fespace Vh(Th,P1);
+Vh uh,vh;
+func f=1;
+func g=1;
+ 
+// Résolution d'une EDP avec le mot-clé problem
+problem laplace(uh,vh)=int2d(Th)(dx(uh)*dx(vh)+dy(uh)*dy(vh))-int2d(Th)(f*vh)+on(1,2,3,4,uh=g);
+laplace;
+plot(uh);
+ 
+// Résolution de la même EDP sous forme matricielle
+varf laplaceA(uh,vh)=int2d(Th)(dx(uh)*dx(vh)+dy(uh)*dy(vh));
+matrix A=laplaceA(Vh,Vh);
+ 
+varf laplaceB=int2d(Th)(f*vh)+on(1,2,3,4,uh=g);
+real[int] B=laplaceB(0,Vh);
+ 
+uh[]=A^-1*B;
+plot(uh);
+```
 
 ### Comment coupler plusieurs problèmes en construisant une matrice par blocs?
-<ul>
-<li > Il faut extraire les matrices des deux problèmes A11, A22, B1, B2. Puis construire les blocs rectangulaires A12 et A21
-</li>
-</ul>
-<pre >matrix A12<span >=</span>probleme1<span >&#40;</span>Vh2,Vh1<span >&#41;</span><span >;</span>
-matrix A21<span >=</span>probleme1<span >&#40;</span>Vh1,Vh2<span >&#41;</span><span >;</span></pre>
-<ul>
-<li > Puis construire la matrice par blocs
-</li>
-</ul>
-<pre >matrix A<span >=</span><span >&#91;</span><span >&#91;</span>A11,A12<span >&#93;</span>,<span >&#91;</span>A21,A22<span >&#93;</span><span >&#93;</span><span >;</span>
-real<span >&#91;</span><span >int</span><span >&#93;</span> B<span >=</span><span >&#91;</span>B1,B2<span >&#93;</span><span >;</span></pre>
-<ul>
-<li > Puis calculer les deux solutions couplées
-</li>
-</ul>
-<pre >Vh1 u1<span >;</span>
-Vh2 u2<span >;</span>
-real<span >&#91;</span><span >int</span><span >&#93;</span> T<span >=</span>A<span >^</span><span >-</span><span >1</span><span >*</span>B<span >;</span>
-<span >&#91;</span>u1<span >&#91;</span><span >&#93;</span>,u2<span >&#91;</span><span >&#93;</span><span >&#93;</span><span >=</span>T<span >;</span></pre>
+
+* Il faut extraire les matrices des deux problèmes A11, A22, B1, B2. Puis construire les blocs rectangulaires A12 et A21
+```C++
+matrix A12=probleme1(Vh2,Vh1);
+matrix A21=probleme1(Vh1,Vh2);
+```
+* Puis construire la matrice par blocs
+```C++
+matrix A=[[A11,A12],[A21,A22]];
+real[int] B=[B1,B2];
+```
+* Puis calculer les deux solutions couplées
+```
+Vh1 u1;
+Vh2 u2;
+real[int] T=A^-1*B;
+[u1[],u2[]]=T;
+```
 
 ### Comment afficher un domaine de calcul très étroit?
 
-Quand une dimension du domaine de calcul est très petite par rapport aux autres, il est très difficile de voir les valeurs affichées sur le domaine qui ressemble plus à une ligne qu'à une surface. Voici comment augmenter la petite dimension du domaine juste pour afficher les valeurs numériques de manière visible.
+Quand une dimension du domaine de calcul est très petite par rapport aux autres, il est très difficile de voir les valeurs affichées sur le
+domaine qui ressemble plus à une ligne qu'à une surface. Voici comment augmenter la petite dimension du domaine juste pour afficher les
+valeurs numériques de manière visible.
 
-<pre ><span >// very thin domain (x range is very small with respect to y)</span>
-mesh Th<span >=</span>square<span >&#40;</span><span >1</span>,<span >100</span>,<span >&#91;</span><span >.01</span><span >*</span>x,y<span >&#93;</span><span >&#41;</span><span >;</span> 
-plot<span >&#40;</span>Th<span >&#41;</span><span >;</span>
-fespace Vh<span >&#40;</span>Th,P1<span >&#41;</span><span >;</span>
-&nbsp;
-<span >// example of value on this very this domain</span>
-Vh uh<span >=</span><span >1e4</span><span >*</span>x<span >*</span>x<span >+</span>y<span >*</span>y<span >;</span>
-plot<span >&#40;</span>uh<span >&#41;</span><span >;</span>
-&nbsp;
-<span >// wider mesh</span>
-mesh Thzoom<span >=</span>square<span >&#40;</span><span >100</span>,<span >100</span>,<span >&#91;</span>x,y<span >&#93;</span><span >&#41;</span><span >;</span> 
-plot<span >&#40;</span>Thzoom<span >&#41;</span><span >;</span>
-fespace Vhzoom<span >&#40;</span>Thzoom,P1<span >&#41;</span><span >;</span>
-&nbsp;
-<span >// values from the thin domain displayed on the wider domain</span>
-Vhzoom uhzoom<span >=</span>uh<span >&#40;</span>x<span >/</span><span >100</span>,y<span >&#41;</span><span >;</span>
-plot<span >&#40;</span>uhzoom<span >&#41;</span><span >;</span></pre>
+```C++
+// very thin domain (x range is very small with respect to y)
+mesh Th=square(1,100,[.01*x,y]); 
+plot(Th);
+fespace Vh(Th,P1);
+ 
+// example of value on this very this domain
+Vh uh=1e4*x*x+y*y;
+plot(uh);
+ 
+// wider mesh
+mesh Thzoom=square(100,100,[x,y]); 
+plot(Thzoom);
+fespace Vhzoom(Thzoom,P1);
+ 
+// values from the thin domain displayed on the wider domain
+Vhzoom uhzoom=uh(x/100,y);
+plot(uhzoom);
+```
 
 ### Dessiner une frontière dans un maillage
 
 Une solution pour dessiner une frontière à l'intérieur d'un maillage FreeFem++ est de créer un espace blanc (vide):
 
-<pre ><span >// Maillage complet</span>
-mesh Th<span >=</span>square<span >&#40;</span><span >10</span>,<span >10</span>,<span >&#91;</span><span >2</span><span >*</span>x,y<span >&#93;</span><span >&#41;</span><span >;</span>
-&nbsp;
-<span >// Maillages séparés par un vide représentant une frontière dans le domaine</span>
-mesh Th1<span >=</span>square<span >&#40;</span><span >10</span>,<span >10</span>,<span >&#91;</span>x<span >*</span><span >0.99</span>,y<span >&#93;</span><span >&#41;</span><span >;</span>
-mesh Th2<span >=</span>square<span >&#40;</span><span >10</span>,<span >10</span>,<span >&#91;</span>x<span >*</span><span >.9</span><span >+</span><span >1</span>,y<span >&#93;</span><span >&#41;</span><span >;</span>
-&nbsp;
-<span >// Exemple de problème résolu sur Th et visualisé avec une frontière</span>
-fespace Vh<span >&#40;</span>Th,P1<span >&#41;</span><span >;</span>
-Vh uh,vh<span >;</span>
-func f<span >=</span><span >1</span><span >;</span>
-func g<span >=</span><span >0</span><span >;</span>
-problem laplace<span >&#40;</span>uh,vh,solver<span >=</span>GMRES,tgv<span >=</span><span >1e5</span><span >&#41;</span> <span >=</span> int2d<span >&#40;</span>Th<span >&#41;</span><span >&#40;</span> dx<span >&#40;</span>uh<span >&#41;</span><span >*</span>dx<span >&#40;</span>vh<span >&#41;</span> <span >+</span> dy<span >&#40;</span>uh<span >&#41;</span><span >*</span>dy<span >&#40;</span>vh<span >&#41;</span> <span >&#41;</span>
-  <span >-</span> int2d<span >&#40;</span>Th<span >&#41;</span><span >&#40;</span> f<span >*</span>vh <span >&#41;</span>
-  <span >+</span> on<span >&#40;</span><span >2</span>,uh<span >=</span>g<span >&#41;</span> <span >;</span>
-&nbsp;
-laplace<span >;</span>
-&nbsp;
-<span >// Interpolation de la solution continue sur le maillage avec frontière</span>
-fespace Vh1<span >&#40;</span>Th1,P1<span >&#41;</span><span >;</span>
-fespace Vh2<span >&#40;</span>Th2,P1<span >&#41;</span><span >;</span>
-Vh1 uh1<span >=</span>uh<span >;</span>
-Vh2 uh2<span >=</span>uh<span >;</span>
-&nbsp;
-<span >// Dessin avec frontière visible</span>
-plot<span >&#40;</span>uh1,uh2<span >&#41;</span><span >;</span></pre>
+```C++
+// Maillage complet
+mesh Th=square(10,10,[2*x,y]);
+ 
+// Maillages séparés par un vide représentant une frontière dans le domaine
+mesh Th1=square(10,10,[x*0.99,y]);
+mesh Th2=square(10,10,[x*.9+1,y]);
+ 
+// Exemple de problème résolu sur Th et visualisé avec une frontière
+fespace Vh(Th,P1);
+Vh uh,vh;
+func f=1;
+func g=0;
+problem laplace(uh,vh,solver=GMRES,tgv=1e5) = int2d(Th)( dx(uh)*dx(vh) + dy(uh)*dy(vh) )
+  - int2d(Th)( f*vh )
+  + on(2,uh=g) ;
+ 
+laplace;
+ 
+// Interpolation de la solution continue sur le maillage avec frontière
+fespace Vh1(Th1,P1);
+fespace Vh2(Th2,P1);
+Vh1 uh1=uh;
+Vh2 uh2=uh;
+ 
+// Dessin avec frontière visible
+plot(uh1,uh2);
+```
 
 ### Convertir un maillage vers FreeFem++
 
 Cet exemple peut facilement être transformé pour lire tout autre format de maillage 2D enregistré dans un fichier texte :
 
-<pre ><span >// mesh data</span>
-<span >int</span> nodes<span >;</span>
-<span >int</span> equations<span >;</span>
-<span >int</span> elements<span >;</span>
-<span >int</span> nodesperelem<span >;</span>
-<span >int</span> spacedim<span >;</span>
-<span >int</span> ni<span >;</span>
-<span >int</span> nj<span >;</span>
-real<span >&#91;</span><span >int</span>,<span >int</span><span >&#93;</span> coordinates<span >&#40;</span><span >3</span>,<span >1</span><span >&#41;</span><span >;</span>
-real<span >&#91;</span><span >int</span>,<span >int</span><span >&#93;</span> geometry<span >&#40;</span><span >3</span>,<span >1</span><span >&#41;</span><span >;</span>
-real<span >&#91;</span><span >int</span><span >&#93;</span> subdomain<span >&#40;</span><span >1</span><span >&#41;</span><span >;</span>
-&nbsp;
-<span >// Load mesh</span>
-<span >&#123;</span>
-  ifstream i<span >&#40;</span><span >&quot;mesh.data&quot;</span><span >&#41;</span><span >;</span>
-&nbsp;
-  <span >// skip some textual data (7 words)</span>
-  string l<span >;</span>
-  i<span >&gt;&gt;</span>l<span >&gt;&gt;</span>l<span >&gt;&gt;</span>l<span >&gt;&gt;</span>l<span >&gt;&gt;</span>l<span >&gt;&gt;</span>l<span >&gt;&gt;</span>l<span >;</span>
-&nbsp;
-  <span >// read mesh size</span>
-  i<span >&gt;&gt;</span>nodes<span >;</span>
-  i<span >&gt;&gt;</span>elements<span >;</span>
-  i<span >&gt;&gt;</span>nodesperelem<span >;</span>
-  i<span >&gt;&gt;</span>spacedim<span >;</span>
-  i<span >&gt;&gt;</span>ni<span >;</span>
-  i<span >&gt;&gt;</span>nj<span >;</span>
-&nbsp;
-  coordinates.<span >resize</span><span >&#40;</span><span >3</span>,nodes<span >&#41;</span><span >;</span>
-  geometry.<span >resize</span><span >&#40;</span><span >3</span>,elements<span >&#41;</span><span >;</span>
-  subdomain.<span >resize</span><span >&#40;</span>elements<span >&#41;</span><span >;</span>
-&nbsp;
-  <span >// skip textual title (1 word)</span>
-  i<span >&gt;&gt;</span>l<span >;</span>
-&nbsp;
-  <span >for</span><span >&#40;</span><span >int</span> n<span >=</span><span >0</span><span >;</span>n<span >&lt;</span>nodes<span >;</span>n<span >++</span><span >&#41;</span><span >&#123;</span>
-    <span >for</span><span >&#40;</span><span >int</span> d<span >=</span><span >0</span><span >;</span>d<span >&lt;</span><span >3</span><span >;</span>d<span >++</span><span >&#41;</span><span >&#123;</span>
-      i<span >&gt;&gt;</span>coordinates<span >&#40;</span>d,n<span >&#41;</span><span >;</span>
-    <span >&#125;</span>
-  <span >&#125;</span>
-&nbsp;
-  <span >// skip textual title (1 word)</span>
-  i<span >&gt;&gt;</span>l<span >;</span>
-&nbsp;
-  <span >for</span><span >&#40;</span><span >int</span> n<span >=</span><span >0</span><span >;</span>n<span >&lt;</span>elements<span >;</span>n<span >++</span><span >&#41;</span><span >&#123;</span>
-    <span >for</span><span >&#40;</span><span >int</span> d<span >=</span><span >0</span><span >;</span>d<span >&lt;</span><span >3</span><span >;</span>d<span >++</span><span >&#41;</span><span >&#123;</span>
-      i<span >&gt;&gt;</span>geometry<span >&#40;</span>d,n<span >&#41;</span><span >;</span>
-      geometry<span >&#40;</span>d,n<span >&#41;</span><span >=</span>geometry<span >&#40;</span>d,n<span >&#41;</span><span >-</span><span >1</span><span >;</span>
-    <span >&#125;</span>
-  <span >&#125;</span>
-&nbsp;
-  <span >// skip textual title (4 words)</span>
-  i<span >&gt;&gt;</span>l<span >&gt;&gt;</span>l<span >&gt;&gt;</span>l<span >&gt;&gt;</span>l<span >;</span>
-&nbsp;
-  <span >for</span><span >&#40;</span><span >int</span> n<span >=</span><span >0</span><span >;</span>n<span >&lt;</span>elements<span >;</span>n<span >++</span><span >&#41;</span>i<span >&gt;&gt;</span>subdomain<span >&#40;</span>n<span >&#41;</span><span >;</span>
-<span >&#125;</span>
-&nbsp;
-<span >// save mesh in FreeFem++ 2D .msh format</span>
-<span >&#123;</span>
-  ofstream o<span >&#40;</span><span >&quot;mesh.msh&quot;</span><span >&#41;</span><span >;</span>
-&nbsp;
-  <span >// numbers of points, elements, edges</span>
-  o<span >&lt;&lt;</span>nodes<span >&lt;&lt;</span><span >&quot; &quot;</span><span >&lt;&lt;</span>elements<span >&lt;&lt;</span><span >&quot; &quot;</span><span >&lt;&lt;</span><span >0</span><span >&lt;&lt;</span>endl<span >;</span>
-&nbsp;
-  <span >// points</span>
-  <span >for</span><span >&#40;</span><span >int</span> n<span >=</span><span >0</span><span >;</span>n<span >&lt;</span>nodes<span >;</span>n<span >++</span><span >&#41;</span><span >&#123;</span>
-&nbsp;
-    <span >// 2D coordinates</span>
-    <span >for</span><span >&#40;</span><span >int</span> c<span >=</span><span >0</span><span >;</span>c<span >&lt;</span><span >2</span><span >;</span>c<span >++</span><span >&#41;</span><span >&#123;</span>
-      o<span >&lt;&lt;</span>coordinates<span >&#40;</span>c,n<span >&#41;</span><span >&lt;&lt;</span><span >&quot; &quot;</span><span >;</span>
-    <span >&#125;</span>
-&nbsp;
-    <span >// label</span>
-    o<span >&lt;&lt;</span><span >0</span><span >&lt;&lt;</span>endl<span >;</span>
-  <span >&#125;</span>
-&nbsp;
-  <span >// elements</span>
-  <span >for</span><span >&#40;</span><span >int</span> n<span >=</span><span >0</span><span >;</span>n<span >&lt;</span>elements<span >;</span>n<span >++</span><span >&#41;</span><span >&#123;</span>
-&nbsp;
-    <span >// connectivity</span>
-    <span >for</span><span >&#40;</span><span >int</span> c<span >=</span><span >0</span><span >;</span>c<span >&lt;</span><span >3</span><span >;</span>c<span >++</span><span >&#41;</span><span >&#123;</span>
-      o<span >&lt;&lt;</span>geometry<span >&#40;</span>c,n<span >&#41;</span><span >+</span><span >1</span><span >&lt;&lt;</span><span >&quot; &quot;</span><span >;</span>
-    <span >&#125;</span>
-&nbsp;
-    <span >// label</span>
-    o<span >&lt;&lt;</span><span >0</span><span >&lt;&lt;</span>endl<span >;</span>
-  <span >&#125;</span>
-<span >&#125;</span>
-&nbsp;
-<span >// reload the mesh in the FreeFem++ format</span>
-mesh Th<span >=</span>readmesh<span >&#40;</span><span >&quot;mesh.msh&quot;</span><span >&#41;</span><span >;</span>
-&nbsp;
-<span >// load some values</span>
-fespace Vh<span >&#40;</span>Th,P1<span >&#41;</span><span >;</span>
-Vh u,v<span >;</span>
-<span >&#123;</span>
-  ifstream i<span >&#40;</span><span >&quot;solution.data&quot;</span><span >&#41;</span><span >;</span>
-  <span >int</span> rank<span >;</span>
-  <span >for</span><span >&#40;</span><span >int</span> n<span >=</span><span >0</span><span >;</span>n<span >&lt;</span>nodes<span >;</span>n<span >++</span><span >&#41;</span><span >&#123;</span>
-&nbsp;
-      <span >// u</span>
-      i<span >&gt;&gt;</span>u<span >&#91;</span><span >&#93;</span><span >&#40;</span>n<span >&#41;</span><span >;</span>
-&nbsp;
-      <span >// v</span>
-      i<span >&gt;&gt;</span>v<span >&#91;</span><span >&#93;</span><span >&#40;</span>n<span >&#41;</span><span >;</span>
-    <span >&#125;</span>
-  <span >&#125;</span>
-<span >&#125;</span>
-&nbsp;
-<span >// display values in FreeFem++</span>
-plot<span >&#40;</span>Th,<span >&#91;</span>u,v<span >&#93;</span>,value<span >=</span><span >1</span>,cmm<span >=</span><span >&quot;u,v&quot;</span><span >&#41;</span><span >;</span></pre>
+```C++
+// mesh data
+int nodes;
+int equations;
+int elements;
+int nodesperelem;
+int spacedim;
+int ni;
+int nj;
+real[int,int] coordinates(3,1);
+real[int,int] geometry(3,1);
+real[int] subdomain(1);
+ 
+// Load mesh
+{
+  ifstream i("mesh.data");
+ 
+  // skip some textual data (7 words)
+  string l;
+  i>>l>>l>>l>>l>>l>>l>>l;
+ 
+  // read mesh size
+  i>>nodes;
+  i>>elements;
+  i>>nodesperelem;
+  i>>spacedim;
+  i>>ni;
+  i>>nj;
+ 
+  coordinates.resize(3,nodes);
+  geometry.resize(3,elements);
+  subdomain.resize(elements);
+ 
+  // skip textual title (1 word)
+  i>>l;
+ 
+  for(int n=0;n<nodes;n++){
+    for(int d=0;d<3;d++){
+      i>>coordinates(d,n);
+    }
+  }
+ 
+  // skip textual title (1 word)
+  i>>l;
+ 
+  for(int n=0;n<elements;n++){
+    for(int d=0;d<3;d++){
+      i>>geometry(d,n);
+      geometry(d,n)=geometry(d,n)-1;
+    }
+  }
+ 
+  // skip textual title (4 words)
+  i>>l>>l>>l>>l;
+ 
+  for(int n=0;n<elements;n++)i>>subdomain(n);
+}
+ 
+// save mesh in FreeFem++ 2D .msh format
+{
+  ofstream o("mesh.msh");
+ 
+  // numbers of points, elements, edges
+  o<<nodes<<" "<<elements<<" "<<0<<endl;
+ 
+  // points
+  for(int n=0;n<nodes;n++){
+ 
+    // 2D coordinates
+    for(int c=0;c<2;c++){
+      o<<coordinates(c,n)<<" ";
+    }
+ 
+    // label
+    o<<0<<endl;
+  }
+ 
+  // elements
+  for(int n=0;n<elements;n++){
+ 
+    // connectivity
+    for(int c=0;c<3;c++){
+      o<<geometry(c,n)+1<<" ";
+    }
+ 
+    // label
+    o<<0<<endl;
+  }
+}
+ 
+// reload the mesh in the FreeFem++ format
+mesh Th=readmesh("mesh.msh");
+ 
+// load some values
+fespace Vh(Th,P1);
+Vh u,v;
+{
+  ifstream i("solution.data");
+  int rank;
+  for(int n=0;n<nodes;n++){
+ 
+      // u
+      i>>u[](n);
+ 
+      // v
+      i>>v[](n);
+    }
+  }
+}
+ 
+// display values in FreeFem++
+plot(Th,[u,v],value=1,cmm="u,v");
+```
 
 ### Un exemple d'écoulement de Stokes en FreeFem++
 
 L'exemple suivant se trouve dans le dossier examples++-chapt3/stokes.edp de FreeFem++ :
 
-<pre ><span >//file Stokes.edp</span>
-<span >int</span> n<span >=</span><span >3</span><span >;</span>
-mesh Th<span >=</span>square<span >&#40;</span><span >10</span><span >*</span>n,<span >10</span><span >*</span>n<span >&#41;</span><span >;</span>
-fespace Uh<span >&#40;</span>Th,P1b<span >&#41;</span><span >;</span> Uh u,v,uu,vv<span >;</span>
-fespace Ph<span >&#40;</span>Th,P1<span >&#41;</span><span >;</span>  Ph p,pp<span >;</span>
-&nbsp;
-solve stokes<span >&#40;</span><span >&#91;</span>u,v,p<span >&#93;</span>,<span >&#91;</span>uu,vv,pp<span >&#93;</span><span >&#41;</span> <span >=</span>
-    int2d<span >&#40;</span>Th<span >&#41;</span><span >&#40;</span>dx<span >&#40;</span>u<span >&#41;</span><span >*</span>dx<span >&#40;</span>uu<span >&#41;</span><span >+</span>dy<span >&#40;</span>u<span >&#41;</span><span >*</span>dy<span >&#40;</span>uu<span >&#41;</span> <span >+</span> dx<span >&#40;</span>v<span >&#41;</span><span >*</span>dx<span >&#40;</span>vv<span >&#41;</span><span >+</span> dy<span >&#40;</span>v<span >&#41;</span><span >*</span>dy<span >&#40;</span>vv<span >&#41;</span>
-            <span >+</span> dx<span >&#40;</span>p<span >&#41;</span><span >*</span>uu <span >+</span> dy<span >&#40;</span>p<span >&#41;</span><span >*</span>vv <span >+</span> pp<span >*</span><span >&#40;</span>dx<span >&#40;</span>u<span >&#41;</span><span >+</span>dy<span >&#40;</span>v<span >&#41;</span><span >&#41;</span>
-            <span >-</span><span >1e-10</span><span >*</span>p<span >*</span>pp<span >&#41;</span>            
-            <span >+</span> on<span >&#40;</span><span >1</span>,<span >2</span>,<span >4</span>,u<span >=</span><span >0</span>,v<span >=</span><span >0</span><span >&#41;</span> <span >+</span> on<span >&#40;</span><span >3</span>,u<span >=</span><span >1</span>,v<span >=</span><span >0</span><span >&#41;</span><span >;</span>
-plot<span >&#40;</span><span >&#91;</span>u,v<span >&#93;</span>,p,wait<span >=</span><span >1</span><span >&#41;</span><span >;</span></pre>
+```C++
+//file Stokes.edp
+int n=3;
+mesh Th=square(10*n,10*n);
+fespace Uh(Th,P1b); Uh u,v,uu,vv;
+fespace Ph(Th,P1);  Ph p,pp;
+ 
+solve stokes([u,v,p],[uu,vv,pp]) =
+    int2d(Th)(dx(u)*dx(uu)+dy(u)*dy(uu) + dx(v)*dx(vv)+ dy(v)*dy(vv)
+            + dx(p)*uu + dy(p)*vv + pp*(dx(u)+dy(v))
+            -1e-10*p*pp)            
+            + on(1,2,4,u=0,v=0) + on(3,u=1,v=0);
+plot([u,v],p,wait=1);
+```
 
 ### Un exemple de simulation de Navier-Stokes dans une cavité entrainée avec plusieurs vortex?
 
 Voici un exemple standard de FreeFem qui montre un vortex en bas de la cavité entrainée.
 
-<pre ><span >// remark: the sign of p is correct </span>
-real s0<span >=</span><span >clock</span><span >&#40;</span><span >&#41;</span><span >;</span>
-mesh Th<span >=</span>square<span >&#40;</span><span >10</span>,<span >10</span><span >&#41;</span><span >;</span>
-fespace Vh2<span >&#40;</span>Th,P2<span >&#41;</span><span >;</span>
-fespace Vh<span >&#40;</span>Th,P1<span >&#41;</span><span >;</span>
-Vh2 u2,v2,up1,up2<span >;</span>
-Vh2 u1,v1<span >;</span> 
-Vh  u1x<span >=</span><span >0</span>,u1y,u2x,u2y, vv<span >;</span>
-&nbsp;
-real reylnods<span >=</span><span >1000</span><span >;</span>
-<span >//cout &lt;&lt; &quot; Enter the reynolds number :&quot;; cin &gt;&gt; reylnods;</span>
-<span >assert</span><span >&#40;</span>reylnods<span >&gt;</span><span >1</span> <span >&amp;&amp;</span> reylnods <span >&lt;</span> <span >100000</span><span >&#41;</span><span >;</span> 
-up1<span >=</span><span >0</span><span >;</span>
-up2<span >=</span><span >0</span><span >;</span> 
-func g<span >=</span><span >&#40;</span>x<span >&#41;</span><span >*</span><span >&#40;</span><span >1</span><span >-</span>x<span >&#41;</span><span >*</span><span >4</span><span >;</span> 
-Vh p<span >=</span><span >0</span>,q<span >;</span>
-real alpha<span >=</span><span >0</span><span >;</span>
-real  nu<span >=</span><span >1</span><span >;</span>
-<span >int</span> i<span >=</span><span >0</span>,iter<span >=</span><span >0</span><span >;</span>
-real dt<span >=</span><span >0</span><span >;</span>
-solve NS <span >&#40;</span><span >&#91;</span>u1,u2,p<span >&#93;</span>,<span >&#91;</span>v1,v2,q<span >&#93;</span>,solver<span >=</span>Crout,init<span >=</span>i<span >&#41;</span> <span >=</span>
-    int2d<span >&#40;</span>Th<span >&#41;</span><span >&#40;</span>
-             alpha<span >*</span><span >&#40;</span> u1<span >*</span>v1 <span >+</span> u2<span >*</span>v2<span >&#41;</span> 
-            <span >+</span> nu <span >*</span> <span >&#40;</span> dx<span >&#40;</span>u1<span >&#41;</span><span >*</span>dx<span >&#40;</span>v1<span >&#41;</span> <span >+</span> dy<span >&#40;</span>u1<span >&#41;</span><span >*</span>dy<span >&#40;</span>v1<span >&#41;</span>
-            <span >+</span>        dx<span >&#40;</span>u2<span >&#41;</span><span >*</span>dx<span >&#40;</span>v2<span >&#41;</span> <span >+</span> dy<span >&#40;</span>u2<span >&#41;</span><span >*</span>dy<span >&#40;</span>v2<span >&#41;</span> <span >&#41;</span>
-            <span >+</span> p<span >*</span>q<span >*</span><span >&#40;</span><span >0.000001</span><span >&#41;</span> 
-            <span >-</span> p<span >*</span>dx<span >&#40;</span>v1<span >&#41;</span> <span >-</span> p<span >*</span>dy<span >&#40;</span>v2<span >&#41;</span>
-            <span >-</span> dx<span >&#40;</span>u1<span >&#41;</span><span >*</span>q <span >-</span> dy<span >&#40;</span>u2<span >&#41;</span><span >*</span>q
-           <span >&#41;</span>
-  <span >+</span> int2d<span >&#40;</span>Th<span >&#41;</span> <span >&#40;</span> <span >-</span>alpha<span >*</span>convect<span >&#40;</span><span >&#91;</span>up1,up2<span >&#93;</span>,<span >-</span>dt,up1<span >&#41;</span><span >*</span>v1 <span >-</span>alpha<span >*</span>convect<span >&#40;</span><span >&#91;</span>up1,up2<span >&#93;</span>,<span >-</span>dt,up2<span >&#41;</span><span >*</span>v2 <span >&#41;</span>
-  <span >+</span> on<span >&#40;</span><span >3</span>,u1<span >=</span>g,u2<span >=</span><span >0</span><span >&#41;</span> 
-  <span >+</span> on<span >&#40;</span><span >1</span>,<span >2</span>,<span >4</span>,u1<span >=</span><span >0</span>,u2<span >=</span><span >0</span><span >&#41;</span> <span >;</span>
-plot<span >&#40;</span>coef<span >=</span><span >0.2</span>,cmm<span >=</span><span >&quot; [u1,u2] et p  &quot;</span>,p,<span >&#91;</span>u1,u2<span >&#93;</span>,ps<span >=</span><span >&quot;StokesP2P1.eps&quot;</span>,value<span >=</span><span >1</span>,wait<span >=</span><span >1</span><span >&#41;</span><span >;</span>
-<span >&#123;</span>
-  real<span >&#91;</span><span >int</span><span >&#93;</span> xx<span >&#40;</span><span >21</span><span >&#41;</span>,yy<span >&#40;</span><span >21</span><span >&#41;</span>,pp<span >&#40;</span><span >21</span><span >&#41;</span><span >;</span>
-  <span >for</span> <span >&#40;</span><span >int</span> i<span >=</span><span >0</span><span >;</span>i<span >&lt;</span><span >21</span><span >;</span>i<span >++</span><span >&#41;</span>
-   <span >&#123;</span>
-     yy<span >&#91;</span>i<span >&#93;</span><span >=</span>i<span >/</span><span >20</span>.<span >;</span>
-     xx<span >&#91;</span>i<span >&#93;</span><span >=</span>u1<span >&#40;</span><span >0.5</span>,i<span >/</span><span >20</span>.<span >&#41;</span><span >;</span>
-     pp<span >&#91;</span>i<span >&#93;</span><span >=</span>p<span >&#40;</span>i<span >/</span><span >20</span>.,<span >0.999</span><span >&#41;</span><span >;</span>
-    <span >&#125;</span>
-      <span >cout</span> <span >&lt;&lt;</span> <span >&quot; &quot;</span> <span >&lt;&lt;</span> yy <span >&lt;&lt;</span> endl<span >;</span>
-     plot<span >&#40;</span><span >&#91;</span>xx,yy<span >&#93;</span>,wait<span >=</span><span >1</span>,cmm<span >=</span><span >&quot;u1 x=0.5 cup&quot;</span><span >&#41;</span><span >;</span>
-     plot<span >&#40;</span><span >&#91;</span>yy,pp<span >&#93;</span>,wait<span >=</span><span >1</span>,cmm<span >=</span><span >&quot;pressure y=0.999 cup&quot;</span><span >&#41;</span><span >;</span>
-<span >&#125;</span>
-&nbsp;
-dt <span >=</span> <span >0.1</span><span >;</span>
-<span >int</span> nbiter <span >=</span> <span >5</span><span >;</span>
-real coefdt <span >=</span> <span >0.25</span><span >^</span><span >&#40;</span><span >1</span>.<span >/</span>nbiter<span >&#41;</span><span >;</span>
-real coefcut <span >=</span> <span >0.25</span><span >^</span><span >&#40;</span><span >1</span>.<span >/</span>nbiter<span >&#41;</span> , cut<span >=</span><span >0.01</span><span >;</span>
-real tol<span >=</span><span >0.5</span>,coeftol <span >=</span> <span >0.25</span><span >^</span><span >&#40;</span><span >1</span>.<span >/</span>nbiter<span >&#41;</span><span >;</span>
-nu<span >=</span><span >1</span>.<span >/</span>reylnods<span >;</span>   
-&nbsp;
-<span >for</span> <span >&#40;</span>iter<span >=</span><span >1</span><span >;</span>iter<span >&lt;=</span>nbiter<span >;</span>iter<span >++</span><span >&#41;</span>
-<span >&#123;</span>
-  <span >cout</span> <span >&lt;&lt;</span> <span >&quot; dt = &quot;</span> <span >&lt;&lt;</span> dt <span >&lt;&lt;</span> <span >&quot; ------------------------ &quot;</span> <span >&lt;&lt;</span> endl<span >;</span>
-  alpha<span >=</span><span >1</span><span >/</span>dt<span >;</span>
-  <span >for</span> <span >&#40;</span>i<span >=</span><span >0</span><span >;</span>i<span >&lt;=</span><span >50</span><span >;</span>i<span >++</span><span >&#41;</span>
-   <span >&#123;</span>
-     up1<span >=</span>u1<span >;</span>
-     up2<span >=</span>u2<span >;</span>
-     NS<span >;</span>
-     <span >if</span> <span >&#40;</span> <span >!</span><span >&#40;</span>i <span >%</span> <span >10</span><span >&#41;</span><span >&#41;</span> 
-     plot<span >&#40;</span>coef<span >=</span><span >0.2</span>,cmm<span >=</span><span >&quot; [u1,u2] et p  &quot;</span>,p,<span >&#91;</span>u1,u2<span >&#93;</span>,ps<span >=</span><span >&quot;plotNS_&quot;</span><span >+</span>iter<span >+</span><span >&quot;_&quot;</span><span >+</span>i<span >+</span><span >&quot;.eps&quot;</span><span >&#41;</span><span >;</span>  
-     <span >cout</span> <span >&lt;&lt;</span> <span >&quot;CPU &quot;</span> <span >&lt;&lt;</span> <span >clock</span><span >&#40;</span><span >&#41;</span><span >-</span>s0 <span >&lt;&lt;</span> <span >&quot;s &quot;</span> <span >&lt;&lt;</span> endl<span >;</span>     
-   <span >&#125;</span> 
-&nbsp;
-  <span >if</span> <span >&#40;</span>iter<span >&gt;=</span> nbiter<span >&#41;</span> <span >break</span><span >;</span>
-&nbsp;
-  Th<span >=</span>adaptmesh<span >&#40;</span>Th,<span >&#91;</span>dx<span >&#40;</span>u1<span >&#41;</span>,dy<span >&#40;</span>u1<span >&#41;</span>,dx<span >&#40;</span>u1<span >&#41;</span>,dy<span >&#40;</span>u2<span >&#41;</span><span >&#93;</span>,
-              abserror<span >=</span><span >0</span>,cutoff<span >=</span>cut,err<span >=</span>tol, inquire<span >=</span><span >0</span>,ratio<span >=</span><span >1.5</span>,hmin<span >=</span><span >1</span>.<span >/</span><span >1000</span><span >&#41;</span><span >;</span>
-  plot<span >&#40;</span>Th,ps<span >=</span><span >&quot;ThNS.eps&quot;</span><span >&#41;</span><span >;</span>
-  dt <span >=</span> dt<span >*</span>coefdt<span >;</span>
-  tol <span >=</span> tol <span >*</span>coeftol<span >;</span>
-  cut <span >=</span> cut <span >*</span>coefcut<span >;</span>
-<span >&#125;</span>
-<span >cout</span> <span >&lt;&lt;</span> <span >&quot;CPU &quot;</span> <span >&lt;&lt;</span> <span >clock</span><span >&#40;</span><span >&#41;</span><span >-</span>s0 <span >&lt;&lt;</span> <span >&quot;s &quot;</span> <span >&lt;&lt;</span> endl<span >;</span>     </pre>
+```C++
+// remark: the sign of p is correct 
+real s0=clock();
+mesh Th=square(10,10);
+fespace Vh2(Th,P2);
+fespace Vh(Th,P1);
+Vh2 u2,v2,up1,up2;
+Vh2 u1,v1; 
+Vh  u1x=0,u1y,u2x,u2y, vv;
+ 
+real reylnods=1000;
+//cout << " Enter the reynolds number :"; cin >> reylnods;
+assert(reylnods>1 && reylnods < 100000); 
+up1=0;
+up2=0; 
+func g=(x)*(1-x)*4; 
+Vh p=0,q;
+real alpha=0;
+real  nu=1;
+int i=0,iter=0;
+real dt=0;
+solve NS ([u1,u2,p],[v1,v2,q],solver=Crout,init=i) =
+    int2d(Th)(
+             alpha*( u1*v1 + u2*v2) 
+            + nu * ( dx(u1)*dx(v1) + dy(u1)*dy(v1)
+            +        dx(u2)*dx(v2) + dy(u2)*dy(v2) )
+            + p*q*(0.000001) 
+            - p*dx(v1) - p*dy(v2)
+            - dx(u1)*q - dy(u2)*q
+           )
+  + int2d(Th) ( -alpha*convect([up1,up2],-dt,up1)*v1 -alpha*convect([up1,up2],-dt,up2)*v2 )
+  + on(3,u1=g,u2=0) 
+  + on(1,2,4,u1=0,u2=0) ;
+plot(coef=0.2,cmm=" [u1,u2] et p  ",p,[u1,u2],ps="StokesP2P1.eps",value=1,wait=1);
+{
+  real[int] xx(21),yy(21),pp(21);
+  for (int i=0;i<21;i++)
+   {
+     yy[i]=i/20.;
+     xx[i]=u1(0.5,i/20.);
+     pp[i]=p(i/20.,0.999);
+    }
+      cout << " " << yy << endl;
+     plot([xx,yy],wait=1,cmm="u1 x=0.5 cup");
+     plot([yy,pp],wait=1,cmm="pressure y=0.999 cup");
+}
+ 
+dt = 0.1;
+int nbiter = 5;
+real coefdt = 0.25^(1./nbiter);
+real coefcut = 0.25^(1./nbiter) , cut=0.01;
+real tol=0.5,coeftol = 0.25^(1./nbiter);
+nu=1./reylnods;   
+ 
+for (iter=1;iter<=nbiter;iter++)
+{
+  cout << " dt = " << dt << " ------------------------ " << endl;
+  alpha=1/dt;
+  for (i=0;i<=50;i++)
+   {
+     up1=u1;
+     up2=u2;
+     NS;
+     if ( !(i % 10)) 
+     plot(coef=0.2,cmm=" [u1,u2] et p  ",p,[u1,u2],ps="plotNS_"+iter+"_"+i+".eps");  
+     cout << "CPU " << clock()-s0 << "s " << endl;     
+   } 
+ 
+  if (iter>= nbiter) break;
+ 
+  Th=adaptmesh(Th,[dx(u1),dy(u1),dx(u1),dy(u2)],
+              abserror=0,cutoff=cut,err=tol, inquire=0,ratio=1.5,hmin=1./1000);
+  plot(Th,ps="ThNS.eps");
+  dt = dt*coefdt;
+  tol = tol *coeftol;
+  cut = cut *coefcut;
+}
+cout << "CPU " << clock()-s0 << "s " << endl;
+```
 
 ce qui donne:
 
@@ -4002,54 +4199,60 @@ freefem-ns-vortex.png <!-- ALHTODO find in dokuwiki backups -->
 Utiliser le mot clé “region”.
 
 ### Comment afficher la valeur des labels dans tout le maillage?
-<pre ><span >// Un exemple de maillage</span>
-load <span >&quot;msh3&quot;</span>
-<span >int</span> nn<span >=</span><span >4</span><span >;</span>
-mesh Th2<span >=</span> square<span >&#40;</span>nn,nn<span >&#41;</span><span >;</span>
-<span >int</span><span >&#91;</span><span >int</span><span >&#93;</span> rup<span >=</span><span >&#91;</span><span >0</span>,<span >0</span><span >&#93;</span>,  rdown<span >=</span><span >&#91;</span><span >0</span>,<span >0</span><span >&#93;</span>, rmid<span >=</span><span >&#91;</span><span >1</span>,<span >1</span>,<span >2</span>,<span >2</span>,<span >3</span>,<span >3</span>,<span >4</span>,<span >4</span><span >&#93;</span><span >;</span>
-real zmin<span >=</span><span >0</span>,zmax<span >=</span><span >1</span><span >;</span>
-mesh3 Th<span >=</span>buildlayers<span >&#40;</span>Th2,nn,
-  zbound<span >=</span><span >&#91;</span>zmin,zmax<span >&#93;</span>,
-  labelmid<span >=</span>rmid, 
-  reffaceup <span >=</span> rup,
-  reffacelow <span >=</span> rdown
-<span >&#41;</span><span >;</span>
-&nbsp;
-<span >// Une fonction 'b' contenant les valeurs des labels en chaque point</span>
-fespace Vh<span >&#40;</span>Th,P1<span >&#41;</span><span >;</span>
-Vh b<span >;</span>
-<span >int</span> t<span >;</span>
-<span >for</span><span >&#40;</span>t<span >=</span><span >0</span><span >;</span>t<span >&lt;</span>Th.<span >nt</span><span >;</span>t<span >++</span><span >&#41;</span><span >&#123;</span>
-	<span >int</span> p<span >;</span>
-	<span >for</span><span >&#40;</span>p<span >=</span><span >0</span><span >;</span>p<span >&lt;</span><span >4</span><span >;</span>p<span >++</span><span >&#41;</span><span >&#123;</span>
-		b<span >&#91;</span><span >&#93;</span><span >&#40;</span>Th<span >&#91;</span>t<span >&#93;</span><span >&#91;</span>p<span >&#93;</span><span >&#41;</span><span >=</span>Th<span >&#91;</span>t<span >&#93;</span><span >&#91;</span>p<span >&#93;</span>.<span >label</span><span >;</span>
-	<span >&#125;</span>
-<span >&#125;</span>
-&nbsp;
-<span >// Représentation graphique de b</span>
-plot<span >&#40;</span>b,nbiso<span >=</span><span >20</span>,value<span >=</span><span >1</span><span >&#41;</span><span >;</span></pre>
+
+```C++
+// Un exemple de maillage
+load "msh3"
+int nn=4;
+mesh Th2= square(nn,nn);
+int[int] rup=[0,0],  rdown=[0,0], rmid=[1,1,2,2,3,3,4,4];
+real zmin=0,zmax=1;
+mesh3 Th=buildlayers(Th2,nn,
+  zbound=[zmin,zmax],
+  labelmid=rmid, 
+  reffaceup = rup,
+  reffacelow = rdown
+);
+ 
+// Une fonction 'b' contenant les valeurs des labels en chaque point
+fespace Vh(Th,P1);
+Vh b;
+int t;
+for(t=0;t<Th.nt;t++){
+	int p;
+	for(p=0;p<4;p++){
+		b[](Th[t][p])=Th[t][p].label;
+	}
+}
+ 
+// Représentation graphique de b
+plot(b,nbiso=20,value=1);
+```
 
 ### Multiplying matrices
 
 This is possible when loading the “lapack” module. eg:
 
-<pre >load <span >&quot;lapack&quot;</span>
-real<span >&#91;</span><span >int</span>,<span >int</span><span >&#93;</span> a<span >&#40;</span><span >2</span>,<span >2</span><span >&#41;</span><span >;</span>
-a<span >=</span><span >&#91;</span><span >&#91;</span><span >1</span>,<span >2</span><span >&#93;</span>,<span >&#91;</span><span >3</span>,<span >4</span><span >&#93;</span><span >&#93;</span><span >;</span>
-real<span >&#91;</span><span >int</span>,<span >int</span><span >&#93;</span> b<span >&#40;</span><span >2</span>,<span >2</span><span >&#41;</span><span >;</span>
-b<span >=</span>a<span >*</span>a<span >;</span>
-<span >cout</span><span >&lt;&lt;</span>b<span >;</span></pre>
+```C++
+load "lapack"
+real[int,int] a(2,2);
+a=[[1,2],[3,4]];
+real[int,int] b(2,2);
+b=a*a;
+cout<<b;
+```
 
 See also [http://www.um.es/freefem/ff++/pmwiki.php?n=Main.SparseMatrixTypeOperations](http://www.um.es/freefem/ff++/pmwiki.php?n=Main.SparseMatrixTypeOperations)
 
 ### What is the equivalent of #include in FreeFem++?
-<pre >include &quot;file.idp&quot;</pre>
+`include "file.idp"`
 
 The “idp” extension is frequently used for included scripts but not required.
 
 ### How to return a vector as the result of a function?
 
-Returning a vector as the value of a function may sometimes pose problems. If the case arises, just tranform the return value into a function parameter.
+Returning a vector as the value of a function may sometimes pose problems. If the case arises, just tranform the return value into a
+function parameter.
 
 ### Are FreeFem++ functions recursive?
 
@@ -4059,229 +4262,257 @@ Not at the moment.
 
 Just use an external sleep command:
 
-<pre ><span >int</span> i<span >;</span>
-<span >for</span><span >&#40;</span>i<span >=</span><span >0</span><span >;</span>i<span >&lt;</span><span >10</span><span >;</span>i<span >++</span><span >&#41;</span><span >&#123;</span>
-  <span >cout</span><span >&lt;&lt;</span>i<span >&lt;&lt;</span>endl<span >;</span>
-  exec<span >&#40;</span><span >&quot;sleep 2&quot;</span><span >&#41;</span><span >;</span> <span >// seconds</span>
-<span >&#125;</span></pre>
+```C++
+int i;
+for(i=0;i<10;i++){
+  cout<<i<<endl;
+  exec("sleep 2"); // seconds
+}
+```
 
 ### How to refine a part of a mesh
 
 Example on a plain square mesh:
 
-<pre >mesh Th1<span >=</span>square<span >&#40;</span><span >30</span>,<span >30</span><span >&#41;</span><span >;</span>
-plot<span >&#40;</span>Th1,cmm<span >=</span><span >&quot;Th1&quot;</span><span >&#41;</span><span >;</span></pre>
+```C++
+mesh Th1=square(30,30);
+plot(Th1,cmm="Th1");
+```
 
 Refine mesh center and keep structured mesh around it (r2 and u can be changed at will):
 
-<pre >func r2<span >=</span><span >&#40;</span>x<span >-</span><span >0.5</span><span >&#41;</span><span >*</span><span >&#40;</span>x<span >-</span><span >0.5</span><span >&#41;</span><span >+</span><span >&#40;</span>y<span >-</span><span >0.5</span><span >&#41;</span><span >*</span><span >&#40;</span>y<span >-</span><span >0.5</span><span >&#41;</span><span >;</span>
-func u<span >=</span><span >1</span><span >+</span><span >1</span><span >/</span><span >&#40;</span><span >0.2</span><span >+</span><span >10</span><span >*</span>r2<span >&#41;</span><span >;</span>
-mesh Th2<span >=</span>splitmesh<span >&#40;</span>Th1,u<span >&#41;</span><span >;</span>
-plot<span >&#40;</span>Th2,cmm<span >=</span><span >&quot;Th2&quot;</span><span >&#41;</span><span >;</span></pre>
+```C++
+func r2=(x-0.5)*(x-0.5)+(y-0.5)*(y-0.5);
+func u=1+1/(0.2+10*r2);
+mesh Th2=splitmesh(Th1,u);
+plot(Th2,cmm="Th2");
+```
 
 ### FreeFem++ quadrature formulae
 
-<em >note:* all quadrature formulae with letter “T” apply to triangles, and “E” apply to edges.
+*note:* all quadrature formulae with letter “T” apply to triangles, and “E” apply to edges.
 
 ### How to start writing to a file from scratch and then append to it?
 
-<pre ><span >&#123;</span>
-  ofstream f<span >&#40;</span><span >&quot;toto.txt&quot;</span><span >&#41;</span><span >;</span>
-  f <span >&lt;&lt;</span> <span >&quot;coucou'<span >\n</span>&quot;</span><span >;</span>
-<span >&#125;</span><span >;</span></pre>
+```C++
+{
+  ofstream f("toto.txt");
+  f << "coucou'\n";
+};
+```
 
 Then to append to the same file:
 
-<pre ><span >&#123;</span>
-  ofstream f<span >&#40;</span><span >&quot;toto.txt&quot;</span><span >,</span>append<span >&#41;</span><span >;</span>
-  f <span >&lt;&lt;</span> <span >&quot;add coucou'<span >\n</span>&quot;</span><span >;</span>
-<span >&#125;</span><span >;</span></pre>
+```C++
+{
+  ofstream f("toto.txt",append);
+  f << "add coucou'\n";
+};
+```
 
 ### How to randomize a symetric mesh to check if its regularity has an impact on numerical results?
 
 Here is an example with a square:
 
-<pre ><span >int</span> n<span >=</span><span >10</span><span >;</span>
-mesh m<span >=</span>square<span >&#40;</span>n<span >,</span>n<span >&#41;</span><span >;</span>
-<span >for</span><span >&#40;</span><span >int</span> i<span >=</span><span >0</span><span >;</span>i<span >&lt;</span><span >100</span><span >;</span>i<span >++</span><span >&#41;</span><span >&#123;</span>
-  m<span >=</span>adaptmesh<span >&#40;</span>m<span >,</span><span >1</span>.<span >/</span>n<span >,</span>IsMetric<span >=</span><span >1</span><span >&#41;</span><span >;</span>
-  plot<span >&#40;</span>m<span >&#41;</span><span >;</span>
-<span >&#125;</span></pre>
+```C++
+int n=10;
+mesh m=square(n,n);
+for(int i=0;i<100;i++){
+  m=adaptmesh(m,1./n,IsMetric=1);
+  plot(m);
+}
+```
 
 ### How to copy a sparse matrix into a dense matrix?
-<pre ><span >// Construction d'une matrice creuse</span>
-&nbsp;
-mesh Th<span >=</span>square<span >&#40;</span><span >10</span><span >,</span><span >10</span><span >&#41;</span><span >;</span>
-plot<span >&#40;</span>Th<span >&#41;</span><span >;</span>
-fespace Vh<span >&#40;</span>Th<span >,</span>P1<span >&#41;</span><span >;</span>
-Vh uh<span >,</span>vh<span >;</span>
-varf laplaceA<span >&#40;</span>uh<span >,</span>vh<span >&#41;</span><span >=</span>int2d<span >&#40;</span>Th<span >&#41;</span><span >&#40;</span>dx<span >&#40;</span>uh<span >&#41;</span><span >*</span>dx<span >&#40;</span>vh<span >&#41;</span><span >+</span>dy<span >&#40;</span>uh<span >&#41;</span><span >*</span>dy<span >&#40;</span>vh<span >&#41;</span><span >&#41;</span><span >;</span>
-matrix SA<span >=</span>laplaceA<span >&#40;</span>Vh<span >,</span>Vh<span >&#41;</span><span >;</span>
-&nbsp;
-<span >// Conversion de la matrice creuse en matrice pleine</span>
-&nbsp;
-real<span >&#91;</span><span >int</span><span >,</span><span >int</span><span >&#93;</span> FA<span >&#40;</span>SA.<span >n</span><span >,</span>SA.<span >n</span><span >&#41;</span><span >;</span>
-&nbsp;
-<span >// This does not work</span>
-<span >// &quot;error operator =  &lt;P3KNMIdE&gt;, &lt;14Matrice_CreuseIdE&gt;&quot;</span>
-&nbsp;
-<span >//FA=SA;</span>
-&nbsp;
-<span >// This does not work</span>
-<span >// &quot;Error: the coef a(0,2)  do'nt exist in sparse matrix  Matrix  type = P14Matrice_CreuseIdE&quot;</span>
-&nbsp;
-<span >//for(int i=0;i&lt;SA.n;i++)</span>
-<span >//  for(int j=0;j&lt;SA.n;j++)</span>
-<span >//    FA(i,j)=SA(i,j);</span>
-&nbsp;
-<span >// This is ok</span>
-&nbsp;
-<span >&#123;</span>
-  real<span >&#91;</span><span >int</span><span >&#93;</span> coef<span >;</span>
-  <span >int</span><span >&#91;</span><span >int</span><span >&#93;</span> lg<span >;</span>
-  <span >int</span><span >&#91;</span><span >int</span><span >&#93;</span> cl<span >;</span>
-  <span >&#91;</span>lg<span >,</span>cl<span >,</span>coef<span >&#93;</span><span >=</span>SA<span >;</span> 
-&nbsp;
-  FA<span >=</span><span >0</span><span >;</span>
-  <span >for</span><span >&#40;</span><span >int</span> c<span >=</span><span >0</span><span >;</span>c<span >&lt;</span>coef.<span >n</span><span >;</span>c<span >++</span><span >&#41;</span>FA<span >&#40;</span>lg<span >&#40;</span>c<span >&#41;</span><span >,</span>cl<span >&#40;</span>c<span >&#41;</span><span >&#41;</span><span >=</span>coef<span >&#40;</span>c<span >&#41;</span><span >;</span>
-<span >&#125;</span>
-&nbsp;
-<span >// just a test to see if SA and FA are identical</span>
-&nbsp;
-real<span >&#91;</span><span >int</span><span >&#93;</span> one<span >&#40;</span>SA.<span >n</span><span >&#41;</span><span >;</span>
-one<span >=</span><span >1</span><span >;</span>
-real<span >&#91;</span><span >int</span><span >&#93;</span> SAone<span >=</span>SA<span >*</span>one<span >;</span>
-cout<span >&lt;&lt;</span>SAone.<span >max</span><span >&lt;&lt;</span>endl<span >;</span>
-real<span >&#91;</span><span >int</span><span >&#93;</span> FAone<span >=</span>FA<span >*</span>one<span >;</span>
-cout<span >&lt;&lt;</span>FAone.<span >max</span><span >&lt;&lt;</span>endl<span >;</span></pre>
+```C++
+// Construction d'une matrice creuse
+ 
+mesh Th=square(10,10);
+plot(Th);
+fespace Vh(Th,P1);
+Vh uh,vh;
+varf laplaceA(uh,vh)=int2d(Th)(dx(uh)*dx(vh)+dy(uh)*dy(vh));
+matrix SA=laplaceA(Vh,Vh);
+ 
+// Conversion de la matrice creuse en matrice pleine
+ 
+real[int,int] FA(SA.n,SA.n);
+ 
+// This does not work
+// "error operator =  <P3KNMIdE>, <14Matrice_CreuseIdE>"
+ 
+//FA=SA;
+ 
+// This does not work
+// "Error: the coef a(0,2)  do'nt exist in sparse matrix  Matrix  type = P14Matrice_CreuseIdE"
+ 
+//for(int i=0;i<SA.n;i++)
+//  for(int j=0;j<SA.n;j++)
+//    FA(i,j)=SA(i,j);
+ 
+// This is ok
+ 
+{
+  real[int] coef;
+  int[int] lg;
+  int[int] cl;
+  [lg,cl,coef]=SA; 
+ 
+  FA=0;
+  for(int c=0;c<coef.n;c++)FA(lg(c),cl(c))=coef(c);
+}
+ 
+// just a test to see if SA and FA are identical
+ 
+real[int] one(SA.n);
+one=1;
+real[int] SAone=SA*one;
+cout<<SAone.max<<endl;
+real[int] FAone=FA*one;
+cout<<FAone.max<<endl;
+```
 
 ### Comment déterminer les valeurs et vecteurs propres d'un matrice?
 
 Voici l'exemple LapEigenValue.edp
 
-<pre ><span >//  Computation of the eigen value and eigen vector of the </span>
-<span >// Dirichlet problem  on square $]0,\pi[^2$</span>
-<span >// ----------------------------------------</span>
-<span >// we use the inverse shift mode </span>
-<span >// the shift is given with sigma real</span>
-<span >// -------------------------------------</span>
-<span >//  find $\lamda$ such that:</span>
-<span >// $$  \int_{\omega}  \nabla u_ \nabla v = \lamba \int_{\omega} u \nabla v  $$</span>
-verbosity<span >=</span><span >1</span><span >;</span>
-mesh Th<span >=</span>square<span >&#40;</span><span >20</span>,<span >20</span>,<span >&#91;</span>pi<span >*</span>y,pi<span >*</span>x<span >&#93;</span><span >&#41;</span><span >;</span>
-fespace Vh<span >&#40;</span>Th,P2<span >&#41;</span><span >;</span>
-Vh u1,u2<span >;</span>
-&nbsp;
-&nbsp;
-real sigma <span >=</span> <span >00</span><span >;</span>  <span >// value of the shift </span>
-&nbsp;
-varf  a<span >&#40;</span>u1,u2<span >&#41;</span><span >=</span> int2d<span >&#40;</span>Th<span >&#41;</span><span >&#40;</span>  dx<span >&#40;</span>u1<span >&#41;</span><span >*</span>dx<span >&#40;</span>u2<span >&#41;</span> <span >+</span> dy<span >&#40;</span>u1<span >&#41;</span><span >*</span>dy<span >&#40;</span>u2<span >&#41;</span> <span >-</span> sigma<span >*</span> u1<span >*</span>u2 <span >&#41;</span>
-                    <span >+</span>  on<span >&#40;</span><span >1</span>,<span >2</span>,<span >3</span>,<span >4</span>,u1<span >=</span><span >0</span><span >&#41;</span> <span >;</span>  <span >// Boundary condition</span>
-&nbsp;
-varf b<span >&#40;</span><span >&#91;</span>u1<span >&#93;</span>,<span >&#91;</span>u2<span >&#93;</span><span >&#41;</span> <span >=</span> int2d<span >&#40;</span>Th<span >&#41;</span><span >&#40;</span>  u1<span >*</span>u2 <span >&#41;</span> <span >;</span> <span >// no  Boundary condition</span>
-&nbsp;
-matrix A<span >=</span> a<span >&#40;</span>Vh,Vh,solver<span >=</span>Crout,factorize<span >=</span><span >1</span><span >&#41;</span><span >;</span> 
-matrix B<span >=</span> b<span >&#40;</span>Vh,Vh,solver<span >=</span>CG,eps<span >=</span><span >1e-20</span><span >&#41;</span><span >;</span> 
-&nbsp;
-<span >// important remark:</span>
-<span >// the boundary condition is make with exact penalisation:</span>
-<span >//     we put 1e30=tgv  on the diagonal term of the lock degre of freedom.</span>
-<span >//  So take dirichlet boundary condition just on $a$ variationnal form</span>
-<span >// and not on  $b$ variationnanl form.</span>
-<span >// because we solve</span>
-<span >//  $$ w=A^-1*B*v $$</span>
-&nbsp;
-<span >int</span> nev<span >=</span><span >20</span><span >;</span>  <span >// number of computed eigen valeu close to sigma</span>
-&nbsp;
-real<span >&#91;</span><span >int</span><span >&#93;</span> ev<span >&#40;</span>nev<span >&#41;</span><span >;</span> <span >// to store nev eigein value</span>
-Vh<span >&#91;</span><span >int</span><span >&#93;</span> eV<span >&#40;</span>nev<span >&#41;</span><span >;</span>   <span >// to store nev eigen vector</span>
-&nbsp;
-&nbsp;
-<span >int</span> k<span >=</span>EigenValue<span >&#40;</span>A,B,sym<span >=</span><span >true</span>,sigma<span >=</span>sigma,value<span >=</span>ev,vector<span >=</span>eV,tol<span >=</span><span >1e-10</span>,maxit<span >=</span><span >0</span>,ncv<span >=</span><span >0</span><span >&#41;</span><span >;</span>
-<span >//   tol= the tolerace</span>
-<span >//   maxit= the maximal iteration see arpack doc.</span>
-<span >//   ncv   see arpack doc.</span>
-<span >//  the return value is number of converged eigen value.</span>
-k<span >=</span>min<span >&#40;</span>k,nev<span >&#41;</span><span >;</span> <span >//  some time the number of converged eigen value </span>
-              <span >// can be greater than nev;</span>
-<span >int</span> nerr<span >=</span><span >0</span><span >;</span>
-real<span >&#91;</span><span >int</span><span >&#93;</span>  eev<span >&#40;</span><span >36</span><span >&#41;</span><span >;</span>
-eev<span >=</span><span >1e100</span><span >;</span>
-<span >for</span><span >&#40;</span><span >int</span> i<span >=</span><span >1</span>,k<span >=</span><span >0</span><span >;</span>i<span >&lt;</span><span >6</span><span >;</span><span >++</span>i<span >&#41;</span>
-<span >for</span><span >&#40;</span><span >int</span> j<span >=</span><span >1</span><span >;</span>j<span >&lt;</span><span >6</span><span >;</span><span >++</span>j<span >&#41;</span>
-  eev<span >&#91;</span>k<span >++</span><span >&#93;</span><span >=</span>i<span >*</span>i<span >+</span>j<span >*</span>j<span >;</span>
-eev.<span >sort</span><span >;</span>
-<span >cout</span> <span >&lt;&lt;</span> eev <span >&lt;&lt;</span> endl<span >;</span>
-<span >for</span> <span >&#40;</span><span >int</span> i<span >=</span><span >0</span><span >;</span>i<span >&lt;</span>k<span >;</span>i<span >++</span><span >&#41;</span>
-<span >&#123;</span>
-  u1<span >=</span>eV<span >&#91;</span>i<span >&#93;</span><span >;</span>
-  real gg <span >=</span> int2d<span >&#40;</span>Th<span >&#41;</span><span >&#40;</span>dx<span >&#40;</span>u1<span >&#41;</span><span >*</span>dx<span >&#40;</span>u1<span >&#41;</span> <span >+</span> dy<span >&#40;</span>u1<span >&#41;</span><span >*</span>dy<span >&#40;</span>u1<span >&#41;</span><span >&#41;</span><span >;</span>
-  real mm<span >=</span> int2d<span >&#40;</span>Th<span >&#41;</span><span >&#40;</span>u1<span >*</span>u1<span >&#41;</span> <span >;</span>
-  real err <span >=</span> int2d<span >&#40;</span>Th<span >&#41;</span><span >&#40;</span>dx<span >&#40;</span>u1<span >&#41;</span><span >*</span>dx<span >&#40;</span>u1<span >&#41;</span> <span >+</span> dy<span >&#40;</span>u1<span >&#41;</span><span >*</span>dy<span >&#40;</span>u1<span >&#41;</span> <span >-</span> <span >&#40;</span>ev<span >&#91;</span>i<span >&#93;</span><span >&#41;</span><span >*</span>u1<span >*</span>u1<span >&#41;</span> <span >;</span>
-  <span >if</span><span >&#40;</span><span >abs</span><span >&#40;</span>err<span >&#41;</span> <span >&gt;</span> <span >1e-6</span><span >&#41;</span> nerr<span >++</span><span >;</span>
-  <span >if</span><span >&#40;</span><span >abs</span><span >&#40;</span>ev<span >&#91;</span>i<span >&#93;</span><span >-</span>eev<span >&#91;</span>i<span >&#93;</span><span >&#41;</span> <span >&gt;</span> <span >1e-1</span><span >&#41;</span> nerr<span >++</span><span >;</span>
-  <span >cout</span> <span >&lt;&lt;</span> <span >&quot; ---- &quot;</span> <span >&lt;&lt;</span>  i<span >&lt;&lt;</span> <span >&quot; &quot;</span> <span >&lt;&lt;</span> ev<span >&#91;</span>i<span >&#93;</span> <span >&lt;&lt;</span> <span >&quot; == &quot;</span> <span >&lt;&lt;</span> eev<span >&#91;</span>i<span >&#93;</span> <span >&lt;&lt;</span> <span >&quot; err= &quot;</span> <span >&lt;&lt;</span> err <span >&lt;&lt;</span> <span >&quot; --- &quot;</span><span >&lt;&lt;</span>endl<span >;</span>
-&nbsp;
-  <span >// FFCS: add 3D view capabilities</span>
-  plot<span >&#40;</span>eV<span >&#91;</span>i<span >&#93;</span>,cmm<span >=</span><span >&quot;Eigen  Vector &quot;</span><span >+</span>i<span >+</span><span >&quot; valeur =&quot;</span> <span >+</span> ev<span >&#91;</span>i<span >&#93;</span>  ,wait<span >=</span><span >1</span>,value<span >=</span><span >1</span>,ps<span >=</span><span >&quot;eigen&quot;</span><span >+</span>i<span >+</span><span >&quot;.eps&quot;</span>,dim<span >=</span><span >3</span>,fill<span >=</span><span >1</span>,CutPlane<span >=</span><span >0</span>,ShowAxes<span >=</span><span >0</span><span >&#41;</span><span >;</span>
-<span >&#125;</span>
-<span >assert</span><span >&#40;</span>nerr<span >==</span><span >0</span><span >&#41;</span><span >;</span></pre>
+```C++
+//  Computation of the eigen value and eigen vector of the 
+// Dirichlet problem  on square $]0,\pi[^2$
+// ----------------------------------------
+// we use the inverse shift mode 
+// the shift is given with sigma real
+// -------------------------------------
+//  find $\lambda$ such that:
+// $$  \int_{\omega}  \nabla u_ \nabla v = \lambda \int_{\omega} u \nabla v  $$
+verbosity=1;
+mesh Th=square(20,20,[pi*y,pi*x]);
+fespace Vh(Th,P2);
+Vh u1,u2;
+ 
+ 
+real sigma = 00;  // value of the shift 
+ 
+varf  a(u1,u2)= int2d(Th)(  dx(u1)*dx(u2) + dy(u1)*dy(u2) - sigma* u1*u2 )
+                    +  on(1,2,3,4,u1=0) ;  // Boundary condition
+ 
+varf b([u1],[u2]) = int2d(Th)(  u1*u2 ) ; // no  Boundary condition
+ 
+matrix A= a(Vh,Vh,solver=Crout,factorize=1); 
+matrix B= b(Vh,Vh,solver=CG,eps=1e-20); 
+ 
+// important remark:
+// the boundary condition is make with exact penalisation:
+//     we put 1e30=tgv  on the diagonal term of the lock degre of freedom.
+//  So take dirichlet boundary condition just on $a$ variationnal form
+// and not on  $b$ variationnanl form.
+// because we solve
+//  $$ w=A^-1*B*v $$
+ 
+int nev=20;  // number of computed eigen valeu close to sigma
+ 
+real[int] ev(nev); // to store nev eigein value
+Vh[int] eV(nev);   // to store nev eigen vector
+ 
+ 
+int k=EigenValue(A,B,sym=true,sigma=sigma,value=ev,vector=eV,tol=1e-10,maxit=0,ncv=0);
+//   tol= the tolerace
+//   maxit= the maximal iteration see arpack doc.
+//   ncv   see arpack doc.
+//  the return value is number of converged eigen value.
+k=min(k,nev); //  some time the number of converged eigen value 
+              // can be greater than nev;
+int nerr=0;
+real[int]  eev(36);
+eev=1e100;
+for(int i=1,k=0;i<6;++i)
+for(int j=1;j<6;++j)
+  eev[k++]=i*i+j*j;
+eev.sort;
+cout << eev << endl;
+for (int i=0;i<k;i++)
+{
+  u1=eV[i];
+  real gg = int2d(Th)(dx(u1)*dx(u1) + dy(u1)*dy(u1));
+  real mm= int2d(Th)(u1*u1) ;
+  real err = int2d(Th)(dx(u1)*dx(u1) + dy(u1)*dy(u1) - (ev[i])*u1*u1) ;
+  if(abs(err) > 1e-6) nerr++;
+  if(abs(ev[i]-eev[i]) > 1e-1) nerr++;
+  cout << " ---- " <<  i<< " " << ev[i] << " == " << eev[i] << " err= " << err << " --- "<<endl;
+ 
+  // FFCS: add 3D view capabilities
+  plot(eV[i],cmm="Eigen  Vector "+i+" valeur =" + ev[i]  ,wait=1,value=1,ps="eigen"+i+".eps",dim=3,fill=1,CutPlane=0,ShowAxes=0);
+}
+assert(nerr==0);
+```
 
 ### Comment arrondir une valeur réelle à un nombre fixe de décimales?
-<pre >real a<span >=</span><span >1</span>.<span >/</span><span >3</span>.<span >;</span>
-<span >cout</span><span >&lt;&lt;</span>a<span >&lt;&lt;</span>endl<span >;</span>
-a<span >=</span><span >int</span><span >&#40;</span>a<span >*</span><span >1000</span>.<span >&#41;</span><span >/</span><span >1000</span>.<span >;</span>
-<span >cout</span><span >&lt;&lt;</span>a<span >&lt;&lt;</span>endl<span >;</span></pre>
+```C++
+real a=1./3.;
+cout<<a<<endl;
+a=int(a*1000.)/1000.;
+cout<<a<<endl;
+```
 
 Résultat :
 
-<pre >0.333333
+```C++
+0.333333
 0.333
 times: compile 0.01s, execution 1.10961e-18s,  mpirank:0
  CodeAlloc : nb ptr  2373,  size :160416 mpirank: 0
-Bien: On a fini Normalement</pre>
+Bien: On a fini Normalement
+```
 
 ### Comment lire une matrice calculée par FreeFem++ dans Matlab?
 
-Voici un [script Matlab](http://www.um.es/freefem/ff++/uploads/Main/FFmatrix_fread.m) écrit par Richard MICHEL et publié sur le [wiki FreeFem++](http://www.um.es/freefem/ff++/pmwiki.php).
+Voici un [script Matlab](http://www.um.es/freefem/ff++/uploads/Main/FFmatrix_fread.m) écrit par Richard MICHEL et publié sur le [wiki
+FreeFem++](http://www.um.es/freefem/ff++/pmwiki.php).
 
 ### Comment appeler ARPACK pour une matrice sans maillage associé?
-<pre ><span >int</span> nev<span >=</span><span >5</span><span >;</span> <span >// number of computed eigenvalue close to sigma</span>
-real<span >&#91;</span><span >int</span><span >&#93;</span> ev<span >&#40;</span>nev<span >&#41;</span><span >;</span> <span >// to store nev eigenvalues</span>
-real<span >&#91;</span><span >int</span>,<span >int</span><span >&#93;</span> eV<span >&#40;</span>AA.<span >n</span>,nev<span >&#41;</span><span >;</span> <span >// to store nev eigenvectors</span>
-<span >int</span> k<span >=</span>EigenValue<span >&#40;</span>AA,BB,sym<span >=</span><span >true</span>,value<span >=</span>ev,rawvector<span >=</span>eV<span >&#41;</span><span >;</span></pre>
+```C++
+int nev=5; // number of computed eigenvalue close to sigma
+real[int] ev(nev); // to store nev eigenvalues
+real[int,int] eV(AA.n,nev); // to store nev eigenvectors
+int k=EigenValue(AA,BB,sym=true,value=ev,rawvector=eV);
+```
 
 ### Comment exécuter Matlab depuis FreeFem++?
 
 Dans le script FreeFem++ : (testé sur Windows et Linux)
 
-<pre >exec(&quot;matlab -automation -r \&quot;run('/path/vers/le/script/matlab.m')\&quot; &quot;)</pre>
+`exec("matlab -automation -r \"run('/path/vers/le/script/matlab.m')\" ")`
 
 ### Fusionner deux maillages le long d'une frontière interne
 
-L'important est de donner un label distinct à la portion de frontière qui sera à l'intérieur du maillage pour que les conditions aux bords ne lui soient pas appliquées:
+L'important est de donner un label distinct à la portion de frontière qui sera à l'intérieur du maillage pour que les conditions aux bords
+ne lui soient pas appliquées:
 
-<pre ><span >int</span><span >&#91;</span><span >int</span><span >&#93;</span> l1<span >=</span><span >&#91;</span><span >1</span>,<span >2</span>,<span >1</span>,<span >1</span><span >&#93;</span><span >;</span>
-mesh m1<span >=</span>square<span >&#40;</span><span >10</span>,<span >10</span>,label<span >=</span>l1<span >&#41;</span><span >;</span>
-<span >int</span><span >&#91;</span><span >int</span><span >&#93;</span> l2<span >=</span><span >&#91;</span><span >1</span>,<span >1</span>,<span >1</span>,<span >2</span><span >&#93;</span><span >;</span>
-mesh m2<span >=</span>square<span >&#40;</span><span >10</span>,<span >10</span>,<span >&#91;</span>x<span >+</span><span >1</span>,y<span >&#93;</span>,label<span >=</span>l2<span >&#41;</span><span >;</span>
-plot<span >&#40;</span>m1,m2<span >&#41;</span><span >;</span>
-mesh m<span >=</span>m1<span >+</span>m2<span >;</span>
-plot<span >&#40;</span>m<span >&#41;</span><span >;</span></pre>
+```C++
+int[int] l1=[1,2,1,1];
+mesh m1=square(10,10,label=l1);
+int[int] l2=[1,1,1,2];
+mesh m2=square(10,10,[x+1,y],label=l2);
+plot(m1,m2);
+mesh m=m1+m2;
+plot(m);
+```
 
 ### Créer une matrice pleine et la convertir en matrice creuse
 
-<pre ><span >int</span> N<span >=</span><span >10</span><span >;</span>
-complex <span >&#91;</span><span >int</span>,<span >int</span><span >&#93;</span> A<span >&#40;</span>N,N<span >&#41;</span><span >;</span>
-A<span >=</span><span >0</span><span >;</span>
-<span >for</span><span >&#40;</span><span >int</span> i<span >=</span><span >0</span><span >;</span>i<span >&lt;</span>N<span >;</span>i<span >++</span><span >&#41;</span><span >&#123;</span>
-  A<span >&#40;</span>i,i<span >&#41;</span><span >=</span><span >1</span>.<span >+</span>i<span >;</span>
-  <span >if</span><span >&#40;</span>i<span >+</span><span >1</span> <span >&lt;</span> N<span >&#41;</span>    A<span >&#40;</span>i,i<span >+</span><span >1</span><span >&#41;</span><span >=</span><span >-</span>i<span >-</span>1i<span >*</span>i<span >;</span>
-  a<span >&#91;</span>i<span >&#93;</span><span >=</span>i<span >*</span><span >&#40;</span><span >1</span>.<span >+</span>2i<span >&#41;</span><span >;</span>
-<span >&#125;</span>
-&nbsp;
-matrix<span >&lt;</span>complex<span >&gt;</span> sparseA<span >=</span>A<span >;</span>
-<span >cout</span> <span >&lt;&lt;</span> sparseA <span >&lt;&lt;</span> endl<span >;</span></pre>
+```C++
+int N=10;
+complex [int,int] A(N,N);
+A=0;
+for(int i=0;i<N;i++){
+  A(i,i)=1.+i;
+  if(i+1 < N)    A(i,i+1)=-i-1i*i;
+  a[i]=i*(1.+2i);
+}
+ 
+matrix<complex> sparseA=A;
+cout << sparseA << endl;
+```
 
 Voir aussi [How to copy a sparse matrix into a dense matrix?](#how_to_copy_a_sparse_matrix_into_a_dense_matrix)
 
@@ -4290,7 +4521,10 @@ Voir aussi [How to copy a sparse matrix into a dense matrix?](#how_to_copy_a_spa
 <!-- <<<Radia>>> -->
 ## <a name="Radia"></a> Radia
 
-"*Main features - Saturated iron &amp; anisotropic materials - Polyhedron shapes - Straight and curved current coils - Easy modeling and meshing - Fast 3D visualization with QuickDraw 3D or Mathematica - Parameterization of the models in the Mathematica Language - Fast solving - Semi-analytical computation of field, field integrals and forces - Operates on MacOs and Windows 95/NT - Authors  : O. Chubar, P.  Elleaume, J. Chavanne*"
+"*Main features - Saturated iron & anisotropic materials - Polyhedron shapes - Straight and curved current coils - Easy modeling and
+meshing - Fast 3D visualization with QuickDraw 3D or Mathematica - Parameterization of the models in the Mathematica Language - Fast
+solving - Semi-analytical computation of field, field integrals and forces - Operates on MacOs and Windows 95/NT - Authors : O. Chubar, P.
+Elleaume, J. Chavanne*"
 
 ### Web
 
@@ -4310,57 +4544,55 @@ Binary only download. Requires Mathematica.
 
 <p>&nbsp;</p>
 
-<!-- <<<reutilisation>>> -->
-## <a name="reutilisation"></a> Formats Standard Réutilisables et Conversions entre Formats
-<ul>
-<li > Formats standard : [3D-Studio](#3d_studio), [AutoCAD DXF](#autocad_dxf), [HDF](#hdf), [I-DEAS file format](#i_deas_file_format), [IGES](#iges), [Matlab MAT-Files](#matlab_mat_files), [Matrix Market Exchange Formats](#matrix_market_exchange_formats), [OFF](#off), [Povray](#povray), [Salomé MED](#salome), [STEP](#step), [STL file format](#stl_file_format), [VRML](#vrml)
-</li>
-</ul>
-<ul>
-<li > Conversion entre formats de données : [medit2dx](#medit2dx), [NCO](#nco)
-</li>
-</ul>
-
-<p>&nbsp;</p>
-
 <!-- <<<Rheolef>>> -->
 ## <a name="Rheolef"></a> Rheolef
 
-"*This is rheolef, a computer environment that serves as a convenient “laboratory” for computations involving finite element-like methods. It provides a set of unix commands and [C++](#cxx) algorithms and containers. This environment is currently under development.*"
+"*This is rheolef, a computer environment that serves as a convenient “laboratory” for computations involving finite element-like
+methods. It provides a set of unix commands and [C++](#cxx) algorithms and containers. This environment is currently under development.*"
 
 [Fiche PLUME](http://www.projet-plume.org/fiche/rheolef)
 
-<ul>
-<li > Documentation: [User guide](http://ljk.imag.fr/membres/Pierre.Saramito/rheolef/usrman.pdf), [Reference manual](http://ljk.imag.fr/membres/Pierre.Saramito/rheolef/#rheolefl)
-</li>
-<li > Informations sur les formats de données: Rheolef understands the following formats (among others) : [Bamg](#bamg), [VTK](#vtk),  [Matrix Market Exchange Formats](#matrix_market_exchange_formats), [Matlab](#matlab), Postscript, [Geomview](#geomview), [Gnuplot](#gnuplot), [Plotmtv](#plotmtv), x3d
-</li>
-</ul>
+* Documentation: [User guide](http://ljk.imag.fr/membres/Pierre.Saramito/rheolef/usrman.pdf), [Reference
+  manual](http://ljk.imag.fr/membres/Pierre.Saramito/rheolef/#rheolefl)
+* Informations sur les formats de données: Rheolef understands the following formats (among others) : [Bamg](#bamg), [VTK](#vtk), [Matrix
+  Market Exchange Formats](#matrix_market_exchange_formats), [Matlab](#matlab), Postscript, [Geomview](#geomview), [Gnuplot](#gnuplot),
+  [Plotmtv](#plotmtv), x3d
 
 <p>&nbsp;</p>
 
 <!-- <<<rlabplus>>> -->
 ## <a name="rlabplus"></a> rlabplus
 
-"*.. RLaB is an interactive, interpreted scientific programming environment. RLaB is a very high level language intended to provide fast prototyping and program development, as well as easy data-visualization, and processing. RLaB is not a clone of languages such as those used by tools like [Matlab](#matlab) or Matrix-X/Xmath. However, as RLaB focuses on creating a good experimental environment (or laboratory) in which to do matrix math, it can be called ”[Matlab](#matlab)-like“; since the programming language possesses similar operators and concepts.*
+"*.. RLaB is an interactive, interpreted scientific programming environment. RLaB is a very high level language intended to provide fast
+prototyping and program development, as well as easy data-visualization, and processing. RLaB is not a clone of languages such as those used
+by tools like [Matlab](#matlab) or Matrix-X/Xmath. However, as RLaB focuses on creating a good experimental environment (or laboratory) in
+which to do matrix math, it can be called ”[Matlab](#matlab)-like“; since the programming language possesses similar operators and
+concepts.*
 
-*RLaB does not try to be a [Matlab](#matlab) clone. Instead, it borrows what I believe are the best features of the [Matlab](#matlab) language and provides improved language syntax and semantics. The syntax has been improved to allow users more expression and reduce ambiguities. The variable scoping rules have been improved to facilitate creation of larger programs and program libraries. A heterogeneous associative array has been added to allow users to create and operate on arbitrary data structures. The fundamental data type is a floating point matrix (either real or complex), though RLaB also includes string matrices, and sparse numerical matrices (both real and complex).*
+*RLaB does not try to be a [Matlab](#matlab) clone. Instead, it borrows what I believe are the best features of the [Matlab](#matlab)
+language and provides improved language syntax and semantics. The syntax has been improved to allow users more expression and reduce
+ambiguities. The variable scoping rules have been improved to facilitate creation of larger programs and program libraries. A heterogeneous
+associative array has been added to allow users to create and operate on arbitrary data structures. The fundamental data type is a floating
+point matrix (either real or complex), though RLaB also includes string matrices, and sparse numerical matrices (both real and complex).*
 
-*Project rlabplus is a continuation of work on an open-source scripting environment for scientific computations RLaB2.  Project rlabplus provides release 2 of RLaB2, which contains upgrades of the numerical libraries used in the first release, and many new libraries and toolkits, e.g., [GNU Scientific Library](#gnu_scientific_library) (GSL). Original RLaB was created by Ian Searle and collaborators. Rlabplus is a creation of Marijan Kostrun.*"
+*Project rlabplus is a continuation of work on an open-source scripting environment for scientific computations RLaB2.  Project rlabplus
+provides release 2 of RLaB2, which contains upgrades of the numerical libraries used in the first release, and many new libraries and
+toolkits, e.g., [GNU Scientific Library](#gnu_scientific_library) (GSL). Original RLaB was created by Ian Searle and collaborators. Rlabplus
+is a creation of Marijan Kostrun.*"
 
-<ul>
-<li > Web: [http://rlabplus.sourceforge.net/](http://rlabplus.sourceforge.net/)
-</li>
-<li > Documentation: [http://sourceforge.net/project/showfiles.php?group_id=109254](http://sourceforge.net/project/showfiles.php?group_id=109254), [screenshot](http://rlabplus.sourceforge.net/rlab-screenshot1.jpg)
-</li>
-</ul>
+* Web: [http://rlabplus.sourceforge.net/](http://rlabplus.sourceforge.net/)
+* Documentation:
+  [http://sourceforge.net/project/showfiles.php?group_id=109254](http://sourceforge.net/project/showfiles.php?group_id=109254),
+  [screenshot](http://rlabplus.sourceforge.net/rlab-screenshot1.jpg)
 
 <p>&nbsp;</p>
 
 <!-- <<<Sage>>> -->
 ## <a name="Sage"></a> Sage
 
-"*Sage is a free open-source mathematics software system licensed under the **GPL**. It combines the power of many existing open-source packages into a common [Python](#python)-based interface. Mission: Creating a viable free open source alternative to Magma, Maple, Mathematica and Matlab.*"
+"*Sage is a free open-source mathematics software system licensed under the **GPL**. It combines the power of many existing open-source
+packages into a common [Python](#python)-based interface. Mission: Creating a viable free open source alternative to Magma, Maple,
+Mathematica and Matlab.*"
 
 [Fiche PLUME](http://www.projet-plume.org/fiche/sage)
 
@@ -4369,31 +4601,43 @@ Binary only download. Requires Mathematica.
 <!-- <<<Salomé>>> -->
 ## <a name="Salomé"></a> Salomé
 
-"*SALOME is a free software that provides a generic platform for Pre and Post-Processing for numerical simulation. It is based on an open and flexible architecture made of reusable components available as free software.  It is open-source ([LGPL](#licences_pour_logiciels_libres)), and you can download both the sourcecode and the executables from this site.*"
+"*SALOME is a free software that provides a generic platform for Pre and Post-Processing for numerical simulation. It is based on an open
+and flexible architecture made of reusable components available as free software.  It is open-source
+([LGPL](#licences_pour_logiciels_libres)), and you can download both the sourcecode and the executables from this site.*"
 
 [Fiche PLUME](http://www.projet-plume.org/fiche/salome)
 
-<em >Format de données standard lus :* [Code_Aster](#code_aster), [Gmsh](#gmsh), [I-DEAS file format](#i_deas_file_format), [IGES](#iges), [Netgen](#netgen), <span >[Salomé MED](#salome)</span>, [STEP](#step)
+*Format de données standard lus :* [Code_Aster](#code_aster), [Gmsh](#gmsh), [I-DEAS file format](#i_deas_file_format), [IGES](#iges),
+[Netgen](#netgen), [Salomé MED](#salome), [STEP](#step)
 
-<em >Format de données standard écrits :* [Code_Aster](#code_aster), [Gmsh](#gmsh), [I-DEAS file format](#i_deas_file_format), [IGES](#iges), [Netgen](#netgen), <span >[Salomé MED](#salome)</span>, [STEP](#step)
+*Format de données standard écrits :* [Code_Aster](#code_aster), [Gmsh](#gmsh), [I-DEAS file format](#i_deas_file_format), [IGES](#iges),
+[Netgen](#netgen), [Salomé MED](#salome), [STEP](#step)
 
-#<!-- <<<Questions/Réponses>>> -->
-## <a name="Questions/Réponses"></a> Questions/Réponses
+### Questions/Réponses
 
 #### Version Windows
 
-Une version pour Windows (version de test, pas la plus récente mais fonctionnelle) est téléchargeable à [http://files.salome-platform.org/cea/adam/salomewindows/download](http://files.salome-platform.org/cea/adam/salomewindows/download)
+Une version pour Windows (version de test, pas la plus récente mais fonctionnelle) est téléchargeable à
+[http://files.salome-platform.org/cea/adam/salomewindows/download](http://files.salome-platform.org/cea/adam/salomewindows/download)
 
 <p>&nbsp;</p>
 
 <!-- <<<ScaLAPACK>>> -->
 ## <a name="ScaLAPACK"></a> ScaLAPACK
 
-"*The ScaLAPACK (or Scalable LAPACK) library includes a subset of [LAPACK](#lapack) routines redesigned for distributed memory MIMD parallel computers. It is currently written in a Single-Program-Multiple-Data style using explicit message passing for interprocessor communication. It assumes matrices are laid out in a two-dimensional block cyclic decomposition.*
+"*The ScaLAPACK (or Scalable LAPACK) library includes a subset of [LAPACK](#lapack) routines redesigned for distributed memory MIMD parallel
+computers. It is currently written in a Single-Program-Multiple-Data style using explicit message passing for interprocessor
+communication. It assumes matrices are laid out in a two-dimensional block cyclic decomposition.*
 
 *ScaLAPACK is designed for heterogeneous computing and is portable on any computer that supports [MPI](#mpi) or PVM.*
 
-*Like [LAPACK](#lapack), the ScaLAPACK routines are based on block-partitioned algorithms in order to minimize the frequency of data movement between different levels of the memory hierarchy. (For such machines, the memory hierarchy includes the off-processor memory of other processors, in addition to the hierarchy of registers, cache, and local memory on each processor.) The fundamental building blocks of the ScaLAPACK library are distributed memory versions ([PBLAS](#pblas)) of the Level 1, 2 and 3 BLAS, and a set of Basic Linear Algebra Communication Subprograms ([BLACS](#blacs)) for communication tasks that arise frequently in parallel linear algebra computations. In the ScaLAPACK routines, all interprocessor communication occurs within the [PBLAS](#pblas) and the [BLACS](#blacs). One of the design goals of ScaLAPACK was to have the ScaLAPACK routines resemble their [LAPACK](#lapack) equivalents as much as possible.*"
+*Like [LAPACK](#lapack), the ScaLAPACK routines are based on block-partitioned algorithms in order to minimize the frequency of data
+movement between different levels of the memory hierarchy. (For such machines, the memory hierarchy includes the off-processor memory of
+other processors, in addition to the hierarchy of registers, cache, and local memory on each processor.) The fundamental building blocks of
+the ScaLAPACK library are distributed memory versions ([PBLAS](#pblas)) of the Level 1, 2 and 3 BLAS, and a set of Basic Linear Algebra
+Communication Subprograms ([BLACS](#blacs)) for communication tasks that arise frequently in parallel linear algebra computations. In the
+ScaLAPACK routines, all interprocessor communication occurs within the [PBLAS](#pblas) and the [BLACS](#blacs). One of the design goals of
+ScaLAPACK was to have the ScaLAPACK routines resemble their [LAPACK](#lapack) equivalents as much as possible.*"
 
 ### Web
 
@@ -4416,11 +4660,16 @@ Une version pour Windows (version de test, pas la plus récente mais fonctionnel
 <!-- <<<Scilab>>> -->
 ## <a name="Scilab"></a> Scilab
 
-"*Scilab (developped since 1989 by Scilab Group) is a scientific software package for numerical computations providing a powerful open computing environment for engineering and scientific applications. Distributed freely via the Internet since 1994, Scilab is currently being used in educational and industrial environnments around the world.*
+"*Scilab (developped since 1989 by Scilab Group) is a scientific software package for numerical computations providing a powerful open
+computing environment for engineering and scientific applications. Distributed freely via the Internet since 1994, Scilab is currently being
+used in educational and industrial environnments around the world.*
 
-*Scilab includes hundreds of mathematical functions with the possibility to add interactively programs from various languages ([C](#c), [Fortran](#fortran)…). It has sophisticated data structures (including lists, polynomials, rational functions, linear systems…), an interpreter and a high level programming language.*
+*Scilab includes hundreds of mathematical functions with the possibility to add interactively programs from various languages ([C](#c),
+[Fortran](#fortran)…). It has sophisticated data structures (including lists, polynomials, rational functions, linear systems…), an
+interpreter and a high level programming language.*
 
-*Scilab has been conceived to be an open system where the user can define new data types and operations on these data types by using overloading.*
+*Scilab has been conceived to be an open system where the user can define new data types and operations on these data types by using
+overloading.*
 
 [Fiche PLUME](http://www.projet-plume.org/fiche/scilab)
 
@@ -4432,19 +4681,19 @@ Une version pour Windows (version de test, pas la plus récente mais fonctionnel
 
 Lire une matrice stockée dans un fichier texte
 
-<pre >  A = fscanfMat('fichier')</pre>
+`  A = fscanfMat('fichier')`
 
 Extraire une ligne ou une colonne de cette matrice
 
-<pre >A(:,1)</pre>
+`A(:,1)`
 
 Un graphe en 2D
 
-<pre >plot2d(A)</pre>
+`plot2d(A)`
 
 Executer un script enregistré dans un fichier
 
-<pre >exec('fichier')</pre>
+`exec('fichier')`
 
 <p>&nbsp;</p>
 
@@ -4453,34 +4702,37 @@ Executer un script enregistré dans un fichier
 
 exécute chaque commande comme si elle disposait de son propre écran virtuel :
 
-<ul>
-<li > Démarrer un programme avec son propre écran :
-</li>
-</ul>
-<pre >screen &lt;programme&gt;</pre>
-<ul>
-<li > Cacher un écran (sans arrêter les programmes qu'il contient m&amp;ecirc;me si on se d&amp;eacute;connecte) : Control-A d
-</li>
-<li > Revenir à un écran caché :
-</li>
-</ul>
-<pre >screen -r</pre>
-<ul>
-<li > Aide :
-</li>
-</ul>
-<pre >man screen</pre>
+* Démarrer un programme avec son propre écran :
+`screen <programme>`
+
+* Cacher un écran (sans arrêter les programmes qu'il contient même si on se déconnecte) : Control-A d
+
+* Revenir à un écran caché :
+`screen -r`
+
+* Aide :
+`man screen`
 
 <p>&nbsp;</p>
 
 <!-- <<<SLEPc>>> -->
 ## <a name="SLEPc"></a> SLEPc
 
-"*SLEPc, the Scalable Library for Eigenvalue Problem Computations, is a software library for the solution of large sparse eigenproblems on parallel computers. It can be used for the solution of problems formulated in either standard or generalized form, as well as other related problems such as the singular value decomposition.*
+"*SLEPc, the Scalable Library for Eigenvalue Problem Computations, is a software library for the solution of large sparse eigenproblems on
+parallel computers. It can be used for the solution of problems formulated in either standard or generalized form, as well as other related
+problems such as the singular value decomposition.*
 
-*The emphasis of the software is on methods and techniques appropriate for problems in which the associated matrices are sparse, for example, those arising after the discretization of partial differential equations. Therefore, most of the methods offered by the library are projection methods or other methods with similar properties. Examples of these methods are Arnoldi, Lanczos and Subspace Iteration, to name a few. SLEPc implements these basic methods as well as more sophisticated algorithms. It also provides built-in support for spectral transformations such as the shift-and-invert technique. SLEPc is a general library in the sense that it covers standard and generalized eigenvalue problems, both Hermitian and non-Hermitian, with either real or complex arithmetic.*
+*The emphasis of the software is on methods and techniques appropriate for problems in which the associated matrices are sparse, for
+example, those arising after the discretization of partial differential equations. Therefore, most of the methods offered by the library are
+projection methods or other methods with similar properties. Examples of these methods are Arnoldi, Lanczos and Subspace Iteration, to name
+a few. SLEPc implements these basic methods as well as more sophisticated algorithms. It also provides built-in support for spectral
+transformations such as the shift-and-invert technique. SLEPc is a general library in the sense that it covers standard and generalized
+eigenvalue problems, both Hermitian and non-Hermitian, with either real or complex arithmetic.*
 
-*SLEPc is built on top of [PETSc](#petsc), the Portable, Extensible Toolkit for Scientific Computation. It can be considered an extension of PETSc providing all the functionality necessary for the solution of eigenvalue problems. This means that PETSc must be previously installed in order to use SLEPc. PETSc users will find SLEPc very easy to use, since it enforces the same programming paradigm. For those users which are not familiar with PETSc yet, our recommendation is to fully understand its basic concepts before proceeding with SLEPc.*"
+*SLEPc is built on top of [PETSc](#petsc), the Portable, Extensible Toolkit for Scientific Computation. It can be considered an extension of
+PETSc providing all the functionality necessary for the solution of eigenvalue problems. This means that PETSc must be previously installed
+in order to use SLEPc. PETSc users will find SLEPc very easy to use, since it enforces the same programming paradigm. For those users which
+are not familiar with PETSc yet, our recommendation is to fully understand its basic concepts before proceeding with SLEPc.*"
 
 ### Web
 
@@ -4493,9 +4745,11 @@ exécute chaque commande comme si elle disposait de son propre écran virtuel :
 <p>&nbsp;</p>
 
 <!-- <<<SLFCFD>>> -->
-## <A NAME="SLFCFD"></A> SLFCFD
+## <a name="SLFCFD"></a> SLFCFD
 
-"*SLFCFD stands for San Le's Free Computational Fluid Dynamics. It is a package of scientific software and graphical user interfaces for use in computational fluid dynamics. It is written in ANSI [C](#c) by San Le and distributed under the terms of the [GNU](#licences_pour_logiciels_libres) license.*"
+"*SLFCFD stands for San Le's Free Computational Fluid Dynamics. It is a package of scientific software and graphical user interfaces for use
+in computational fluid dynamics. It is written in ANSI [C](#c) by San Le and distributed under the terms of the
+[GNU](#licences_pour_logiciels_libres) license.*"
 
 ### Web
 
@@ -4516,9 +4770,11 @@ exécute chaque commande comme si elle disposait de son propre écran virtuel :
 <p>&nbsp;</p>
 
 <!-- <<<SLFFEA>>> -->
-## <A NAME="SLFFEA"></A> SLFFEA
+## <a name="SLFFEA"></a> SLFFEA
 
-"*SLFFEA stands for San Le's Free Finite Element Analysis. It is a package of scientific software and graphical user interfaces for use in finite element analysis. It is written in ANSI [C](#c) by San Le and distributed under the terms of the [GNU license](#licences_pour_logiciels_libres).*"
+"*SLFFEA stands for San Le's Free Finite Element Analysis. It is a package of scientific software and graphical user interfaces for use in
+finite element analysis. It is written in ANSI [C](#c) by San Le and distributed under the terms of the [GNU
+license](#licences_pour_logiciels_libres).*"
 
 ### Web
 
@@ -4539,9 +4795,13 @@ exécute chaque commande comme si elle disposait de son propre écran virtuel :
 <p>&nbsp;</p>
 
 <!-- <<<SPARSE>>> -->
-## <A NAME="SPARSE"></A> SPARSE
+## <a name="SPARSE"></a> SPARSE
 
-"*SPARSE consists of a set of [C](#c) procedures for solving large sparse real or complex linear systems. Besides being able to solve linear systems, it solves transposed systems, finds determinants, and estimates errors due to ill-conditioning in the system of equations and instability in the computations. SPARSE does not require symmetry and is able to perform numerical pivoting (either diagonal or complete) to avoid unnecessary error in the solution. It was originally written for use in circuit simulators and is particularly apt at handling node- and modified-node admittance matrices.*"
+"*SPARSE consists of a set of [C](#c) procedures for solving large sparse real or complex linear systems. Besides being able to solve linear
+systems, it solves transposed systems, finds determinants, and estimates errors due to ill-conditioning in the system of equations and
+instability in the computations. SPARSE does not require symmetry and is able to perform numerical pivoting (either diagonal or complete) to
+avoid unnecessary error in the solution. It was originally written for use in circuit simulators and is particularly apt at handling node-
+and modified-node admittance matrices.*"
 
 ### Web
 
@@ -4556,7 +4816,13 @@ exécute chaque commande comme si elle disposait de son propre écran virtuel :
 <!-- <<<SparseLib++>>> -->
 ## <a name="SparseLib++"></a> SparseLib++
 
-"*SparseLib++ is a [C++](#cxx) class library for efficient sparse matrix computations across various computational platforms. The software package consists of matrix classes encompassing several sparse storage formats (e.g. compressed row, compressed column and coordinate formats), and providing basic functionality for managing sparse matrices. The Sparse BLAS Toolkit is used to for efficient kernel mathematical operations (e.g. sparse matrix-vector multiply) and to enhance portability and performance across a wide range of computer architectures. Included in the package are various preconditioners commonly used in iterative solvers for linear systems of equations. The focus is on computational support for iterative methods (for example, see IML++), but the sparse matrix objects presented here can be used in their own right.*
+"*SparseLib++ is a [C++](#cxx) class library for efficient sparse matrix computations across various computational platforms. The software
+package consists of matrix classes encompassing several sparse storage formats (e.g. compressed row, compressed column and coordinate
+formats), and providing basic functionality for managing sparse matrices. The Sparse BLAS Toolkit is used to for efficient kernel
+mathematical operations (e.g. sparse matrix-vector multiply) and to enhance portability and performance across a wide range of computer
+architectures. Included in the package are various preconditioners commonly used in iterative solvers for linear systems of equations. The
+focus is on computational support for iterative methods (for example, see IML++), but the sparse matrix objects presented here can be used
+in their own right.*
 
 *SparseLib++ matrices can be built out of nearly any C++ matrix/vector classes; it is shipped with the MV++ classes by default.*"
 
@@ -4575,7 +4841,7 @@ exécute chaque commande comme si elle disposait de son propre écran virtuel :
 <p>&nbsp;</p>
 
 <!-- <<<SPOOLES>>> -->
-## <A NAME="SPOOLES"></A> SPOOLES
+## <a name="SPOOLES"></a> SPOOLES
 
 "*SPOOLES 2.2 : SParse Object Oriented Linear Equations Solver*"
 
@@ -4601,7 +4867,7 @@ oriented design. At present, there is the following functionality:*
 <p>&nbsp;</p>
 
 <!-- <<<STEP>>> -->
-## <A NAME="STEP"></A> STEP
+## <a name="STEP"></a> STEP
 
 "*STEP, the Standard for the Exchange of Product Model Data, is a comprehensive ISO standard (ISO 10303) that describes how to represent and
 exchange digital product information.*"
@@ -4680,9 +4946,9 @@ major operating systems, e.g. Unix/Linux, MacOS, Windows, etc, are supported. *"
 
 "*A Two-Dimensional Quality Mesh Generator and Delaunay Triangulator.*
 
-*Triangle generates exact Delaunay triangulations, constrained Delaunay triangulations, conforming Delaunay triangulations, Voronoi diagrams,
-and high-quality triangular meshes. The latter can be generated with no small or large angles, and are thus suitable for finite element
-analysis.*"
+*Triangle generates exact Delaunay triangulations, constrained Delaunay triangulations, conforming Delaunay triangulations, Voronoi
+diagrams, and high-quality triangular meshes. The latter can be generated with no small or large angles, and are thus suitable for finite
+element analysis.*"
 
 [Fiche PLUME](http://www.projet-plume.org/fiche/triangle)
 
@@ -4707,7 +4973,7 @@ implement all abstract interfaces.*"
 <p>&nbsp;</p>
 
 <!-- <<<TYPHON>>> -->
-## <A NAME="TYPHON"></A> TYPHON
+## <a name="TYPHON"></a> TYPHON
 
 "*TYPHON is an open source project which aims to offer a development platform for many computational methods for gas dynamics. It is
 structured as a multi-solver platform where it could be easily added a new solver. For now, it provides a finite volume solver for
@@ -4751,7 +5017,7 @@ triangular solver. The glue between containers, views and expression templated o
 <p>&nbsp;</p>
 
 <!-- <<<UMFPACK>>> -->
-## <A NAME="UMFPACK"></A> UMFPACK
+## <a name="UMFPACK"></a> UMFPACK
 
 "*UMFPACK is a set of routines for solving unsymmetric sparse linear systems, Ax=b, using the Unsymmetric MultiFrontal method. It uses
 dynamic memory allocation, and has a symbolic preordering and analysis phase that also reports the upper bounds on the nonzeros in L and U,
@@ -4781,72 +5047,57 @@ below for more details about the tool's features.*"
 
 Quelques logiciels disponibles sur la plupart des machines pour créer des images à partir de vos résultats numériques :
 
-<ul>
-<li > [Gnuplot](#gnuplot) (Tutoriel : [http://www.duke.edu/~hpgavin/#gnuplotl](http://www.duke.edu/~hpgavin/#gnuplotl))
-</li>
-<li > Medit
-</li>
-<li > [Paraview](#paraview)
-</li>
-<li > [Scilab](#scilab)
-</li>
-</ul>
+* [Gnuplot](#gnuplot) (Tutoriel : [http://www.duke.edu/~hpgavin/#gnuplotl](http://www.duke.edu/~hpgavin/#gnuplotl))
+* Medit
+* [Paraview](#paraview)
+* [Scilab](#scilab)
 
 Pour retoucher une image une fois qu'elle a été enregistrée : [GIMP](http://www.gimp.org)
 
-<ul>
-<li > Une image JPEG de bonne qualité à partir d'une image EPS (fonctionne aussi à partir de PDF) :
-</li>
-</ul>
-<pre >convert -density 200 -quality 100 &lt;image&gt;.eps &lt;image&gt;.jpg</pre>
-<ul>
-<li > Convertir toutes les images EPS du répertoire courant en JPEG :
-</li>
-</ul>
-<pre >for i in *.eps;do echo $i;convert -density 200 -quality 100 $i $i.jpg;done</pre>
+* Une image JPEG de bonne qualité à partir d'une image EPS (fonctionne aussi à partir de PDF) :
+`convert -density 200 -quality 100 <image>.eps <image>.jpg`
 
-*Note pour Windows :* <strong>convert</strong>, ainsi que de nombreuses autres commandes utiles, est disponible en installant le logiciel
+* Convertir toutes les images EPS du répertoire courant en JPEG :
+`for i in *.eps;do echo $i;convert -density 200 -quality 100 $i $i.jpg;done`
+
+*Note pour Windows :* **convert**, ainsi que de nombreuses autres commandes utiles, est disponible en installant le logiciel
 gratuit Cygwin ([http://www.cygwin.com](http://www.cygwin.com)).
 
 ### Films
 
 #### Convertir une séquence d'images en film sous Linux
-<ul>
-<li > Une animation GIF (visible dans tout navigateur internet) à partir d'une séquence d'images EPS (NB: EPS n'est pas le seul format d'entrée possible. On peut aussi utiliser PPM, PNG, JPG, etc. Un fond transparent conduit à une superposition d'images) :
-</li>
-</ul>
-<pre >convert -delay &lt;délai entre deux images en centièmes de secondes&gt; -loop 0 *.eps &lt;animation&gt;.gif</pre>
-<ul>
-<li > Un film MPEG à partir d'une séquence d'images JPEG nommées <strong>image1.jpg</strong>, <strong>image2.jpg</strong>, *etc* (more ffmpeg examples at [19 ffmpeg commands for all needs](http://www.catswhocode.com/blog/19-ffmpeg-commands-for-all-needs)):
-</li>
-</ul>
-<pre >ffmpeg -i &lt;nom de l'image&gt;%d.jpg &lt;film&gt;.mpg</pre>
-<ul>
-<li > Un film MPEG-4 en 25 images/seconde à partir d'une séquence d'images&nbsp;.jpg&nbsp;: 
-</li>
-</ul>
-<pre >mencoder mf://*.jpg -mf fps=25:type=jpg -ovc lavc -lavcopts vcodec=mpeg4 -oac copy -o &lt;film&gt;.avi</pre>
+
+* Une animation GIF (visible dans tout navigateur internet) à partir d'une séquence d'images EPS (NB: EPS n'est pas le seul format d'entrée
+  possible. On peut aussi utiliser PPM, PNG, JPG, etc. Un fond transparent conduit à une superposition d'images) :
+
+`convert -delay <délai entre deux images en centièmes de secondes> -loop 0 *.eps <animation>.gif`
+
+* Un film MPEG à partir d'une séquence d'images JPEG nommées **image1.jpg**, **image2.jpg**, *etc* (more ffmpeg examples at [19 ffmpeg
+  commands for all needs](http://www.catswhocode.com/blog/19-ffmpeg-commands-for-all-needs)):
+
+`ffmpeg -i <nom de l'image>%d.jpg <film>.mpg`
+
+* Un film MPEG-4 en 25 images/seconde à partir d'une séquence d'images .jpg : 
+
+`mencoder mf://*.jpg -mf fps=25:type=jpg -ovc lavc -lavcopts vcodec=mpeg4 -oac copy -o <film>.avi`
 
 #### Convertir un film du format AVI au format MPEG
-<pre >ffmpeg -i &lt;in&gt;.avi &lt;out&gt;.mpg</pre>
+`ffmpeg -i <in>.avi <out>.mpg`
 
 #### Extraire les images d'un film
-<ul>
-<li > Depuis une animation GIF :
-</li>
-</ul>
-<pre >convert &lt;animation&gt;.gif &lt;images&gt;.jpg</pre>
-<ul>
-<li > Depuis tout format de film :
-</li>
-</ul>
-<pre >mplayer -vo png &lt;film&gt;</pre>
+
+* Depuis une animation GIF :
+
+`convert <animation>.gif <images>.jpg`
+
+* Depuis tout format de film :
+`mplayer -vo png <film>`
 
 #### Coller deux films
-<pre >mencoder -ovc copy -oac copy &lt;film1&gt;.avi &lt;film2&gt;.avi -o &lt;film&gt;.avi</pre>
+`mencoder -ovc copy -oac copy <film1>.avi <film2>.avi -o <film>.avi`
 
 #### Convertir toutes les images EPS avec un fond transparent du répertoire courant en images PNG avec un fond blanc
-<pre >for i in *.eps;do echo $i;convert -alpha Off -background white $i $i.png;done</pre>
+`for i in *.eps;do echo $i;convert -alpha Off -background white $i $i.png;done`
 
 ### Autres logiciels de visualisation scientifique
 
@@ -4857,7 +5108,7 @@ gratuit Cygwin ([http://www.cygwin.com](http://www.cygwin.com)).
 <p>&nbsp;</p>
 
 <!-- <<<VRML>>> -->
-## <A NAME="VRML"></A> VRML
+## <a name="VRML"></a> VRML
 
 "*The Virtual Reality Modeling Language (VRML) is a file format for describing interactive 3D objects and worlds. VRML is designed to be
 used on the Internet, intranets, and local client systems. VRML is also intended to be a universal interchange format for integrated 3D
@@ -4875,7 +5126,7 @@ presentations, entertainment and educational titles, web pages, and shared virtu
 <p>&nbsp;</p>
 
 <!-- <<<VTK>>> -->
-## <A NAME="VTK"></A> VTK
+## <a name="VTK"></a> VTK
 
 "*The Visualization ToolKit (VTK) is an open source, freely available software system for 3D computer graphics, image processing, and
 visualization used by thousands of researchers and developers around the world. VTK consists of a [C++](#cxx) class library, and several
@@ -4900,7 +5151,8 @@ installed and tested on nearly every Unix-based platform, PCs (Windows 98/ME/NT/
 
 "*Wings 3D is a subdivision modeler inspired by Nendo and Mirai from Izware.*
 
-*It is possible to assign materials, vertex color, UV coordinates and textures, but there will be improvements in those features before Wings goes 1.0.*
+*It is possible to assign materials, vertex color, UV coordinates and textures, but there will be improvements in those features before
+Wings goes 1.0.*
 
 *There is no support in Wings for doing animations.*"
 
@@ -4948,7 +5200,7 @@ Lit les fichiers au format NOPO (voir Modulef)
 <p>&nbsp;</p>
 
 <!-- <<<Y12M>>> -->
-## <A NAME="Y12M"></A> Y12M
+## <a name="Y12M"></a> Y12M
 
 "*Y12MA solves sparse systems of linear algebraic equations by Gaussian elimination.  The subroutine is a “black box subroutine” designed to
 solve efficiently problems which contain only one system with a single right hand side. The number of the input parameters is minimized. The
@@ -4990,7 +5242,7 @@ file package capable of translating to and from the raw numeric formats of all m
 
 ### Autres indications
 
-"*[SpYorick](http://www.maumae.net/yorick/contrib/#spyorickl) is a plugin package for Yorick (&gt;= version 1.4) that, among other
+"*[SpYorick](http://www.maumae.net/yorick/contrib/#spyorickl) is a plugin package for Yorick (>= version 1.4) that, among other
 interesting things, adds functions that operate both on dense and sparse matrices.*"
 
 <p>&nbsp;</p>
@@ -5019,6 +5271,20 @@ Pro/MECHANICA is supported.*"
 ### Licence
 
 "*The new version Z88 12.0 is GNU-**GPL** Freeware.*"
+
+<!-- 
+   - Local Variables:
+   - mode:markdown
+   - indent-tabs-mode:nil
+   - mode:visual-line
+   - ispell-local-dictionary:"british"
+   - coding:utf-8
+   - eval:(flyspell-mode)
+   - eval:(outline-minor-mode)
+   - End:
+   -->
+<!-- LocalWords: emacs
+   -->
 
 <!-- 
    - Local Variables:
