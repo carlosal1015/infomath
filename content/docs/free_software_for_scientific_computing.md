@@ -1,8 +1,16 @@
 +++
 title = "Logiciels gratuits pour le calcul scientifique"
-date = "2018-11-01T22:15:27+01:00"
+date = 2018-11-01T22:15:27+01:00
 draft = false
-layout = "docs"
+type = "docs"
+toc = true
+
+# Tags and categories
+# For example, use `tags = []` for no tags, or the form `tags = ["A Tag", "Another Tag"]` for one or more tags.
+tags = []
+
+# Project summary to display on homepage.
+summary = ""
 
 # Does the project detail page use math formatting?
 math = false
@@ -10,9 +18,9 @@ math = false
 # Does the project detail page use source code highlighting?
 highlight = true
 
-[menu.tmp]
+[menu.docs]
   name = "Software for scientific computing"
-  weight = 1
+  weight = 30
 
 +++
 
