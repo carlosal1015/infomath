@@ -1,6 +1,7 @@
+
 +++
 title = "Logiciels gratuits pour le calcul scientifique"
-date = 2018-11-01T22:15:27+01:00
+date = "2018-11-05T10:32:40+01:00"
 draft = false
 type = "docs"
 toc = true
@@ -23,6 +24,7 @@ highlight = true
   weight = 30
 
 +++
+
 
 
 <!-- 
@@ -54,21 +56,26 @@ highlight = true
    -->
 
 <!--
-    template       [[https://raw.githubusercontent.com/Bertbk/infomath/master/content/tools/vscode.md]]
-    syntax         [[https://sourcethemes.com/academic/docs/writing-markdown-latex/]]
-                   [[https://daringfireball.net/projects/markdown/syntax]]
-                   [[https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#code]]
-                   [[info:m4]]
+    template         [[https://raw.githubusercontent.com/Bertbk/infomath/master/content/tools/vscode.md]]
+    syntax           [[https://sourcethemes.com/academic/docs/writing-markdown-latex/]]
+                     [[https://daringfireball.net/projects/markdown/syntax]]
+                     [[https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#code]]
+                     [[info:m4]]
     compile
-    - dev          [[elisp:(compile "make freesoft.htm")]]
-                   [[file:Makefile::freesoft.htm]]
-                   [[file:freesoft.htm]]
-                   [[elisp:(startup-persistent-process "browseralh freesoft.htm")]]
-                   [[man:pandoc]]
-    - infomath     [[elisp:(compile "m4 -DINFOMATH=1 freesoft.m4 > ~/infomath/content/tmp/free_software_for_scientific_computing.md")]]
-                   [[file:~/infomath/content/tmp/free_software_for_scientific_computing.md]]
-    Nombre de ##   [[shell:grep '^## ' freesoft.md|wc -l]]
--->
+    - dev            [[elisp:(compile "make freesoft.htm")]]
+                     [[file:Makefile::freesoft.htm]]
+                     [[file:freesoft.htm]]
+                     [[elisp:(startup-persistent-process "browseralh freesoft.htm")]]
+                     [[man:pandoc]]
+    - infomath       [[elisp:(compile "m4 -DINFOMATH=1 freesoft.m4 > ~/infomath/content/docs/free_software_for_scientific_computing.md")]]
+                     [[file:~/infomath/content/docs/free_software_for_scientific_computing.md]]
+                     [[https://infomath.gitlab.io/docs/free_software_for_scientific_computing]]
+    Nombre de titres [[shell:grep '^\#\# ' freesoft.md|wc -l]]
+    
+    hugo             [[https://github.com/gohugoio/hugo/releases]] (package for Debian)
+                     [[elisp:(startup-persistent-process "cd ~/infomath && remote.pl -X -- hugo serve")]] (run server)
+                     [[http://localhost:1313/docs/free_software_for_scientific_computing]]
+   -->
 
 
 
@@ -102,7 +109,9 @@ si vous notez une imprécision.
 <p>&nbsp;</p>
 
 <!-- <<<CAD>>> -->
-## <a name="CAD"></a> CAD Design
+<a name="CAD"></a>
+
+## CAD Design
 
 > [Ayam](#ayam), [Blender](#blender), [BRL-CAD](#brl_cad), [Gmsh](#gmsh), [jCAE](#jcae), [Méfisto](#maofisto),
 > [Salomé](#salome), [Wings 3D](#wings_3d)
@@ -110,7 +119,9 @@ si vous notez une imprécision.
 <p>&nbsp;</p>
 
 <!-- <<<Meshing>>> -->
-## <a name="Meshing"></a> Mesh generation
+<a name="Meshing"></a>
+
+## Mesh generation
 
 *  Construire un maillage 2D : [Bamg](#bamg), [GRUMMP](#grummp), [Triangle](#triangle)
 *  Construire un maillage 3D (surfaces & volumes) : [Gmsh](#gmsh), [GNU Triangulated Surface Library](#gnu_triangulated_surface_library),
@@ -122,7 +133,9 @@ si vous notez une imprécision.
 <p>&nbsp;</p>
 
 <!-- <<<modeles_physiques>>> -->
-## <a name="modeles_physiques"></a> Modélisation de Phénomènes Physiques
+<a name="modeles_physiques"></a>
+
+## Modélisation de Phénomènes Physiques
 
 *  Multi-physiques : [Elmer](#elmer), [FElt](#felt), [Méfisto](#maofisto), [NGSolve](#ngsolve), [OOFEM](#oofem), [OpenFOAM](#openfoam),
    [TYPHON](#typhon)
@@ -138,7 +151,9 @@ si vous notez une imprécision.
 <p>&nbsp;</p>
 
 <!-- <<<calcul>>> -->
-## <a name="calcul"></a> Logiciels et Bibliothèques de Calcul Numérique
+<a name="calcul"></a>
+
+## Logiciels et Bibliothèques de Calcul Numérique
 
 *  Méthode des éléments finis : [deal.II](#deal.ii), [Feel++](#feel), [FEniCS](#fenics), [FreeFEM++](#freefem), [FreeFEM++-cs](#freefem_cs),
    [Getfem++](#getfem), [libMesh](#libmesh), [Mélina](#maolina), [OFELI](#ofeli), [OpenFEM](#openfem), [Rheolef](#rheolef)
@@ -160,10 +175,12 @@ si vous notez une imprécision.
 <p>&nbsp;</p>
 
 <!-- <<<industrialisation>>> -->
-## <a name="industrialisation"></a> Industrialisation et Génie Logiciel
+<a name="industrialisation"></a>
+
+## Industrialisation et Génie Logiciel
 
 * Gestion des versions : [Mercurial](#mercurial), [Git](http://fr.wikipedia.org/wiki/Git)
-* Configuration : [Automake](#automake), [GNU Make](#gnu_make), [Libtool](#libtool)
+* Configuration : [Automake](#automake), [CMake](#cmake), [GNU Make](#gnu_make), [Libtool](#libtool)
 * Documentation : [Doxygen](#doxygen), HTML, [LaTeX](#latex) 
 * [Licences pour logiciels libres](#licences_pour_logiciels_libres)
 * De l'importance de la robustesse d'un code : [Working with the Chaos
@@ -172,7 +189,9 @@ si vous notez une imprécision.
 <p>&nbsp;</p>
 
 <!-- <<<reutilisation>>> -->
-## <a name="reutilisation"></a> Formats Standard Réutilisables et Conversions entre Formats
+<a name="reutilisation"></a>
+
+## Formats Standard Réutilisables et Conversions entre Formats
 
 * Formats standard : [3D-Studio](#3d_studio), [AutoCAD DXF](#autocad_dxf), [HDF](#hdf), [I-DEAS file format](#i_deas_file_format),
   [IGES](#iges), [Matlab MAT-Files](#matlab_mat_files), [Matrix Market Exchange Formats](#matrix_market_exchange_formats), [OFF](#off),
@@ -182,7 +201,9 @@ si vous notez une imprécision.
 <p>&nbsp;</p>
 
 <!-- <<<autres_informations_utiles>>> -->
-## <a name="autres_informations_utiles"></a> Autres Outils Utiles pour la Programmation
+<a name="autres_informations_utiles"></a>
+
+## Autres Outils Utiles pour la Programmation
 
 *  Langages compilés : [C](#c), [C++](#cxx), [Fortran](#fortran) 
 *  Langages interprétés : [Perl](#perl), [Python](#python)
@@ -191,7 +212,9 @@ si vous notez une imprécision.
 <p>&nbsp;</p>
 
 <!-- <<<liens>>> -->
-## <a name="liens"></a> Liens vers d'autres listes de logiciels
+<a name="liens"></a>
+
+## Liens vers d'autres listes de logiciels
 
 * [Finite element analysis - Wikipedia, the free encyclopedia](http://en.wikipedia.org/wiki/Finite_element_analysis)
 * [Matrix Market : A visual repository of test data for use in comparative studies of algorithms for numerical linear algebra, featuring
@@ -199,7 +222,6 @@ si vous notez une imprécision.
   services](http://math.nist.gov/MatrixMarket/)
 * [Free Mechanical Engineering Software](http://www.freebyte.com/cad/)
 * [Netlib Repository](http://www.netlib.org/)
-* [Jack Dongarra's survey : Freely available software for linear algebra on the web](http://www.netlib.org/utk/people/JackDongarra/la-#swl)
 * [polymorphe.org: Ce site regroupe de nombreuses archives portant sur divers domaines de l'informatique, les cours que vous pourrez trouver
   ici sont sous divers formats : doc, html, pdf, ps mais d'autres sont egalement compresses au format rar](http://www.polymorphe.org/)
 * [Convert: Bridging the Scientific Data Format Chasm](http://www.adass.org/adass/proceedings/adass94/#jenningsdl) (1995)
@@ -214,7 +236,9 @@ si vous notez une imprécision.
 <p>&nbsp;</p>
 
 <!-- <<<3D-Studio>>> -->
-## <a name="3D-Studio"></a> 3D-Studio
+<a name="3D-Studio"></a>
+
+## 3D-Studio
 
 > "*This document describes the file format of the 3ds files generated by 3d-studio by Autodesk.*"
 
@@ -225,7 +249,9 @@ si vous notez une imprécision.
 <p>&nbsp;</p>
 
 <!-- <<<ADMesh>>> -->
-## <a name="ADMesh"></a> ADMesh
+<a name="ADMesh"></a>
+
+## ADMesh
 
 > "*ADMesh is a program for processing triangulated solid meshes. Currently, ADMesh only reads the [STL file format](#stl_file_format)
 > that is used for rapid prototyping applications, although it can write [STL](#stl_file_format), [VRML](#vrml), [OFF](#off), and
@@ -269,7 +295,9 @@ si vous notez une imprécision.
 <p>&nbsp;</p>
 
 <!-- <<<ARPACK>>> -->
-## <a name="ARPACK"></a> ARPACK
+<a name="ARPACK"></a>
+
+## ARPACK
 
 > "*ARPACK++ is an object-oriented version of the ARPACK package. ARPACK is a well known collection of [Fortran](#fortran) subroutines
 > designed to compute a few eigenvalues and eigenvectors of large scale sparse matrices and pencils. It implements a variant of the Arnoldi
@@ -304,7 +332,9 @@ si vous notez une imprécision.
 <p>&nbsp;</p>
 
 <!-- <<<Atlas>>> -->
-## <a name="Atlas"></a> Atlas
+<a name="Atlas"></a>
+
+## Atlas
 
 > "*The ATLAS (Automatically Tuned Linear Algebra Software) project is an ongoing research effort focusing on applying empirical techniques
 > in order to provide portable performance. At present, it provides [C](#c) and [Fortran](#fortran) 77 interfaces to a portably
@@ -321,7 +351,9 @@ si vous notez une imprécision.
 <p>&nbsp;</p>
 
 <!-- <<<AutoCAD DXF>>> -->
-## <a name="AutoCAD DXF"></a> AutoCAD DXF
+<a name="AutoCAD DXF"></a>
+
+## AutoCAD DXF
 
 (il ne s'agit pas ici du logiciel commercial AutoCAD mais du format de ses fichiers car ils sont compris par beaucoup d'autres
 logiciels)
@@ -340,7 +372,9 @@ logiciels)
 <p>&nbsp;</p>
 
 <!-- <<<Automake>>> -->
-## <a name="Automake"></a> Automake
+<a name="Automake"></a>
+
+## Automake
 
 "* Automake is a tool for automatically generating 'Makefile.in' files compliant with the GNU Coding Standards. Automake requires
 the use of GNU Autoconf.*"
@@ -356,7 +390,9 @@ the use of GNU Autoconf.*"
 <p>&nbsp;</p>
 
 <!-- <<<Ayam>>> -->
-## <a name="Ayam"></a> Ayam
+<a name="Ayam"></a>
+
+## Ayam
 
 "*Ayam is a free (as in free speech, [BSD-licensed](#licences_pour_logiciels_libres)) 3D modelling environment for the RenderMan
 interface. Free means that neither the author nor any contributors make money out of this software. We need your (yes your!) feedback to
@@ -364,17 +400,17 @@ keep this project alive. If you use Ayam, please submit your pictures, bug repor
 
 "*Ayam currently runs on Unix (Linux, IRIX, FreeBSD tested), Win32 (Win95-Win2000, XP), and Mac **OS** X (Aqua and X11)*"
 
-"*Ayam features at a glance :*"
+"*Ayam features at a glance :*
 
-*   RIB (RenderMan Interface Bytestream) export and import.
-*   Support for NURBS curves and (trimmed) NURBS surfaces, Boxes, Quadrics (Sphere, Disk, Cylinder, Cone, Hyperboloid, Paraboloid, and
-    Torus), CSG, MetaBalls, Patch Meshes, Polygonal Meshes, and Subdivision Surfaces.
-*   NURBS modelling includes normal and interpolating curves as well as extrude, revolve, sweep, birail, skin and gordon objects with caps,
-    holes, and bevels.
-*   Custom objects that may freely implement their representations (using OpenGL and RIB) and even small GUIs to edit their type specific
-    parameters may be written by the user and dynamically loaded at runtime.
-*   Scripting interface: Tcl.
-*   Misc: instancing, arbitrary number of modeling views, object clipboard, independent property clipboard, console, n-level undo.
+*   *RIB (RenderMan Interface Bytestream) export and import.*
+*   *Support for NURBS curves and (trimmed) NURBS surfaces, Boxes, Quadrics (Sphere, Disk, Cylinder, Cone, Hyperboloid, Paraboloid, and
+    Torus), CSG, MetaBalls, Patch Meshes, Polygonal Meshes, and Subdivision Surfaces.*
+*   *NURBS modelling includes normal and interpolating curves as well as extrude, revolve, sweep, birail, skin and gordon objects with caps,
+    holes, and bevels.*
+*   *Custom objects that may freely implement their representations (using OpenGL and RIB) and even small GUIs to edit their type specific
+    parameters may be written by the user and dynamically loaded at runtime.*
+*   *Scripting interface: Tcl.*
+*   *Misc: instancing, arbitrary number of modeling views, object clipboard, independent property clipboard, console, n-level undo.*"
 
 *  Web: [http://ayam.sourceforge.net/](http://ayam.sourceforge.net/)
 *  Documentation: [http://ayam.sourceforge.net/#docsl](http://ayam.sourceforge.net/#docsl)
@@ -385,7 +421,9 @@ keep this project alive. If you use Ayam, please submit your pictures, bug repor
 <p>&nbsp;</p>
 
 <!-- <<<bamg>>> -->
-## <a name="bamg"></a> Bamg
+<a name="bamg"></a>
+
+## Bamg
 	  
 "*Bamg est un générateur de maillages bidimensionnels isotropes ou anisotopes. Ce générateur permet, soit de construire un maillage à partir
 d'une géométrie, soit de construire un maillage adapté à partir d'un maillage précédent et d'une solution ou d'une
@@ -402,7 +440,9 @@ inclus.*"
 <p>&nbsp;</p>
 
 <!-- <<<bidirectional_reflectance_codes>>> -->
-## <a name="bidirectional_reflectance_codes"></a> Bidirectional Reflectance Codes
+<a name="bidirectional_reflectance_codes"></a>
+
+## Bidirectional Reflectance Codes
 
 "*This webpage provides access to two collections of [FORTRAN](#fortran) codes.*
 
@@ -415,7 +455,9 @@ different refractive indices (e.g., a rough ocean surface).*"
 <p>&nbsp;</p>
 
 <!-- <<<bilum>>> -->
-## <a name="bilum"></a> BILUM
+<a name="bilum"></a>
+
+## BILUM
 
 "*BILUM is a set of programs designed for solving general sparse linear systems by using Krylov subspace methods preconditioned by some
 multi-level block ILU (BILUM) preconditioning techniques. BILUM combines the benefits of generality and robustness of ILU preconditioning
@@ -448,7 +490,9 @@ Written in [Fortran](#fortran).
 <p>&nbsp;</p>
 
 <!-- <<<blacs>>> -->
-## <a name="blacs"></a> BLACS
+<a name="blacs"></a>
+
+## BLACS
 
 "*The BLACS (Basic Linear Algebra Communication Subprograms) project is an ongoing investigation whose purpose is to create a linear algebra
 oriented message passing interface that may be implemented efficiently and uniformly across a large range of distributed memory platforms.*
@@ -472,7 +516,9 @@ reason that the BLACS are used as the communication layer of [ScaLAPACK](#scalap
 <p>&nbsp;</p>
 
 <!-- <<<BLAS>>> -->
-## <a name="BLAS"></a> BLAS
+<a name="BLAS"></a>
+
+## BLAS
 
 "*The BLAS (Basic Linear Algebra Subprograms) are high quality “building block” routines for performing basic vector and matrix
 operations. Level 1 BLAS do vector-vector operations, Level 2 BLAS do matrix-vector operations, and Level 3 BLAS do matrix-matrix
@@ -493,7 +539,9 @@ BLAS, see [Atlas](#atlas) or the [GNU Scientific Library](#gnu_scientific_librar
 <p>&nbsp;</p>
 
 <!-- <<<Blender>>> -->
-## <a name="Blender"></a> Blender
+<a name="Blender"></a>
+
+## Blender
 
 "*Blender is the open source software for 3D modeling, animation, rendering, post-production, interactive creation and playback.*"
 
@@ -512,7 +560,9 @@ BLAS, see [Atlas](#atlas) or the [GNU Scientific Library](#gnu_scientific_librar
 <p>&nbsp;</p>
 
 <!-- <<<Blitz++>>> -->
-## <a name="Blitz++"></a> Blitz++
+<a name="Blitz++"></a>
+
+## Blitz++
 
 "*Blitz++ is a [C++](#c) class library for scientific computing which provides performance on par with [Fortran](#fortran) 77/90. It uses
 template techniques to achieve high performance. The current versions provide dense arrays and vectors, random number generators, and small
@@ -523,7 +573,9 @@ vectors and matrices. Blitz++ is distributed freely under an open source license
 <p>&nbsp;</p>
 
 <!-- <<<Boost>>> -->
-## <a name="Boost"></a> Boost
+<a name="Boost"></a>
+
+## Boost
 
 "*Boost provides free peer-reviewed portable [C++](#c) source libraries.*
 
@@ -559,7 +611,9 @@ packages. Boost may also already be available on your organization's internal we
 <p>&nbsp;</p>
 
 <!-- <<<brl-cad>>> -->
-## <a name="brl-cad"></a> BRL-CAD
+<a name="brl-cad"></a>
+
+## BRL-CAD
 
 "*The BRL-CAD package is a powerful Constructive Solid Geometry (CSG) solid modeling system with over 20 years development and production
 use by the U.S. military. BRL-CAD includes an interactive geometry editor, parallel ray-tracing support for rendering and geometric
@@ -585,7 +639,9 @@ tools.*"
 <p>&nbsp;</p>
 
 <!-- <<<bsp>>> -->
-## <a name="bsp"></a> BSP
+<a name="bsp"></a>
+
+## BSP
 
 "*Parallel programmers looking for a simple but efficient approach to developing scalable applications software may be interested in the
 BSPlib programming library. BSPlib is an alternative to [MPI](#mpi) and PVM, and is based on the BSP model of parallel computation. It is
@@ -609,7 +665,9 @@ See also [MPI](#mpi).
 <p>&nbsp;</p>
 
 <!-- <<<cadna>>> -->
-## <a name="cadna"></a> CADNA
+<a name="cadna"></a>
+
+## CADNA
 
 "*… the CADNA library … allows to estimate the round-off error propagation on every scientific code written in FORTRAN language.*"
 
@@ -618,7 +676,9 @@ See also [MPI](#mpi).
 <p>&nbsp;</p>
 
 <!-- <<<calculix>>> -->
-## <a name="calculix"></a> CalculiX
+<a name="calculix"></a>
+
+## CalculiX
 
 "*CalculiX is a package designed to solve field problems. The method used is the finite element method.*
 
@@ -637,7 +697,9 @@ Aero Engine manufacturer in Germany which granted the publication.*"
 <p>&nbsp;</p>
 
 <!-- <<<cast3m>>> -->
-## <a name="cast3m"></a> Cast3M
+<a name="cast3m"></a>
+
+## Cast3M
 
 "*CASTEM 2000 est un code de calcul pour l'analyse de structures par la méthode des éléments finis. Ce code a été développé par le
 Département Mécanique et Technologie (DMT) du Commissariat français à l'Energie Atomique (CEA).*
@@ -655,7 +717,9 @@ l'utilisateur peut adapter à ses besoins pour résoudre ses propres problèmes.
 <p>&nbsp;</p>
 
 <!-- <<<channelflow>>> -->
-## <a name="channelflow"></a> Channelflow
+<a name="channelflow"></a>
+
+## Channelflow
 
 "*Channelflow is a software system for direct spectral simulation of incompressible Navier-Stokes flow in channel geometries, witten in
 [C++](#c). Channelflow is not innovative as an algorithm. Rather, Channelflow uses relatively modern software design to improve the
@@ -683,7 +747,9 @@ usability, flexibility, and intelligibility of a well-known algorithm. The goals
 <p>&nbsp;</p>
 
 <!-- <<<c>>> -->
-## <a name="c"></a> C
+<a name="c"></a>
+
+## C
 
 C est un langage de programmation généraliste, de même que [C++](#cxx) et [Fortran](#fortran).
 
@@ -700,7 +766,9 @@ Référence : [Anglais](http://www.acm.uiuc.edu/webmonkeys/book/c_guide/)
 <p>&nbsp;</p>
 
 <!-- <<<Cilk>>> -->
-## <a name="Cilk"></a> Cilk
+<a name="Cilk"></a>
+
+## Cilk
 
 "*Cilk is a language for multithreaded parallel programming based on [ANSI C](#c). Cilk is designed for general-purpose parallel
 programming, but it is especially effective for exploiting dynamic, highly asynchronous parallelism, which can be difficult to write in
@@ -717,7 +785,9 @@ abstract complexity measures.*"
 <p>&nbsp;</p>
 
 <!-- <<<Code_Aster>>> -->
-## <a name="Code_Aster"></a> Code_Aster
+<a name="Code_Aster"></a>
+
+## Code_Aster
 
 "*Code_Aster propose, bien au delà des fonctionnalités standard d'un code de calcul thermo-mécanique, toute une panoplie de méthodes
 d'analyse et de modélisations multiphysiques : de l'analyse sismique aux milieux poreux en passant par l'acoustique, la fatigue, la
@@ -729,8 +799,24 @@ choix !*"
 
 <p>&nbsp;</p>
 
+<!-- <<<CMake>>> -->
+<a name="cmake"></a>
+
+## CMake
+
+> CMake is an open-source, cross-platform family of tools designed to build, test and package software. CMake is used to control the
+> software compilation process using simple platform and compiler independent configuration files, and generate native makefiles and
+> workspaces that can be used in the compiler environment of your choice. The suite of CMake tools were created by Kitware in response to
+> the need for a powerful, cross-platform build environment for open-source projects such as ITK and [VTK](#vtk).
+
+[https://cmake.org](https://cmake.org/)
+
+<p>&nbsp;</p>
+
 <!-- <<<Code_Saturne>>> -->
-## <a name="Code_Saturne"></a> Code_Saturne
+<a name="Code_Saturne"></a>
+
+## Code_Saturne
 
 "*Code_Saturne® is EDF's general purpose computational fluid dynamics software. Developed since 1997 at EDF R&D, it is based on a
 co-located Finite Volume approach that accepts meshes with any type of cell (tetrahedral, hexahedral, prismatic, pyramidal, polyhedral…) and
@@ -765,7 +851,9 @@ La librairie FVM offre aussi des possibilités de couplage de codes en parallèl
 <p>&nbsp;</p>
 
 <!-- <<<Conversion des fichiers texte>>> -->
-## <a name="Conversion des fichiers texte"></a> Conversion des fichiers texte
+<a name="Conversion des fichiers texte"></a>
+
+## Conversion des fichiers texte
 
 Les systèmes Linux, Windows et MacOS ne traitent pas les fichiers textes de la même façon :
 
@@ -792,7 +880,9 @@ les commandes suivantes sous Linux ou MacOS :
 <p>&nbsp;</p>
 
 <!-- <<<CUDA>>> -->
-## <a name="CUDA"></a> CUDA
+<a name="CUDA"></a>
+
+## CUDA
 
 Au laboratoire, CUDA est disponible sur **gpu1**, **gpu2** et **tesla**. CUDA est une technologie
 propriétaire développée par la société [NVidia](http://www.nvidia.fr). La technologie alternative
@@ -805,7 +895,9 @@ propriétaire développée par la société [NVidia](http://www.nvidia.fr). La t
 <p>&nbsp;</p>
 
 <!-- <<<C++>>> -->
-## <a name="C++"></a> C++
+<a name="C++"></a>
+
+## C++
 
 C++ est un langage de programmation généraliste issu d'une évolution du langage [C](#c).
 
@@ -820,7 +912,9 @@ C++ est un langage de programmation généraliste issu d'une évolution du langa
 <p>&nbsp;</p>
 
 <!-- <<<DDD>>> -->
-## <a name="DDD"></a> DDD
+<a name="DDD"></a>
+
+## DDD
 
 "*GNU DDD is a graphical front-end for command-line debuggers such as [GDB](#gdb), DBX, WDB, Ladebug, JDB, XDB, the Perl debugger, the bash
 debugger, or the Python debugger. Besides “usual” front-end features such as viewing source texts, DDD has become famous through its
@@ -832,7 +926,9 @@ interactive graphical data display, where data structures are displayed as graph
 <p>&nbsp;</p>
 
 <!-- <<<deal.II>>> -->
-## <a name="deal.ii"></a> deal.II
+<a name="deal.ii"></a>
+
+## deal.II
 
 "*deal.II is a [C++](#c) program library targeted at adaptive finite elements and error estimation. It uses state-of-the-art programming
 techniques of the C++ programming language to offer you a modern interface to the complex data structures and algorithms required for
@@ -862,7 +958,9 @@ without unreasonable penalties on run-time and memory consumption.*"
 <p>&nbsp;</p>
 
 <!-- <<<dolfyn>>> -->
-## <a name="dolfyn"></a> dolfyn
+<a name="dolfyn"></a>
+
+## dolfyn
 
 "*The Open Source CFD code dolfyn is an initiative in Noord-Brabant, a Dutch province in the south of the Netherlands, particularly in the
 region around Eindhoven. The Eindhoven Region presents itself as Leading in technology and ranks in the top three most technological
@@ -896,7 +994,9 @@ Part of the documentation is in dutch. There is also a graphical user interface 
 <p>&nbsp;</p>
 
 <!-- <<<Doxygen>>> -->
-## <a name="Doxygen"></a> Doxygen
+<a name="Doxygen"></a>
+
+## Doxygen
 
 "*Doxygen is a documentation system for [C++](#cxx), [C](#c), Java, IDL (Corba and Microsoft flavors) and to some extent Objective-C, PHP,
 C# and D.*
@@ -938,7 +1038,9 @@ by this license.*"
 <p>&nbsp;</p>
 
 <!-- <<<Elmer>>> -->
-## <a name="Elmer"></a> Elmer
+<a name="Elmer"></a>
+
+## Elmer
 
 "*Elmer is an open-source computational tool for multi-physics problems. It has been developed in collaboration with Finnish universities,
 research laboratories and industry.*
@@ -958,7 +1060,9 @@ research laboratories and industry.*
 <p>&nbsp;</p>
 
 <!-- <<<Emacs>>> -->
-## <a name="Emacs"></a> Emacs
+<a name="Emacs"></a>
+
+## Emacs
 
 "*To quote the Emacs Manual:*
 
@@ -993,7 +1097,9 @@ GNU Emacs Lisp Reference Manual : [http://www.gnu.org/software/emacs/manual/#eli
 <p>&nbsp;</p>
 
 <!-- <<<EMAP>>> -->
-## <a name="EMAP"></a> EMAP
+<a name="EMAP"></a>
+
+## EMAP
 
 "*EMAP (ElectroMagnetic Analysis Program) is a family of three-dimensional finite element modeling codes that can be used to analyze simple
 3-dimensional geometries. The EMAP codes are relatively easy to learn to use and are distributed in source code form.*
@@ -1009,7 +1115,9 @@ modeling of simple three-dimensional configurations over a wide range of frequen
 <p>&nbsp;</p>
 
 <!-- <<<featflow>>> -->
-## <a name="featflow"></a> FEATFLOW
+<a name="featflow"></a>
+
+## FEATFLOW
     
 "*The progam package FEATFLOW is both a user oriented as well as a general purpose subroutine system for the numerical solution of the
 incompressible Navier-Stokes equations in two and three space dimensions. It is based on the packages FEAT2D and FEAT3D.*
@@ -1023,7 +1131,9 @@ incompressible Navier-Stokes equations in two and three space dimensions. It is 
 <p>&nbsp;</p>
 
 <!-- <<<Feel++ : Finite Element Embedded Library in C++>>> -->
-## <a name="Feel++ : Finite Element Embedded Library in C++"></a> Feel++ : Finite Element Embedded Library in C++
+<a name="Feel++ : Finite Element Embedded Library in C++"></a>
+
+## Feel++ : Finite Element Embedded Library in C++
 
 "*FEEL++ est une bibliothèque C++ pour la résolution des EDP par des méthodes de Galerkin généralisées telles que les méthodes des éléments
 finis simples et étendues (FEM et hp-FEM) et les méthodes spectrales.*"
@@ -1033,7 +1143,9 @@ finis simples et étendues (FEM et hp-FEM) et les méthodes spectrales.*"
 <p>&nbsp;</p>
 
 <!-- <<<FElt>>> -->
-## <a name="FElt"></a> FElt
+<a name="FElt"></a>
+
+## FElt
 
 "*The current version of FElt knows how to solve linear static and dynamic structural and thermal analysis problems; it can also do modal
 and spectral analysis for dynamic problems. FElt's element library currently contains fourteen elements. The **FAQ** contains some
@@ -1066,7 +1178,9 @@ it quite easy to specify a wide range of functions.*"
 <p>&nbsp;</p>
 
 <!-- <<<FEMM>>> -->
-## <a name="FEMM"></a> FEMM
+<a name="FEMM"></a>
+
+## FEMM
 
 "*A Windows finite element solver for 2D and axisymmetric magnetic and electrostatic problems with graphical pre- and post-processors.*"
 
@@ -1075,7 +1189,9 @@ it quite easy to specify a wide range of functions.*"
 <p>&nbsp;</p>
 
 <!-- <<<FEniCS>>> -->
-## <a name="FEniCS"></a> FEniCS
+<a name="FEniCS"></a>
+
+## FEniCS
 
 "*The vision of FEniCS is to set a new standard in Computational Mathematical Modeling (CMM), which is the Automation of CMM (ACMM), towards
 the goals of generality, efficiency, and simplicity, concerning mathematical methodology, implementation, and application.*
@@ -1095,7 +1211,9 @@ the goals of generality, efficiency, and simplicity, concerning mathematical met
 <p>&nbsp;</p>
 
 <!-- <<<FFTW>>> -->
-## <a name="FFTW"></a> FFTW
+<a name="FFTW"></a>
+
+## FFTW
 
 "*FFTW is a C subroutine library for computing the discrete Fourier transform (DFT) in one or more dimensions, of arbitrary input size, and
 of both real and complex data (as well as of even/odd data, i.e. the discrete cosine/sine transforms or DCT/DST). We believe that FFTW,
@@ -1111,7 +1229,9 @@ somewhat whimsical title of “Fastest Fourier Transform in the West.”*"
 <p>&nbsp;</p>
 
 <!-- <<<FLAME>>> -->
-## <a name="FLAME"></a> FLAME
+<a name="FLAME"></a>
+
+## FLAME
 
 Quote from [http://www.cs.utexas.edu/users/flame/overview/#node1l](http://www.cs.utexas.edu/users/flame/overview/#node1l) : "*When
 considering the unmanageable complexity of computer systems, Dijkstra recently made the following observations 3:*
@@ -1172,7 +1292,9 @@ FLAME has interfaces with [C](#c), [Fortran](#fortran), [Matlab](#matlab), [MPI]
 <p>&nbsp;</p>
 
 <!-- <<<Fortran>>> -->
-## <a name="Fortran"></a> Fortran
+<a name="Fortran"></a>
+
+## Fortran
 
 Fortran is a powerful general-purpose programming language. Other general-purpose programming languages include [C](#c) and [C++](#cxx).
 
@@ -1221,7 +1343,9 @@ La relation avec les autres langages:
 <p>&nbsp;</p>
 
 <!-- <<<FreeFEM++-cs>>> -->
-## <a name="FreeFEM++-cs"></a> FreeFEM++-cs
+<a name="FreeFEM++-cs"></a>
+
+## FreeFEM++-cs
 
 "*FreeFem++-cs is an integrated development environment for [FreeFem++](#freefem) that aims to provide a user-friendly interface which
 resembles other popular windowed applications. It follows a client/server design : the client deals with user interaction, the server runs
@@ -1255,7 +1379,9 @@ Il faut télécharger la version de FreeFem++-cs qui correspond à chaque nouvel
 <p>&nbsp;</p>
 
 <!-- <<<FreeFem++>>> -->
-## <a name="FreeFem++"></a> FreeFem++
+<a name="FreeFem++"></a>
+
+## FreeFem++
 
 "*FreeFem++ is an implementation of a language dedicated to the finite element method. It provides you a way to solve Partial Differential
 Equations (PDE) simply.  Problems involving partial differential equations (pde) of several branches of physics such as fluid-structure
@@ -1270,7 +1396,9 @@ interactions require interpolations of data on several meshes and their manipula
 <p>&nbsp;</p>
 
 <!-- <<<Free Meshes>>> -->
-## <a name="Free Meshes"></a> Free Meshes
+<a name="Free Meshes"></a>
+
+## Free Meshes
 
 Free pre-built meshes available from the web.
 
@@ -1281,7 +1409,9 @@ Free pre-built meshes available from the web.
 <p>&nbsp;</p>
 
 <!-- <<<GDB>>> -->
-## <a name="GDB"></a> GDB
+<a name="GDB"></a>
+
+## GDB
 
 "*GDB, the GNU Project debugger, allows you to see what is going on 'inside' another program while it executes – or what another program was
 doing at the moment it crashed.*
@@ -1303,7 +1433,9 @@ the same machine as GDB (native) or on another machine (remote). GDB can run on 
 <p>&nbsp;</p>
 
 <!-- <<<Geomview>>> -->
-## <a name="Geomview"></a> Geomview
+<a name="Geomview"></a>
+
+## Geomview
 
 "*Geomview is an interactive 3D viewing program for Unix. It lets you view and manipulate 3D objects: you use the mouse to rotate,
 translate, zoom in and out, etc. It can be used as a standalone viewer for static objects or as a display engine for other programs which
@@ -1335,7 +1467,9 @@ OOGL, [OFF](#off)
 <p>&nbsp;</p>
 
 <!-- <<<Gerris Flow Solver>>> -->
-## <a name="Gerris Flow Solver"></a> Gerris Flow Solver
+<a name="Gerris Flow Solver"></a>
+
+## Gerris Flow Solver
 
 "*Gerris is an Open Source Free Software library for the solution of the partial differential equations describing fluid flow. The source
 code is available free of charge under the [Free Software GPL license](#licences_pour_logiciels_libres).*
@@ -1391,7 +1525,9 @@ geometrical functions and object-oriented programming.*
 <p>&nbsp;</p>
 
 <!-- <<<GetDP>>> -->
-## <a name="GetDP"></a> GetDP
+<a name="GetDP"></a>
+
+## GetDP
 
 "*GetDP is a general finite element solver using mixed elements to discretize de Rham-type complexes in one, two and three dimensions. The
 main feature of GetDP is the closeness between the input data defining discrete problems (written by the user in **ASCII** data files) and
@@ -1406,7 +1542,9 @@ the symbolic mathematical expressions of these problems.*"
 <p>&nbsp;</p>
 
 <!-- <<<Getfem++>>> -->
-## <a name="Getfem++"></a> Getfem++
+<a name="Getfem++"></a>
+
+## Getfem++
 
 "*The Getfem++ project focuses on the development of a generic and efficient [C++](#cxx) library for finite element methods elementary
 computations. The goal is to provide a library allowing the computation of any elementary matrix (even for mixed finite element methods) on
@@ -1444,7 +1582,9 @@ different meshes. This is usefull for some mixed finite element methods and for 
 <p>&nbsp;</p>
 
 <!-- <<<GETM>>> -->
-## <a name="GETM"></a> GETM
+<a name="GETM"></a>
+
+## GETM
 
 "*GETM is a 3D numerical model simulating the most important hydrodynamic and thermodynamic processes in natural waters. The model is
 general in the sense that it can be applied to various systems, scales and specifications. The model includes for example flooding and
@@ -1458,7 +1598,9 @@ is a Public Domain model published under [GNU Public Licence](#licences_pour_log
 <p>&nbsp;</p>
 
 <!-- <<<Gmsh>>> -->
-## <a name="Gmsh"></a> Gmsh
+<a name="Gmsh"></a>
+
+## Gmsh
 
 "*Gmsh is an automatic 3D finite element mesh generator (primarily Delaunay) with build-in CAD and post-processing facilities. Its primal
 design goal is to provide a simple meshing tool for academic test cases with parametric input and up to date visualization capabilities. One
@@ -1481,7 +1623,9 @@ either interactively using the graphical user interface or in **ASCII** text fil
 <p>&nbsp;</p>
 
 <!-- <<<GNU Make>>> -->
-## <a name="GNU Make"></a> GNU Make
+<a name="GNU Make"></a>
+
+## GNU Make
 
 "*Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files.*
 
@@ -1503,7 +1647,9 @@ If MACRO is used inside a makefile, one can give it a value from the command lin
 <p>&nbsp;</p>
 
 <!-- <<<Gnuplot>>> -->
-## <a name="Gnuplot"></a> Gnuplot
+<a name="Gnuplot"></a>
+
+## Gnuplot
 
 "*gnuplot is a command-driven interactive function plotting program. It can be used to plot functions and data points in both two- and
 three-dimensional plots in many different formats, and will accommodate many of the needs of today's scientists for graphic data
@@ -1577,7 +1723,9 @@ pause -1
 <p>&nbsp;</p>
 
 <!-- <<<GNU Scientific Library>>> -->
-## <a name="GNU Scientific Library"></a> GNU Scientific Library
+<a name="GNU Scientific Library"></a>
+
+## GNU Scientific Library
 
 "*The GNU Scientific Library (GSL) is a numerical library for [C](#c) and [C++](#cxx) programmers. It is free software under the [GNU
 General Public License](#licences_pour_logiciels_libres).*
@@ -1605,7 +1753,9 @@ The GNU Scientific Library implements [BLAS](#blas) support as described in
 <p>&nbsp;</p>
 
 <!-- <<<GNU Triangulated Surface Library>>> -->
-## <a name="GNU Triangulated Surface Library"></a> GNU Triangulated Surface Library
+<a name="GNU Triangulated Surface Library"></a>
+
+## GNU Triangulated Surface Library
 
 "*GTS stands for the GNU Triangulated Surface Library. It is an Open Source Free Software Library intended to provide a set of useful
 functions to deal with 3D surfaces meshed with interconnected triangles. The source code is available free of charge under the Free Software
@@ -1651,7 +1801,9 @@ computational surface meshes.*
 <p>&nbsp;</p>
 
 <!-- <<<gotm>>> -->
-## <a name="gotm"></a> GOTM
+<a name="gotm"></a>
+
+## GOTM
 
 "*GOTM is the abbreviation for 'General Ocean Turbulence Model'. It is a one-dimensional water column model for the most important
 hydrodynamic and thermodynamic processes related to vertical mixing in natural waters. In addition, it has been designed such that it can
@@ -1670,7 +1822,9 @@ empirical models, energy models, two-equation models, Explicit Algebraic Stress 
 <p>&nbsp;</p>
 
 <!-- <<<GRUMMP>>> -->
-## <a name="GRUMMP"></a> GRUMMP
+<a name="GRUMMP"></a>
+
+## GRUMMP
 
 "*GRUMMP — Generation and Refinement of Unstructured, Mixed-Element Meshes in Parallel*
 
@@ -1716,7 +1870,9 @@ solution-based adaptive length scales are not available.*"
 <p>&nbsp;</p>
 
 <!-- <<<HDF>>> -->
-## <a name="HDF"></a> HDF
+<a name="HDF"></a>
+
+## HDF
 
 "*WELCOME to the Hierarchical Data Format (HDF) home page at the National Center for Supercomputing Applications.*
 
@@ -1735,7 +1891,9 @@ project, and the DOE's Advanced Simulation and Computing Program.*"
 <p>&nbsp;</p>
 
 <!-- <<<Hypre>>> -->
-## <a name="Hypre"></a> Hypre
+<a name="Hypre"></a>
+
+## Hypre
 
 "*The goal of the Scalable Linear Solvers project is to develop scalable algorithms and software for solving large, sparse linear systems of
 equations on parallel computers. The primary software product is hypre, a library of high performance preconditioners that features parallel
@@ -1759,7 +1917,9 @@ at LLNL and elsewhere to study physical phenomena in the defense, environmental,
 <p>&nbsp;</p>
 
 <!-- <<<I-DEAS file format>>> -->
-## <a name="I-DEAS file format"></a> I-DEAS file format
+<a name="I-DEAS file format"></a>
+
+## I-DEAS file format
 
 File format of the [I-DEAS computer-aided design software package](http://en.wikipedia.org/wiki/I-DEAS). It can be used in
 [Matlab](#matlab) :
@@ -1769,7 +1929,9 @@ and [libMesh](#libmesh).
 <p>&nbsp;</p>
 
 <!-- <<<IGES>>> -->
-## <a name="IGES"></a> IGES
+<a name="IGES"></a>
+
+## IGES
 
 "*Products may be designed as either a two-dimensional, three-view drawing layout, or as a full three-dimensional model with associated
 drawing views and dimensions using a Computer Aided Design (CAD) system. The IGES format serves as a neutral data format to transfer the
@@ -1791,7 +1953,9 @@ for importing the IGES file into the destination system.*"
 <p>&nbsp;</p>
 
 <!-- <<<IML++>>> -->
-## <a name="IML++"></a> IML++
+<a name="IML++"></a>
+
+## IML++
 
 "*IML++ is a [C++](#cxx) templated library of modern iterative methods for solving both symmetric and nonsymmetric linear systems of
 equations. The algorithms are fully templated in that the same source code works for dense, sparse, and distributed matrices. Some of the
@@ -1815,7 +1979,9 @@ numerical methods are presented in the book, Templates: Building Blocks for the 
 <p>&nbsp;</p>
 
 <!-- <<<Impact>>> -->
-## <a name="Impact"></a> Impact
+<a name="Impact"></a>
+
+## Impact
 
 "*Impact is an open source finite element program suite which can be used to predict most dynamic events such as car crashes or metal sheet
 punch operations. They usually involve large deformations and high velocities.*
@@ -1841,7 +2007,9 @@ release and publish your improvements under the same license.*
 <p>&nbsp;</p>
 
 <!-- <<<ISAAC>>> -->
-## <a name="ISAAC"></a> ISAAC
+<a name="ISAAC"></a>
+
+## ISAAC
 
 "*ISAAC (Integrated Solution Algorithm for Arbitrary Configurations) is a compressible Euler/Navier-Stokes computational fluid dynamics
 code. ISAAC includes the capability of calculating the Euler equations for inviscid flow or the Navier-Stokes equations for viscous
@@ -1870,7 +2038,9 @@ differential Reynolds stress models are implemented in ISAAC. Several test cases
 <p>&nbsp;</p>
 
 <!-- <<<ITPACK>>> -->
-## <a name="ITPACK"></a> ITPACK
+<a name="ITPACK"></a>
+
+## ITPACK
 
 "*There are four packages in the ITPACK directory for solving large sparse linear systems by iterative methods: ITPACK 2C (single
 precision), ITPACK 2C (double precision), ITPACKV 2D (a vectorized version of ITPACK 2C for the Cray Y-MP and similar vector computers), and
@@ -1886,7 +2056,9 @@ computer.  They are located in routines DFAULT and TIMER in all four packages.*"
 <p>&nbsp;</p>
 
 <!-- <<<jCAE>>> -->
-## <a name="jCAE"></a> jCAE
+<a name="jCAE"></a>
+
+## jCAE
 
 "*Features*
 
@@ -1909,7 +2081,9 @@ computer.  They are located in routines DFAULT and TIMER in all four packages.*"
 <p>&nbsp;</p>
 
 <!-- <<<LAPACK>>> -->
-## <a name="LAPACK"></a> LAPACK
+<a name="LAPACK"></a>
+
+## LAPACK
 
 "*LAPACK is written in [Fortran](#fortran) 77 and provides routines for solving systems of simultaneous linear equations, least-squares
 solutions of linear systems of equations, eigenvalue problems, and singular value problems. The associated matrix factorizations (LU,
@@ -1932,7 +2106,9 @@ LAPACK should be used together with an optimized version of the [BLAS](#blas). F
 <p>&nbsp;</p>
 
 <!-- <<<LaTeX>>> -->
-## <a name="LaTeX"></a> LaTeX
+<a name="LaTeX"></a>
+
+## LaTeX
 
 "*LaTeX is a high-quality typesetting system, with features designed for the production of technical and scientific documentation. LaTeX is
 the de facto standard for the communication and publication of scientific documents.*"
@@ -2010,7 +2186,9 @@ On machines where the epstopdf external command is not available to LaTeX, one c
 <p>&nbsp;</p>
 
 <!-- <<<libMesh>>> -->
-## <a name="libMesh"></a> libMesh
+<a name="libMesh"></a>
+
+## libMesh
 
 "*The libMesh library is a [C++](#cxx) framework for the numerical simulation of partial differential equations on serial and parallel
 platforms. Development began in March 2002 with the intent of providing a friendly interface to a number of high-quality software packages
@@ -2028,7 +2206,9 @@ scientist to focus on the physics they are modeling.*"
 <p>&nbsp;</p>
 
 <!-- <<<Libtool>>> -->
-## <a name="Libtool"></a> Libtool
+<a name="Libtool"></a>
+
+## Libtool
 
 "*GNU libtool is a generic library support script. Libtool hides the complexity of using shared libraries behind a consistent, portable
 interface.*
@@ -2052,7 +2232,9 @@ the Free Software Foundation; either version 2 of the License, or (at your optio
 <p>&nbsp;</p>
 
 <!-- <<<Licences pour logiciels libres>>> -->
-## <a name="Licences pour logiciels libres"></a> Licences pour logiciels libres
+<a name="Licences pour logiciels libres"></a>
+
+## Licences pour logiciels libres
 
 Pour les développeurs de logiciels dans les laboratoires de recherche (CNRS, universités, INRA…) :
 
@@ -2072,7 +2254,9 @@ Et une autre liste en anglais : [List of Free Licenses from the Open Source Init
 <p>&nbsp;</p>
 
 <!-- <<<Méfisto>>> -->
-## <a name="Méfisto"></a> Méfisto
+<a name="maofisto"></a>
+
+## Méfisto
 
 "*Ce logiciel gratuit comprend les modules exécutables à télécharger :*
 
@@ -2100,7 +2284,9 @@ Alain Perronnet ([http://www.ljll.math.upmc.fr/perronnet](http://www.ljll.math.u
 <p>&nbsp;</p>
 
 <!-- <<<Mélina>>> -->
-## <a name="Mélina"></a> Mélina
+<a name="Mélina"></a>
+
+## Mélina
 
 "*Le code MÉLINA est une bibliothèque de procédures pour la résolution de problèmes aux limites gouvernés par des équations aux dérivées
 partielles par la méthode des éléments finis en dimension 2 ou 3. Il a été développé par D.Martin (Université de RENNES 1) et O.deBayser
@@ -2113,7 +2299,9 @@ rapidement des applications pour le traitement numérique de problèmes nouveaux
 <p>&nbsp;</p>
 
 <!-- <<<Matlab>>> -->
-## <a name="Matlab"></a> Matlab
+<a name="Matlab"></a>
+
+## Matlab
 
 *  [Historique](http://fr.wikipedia.org/wiki/MATLAB)
 *  [Introduction au logiciel Matlab](http://www.ljll.math.upmc.fr/~postel/matlab)
@@ -2324,7 +2512,9 @@ y = A\b;                % solves Ay = b; y should equal x
 <p>&nbsp;</p>
 
 <!-- <<<Matlab MAT-Files>>> -->
-## <a name="Matlab MAT-Files"></a> Matlab MAT-Files
+<a name="Matlab MAT-Files"></a>
+
+## Matlab MAT-Files
 
 (I do not describe the commercial Matlab software here but its file formats, because these are understood by many other programs)
 
@@ -2339,7 +2529,9 @@ be manipulated by other programs external to MATLAB.*"
 <p>&nbsp;</p>
 
 <!-- <<<Matrix Market Exchange Formats>>> -->
-## <a name="Matrix Market Exchange Formats"></a> Matrix Market Exchange Formats
+<a name="Matrix Market Exchange Formats"></a>
+
+## Matrix Market Exchange Formats
 
 "*The Matrix Market (MM) exchange formats provide a simple mechanism to facilitate the exchange of matrix data. In particular, the objective
 has been to define a minimal base **ASCII** file format which can be very easily explained and parsed, but can easily adapted to
@@ -2352,7 +2544,9 @@ affiliated formats which share design elements. In our initial specification, tw
 <p>&nbsp;</p>
 
 <!-- <<<Maxima>>> -->
-## <a name="Maxima"></a> Maxima
+<a name="Maxima"></a>
+
+## Maxima
 
 "*Maxima is a system for the manipulation of symbolic and numerical expressions, including differentiation, integration, Taylor series,
 Laplace transforms, ordinary differential equations, systems of linear equations, and vectors, matrices, and tensors. Maxima produces high
@@ -2373,7 +2567,9 @@ nature. Macsyma was revolutionary in its day, and many later systems, such as Ma
 <p>&nbsp;</p>
 
 <!-- <<<MayaVi>>> -->
-## <a name="MayaVi"></a> MayaVi
+<a name="MayaVi"></a>
+
+## MayaVi
 
 "*MayaVi is a free, easy to use scientific data visualizer. It is written in [Python](#python) and uses the amazing Visualization Toolkit
 ([VTK](#vtk)) for the graphics. It provides a **GUI** written using Tkinter. MayaVi is free and distributed under the conditions of the BSD
@@ -2403,10 +2599,14 @@ almost any *nix, Mac OSX or Windows).*"
 <p>&nbsp;</p>
 
 <!-- <<<Mercurial>>> -->
-## <a name="Mercurial"></a> Mercurial
+<a name="Mercurial"></a>
+
+## Mercurial
 
 #<!-- <<<FAQ>>> -->
-## <a name="FAQ"></a> FAQ
+<a name="FAQ"></a>
+
+## FAQ
 
 #### Which diff3 software to use for merging?
 
@@ -2446,7 +2646,9 @@ graphlog =
 <p>&nbsp;</p>
 
 <!-- <<<METIS>>> -->
-## <a name="METIS"></a> METIS
+<a name="METIS"></a>
+
+## METIS
 
 "*METIS is a family of programs for partitioning unstructured graphs and hypergraphs and computing fill-reducing orderings of sparse
 matrices. The underlying algorithms used by METIS are based on the state-of-the-art multilevel paradigm that has been shown to produce high
@@ -2459,7 +2661,9 @@ quality results and scale to very large problems.*"
 <p>&nbsp;</p>
 
 <!-- <<<mpi>>> -->
-## <a name="mpi"></a> MPI
+<a name="mpi"></a>
+
+## MPI
     
 "*MPI is a library specification for message-passing, proposed as a standard by a broadly based committee of vendors, implementors, and
 users.*"
@@ -2470,7 +2674,9 @@ users.*"
 <p>&nbsp;</p>
 
 <!-- <<<MUMPS>>> -->
-## <a name="MUMPS"></a> MUMPS
+<a name="MUMPS"></a>
+
+## MUMPS
 
 "*MUMPS: a MUltifrontal Massively Parallel sparse direct Solver*"
 
@@ -2479,7 +2685,9 @@ users.*"
 <p>&nbsp;</p>
 
 <!-- <<<NAPACK>>> -->
-## <a name="NAPACK"></a> NAPACK
+<a name="NAPACK"></a>
+
+## NAPACK
 
 "*NAPACK is a collection of [Fortran](#fortran) subroutines for doing numerical linear algebra and optimization. It may be used to solve
 linear systems, to estimate the condition number or the norm of a matrix, to compute determinants, to multiply a matrix by a vector, to
@@ -2494,7 +2702,9 @@ Hessenberg, and circulant matrices.*"
 <p>&nbsp;</p>
 
 <!-- <<<NCO>>> -->
-## <a name="NCO"></a> NCO
+<a name="NCO"></a>
+
+## NCO
 
 "*The NetCDF Operators, or NCO, are a suite of programs known as operators. Each operator is a standalone, command line program which is
 executed at the UNIX (or NT) shell-level like, e.g., ls or mkdir. The operators take NetCDF or [HDF](#hdf)4 files as input, then perform a
@@ -2517,7 +2727,9 @@ because they can perform many non-linear operations as well, e.g., total, minimu
 <p>&nbsp;</p>
 
 <!-- <<<Netgen>>> -->
-## <a name="Netgen"></a> Netgen
+<a name="Netgen"></a>
+
+## Netgen
 
 "*NETGEN is an automatic 3d tetrahedral mesh generator. It accepts input from constructive solid geometry (CSG) or boundary representation
 (BRep) from [STL file format](#stl_file_format).  The connection to a geometry kernel allows the handling of [IGES](#iges) and [STEP](#step)
@@ -2533,7 +2745,9 @@ license](#licences_pour_logiciels_libres). It is available for Unix/Linux and Wi
 <p>&nbsp;</p>
 
 <!-- <<<ngsolve>>> -->
-## <a name="ngsolve"></a> NGSolve
+<a name="ngsolve"></a>
+
+## NGSolve
 
 "*NGSolve is a general purpose 3D finite element solver. Version 1.x supports scalar (heat flow), elasticity and magnetic field
 problems. The package provides [C++](#cxx) source code such that more advanced problem solvers can be built around it. NGSolve performs
@@ -2542,7 +2756,9 @@ adaptive mesh refinement, the matrix equations are solved by optimal order multi
 <p>&nbsp;</p>
 
 <!-- <<<NIST Sparse BLAS>>> -->
-## <a name="NIST Sparse BLAS"></a> NIST Sparse BLAS
+<a name="NIST Sparse BLAS"></a>
+
+## NIST Sparse BLAS
 
 "*This page contains software for various libaries developed at NIST for the Sparse Basic Linear Algebra Subprograms ([BLAS](#blas)), which
 describes kernels operations for sparse vectors and matrices. The current distribution adheres to the ANSI [C](#c) interface of the
@@ -2560,7 +2776,9 @@ purposes.*"
 <p>&nbsp;</p>
 
 <!-- <<<nohup>>> -->
-## <a name="nohup"></a> nohup
+<a name="nohup"></a>
+
+## nohup
 
 exécute une commande en la rendant insensible aux déconnexions et stocke les résultats dans le fichier **nohup.out** :
 
@@ -2598,7 +2816,9 @@ Pour interrompre un calcul précis, il faut connaître son identifiant (numéro 
 <p>&nbsp;</p>
 
 <!-- <<<NSC2KE>>> -->
-## <a name="NSC2KE"></a> NSC2KE
+<a name="NSC2KE"></a>
+
+## NSC2KE
 
 "*NSC2KE est un solveur Volumes-Finis-Galerkin pour le calcul d'écoulements 2D et axisymetriques utilisant des maillages
 non-structurés. Pour résoudre la partie Euler des equations, le flux de Roe, de Osher et un flux cinetique sont disponibles. Pour le calcul
@@ -2613,7 +2833,9 @@ NSC2KE utilise les maillages générés par [Bamg](#bamg) ou EMC2.
 <p>&nbsp;</p>
 
 <!-- <<<Octave>>> -->
-## <a name="Octave"></a> Octave
+<a name="Octave"></a>
+
+## Octave
 
 "*GNU Octave is a high-level language, primarily intended for numerical computations. It provides a convenient command line interface for
 solving linear and nonlinear problems numerically, and for performing other numerical experiments using a language that is mostly compatible
@@ -2637,7 +2859,9 @@ extensible and customizable via user-defined functions written in Octave's own l
 <p>&nbsp;</p>
 
 <!-- <<<OFELI>>> -->
-## <a name="OFELI"></a> OFELI
+<a name="OFELI"></a>
+
+## OFELI
 
 "*OFELI (Object Finite Element LIbrary) is an object oriented library of [C++](#cxx) classes for development of finite element codes. Its
 main features are :*
@@ -2665,7 +2889,9 @@ main features are :*
 <p>&nbsp;</p>
 
 <!-- <<<OFF>>> -->
-## <a name="OFF"></a> OFF
+<a name="OFF"></a>
+
+## OFF
 
 "*This format, called OFF (for Object File Format), is general, flexible, and extensible. It supports **ASCII** text versions of objects for
 the purpose of interchange, and binary versions for efficiency of reading and writing.*"
@@ -2683,7 +2909,9 @@ the purpose of interchange, and binary versions for efficiency of reading and wr
 <p>&nbsp;</p>
 
 <!-- <<<OOFEM>>> -->
-## <a name="OOFEM"></a> OOFEM
+<a name="OOFEM"></a>
+
+## OOFEM
 
 "*OOFEM is free finite element code with object oriented architecture for solving mechanical, transport and fluid mechanics problems that
 operates on various platforms.*
@@ -2716,7 +2944,9 @@ environment for future development.*"
 <p>&nbsp;</p>
 
 <!-- <<<opendx>>> -->
-## <a name="opendx"></a> OpenDX
+<a name="opendx"></a>
+
+## OpenDX
 
 "*OpenDX gives you new control over your data…and new insights into their meaning.  Yet OpenDX is easy to use because it lets you visualize
 data in ways you've never dreamed of–without getting bogged down in the technology.*
@@ -2735,7 +2965,9 @@ the science of visualization come together. It's the place where they're combine
 <p>&nbsp;</p>
 
 <!-- <<<Open Dynamics Engine>>> -->
-## <a name="Open Dynamics Engine"></a> Open Dynamics Engine
+<a name="Open Dynamics Engine"></a>
+
+## Open Dynamics Engine
 
 "*ODE is an open source, high performance library for simulating rigid body dynamics. It is fully featured, stable, mature and platform
 independent with an easy to use [C](#c)/[C++](#cxx) **API**. It has advanced joint types and integrated collision detection with
@@ -2759,7 +2991,9 @@ computer games, 3D authoring tools and simulation tools.*"
 <p>&nbsp;</p>
 
 <!-- <<<openfem>>> -->
-## <a name="openfem"></a> OpenFEM
+<a name="openfem"></a>
+
+## OpenFEM
 
 "*OpenFEM is a finite element toolbox designed to be used within a matrix computing environment.  It is available for both [Matlab](#matlab)
 and [Scilab](#scilab). So far, OpenFEM has been jointly developed by INRIA and SDTools, based on the existing software packages Modulef and
@@ -2769,7 +3003,9 @@ improve the toolbox.*"
 <p>&nbsp;</p>
 
 <!-- <<<openfoam>>> -->
-## <a name="openfoam"></a> OpenFOAM
+<a name="openfoam"></a>
+
+## OpenFOAM
 	  
 "*The OpenFOAM (Open Field Operation and Manipulation) CFD Toolbox can simulate anything from complex fluid flows involving chemical
 reactions, turbulence and heat transfer, to solid dynamics, electromagnetics and the pricing of financial options.*
@@ -2795,7 +3031,9 @@ integrated at a low level so that solvers can generally be developed without the
 <p>&nbsp;</p>
 
 <!-- <<<OpenMP>>> -->
-## <a name="OpenMP"></a> OpenMP
+<a name="OpenMP"></a>
+
+## OpenMP
 
 "*OpenMP is a specification for a set of compiler directives, library routines, and environment variables that can be used to specify shared
 memory parallelism in [Fortran](#fortran) and [C](#c)/[C++](#cxx) programs.*"
@@ -2806,7 +3044,9 @@ memory parallelism in [Fortran](#fortran) and [C](#c)/[C++](#cxx) programs.*"
 <p>&nbsp;</p>
 
 <!-- <<<OpenSees>>> -->
-## <a name="OpenSees"></a> OpenSees
+<a name="OpenSees"></a>
+
+## OpenSees
 
 "*[…] OpenSees, a software framework for developing applications to simulate the performance of structural and geotechnical systems
 subjected to earthquakes.*
@@ -2827,7 +3067,9 @@ development. *"
 <p>&nbsp;</p>
 
 <!-- <<<ParaView>>> -->
-## <a name="ParaView"></a> ParaView
+<a name="ParaView"></a>
+
+## ParaView
 
 "*Welcome to ParaView, an application designed with the need to visualize large data sets in mind. The goals of the ParaView project include
 the following:*
@@ -2871,7 +3113,9 @@ Menu “Edit/Settings…/Colors”
 <p>&nbsp;</p>
 
 <!-- <<<PARI/GP>>> -->
-## <a name="PARI/GP"></a> PARI/GP
+<a name="PARI/GP"></a>
+
+## PARI/GP
 
 "* PARI/GP is a widely used computer algebra system designed for fast computations in number theory (factorizations, algebraic number
 theory, elliptic curves…), but also contains a large number of other useful functions to compute with mathematical entities such as
@@ -2887,7 +3131,9 @@ library to allow for faster computations.*"
 <p>&nbsp;</p>
 
 <!-- <<<pARMS>>> -->
-## <a name="pARMS"></a> pARMS
+<a name="pARMS"></a>
+
+## pARMS
 
 "*pARMS: parallel Algebraic Recursive Multilevel Solvers*
 
@@ -2904,7 +3150,9 @@ included as are a number of Schur complement techniques.*"
 <p>&nbsp;</p>
 
 <!-- <<<PBLAS>>> -->
-## <a name="PBLAS"></a> PBLAS
+<a name="PBLAS"></a>
+
+## PBLAS
 
 "*Parallel Basic Linear Algebra Subprograms (PBLAS)*"
 
@@ -2915,7 +3163,9 @@ included as are a number of Schur complement techniques.*"
 <p>&nbsp;</p>
 
 <!-- <<<Perl>>> -->
-## <a name="Perl"></a> Perl
+<a name="Perl"></a>
+
+## Perl
 
 Perl is a general-purpose scripting language, like Tcl/Tk and [Python](#python). Il existe une [version pour
 Windows.](http://www.activestate.com/Products/ActivePerl)
@@ -2950,7 +3200,9 @@ v=2 c=3
 <p>&nbsp;</p>
 
 <!-- <<<PETSc>>> -->
-## <a name="PETSc"></a> PETSc
+<a name="PETSc"></a>
+
+## PETSc
 
 "*PETSc, the Portable, Extensible Toolkit for Scientific computation, provides sets of tools for the parallel (as well as serial), numerical
 solution of PDEs that require solving large-scale, sparse nonlinear systems of equations. PETSc includes nonlinear and linear equation
@@ -2965,7 +3217,9 @@ PETSc is fully usable from [Fortran](#fortran), [C](#c) and [C++](#cxx), and is 
 <p>&nbsp;</p>
 
 <!-- <<<PLAPACK>>> -->
-## <a name="PLAPACK"></a> PLAPACK
+<a name="PLAPACK"></a>
+
+## PLAPACK
 
 "*Coding parallel algorithms is generally regarded as a formidable task. To make this task manageable in the arena of linear algebra
 algorithms, we have developed the Parallel Linear Algebra Package (PLAPACK), an infrastructure for coding such algorithms at a high level of
@@ -2993,7 +3247,9 @@ performance is attained by our solvers.*"
 <p>&nbsp;</p>
 
 <!-- <<<Plotmtv>>> -->
-## <a name="Plotmtv"></a> Plotmtv
+<a name="Plotmtv"></a>
+
+## Plotmtv
 
 "*The application plotmtv is a fast multi-purpose plotting program for visualization of scientific data in an X11-window environment. Each
 plot comes with a simple but functional Graphical User Interface which allows users to zoom in or pan to areas of interest on the plot or to
@@ -3006,7 +3262,9 @@ toggle between 2D and 3D plots.*"
 <p>&nbsp;</p>
 
 <!-- <<<POOMA>>> -->
-## <a name="POOMA"></a> POOMA
+<a name="POOMA"></a>
+
+## POOMA
 
 "*POOMA is a high-performance [C++](#cxx) toolkit for parallel scientific computation. POOMA's object-oriented design facilitates rapid
 application development. POOMA has been optimized to take full advantage of massively parallel machines. POOMA is available free of charge
@@ -3032,7 +3290,9 @@ LICENSE.pete for more information.  *"
 <p>&nbsp;</p>
 
 <!-- <<<Povray>>> -->
-## <a name="Povray"></a> Povray
+<a name="Povray"></a>
+
+## Povray
 
 "*The Persistence of Vision Raytracer is a high-quality, totally free tool for creating stunning three-dimensional graphics. It is available
 in official versions for Windows, Mac **OS**/Mac **OS** X and i86 Linux. The source code is available for those wanting to do their own
@@ -3048,7 +3308,9 @@ ports.*"
 <p>&nbsp;</p>
 
 <!-- <<<PRIMME>>> -->
-## <a name="PRIMME"></a> PRIMME
+<a name="PRIMME"></a>
+
+## PRIMME
 
 "*PRIMME (PReconditioned Iterative MultiMethod Eigensolver)*
 
@@ -3070,7 +3332,9 @@ ports.*"
 <p>&nbsp;</p>
 
 <!-- <<<PRISM>>> -->
-## <a name="PRISM"></a> PRISM
+<a name="PRISM"></a>
+
+## PRISM
 
 "*The goal of the PRISM (Parallel Research on Invariant Subspace Methods) project is to develop infrastructure and algorithms for the
 parallel solution of eigenvalue problems. We are currently investigating a complete eigensolver based on the Invariant Subspace
@@ -3091,7 +3355,9 @@ Decomposition Algorithm for dense symmetric matrices (SYISDA).*"
 <p>&nbsp;</p>
 
 <!-- <<<pthreads>>> -->
-## <a name="pthreads"></a> Pthreads
+<a name="pthreads"></a>
+
+## Pthreads
 
 "*Historically, hardware vendors have implemented their own proprietary versions of threads. These implementations differed substantially
 from each other making it difficult for programmers to develop portable threaded applications.*
@@ -3109,7 +3375,9 @@ there are differences between drafts that can cause problems.*"
 <p>&nbsp;</p>
 
 <!-- <<<Python>>> -->
-## <a name="Python"></a> Python
+<a name="Python"></a>
+
+## Python
 
 Python is a general-purpose scripting language, like Tcl/Tk and [Perl](#perl).
 
@@ -3128,7 +3396,9 @@ commandes et objets disponibles.
 <p>&nbsp;</p>
 
 <!-- <<<Commande de soumission de travaux "qsub">>> -->
-## <a name="qsub"></a> Commande de soumission de travaux "qsub"
+<a name="qsub"></a>
+
+## Commande de soumission de travaux "qsub"
 
 ### Questions/Réponses
 
@@ -3152,7 +3422,9 @@ Mais dans les lignes suivantes, ce nombre de processeurs peut être remplacé pa
 <p>&nbsp;</p>
 
 <!-- <<<questions_reponses_langages_compiles>>> -->
-## <a name="questions_reponses_langages_compiles"></a> Questions/Réponses sur les langages compilés
+<a name="questions_reponses_langages_compiles"></a>
+
+## Questions/Réponses sur les langages compilés
 
 ### Comment observer une fuite de mémoire?
 
@@ -3241,7 +3513,8 @@ On linux-type systems, use nm. **T** shows defined symbols, **U** shows undefine
 ```
 
 <!-- <<<history>>> [[file:history.php]] -->
-<script src="//www.ljll.math.upmc.fr/lehyaric/history.php?page=freesoft-infomath" type="text/javascript"></script>
+<script src="https://www.ljll.math.upmc.fr/lehyaric/history.php?page=freesoft-infomath" type="text/javascript">
+</script>
 
 ### How to deal with a "segmentation fault" in a compiled program?
 
@@ -3278,7 +3551,9 @@ detect where the first error occurred:
 <p>&nbsp;</p>
 
 <!-- <<<questions_reponses_sur_freefem>>> -->
-## <a name="questions_reponses_sur_freefem"></a> Questions/Réponses sur FreeFem++
+<a name="questions_reponses_sur_freefem"></a>
+
+## Questions/Réponses sur FreeFem++
 
 ### Numérotation des maillages
 
@@ -4527,7 +4802,9 @@ Voir aussi [How to copy a sparse matrix into a dense matrix?](#how_to_copy_a_spa
 <p>&nbsp;</p>
 
 <!-- <<<Radia>>> -->
-## <a name="Radia"></a> Radia
+<a name="Radia"></a>
+
+## Radia
 
 "*Main features - Saturated iron & anisotropic materials - Polyhedron shapes - Straight and curved current coils - Easy modeling and
 meshing - Fast 3D visualization with QuickDraw 3D or Mathematica - Parameterization of the models in the Mathematica Language - Fast
@@ -4553,7 +4830,9 @@ Binary only download. Requires Mathematica.
 <p>&nbsp;</p>
 
 <!-- <<<Rheolef>>> -->
-## <a name="Rheolef"></a> Rheolef
+<a name="Rheolef"></a>
+
+## Rheolef
 
 "*This is rheolef, a computer environment that serves as a convenient “laboratory” for computations involving finite element-like
 methods. It provides a set of unix commands and [C++](#cxx) algorithms and containers. This environment is currently under development.*"
@@ -4569,7 +4848,9 @@ methods. It provides a set of unix commands and [C++](#cxx) algorithms and conta
 <p>&nbsp;</p>
 
 <!-- <<<rlabplus>>> -->
-## <a name="rlabplus"></a> rlabplus
+<a name="rlabplus"></a>
+
+## rlabplus
 
 "*.. RLaB is an interactive, interpreted scientific programming environment. RLaB is a very high level language intended to provide fast
 prototyping and program development, as well as easy data-visualization, and processing. RLaB is not a clone of languages such as those used
@@ -4596,7 +4877,9 @@ is a creation of Marijan Kostrun.*"
 <p>&nbsp;</p>
 
 <!-- <<<Sage>>> -->
-## <a name="Sage"></a> Sage
+<a name="Sage"></a>
+
+## Sage
 
 "*Sage is a free open-source mathematics software system licensed under the **GPL**. It combines the power of many existing open-source
 packages into a common [Python](#python)-based interface. Mission: Creating a viable free open source alternative to Magma, Maple,
@@ -4607,7 +4890,9 @@ Mathematica and Matlab.*"
 <p>&nbsp;</p>
 
 <!-- <<<Salomé>>> -->
-## <a name="Salomé"></a> Salomé
+<a name="Salomé"></a>
+
+## Salomé
 
 "*SALOME is a free software that provides a generic platform for Pre and Post-Processing for numerical simulation. It is based on an open
 and flexible architecture made of reusable components available as free software.  It is open-source
@@ -4631,7 +4916,9 @@ Une version pour Windows (version de test, pas la plus récente mais fonctionnel
 <p>&nbsp;</p>
 
 <!-- <<<ScaLAPACK>>> -->
-## <a name="ScaLAPACK"></a> ScaLAPACK
+<a name="ScaLAPACK"></a>
+
+## ScaLAPACK
 
 "*The ScaLAPACK (or Scalable LAPACK) library includes a subset of [LAPACK](#lapack) routines redesigned for distributed memory MIMD parallel
 computers. It is currently written in a Single-Program-Multiple-Data style using explicit message passing for interprocessor
@@ -4666,7 +4953,9 @@ ScaLAPACK was to have the ScaLAPACK routines resemble their [LAPACK](#lapack) eq
 <p>&nbsp;</p>
 
 <!-- <<<Scilab>>> -->
-## <a name="Scilab"></a> Scilab
+<a name="Scilab"></a>
+
+## Scilab
 
 "*Scilab (developped since 1989 by Scilab Group) is a scientific software package for numerical computations providing a powerful open
 computing environment for engineering and scientific applications. Distributed freely via the Internet since 1994, Scilab is currently being
@@ -4706,7 +4995,9 @@ Executer un script enregistré dans un fichier
 <p>&nbsp;</p>
 
 <!-- <<<screen>>> -->
-## <a name="screen"></a> screen
+<a name="screen"></a>
+
+## screen
 
 exécute chaque commande comme si elle disposait de son propre écran virtuel :
 
@@ -4724,7 +5015,9 @@ exécute chaque commande comme si elle disposait de son propre écran virtuel :
 <p>&nbsp;</p>
 
 <!-- <<<SLEPc>>> -->
-## <a name="SLEPc"></a> SLEPc
+<a name="SLEPc"></a>
+
+## SLEPc
 
 "*SLEPc, the Scalable Library for Eigenvalue Problem Computations, is a software library for the solution of large sparse eigenproblems on
 parallel computers. It can be used for the solution of problems formulated in either standard or generalized form, as well as other related
@@ -4753,7 +5046,9 @@ are not familiar with PETSc yet, our recommendation is to fully understand its b
 <p>&nbsp;</p>
 
 <!-- <<<SLFCFD>>> -->
-## <a name="SLFCFD"></a> SLFCFD
+<a name="SLFCFD"></a>
+
+## SLFCFD
 
 "*SLFCFD stands for San Le's Free Computational Fluid Dynamics. It is a package of scientific software and graphical user interfaces for use
 in computational fluid dynamics. It is written in ANSI [C](#c) by San Le and distributed under the terms of the
@@ -4778,7 +5073,9 @@ in computational fluid dynamics. It is written in ANSI [C](#c) by San Le and dis
 <p>&nbsp;</p>
 
 <!-- <<<SLFFEA>>> -->
-## <a name="SLFFEA"></a> SLFFEA
+<a name="SLFFEA"></a>
+
+## SLFFEA
 
 "*SLFFEA stands for San Le's Free Finite Element Analysis. It is a package of scientific software and graphical user interfaces for use in
 finite element analysis. It is written in ANSI [C](#c) by San Le and distributed under the terms of the [GNU
@@ -4803,7 +5100,9 @@ license](#licences_pour_logiciels_libres).*"
 <p>&nbsp;</p>
 
 <!-- <<<SPARSE>>> -->
-## <a name="SPARSE"></a> SPARSE
+<a name="SPARSE"></a>
+
+## SPARSE
 
 "*SPARSE consists of a set of [C](#c) procedures for solving large sparse real or complex linear systems. Besides being able to solve linear
 systems, it solves transposed systems, finds determinants, and estimates errors due to ill-conditioning in the system of equations and
@@ -4822,7 +5121,9 @@ and modified-node admittance matrices.*"
 <p>&nbsp;</p>
 
 <!-- <<<SparseLib++>>> -->
-## <a name="SparseLib++"></a> SparseLib++
+<a name="SparseLib++"></a>
+
+## SparseLib++
 
 "*SparseLib++ is a [C++](#cxx) class library for efficient sparse matrix computations across various computational platforms. The software
 package consists of matrix classes encompassing several sparse storage formats (e.g. compressed row, compressed column and coordinate
@@ -4849,7 +5150,9 @@ in their own right.*
 <p>&nbsp;</p>
 
 <!-- <<<SPOOLES>>> -->
-## <a name="SPOOLES"></a> SPOOLES
+<a name="SPOOLES"></a>
+
+## SPOOLES
 
 "*SPOOLES 2.2 : SParse Object Oriented Linear Equations Solver*"
 
@@ -4875,7 +5178,9 @@ oriented design. At present, there is the following functionality:*
 <p>&nbsp;</p>
 
 <!-- <<<STEP>>> -->
-## <a name="STEP"></a> STEP
+<a name="STEP"></a>
+
+## STEP
 
 "*STEP, the Standard for the Exchange of Product Model Data, is a comprehensive ISO standard (ISO 10303) that describes how to represent and
 exchange digital product information.*"
@@ -4895,7 +5200,9 @@ exchange digital product information.*"
 <p>&nbsp;</p>
 
 <!-- <<<STL file format>>> -->
-## <a name="STL file format"></a> STL file format
+<a name="STL file format"></a>
+
+## STL file format
 
 "*The .stl or stereolithography format is an **ASCII** or binary file used in manufacturing. It is a list of the triangular surfaces that
 describe a computer generated solid model. This is the standard input for most rapid prototyping machines.*"
@@ -4915,7 +5222,9 @@ describe a computer generated solid model. This is the standard input for most r
 <p>&nbsp;</p>
 
 <!-- <<<SuperLU>>> -->
-## <a name="SuperLU"></a> SuperLU
+<a name="SuperLU"></a>
+
+## SuperLU
 
 "*SuperLU is a general purpose library for the direct solution of large, sparse, nonsymmetric systems of linear equations on high
 performance machines. The library is written in [C](#c) and is callable from either [C](#c) or [Fortran](#fortran). The library routines
@@ -4937,7 +5246,9 @@ for the refined solutions.*"
 <p>&nbsp;</p>
 
 <!-- <<<TetGen>>> -->
-## <a name="TetGen"></a> TetGen
+<a name="TetGen"></a>
+
+## TetGen
 
 "*TetGen generates tetrahedral meshes. The algorithms used in TetGen are of Delaunay type. For a three-dimensional domain, defined by its
 boundary (such as a surface mesh), TetGen generates the boundary constrained (Delaunay) tetrahedralization, conforming Delaunay
@@ -4950,7 +5261,9 @@ major operating systems, e.g. Unix/Linux, MacOS, Windows, etc, are supported. *"
 <p>&nbsp;</p>
 
 <!-- <<<Triangle>>> -->
-## <a name="Triangle"></a> Triangle
+<a name="Triangle"></a>
+
+## Triangle
 
 "*A Two-Dimensional Quality Mesh Generator and Delaunay Triangulator.*
 
@@ -4967,7 +5280,9 @@ element analysis.*"
 <p>&nbsp;</p>
 
 <!-- <<<trilinos>>> -->
-## <a name="trilinos"></a> Trilinos
+<a name="trilinos"></a>
+
+## Trilinos
 
 "*The Trilinos Project is an effort to develop and implement robust parallel algorithms using modern object-oriented software design, while
 still leveraging the value of established numerical libraries such as [PETSc](#petsc), Aztec, the [BLAS](#blas) and [LAPACK](#lapack). It
@@ -4981,7 +5296,9 @@ implement all abstract interfaces.*"
 <p>&nbsp;</p>
 
 <!-- <<<TYPHON>>> -->
-## <a name="TYPHON"></a> TYPHON
+<a name="TYPHON"></a>
+
+## TYPHON
 
 "*TYPHON is an open source project which aims to offer a development platform for many computational methods for gas dynamics. It is
 structured as a multi-solver platform where it could be easily added a new solver. For now, it provides a finite volume solver for
@@ -5006,7 +5323,9 @@ compressible inviscid equations and a finite volume solver for heat transfer.*"
 <p>&nbsp;</p>
 
 <!-- <<<uBLAS>>> -->
-## <a name="uBLAS"></a> uBLAS
+<a name="uBLAS"></a>
+
+## uBLAS
 
 "*uBLAS is a [C++](#cxx) template class library that provides [BLAS](#blas) level 1, 2, 3 functionality for dense, packed and sparse
 matrices. The design and implementation unify mathematical notation via operator overloading and efficient code generation via expression
@@ -5025,7 +5344,9 @@ triangular solver. The glue between containers, views and expression templated o
 <p>&nbsp;</p>
 
 <!-- <<<UMFPACK>>> -->
-## <a name="UMFPACK"></a> UMFPACK
+<a name="UMFPACK"></a>
+
+## UMFPACK
 
 "*UMFPACK is a set of routines for solving unsymmetric sparse linear systems, Ax=b, using the Unsymmetric MultiFrontal method. It uses
 dynamic memory allocation, and has a symbolic preordering and analysis phase that also reports the upper bounds on the nonzeros in L and U,
@@ -5035,7 +5356,9 @@ non-singular and singular.*"
 <p>&nbsp;</p>
 
 <!-- <<<VisIt>>> -->
-## <a name="VisIt"></a> VisIt
+<a name="VisIt"></a>
+
+## VisIt
 
 "*VisIt is a free interactive parallel visualization and graphical analysis tool for viewing scientific data on Unix and PC platforms. Users
 can quickly generate visualizations from their data, animate them through time, manipulate them, and save the resulting images for
@@ -5049,7 +5372,9 @@ below for more details about the tool's features.*"
 <p>&nbsp;</p>
 
 <!-- <<<Visualisation>>> -->
-## <a name="Visualisation"></a> Visualisation
+<a name="Visualisation"></a>
+
+## Visualisation
 
 ### Images
 
@@ -5116,7 +5441,9 @@ gratuit Cygwin ([http://www.cygwin.com](http://www.cygwin.com)).
 <p>&nbsp;</p>
 
 <!-- <<<VRML>>> -->
-## <a name="VRML"></a> VRML
+<a name="VRML"></a>
+
+## VRML
 
 "*The Virtual Reality Modeling Language (VRML) is a file format for describing interactive 3D objects and worlds. VRML is designed to be
 used on the Internet, intranets, and local client systems. VRML is also intended to be a universal interchange format for integrated 3D
@@ -5134,7 +5461,9 @@ presentations, entertainment and educational titles, web pages, and shared virtu
 <p>&nbsp;</p>
 
 <!-- <<<VTK>>> -->
-## <a name="VTK"></a> VTK
+<a name="vtk"></a>
+
+## VTK
 
 "*The Visualization ToolKit (VTK) is an open source, freely available software system for 3D computer graphics, image processing, and
 visualization used by thousands of researchers and developers around the world. VTK consists of a [C++](#cxx) class library, and several
@@ -5155,7 +5484,9 @@ installed and tested on nearly every Unix-based platform, PCs (Windows 98/ME/NT/
 <p>&nbsp;</p>
 
 <!-- <<<Wings 3D>>> -->
-## <a name="Wings 3D"></a> Wings 3D
+<a name="Wings 3D"></a>
+
+## Wings 3D
 
 "*Wings 3D is a subdivision modeler inspired by Nendo and Mirai from Izware.*
 
@@ -5183,7 +5514,9 @@ Wings goes 1.0.*
 <p>&nbsp;</p>
 
 <!-- <<<xd3d>>> -->
-## <a name="xd3d"></a> xd3d
+<a name="xd3d"></a>
+
+## xd3d
 
 "*xd3d is a simple scientific visualization tool designed to be easy to learn. It can plot 2d and 3d meshes, with shadowing, contour plots,
 vector fields, iso-contour (3d), as well as 3d surfaces z=f(x,y) defined by an algebraic expression or a cloud of points. It generates high
@@ -5208,7 +5541,9 @@ Lit les fichiers au format NOPO (voir Modulef)
 <p>&nbsp;</p>
 
 <!-- <<<Y12M>>> -->
-## <a name="Y12M"></a> Y12M
+<a name="Y12M"></a>
+
+## Y12M
 
 "*Y12MA solves sparse systems of linear algebraic equations by Gaussian elimination.  The subroutine is a “black box subroutine” designed to
 solve efficiently problems which contain only one system with a single right hand side. The number of the input parameters is minimized. The
@@ -5229,7 +5564,9 @@ are the same is to be solved.*"
 <p>&nbsp;</p>
 
 <!-- <<<Yorick>>> -->
-## <a name="Yorick"></a> Yorick
+<a name="Yorick"></a>
+
+## Yorick
 
 "*Yorick is an interpreted programming language, designed for postprocessing or steering large scientific simulation codes. Smaller
 scientific simulations or calculations, such as the flow past an airfoil or the motion of a drumhead, can be written as standalone yorick
@@ -5256,7 +5593,9 @@ interesting things, adds functions that operate both on dense and sparse matrice
 <p>&nbsp;</p>
 
 <!-- <<<Z88>>> -->
-## <a name="Z88"></a> Z88
+<a name="Z88"></a>
+
+## Z88
 
 "*Z88 is a fast, powerful and compact Finite Elements Analysis Program especially designed for PCs running the great LINUX, workstations and
 large computers with UNIX and PCs with WindowsXP/95. Z88 features 20 finite element types covering plane stress, plate bending, axial
@@ -5279,20 +5618,6 @@ Pro/MECHANICA is supported.*"
 ### Licence
 
 "*The new version Z88 12.0 is GNU-**GPL** Freeware.*"
-
-<!-- 
-   - Local Variables:
-   - mode:markdown
-   - indent-tabs-mode:nil
-   - mode:visual-line
-   - ispell-local-dictionary:"british"
-   - coding:utf-8
-   - eval:(flyspell-mode)
-   - eval:(outline-minor-mode)
-   - End:
-   -->
-<!-- LocalWords: emacs
-   -->
 
 <!-- 
    - Local Variables:
